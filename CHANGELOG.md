@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.1.1 — 2026-03-28
+
+**Cambios:**
+- Renombrado del repositorio a StarCitizen_ES_BluePrints_Plus
+- Añadido README con descripción del proyecto y enlaces a fuentes
+
 ## v1.1.0 — 2026-03-28
 
 **Fuentes utilizadas:**
