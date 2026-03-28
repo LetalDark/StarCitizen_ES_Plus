@@ -4,6 +4,9 @@
 # Sources (se regeneran desde repos y p4k)
 versions/*/sources/
 
+# Claude Code config
+.claude/
+
 # Archivos temporales
 *.tmp
 *.bak
