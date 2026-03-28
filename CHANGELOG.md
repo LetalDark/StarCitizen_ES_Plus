@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.1.2 — 2026-03-28
+
+**Cambios:**
+- Corregido crash del juego con global_plus.ini: line endings corruptos (\r\r\n → \r\n)
+- Corregida codificación de global_diff_p4k_es.ini (LF sin BOM → CRLF con BOM)
+- Estandarizada estructura de ZIPs: carpeta LIVE/ + user.cfg incluidos en ambos
+
+**Estadísticas:**
+- Líneas en global.ini: 87.593
+- Líneas en global_plus.ini: 87.657
+- Blueprints traducidos: 225
+- Claves p4k traducidas: 877
+
 ## v1.1.1 — 2026-03-28
 
 **Cambios:**
