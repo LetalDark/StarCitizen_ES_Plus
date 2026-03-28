@@ -1,0 +1,6 @@
+# ZIPs de distribución y fuentes
+*.zip
+
+# Archivos temporales
+*.tmp
+*.bak
