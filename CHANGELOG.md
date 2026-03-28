@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.1.3 — 2026-03-28
+
+**Cambios:**
+- Eliminados 4 GUIDs nulos (00000000-...) que aparecían como blueprint en misiones InterSec Patrol y Hockrow P2M3
+- Eliminada clave LOC_UNINITIALIZED (no es una misión real)
+- Añadidos 3 pools de blueprints que faltaban (verificados contra Game2.dcb):
+  - Hockrow FacilityDelve P3 Repeat: Zenith Darkwave, Fresnel Molten, Geist ASD Edition (7 bps)
+  - Headhunters EliminateSpecific PAF: P8-AR Rifle, Palatino + Moonfall (10 bps)
+  - Rayari Irradiated Pearls + Storm (x5 claves): Prism Laser Shotgun, Stirling, Siebe (7 bps)
+- Nueva herramienta parse_dcb.py para datamining del Game2.dcb (DataCore Binary)
+- Nueva herramienta explore_p4k.py para explorar contenido del Data.p4k
+
+**Estadísticas:**
+- Líneas en global.ini: 87.593
+- Líneas en global_plus.ini: 87.656
+- Blueprints traducidos: 232
+- Pools cubiertos: 45/45 del DCB (antes 42/45)
+
 ## v1.1.2 — 2026-03-28
 
 **Cambios:**
