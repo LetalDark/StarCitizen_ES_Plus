@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.2.3 — 2026-03-30
+
+**Cambios:**
+- Nuevo formato de componentes: `[Mil-2A]` en vez de `Mil2A` (mas legible, con separador)
+
 ## v1.2.2 — 2026-03-30
 
 **Cambios:**

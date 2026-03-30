@@ -8,7 +8,7 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 
 1. **Parte de la traduccion de Thord82**, la traduccion comunitaria al español mas completa
 2. **Añade datos de blueprints** de las misiones que dan planos, con la lista de posibles recompensas traducida al español
-3. **Añade clase/grado a los componentes** de naves (coolers, power plants, quantum drives, shields, radars) con prefijo compacto (ej: `Mil2A Bracer` = Militar, Tamaño 2, Grado A)
+3. **Añade clase/grado a los componentes** de naves (coolers, power plants, quantum drives, shields, radars) con prefijo compacto (ej: `[Mil-2A] Bracer` = Militar, Tamaño 2, Grado A)
 4. **Añade tracking type a misiles** (IR/EM/CS) y tamaño a bombas (B3/B5/B10) para saber que contramedida usar
 5. **Marca misiones con blueprints** con `[BP]` en el titulo para identificarlas rapidamente
 6. **Marca sustancias ilegales** con `[!]` para avisar antes de transportarlas
@@ -35,7 +35,7 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 | 2 | Blueprints misiones | Planos posibles en misiones, traducidos al ES + correcciones | 232 | MrKraken + nuestras |
 | 3 | Traducciones p4k | Claves que faltan en Thord82, traducidas del ingles oficial | 874 | Data.p4k CIG |
 | 4 | [BP] en titulos | Marca `[BP]` en misiones que dan blueprints | 216 | ExoAE |
-| 5 | Componentes clase/grado | Prefijo `Mil2A`, `Civ1C`, etc. en componentes de naves | 368 | ExoAE |
+| 5 | Componentes clase/grado | Prefijo `[Mil-2A]`, `[Civ-1C]`, etc. en componentes de naves | 368 | ExoAE |
 | 6 | Misiles y bombas | Tracking type `IR`/`EM`/`CS` en misiles, tamaño `B#` en bombas | 115 | BeltaKoda |
 | 7 | Sustancias ilegales | Marca `[!]` en drogas (WiDoW, SLAM, Maze, etc.) | 8 | ExoAE |
 | 8 | HUD mining | Abreviaturas para evitar solapamiento (Inest:, Res:) | 2 | MrKraken/ExoAE |
@@ -71,7 +71,7 @@ Los componentes de naves llevan un prefijo con 3 partes: **Clase + Tamaño + Gra
 
 Grado: A (mejor) a D (peor). Tamaño: 0-4.
 
-Ejemplo: `Mil2A Bracer` = Bracer, clase Militar, tamaño 2, grado A.
+Ejemplo: `[Mil-2A] Bracer` = Bracer, clase Militar, tamaño 2, grado A.
 
 ## Formato de misiles y bombas
 

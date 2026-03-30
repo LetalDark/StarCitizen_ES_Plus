@@ -68,7 +68,7 @@ def apply_components(global_ini, exo, p4k):
         grade = m.group(3)
         sm = re.search(r"_S(\d+)", key)
         size = sm.group(1).lstrip("0") or "0" if sm else "?"
-        prefix = f"{cls}{size}{grade}"
+        prefix = f"[{cls}-{size}{grade}]"
         if key in global_ini:
             global_ini[key] = f"{prefix} {global_ini[key]}"
             count += 1
