@@ -1,13 +1,8 @@
-# ZIPs de distribución
+# ZIPs de distribucion (van como GitHub Release)
 *.zip
 
-# Sources (se regeneran desde repos y p4k)
+# Sources (se regeneran desde repos y p4k, referenciadas en README)
 versions/*/sources/
-
-# Herramientas locales (no van al repo publico)
-tools/
-*.py
-__pycache__/
 
 # Claude Code
 .claude/
@@ -16,3 +11,7 @@ CLAUDE.md
 # Archivos temporales
 *.tmp
 *.bak
+__pycache__/
+
+# DCB y JSONs de datamining (demasiado grandes)
+Game2.dcb

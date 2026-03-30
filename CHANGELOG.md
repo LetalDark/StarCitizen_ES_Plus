@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.2.1 — 2026-03-30
+
+**Cambios:**
+- Añadido prefijo de tracking type (IR/EM/CS) a 109 misiles y torpedos (nombre completo + MFD)
+- Añadido prefijo de tamaño (B3/B5/B10) a 6 bombas (nombre completo + MFD)
+- Eliminados trailing spaces en 604 claves (limpieza de datos de CIG)
+- Renombrada carpeta de version: hotfix → LIVE (mismo build 11545720)
+- Scripts y herramientas ahora publicos en el repositorio
+- rebuild_outputs.py actualizado con las 11 capas completas
+
+**Estadisticas:**
+- Lineas en global.ini: 87.656
+- Misiles/bombas con tracking/tamaño: 115
+- Trailing spaces eliminados: 604
+
 ## v1.2.0 — 2026-03-30
 
 **Fuentes utilizadas:**

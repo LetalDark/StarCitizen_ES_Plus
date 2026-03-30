@@ -9,12 +9,13 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 1. **Parte de la traduccion de Thord82**, la traduccion comunitaria al español mas completa
 2. **Añade datos de blueprints** de las misiones que dan planos, con la lista de posibles recompensas traducida al español
 3. **Añade clase/grado a los componentes** de naves (coolers, power plants, quantum drives, shields, radars) con prefijo compacto (ej: `Mil2A Bracer` = Militar, Tamaño 2, Grado A)
-4. **Marca misiones con blueprints** con `[BP]` en el titulo para identificarlas rapidamente
-5. **Marca sustancias ilegales** con `[!]` para avisar antes de transportarlas
-6. **Mejora titulos de hauling** añadiendo la ruta (origen>destino) al titulo del contrato
-7. **Acorta nombres largos** en el HUD de mineria para evitar solapamiento (Hephaestanite → Heph, Inestabilidad → Inest:)
-8. **Completa claves que faltan** extrayendo los textos oficiales directamente del Data.p4k del juego
-9. **Corrige errores** de las fuentes originales (GUIDs nulos, pools faltantes, duplicados)
+4. **Añade tracking type a misiles** (IR/EM/CS) y tamaño a bombas (B3/B5/B10) para saber que contramedida usar
+5. **Marca misiones con blueprints** con `[BP]` en el titulo para identificarlas rapidamente
+6. **Marca sustancias ilegales** con `[!]` para avisar antes de transportarlas
+7. **Mejora titulos de hauling** añadiendo la ruta (origen>destino) al titulo del contrato
+8. **Acorta nombres largos** en el HUD de mineria para evitar solapamiento (Hephaestanite → Heph, Inestabilidad → Inest:)
+9. **Completa claves que faltan** extrayendo los textos oficiales directamente del Data.p4k del juego
+10. **Corrige errores** de las fuentes originales (GUIDs nulos, pools faltantes, duplicados)
 
 ## Fuentes
 
@@ -23,22 +24,26 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 | **Thord82** | Traduccion comunitaria al español. Base principal del proyecto | [github.com/Thord82/Star_citizen_ES](https://github.com/Thord82/Star_citizen_ES/) |
 | **MrKraken / StarStrings** | Blueprints de misiones, clase/grado de componentes, mejoras de hauling y QoL | [github.com/MrKraken/StarStrings](https://github.com/MrKraken/StarStrings) |
 | **ExoAE / ScCompLangPack** | Clase/grado de componentes, blueprints, avisos de sustancias ilegales | [github.com/ExoAE/ScCompLangPack](https://github.com/ExoAE/ScCompLangPack/) |
-| **BeltaKoda / ScCompLangPackRemix** | Prefijos compactos de componentes (referencia) | [github.com/BeltaKoda/ScCompLangPackRemix](https://github.com/BeltaKoda/ScCompLangPackRemix) |
+| **BeltaKoda / ScCompLangPackRemix** | Tracking type de misiles/bombas, prefijos compactos de componentes | [github.com/BeltaKoda/ScCompLangPackRemix](https://github.com/BeltaKoda/ScCompLangPackRemix) |
 | **Data.p4k** | Textos oficiales EN/ES extraidos del propio juego con `extract_p4k.py` | Instalacion local de Star Citizen |
 
 ## Que incluye el global.ini final
 
-| Capa | Descripcion | Claves |
-|---|---|---|
-| Thord82 | Traduccion base al español | ~87.585 |
-| Blueprints | Planos posibles en misiones (traducidos al ES) + correcciones | ~232 |
-| Componentes | Prefijo clase/grado en 368 componentes de naves | 368 |
-| [BP] titulos | Marca `[BP]` en misiones que dan blueprints | 216 |
-| Sustancias ilegales | Marca `[!]` en 8 drogas/sustancias | 8 |
-| HUD mining | Abreviaturas para evitar solapamiento | 2 |
-| Heph + minerales | Hephaestanite acortado + unificacion a (Bruto) | 20 |
-| Hauling titles | Rutas en titulos de transporte de carga | 5 |
-| P4K traducciones | Claves que faltan en Thord82, traducidas | ~874 |
+| # | Capa | Descripcion | Claves | Fuente |
+|---|---|---|---|---|
+| 1 | Traduccion base ES | Traduccion comunitaria completa al español | 87.585 | Thord82 |
+| 2 | Blueprints misiones | Planos posibles en misiones, traducidos al ES + correcciones | 232 | MrKraken + nuestras |
+| 3 | Traducciones p4k | Claves que faltan en Thord82, traducidas del ingles oficial | 874 | Data.p4k CIG |
+| 4 | [BP] en titulos | Marca `[BP]` en misiones que dan blueprints | 216 | ExoAE |
+| 5 | Componentes clase/grado | Prefijo `Mil2A`, `Civ1C`, etc. en componentes de naves | 368 | ExoAE |
+| 6 | Misiles y bombas | Tracking type `IR`/`EM`/`CS` en misiles, tamaño `B#` en bombas | 115 | BeltaKoda |
+| 7 | Sustancias ilegales | Marca `[!]` en drogas (WiDoW, SLAM, Maze, etc.) | 8 | ExoAE |
+| 8 | HUD mining | Abreviaturas para evitar solapamiento (Inest:, Res:) | 2 | MrKraken/ExoAE |
+| 9 | Minerales | Hephaestanite → Heph + unificacion de (Raw)/(Crudo) a (Bruto) | 19 | MrKraken/ExoAE |
+| 10 | Hauling titles | Ruta origen>destino en titulos de transporte de carga | 5 | MrKraken |
+| 11 | Limpieza | Trailing spaces eliminados | 604 | BeltaKoda |
+
+**Total: 87.656 claves**
 
 ## Instalacion
 
@@ -68,18 +73,75 @@ Grado: A (mejor) a D (peor). Tamaño: 0-4.
 
 Ejemplo: `Mil2A Bracer` = Bracer, clase Militar, tamaño 2, grado A.
 
-## Herramienta incluida: extract_p4k.py
+## Formato de misiles y bombas
 
-Script Python que extrae el `global.ini` de cualquier idioma directamente del `Data.p4k` de tu instalacion de Star Citizen.
+Los misiles llevan un prefijo con el tipo de tracking:
+
+| Prefijo | Tracking | Contramedida |
+|---|---|---|
+| `IR` | Infrarrojo | Flares |
+| `EM` | Electromagnetico | Chaff |
+| `CS` | Cross-Section | Sin CM directa |
+
+Las bombas llevan prefijo de tamaño: `B3`, `B5`, `B10`.
+
+Ejemplo: `IR Misil Marksman I` = Marksman tamaño 1, tracking infrarrojo.
+
+## Herramientas incluidas
+
+### rebuild_outputs.py — Generar global.ini
+
+Regenera el `global.ini` completo desde cero aplicando las 11 capas.
+
+```bash
+python rebuild_outputs.py
+```
+
+### extract_p4k.py — Extraer localizacion del Data.p4k
+
+Extrae el `global.ini` de cualquier idioma directamente del `Data.p4k` de tu instalacion.
 
 ```bash
 pip install zstandard
 python extract_p4k.py --list                        # Ver idiomas disponibles
 python extract_p4k.py                               # Extraer ingles
 python extract_p4k.py --lang spanish_(spain)         # Extraer español oficial de CIG
+python extract_p4k.py -o archivo.ini                 # Elegir nombre de salida
+python extract_p4k.py --sc-path "D:/Games/SC/LIVE"   # Ruta manual
+```
+
+### explore_p4k.py — Explorar contenido del Data.p4k
+
+Navega y extrae archivos individuales del Data.p4k.
+
+```bash
+python explore_p4k.py --stats                       # Carpetas de primer nivel
+python explore_p4k.py --search blueprint             # Buscar archivos por nombre
+python explore_p4k.py --extract "Data\Game2.dcb" -o Game2.dcb  # Extraer archivo
+```
+
+### parse_dcb.py — Datamining del Game2.dcb
+
+Explora y exporta datos del DataForge Binary (base de datos central de gameplay).
+
+```bash
+python parse_dcb.py                                 # Resumen general
+python parse_dcb.py --search loot                    # Buscar structs/records
+python parse_dcb.py --struct BlueprintRewards        # Ver propiedades de un struct
+python parse_dcb.py --dump BlueprintPoolRecord -o x.json  # Exportar a JSON
+```
+
+### Herramientas de verificacion
+
+```bash
+python audit_diffs.py                               # Auditar diffs: GUIDs nulos, duplicados, tags rotos
+python fix_diffs.py                                  # Corregir diffs automaticamente
+python verify_blueprints.py                          # Verificar blueprints contra DCB
+python compare_coverage.py                           # Comparar cobertura MrKraken vs DCB pool por pool
+python extract_mission_blueprints.py                 # Extraer cadena mision→pool→blueprint del DCB
 ```
 
 ## Version actual
 
-- **Star Citizen Alpha 4.7.0-hotfix** (build 11545720)
+- **Star Citizen Alpha 4.7.0-LIVE** (build 11545720)
 - Ver [CHANGELOG.md](CHANGELOG.md) para el historial completo
