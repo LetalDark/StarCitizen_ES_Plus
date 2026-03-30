@@ -53,7 +53,7 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 ```
 StarCitizen/
 └── LIVE/
-    ├── data/Localization/english/global.ini
+    ├── data/Localization/spanish_(spain)/global.ini
     └── user.cfg
 ```
 
