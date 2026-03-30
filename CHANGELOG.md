@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.2.2 — 2026-03-30
+
+**Cambios:**
+- Movido tag [BP] al principio del titulo (antes estaba al final)
+- Reduce solapamiento con el precio en misiones con titulo largo
+- Fix: ruta de localizacion corregida a spanish_(spain) en ZIP y README
+
+**Nota:** el solapamiento del precio en algunas misiones (ej: Shubin Mining Rights 175000) es un bug de CIG que muestra el precio sin abreviar. No es corregible desde global.ini.
+
 ## v1.2.1 — 2026-03-30
 
 **Cambios:**

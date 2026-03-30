@@ -32,13 +32,13 @@ def write_ini(path, entries):
 
 
 def apply_bp_titles(global_ini, exo, p4k):
-    """Add [BP] tag to mission titles that award blueprints (from ExoAE)."""
-    bp_tag = " <EM4>[BP]</EM4>"
+    """Add [BP] tag at the start of mission titles that award blueprints (from ExoAE)."""
+    bp_tag = "<EM4>[BP]</EM4> "
     count = 0
     for key in set(exo.keys()) & set(p4k.keys()):
         if "[BP]" in exo[key] and "[BP]" not in p4k[key]:
             if key in global_ini and "[BP]" not in global_ini[key]:
-                global_ini[key] = global_ini[key] + bp_tag
+                global_ini[key] = bp_tag + global_ini[key]
                 count += 1
     return count
 
