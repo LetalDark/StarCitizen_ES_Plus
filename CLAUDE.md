@@ -12,8 +12,8 @@ Localización al español de Star Citizen. Combina la traducción de Thord82 con
 | Blueprints EN (MrKraken) | https://github.com/MrKraken/StarStrings | Inglés con datos técnicos de blueprints |
 | Componentes EN (ExoAE) | https://github.com/ExoAE/ScCompLangPack/ | Clase/grado de componentes + blueprints + QoL tweaks |
 | Componentes EN (BeltaKoda) | https://github.com/BeltaKoda/ScCompLangPackRemix | Prefijos compactos de clase/tamaño/grado en componentes |
-| Stats (scunpacked-data) | https://github.com/StarCitizenWiki/scunpacked-data | JSONs con stats reales de armas, naves, componentes (mismos datos que erkul/spviewer) |
 | Stats testeados in-game | Spreadsheet comunitario (privado) | DPS/Alpha/FR medidos in-game, sin y con crafteo |
+| Stats (scunpacked-data) | https://github.com/StarCitizenWiki/scunpacked-data | Fuente alternativa (--source scunpacked), no se usa por defecto |
 | Data.p4k (CIG) | Instalación local del juego | Textos oficiales EN/ES extraídos con `extract_p4k.py` |
 
 ## Estructura del proyecto
@@ -156,7 +156,8 @@ python inject_weapon_stats.py --dry-run             # Preview sin escribir
 python inject_weapon_stats.py --version 4.7.0-LIVE_11545720  # Versión específica
 ```
 
-Inyecta: armas FPS (329), cargadores (42), armaduras (774).
+Fuentes: Excel testeado (DPS, Alpha, modos) + Data.p4k (mapeo nombres).
+Inyecta: armas FPS (328), cargadores (42), armaduras (774).
 
 Formato de stats inyectados — ver guía: `.claude/guides/weapon-stats-format.md`
 

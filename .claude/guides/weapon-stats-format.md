@@ -1,5 +1,12 @@
 # Formato de stats — inject_weapon_stats.py
 
+## Fuentes de datos (--source tested)
+
+1. **Excel testeado in-game** (tab_Item.csv) — DPS, Alpha, FR, Velocidad, Rango, Peso, Caída de daño, Modos de fuego
+2. **Data.p4k del juego** (global_p4k_en.ini) — Mapeo nombre inglés → className
+
+No se usa scunpacked para --source tested. Scunpacked solo se usa como fuente alternativa con --source scunpacked.
+
 ## Principios
 
 1. Solo inyectar stats que el juego NO muestra
@@ -13,13 +20,13 @@
 9. Vel/Rango/Peso: siempre número normal (metros, m/s, kg)
 10. Sin perdigones en línea de DPS
 
-## Formato armas FPS (--source tested)
+## Formato armas FPS
 
 ### Modo único
 ```
 [Auto] DPS: 182.8 | Alpha: 22 | 875 m/s | 1750m
 3.5 kg | Dmg/Cargador: 990
-Penetración: 0.5m | Caída daño: desde 60m
+Caída daño: desde 60m
 ```
 
 ### Modos seleccionables (P4-AR, R97, Gallant)
@@ -35,7 +42,6 @@ Caída daño: desde 40m
 [Auto] DPS: 173.2 | Alpha: 9 | 1100 m/s | 4400m
 [Hot] DPS: 156.8 | Alpha: 31.5 | 1100 m/s | 4400m
 15 kg | Dmg/Cargador: 1.5K
-Penetración: 0.3m
 ```
 
 ### Charge (Scourge, Zenith, Karna)
@@ -43,7 +49,6 @@ Penetración: 0.3m
 [Semi] DPS: 89.8 | Alpha: 77 | 50 m/s | 200m
 [Full] DPS: 2.1K | Alpha: 6.1K | 2500 m/s | 10000m
 15 kg | Dmg/Cargador: 385
-Penetración: 2.5m
 ```
 
 ### 3 modos (Custodian, Karna)
@@ -52,14 +57,13 @@ Penetración: 2.5m
 [Burst] DPS: 48.8 | Alpha: 39 | 600 m/s | 1200m
 [Full] DPS: 44.6 | Alpha: 171.6 | 600 m/s | 1200m
 2.8 kg | Dmg/Cargador: 780
-Penetración: 0.5m
 ```
 
 ### Beam (Quartz, Ripper)
 ```
 [Beam] DPS: 225 | Alpha: 7.5 | 25m
 2.8 kg | Dmg/Cargador: 1.4K
-Penetración: 0.5m | Caída daño: desde 10m
+Caída daño: desde 10m
 ```
 
 ## Formato cargadores
@@ -72,7 +76,7 @@ Capacidad: 45 | 0.6 kg
 ```
 7 kg | Stun: 60% | Impacto: 35%
 ```
-Insertado antes del flavor text. Stun e Impacto son % de reducción.
+Peso por tier del Excel. Stun e Impacto son % de reducción.
 
 ## Etiquetas de modo
 
@@ -87,19 +91,11 @@ Insertado antes del flavor text. Stun e Impacto son % de reducción.
 | Double | [Doble] |
 | Charge Single, Charge Burst | [Full] |
 | Heat 50% | [Hot] |
-| Combined, Combined R, Combined S (slug) | [Auto] o [Hot] |
+| Combined R | [Auto] |
+| Combined S (slug) | [Hot] |
 
-## Fuentes de datos
+## Datos eliminados
 
-- **--source tested** (recomendada): spreadsheet comunitario con tests in-game. DPS reales medidos.
-- **--source scunpacked**: datos calculados de scunpacked-data. DPS teóricos, a veces incorrectos.
-- Penetración: siempre de scunpacked (Excel no la tiene)
-- Peso: ambas fuentes coinciden
-
-## Datos con problemas
-
-- Penetración > 10m: dato erróneo → se omite
-- Parallax: híbrida proyectil→beam, DPS 210 (proyectil) del Excel
-- Fresnel: heat ramp invierte DPS/Alpha
-- DPS Burst vs Sustained: el spreadsheet diferencia ambos
-- Animus Missile: solo tiene DPS Burst (no Sustained)
+- **Penetración** (MaxPenetrationThickness) — solo venía de scunpacked, eliminada
+- **Pierceability** — no se usa en el juego
+- **Perdigones** en línea de DPS — eliminados para compactar
