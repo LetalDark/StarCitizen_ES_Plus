@@ -13,6 +13,7 @@ Localización al español de Star Citizen. Combina la traducción de Thord82 con
 | Componentes EN (ExoAE) | https://github.com/ExoAE/ScCompLangPack/ | Clase/grado de componentes + blueprints + QoL tweaks |
 | Componentes EN (BeltaKoda) | https://github.com/BeltaKoda/ScCompLangPackRemix | Prefijos compactos de clase/tamaño/grado en componentes |
 | Stats (scunpacked-data) | https://github.com/StarCitizenWiki/scunpacked-data | JSONs con stats reales de armas, naves, componentes (mismos datos que erkul/spviewer) |
+| Stats testeados in-game | Spreadsheet comunitario (privado) | DPS/Alpha/FR medidos in-game, sin y con crafteo |
 | Data.p4k (CIG) | Instalación local del juego | Textos oficiales EN/ES extraídos con `extract_p4k.py` |
 
 ## Estructura del proyecto
@@ -34,11 +35,14 @@ versions/
     │   ├── MrKrakenStarStrings-*.zip   # Zip release de MrKraken
     │   ├── ScCompLangPack_ExoAE.zip    # Zip release de ExoAE
     │   ├── ScCompLangPackRemix_BeltaKoda.zip # Zip release de BeltaKoda
-    │   └── scunpacked/
-    │       ├── fps-items.json          # Stats armas FPS, armaduras, accesorios
-    │       ├── ship-items.json         # Stats armas nave, componentes, misiles
-    │       ├── ships.json              # Stats de naves/vehículos
-    │       └── items_beam/             # JSONs individuales de armas beam (caché)
+    │   ├── scunpacked/
+    │   │   ├── fps-items.json          # Stats armas FPS, armaduras, accesorios
+    │   │   ├── ship-items.json         # Stats armas nave, componentes, misiles
+    │   │   ├── ships.json              # Stats de naves/vehículos
+    │   │   └── items_beam/             # JSONs individuales de armas beam (caché)
+    │   └── tested/                     # Stats testeados in-game (fuente alternativa)
+    │       ├── sin_crafteo/            # 23 pestañas: Item, TTK, Armor, Recoil, etc.
+    │       └── con_crafteo/            # Mismas pestañas con crafteo calidad 1000
     ├── diff/
     │   ├── global_diff.ini             # Blueprints extraídos (EN)
     │   ├── global_diff_es.ini          # Blueprints traducidos (ES)
