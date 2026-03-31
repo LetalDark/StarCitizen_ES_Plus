@@ -6,17 +6,17 @@
 
 **Fuentes de datos:**
 - Tests in-game: spreadsheet comunitario con DPS/Alpha/FR medidos (sin y con crafteo)
-- Data.p4k: nombres en ingles y datos de penetracion extraidos del juego
+- Data.p4k: nombres en inglés extraídos del juego para mapeo de claves
 
 **Armas FPS (329 descripciones):**
-- DPS, Alpha, Velocidad, Rango, Dmg/Cargador, Penetración, Caída de daño, Peso
+- DPS, Alpha, Velocidad, Rango, Dmg/Cargador, Caída de daño, Peso
 - Modos de fuego etiquetados: [Auto] [Semi] [Burst] [Beam] [Full] [Hot] [Slug] [Doble]
 - Armas con heat ramp: Fresnel, Pulse, Prism (modo frío + caliente)
 - Armas con carga: Scourge, Zenith, Karna, Custodian, Devastator, Salvo, Arrowhead
 - Armas con modos seleccionables: P4-AR, R97, Scalpel, Arclight, Gallant, P8-SC
 - Daño combinado: Killshot (Físico + Energía)
 - Valores K para números grandes (2.1K, 95K, 285K)
-- Fuente seleccionable: `--source scunpacked` o `--source tested`
+- Fuente: `--source tested` (default). Pendiente: `--source game` desde archivos del juego
 
 **Cargadores (42 descripciones):**
 - Peso añadido: "Capacidad: 45 | 0.6 kg"
@@ -36,18 +36,19 @@
 
 **Scripts nuevos:**
 - `inject_weapon_stats.py` — inyecta stats en global.ini
-- `patch_beam_stats.py` — parchea DPS de armas beam en scunpacked
+- `patch_beam_stats.py` — parchea DPS de armas beam (fuente alternativa)
 
 **Uso:**
 ```bash
 python inject_weapon_stats.py --source tested    # datos testeados in-game
-python inject_weapon_stats.py --source scunpacked # datos de scunpacked
+python inject_weapon_stats.py --source game       # pendiente: desde archivos del juego
 python inject_weapon_stats.py --dry-run           # preview sin escribir
 ```
 
 **Estadísticas:**
 - Líneas en global.ini: 87.656
 - Armas FPS parcheadas: 328
+- Sin dependencia de scunpacked (solo Excel + Data.p4k)
 - Cargadores parcheados: 42
 - Armaduras parcheadas: 774
 - Nombres corregidos: 10

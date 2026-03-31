@@ -181,13 +181,13 @@ Inyecta stats reales de armas FPS, cargadores y armaduras en el global.ini.
 
 ```bash
 python inject_weapon_stats.py --source tested       # Datos testeados in-game (recomendado)
-python inject_weapon_stats.py --source scunpacked    # Datos de scunpacked
+python inject_weapon_stats.py --source game           # Pendiente: desde archivos del juego
 python inject_weapon_stats.py --dry-run             # Preview sin escribir
 ```
 
-### patch_beam_stats.py — Parchear DPS de armas beam
+### patch_beam_stats.py — Parchear DPS de armas beam (fuente alternativa)
 
-Scunpacked no calcula DPS para armas beam. Este script descarga los JSONs individuales y parchea los agregados.
+Parchea DPS de armas beam en JSONs agregados. Solo necesario para fuentes alternativas.
 
 ```bash
 python patch_beam_stats.py                          # Parchear fps-items.json y ship-items.json

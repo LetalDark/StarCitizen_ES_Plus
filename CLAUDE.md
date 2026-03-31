@@ -13,7 +13,7 @@ Localización al español de Star Citizen. Combina la traducción de Thord82 con
 | Componentes EN (ExoAE) | https://github.com/ExoAE/ScCompLangPack/ | Clase/grado de componentes + blueprints + QoL tweaks |
 | Componentes EN (BeltaKoda) | https://github.com/BeltaKoda/ScCompLangPackRemix | Prefijos compactos de clase/tamaño/grado en componentes |
 | Stats testeados in-game | Spreadsheet comunitario (privado) | DPS/Alpha/FR medidos in-game, sin y con crafteo |
-| Stats (scunpacked-data) | https://github.com/StarCitizenWiki/scunpacked-data | Fuente alternativa (--source scunpacked), no se usa por defecto |
+| Stats (scunpacked-data) | https://github.com/StarCitizenWiki/scunpacked-data | Fuente alternativa desactivada. Pendiente: --source game desde Game2.dcb |
 | Data.p4k (CIG) | Instalación local del juego | Textos oficiales EN/ES extraídos con `extract_p4k.py` |
 
 ## Estructura del proyecto
@@ -151,7 +151,7 @@ Armas sin datos: Parallax, Fresnel (híbridas proyectil→beam, scunpacked no ti
 
 ```bash
 python inject_weapon_stats.py --source tested       # Datos testeados in-game (recomendado)
-python inject_weapon_stats.py --source scunpacked    # Datos de scunpacked
+python inject_weapon_stats.py --source game           # Pendiente: desde archivos del juego
 python inject_weapon_stats.py --dry-run             # Preview sin escribir
 python inject_weapon_stats.py --version 4.7.0-LIVE_11545720  # Versión específica
 ```
