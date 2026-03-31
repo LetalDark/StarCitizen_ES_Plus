@@ -5,11 +5,18 @@ inject_weapon_stats.py — Inject real weapon stats into global.ini descriptions
 Reads fps-items.json from scunpacked and patches the description lines in
 global.ini so they show accurate DPS, alpha, penetration, etc.
 
+Sources:
+  --source scunpacked (default): stats from scunpacked fps-items.json
+  --source tested: stats from tested spreadsheet CSVs (tab_Item.csv),
+                   with only penetration data from scunpacked
+
 Usage:
     python inject_weapon_stats.py [--version 4.7.0-LIVE_11545720] [--dry-run]
+    python inject_weapon_stats.py --source tested [--dry-run]
 """
 
 import argparse
+import csv
 import json
 import os
 import re
@@ -258,7 +265,8 @@ def build_stats_block(item, category):
             is_burst = True
 
     # Sanitize absurd penetration values (data errors in scunpacked)
-    if penetration > 100:
+    # P4-AR: 5000m, Prism: 20m — clearly wrong
+    if penetration > 10:
         penetration = 0
 
     active_dps = build_damage_label(dps_dict, alpha_dict)
@@ -278,16 +286,19 @@ def build_stats_block(item, category):
         lines.append(f"Daño completo: 0-{fmt_num(full_range)}m | Cero daño: {fmt_num(zero_range)}m")
 
     elif category == "shotgun":
-        if len(active_dps) == 1:
-            lines.append(f"DPS: {fmt_num(dps_total)}{burst_tag} | Alpha: {fmt_num(alpha_total)} | {pellets} perdigones")
-        else:
+        if len(active_dps) >= 2:
             parts = [f"{fmt_num(v)} {k}" for k, v in active_dps.items()]
             lines.append(f"DPS: {fmt_num(dps_total)}{burst_tag} ({' + '.join(parts)}) | Alpha: {fmt_num(alpha_total)} | {pellets} perdigones")
+        else:
+            lines.append(f"DPS: {fmt_num(dps_total)}{burst_tag} | Alpha: {fmt_num(alpha_total)} | {pellets} perdigones")
         lines.append(f"Dmg/Cargador: {fmt_num(max_per_mag)} | Vel. Proyectil: {fmt_num(speed)} m/s")
-        pen_line = f"Penetración: {fmt_num(penetration)}m"
+        extras = []
+        if 0 < penetration <= 10:
+            extras.append(f"Penetración: {fmt_num(penetration)}m")
         if drop_dist > 0:
-            pen_line += f" | Caída daño: desde {fmt_num(drop_dist)}m"
-        lines.append(pen_line)
+            extras.append(f"Caída daño: desde {fmt_num(drop_dist)}m")
+        if extras:
+            lines.append(" | ".join(extras))
 
     elif category == "ballistic":
         lines.append(f"DPS: {fmt_num(dps_total)}{burst_tag} | Alpha: {fmt_num(alpha_total)}")
@@ -407,44 +418,421 @@ def rebuild_description(header_str, stats_block, flavor_str):
 
 
 # ---------------------------------------------------------------------------
+# Tested source: load stats from spreadsheet CSV
+# ---------------------------------------------------------------------------
+
+# Category headers in the CSV to skip
+EXCEL_CATEGORY_HEADERS = {
+    "ASSAULT RIFLE", "LMG", "PISTOL", "SHOTGUN", "SMG", "SNIPER RIFLE",
+    "HEAVY / MOUNTED", "GRENADE", "GADGET", "GRENADE LAUNCHER", "RAILGUN",
+    "MOUNTED GUN", "ROCKET LAUNCHER",
+}
+
+
+def _parse_csv_float(val):
+    """Parse a CSV numeric value, handling commas and empty strings."""
+    if not val or not val.strip():
+        return 0.0
+    return float(val.strip().replace(",", ""))
+
+
+def _build_scunpacked_name_map(fps_items):
+    """
+    Build a mapping from simplified display name -> base className.
+
+    From scunpacked fps-items.json, extract WeaponPersonal items,
+    strip quoted skin names from stdItem.Name, normalize nbsp,
+    and pick the shortest className (base variant) for each name.
+    """
+    from collections import defaultdict
+    name_to_cns = defaultdict(list)
+
+    for item in fps_items:
+        if item.get("type") != "WeaponPersonal":
+            continue
+        cn = item.get("className", "")
+        name = item.get("stdItem", {}).get("Name", "")
+        if not name or "PLACEHOLDER" in name:
+            continue
+        # Remove quoted skin suffix: "Rager", "Boneyard", etc.
+        simplified = re.sub(r'"[^"]*"\s*', '', name).strip()
+        # Normalize non-breaking spaces
+        simplified = simplified.replace('\xa0', ' ')
+        name_to_cns[simplified.lower()].append(cn)
+
+    # For each name, pick the shortest className (base variant without skin suffix)
+    name_map = {}
+    for sname, cns in name_to_cns.items():
+        cns.sort(key=len)
+        name_map[sname] = cns[0]
+
+    return name_map
+
+
+def _build_penetration_map(fps_items):
+    """Build className -> MaxPenetrationThickness from scunpacked data."""
+    pen_map = {}
+    for item in fps_items:
+        if item.get("type") != "WeaponPersonal":
+            continue
+        cn = item.get("className", "").lower()
+        ammo = item.get("stdItem", {}).get("Ammunition", {})
+        pen = ammo.get("MaxPenetrationThickness", 0) or 0
+        if pen > 100:
+            pen = 0  # Sanitize absurd values
+        if pen > 0:
+            pen_map[cn] = pen
+    return pen_map
+
+
+def _match_excel_name(excel_name, name_map):
+    """
+    Try to match an Excel weapon name to a scunpacked className.
+
+    First tries exact match, then tries matching with common extra words
+    removed (Energy, Laser, Energy Assault, etc.).
+    """
+    key = excel_name.lower()
+
+    # Collect all matches (exact + variants), pick shortest className
+    candidates = []
+    if key in name_map:
+        candidates.append(name_map[key])
+
+    # Try adding common prefixes/infixes that scunpacked uses
+    # e.g., "Fresnel LMG" -> "Fresnel Energy LMG"
+    #        "Prism Shotgun" -> "Prism Laser Shotgun"
+    #        "Parallax Rifle" -> "Parallax Energy Assault Rifle"
+    #        "Pulse Pistol" -> "Pulse Laser Pistol"
+    variants = []
+    words = key.split()
+    if len(words) >= 2:
+        base = words[0]
+        weapon_type = words[-1]
+        # Try "Base Energy Type", "Base Laser Type", "Base Energy Assault Type"
+        for infix in ["energy", "laser", "energy assault"]:
+            variant = f"{base} {infix} {weapon_type}"
+            variants.append(variant)
+        # Try "Base Laser Type" for compound names like "Pulse Pistol"
+        # Also try just the first word + type with all known infixes
+    for v in variants:
+        if v in name_map:
+            candidates.append(name_map[v])
+
+    if not candidates:
+        return None
+    # Pick shortest className (base variant)
+    candidates.sort(key=len)
+    return candidates[0]
+
+
+def classify_weapon_tested(fire_mode, pellets, alpha, dps_sustained, dps_burst, drop_dist):
+    """
+    Classify a weapon from tested/Excel data.
+
+    Returns: 'beam', 'shotgun', 'ballistic', 'energy', 'launcher', or None.
+    """
+    mode_lower = fire_mode.lower()
+
+    if "beam" in mode_lower:
+        return "beam"
+
+    if "charge" in mode_lower and alpha > 100:
+        return "launcher"
+
+    if pellets > 1:
+        return "shotgun"
+
+    if drop_dist > 0:
+        return "ballistic"
+
+    return "energy"
+
+
+def build_stats_block_tested(item, category):
+    """
+    Build stats block for tested source data.
+
+    Uses the same build_stats_block function but for beam weapons,
+    produces a simpler format since Excel doesn't have FullDamageRange/ZeroDamageRange.
+    """
+    if category == "beam":
+        # Beam weapons from Excel: simple DPS | Alpha format
+        si = item.get("stdItem", {})
+        weapon = si.get("Weapon", {})
+        damage = weapon.get("Damage", {})
+        ammo = si.get("Ammunition", {})
+
+        dps_total = damage.get("DpsTotal") or 0
+        alpha_total = damage.get("AlphaTotal") or 0
+        max_per_mag = damage.get("MaxPerMag") or 0
+        speed = ammo.get("Speed", 0) or 0
+        penetration = ammo.get("MaxPenetrationThickness", 0) or 0
+        drop_dist = get_damage_drop_distance(ammo)
+
+        lines = []
+        lines.append(f"DPS: {fmt_num(dps_total)} | Alpha: {fmt_num(alpha_total)}")
+
+        extras = []
+        if max_per_mag > 0:
+            extras.append(f"Dmg/Cargador: {fmt_num(max_per_mag)}")
+        if speed > 0:
+            extras.append(f"Vel. Proyectil: {fmt_num(speed)} m/s")
+        if extras:
+            lines.append(" | ".join(extras))
+
+        pen_extras = []
+        if penetration > 0:
+            pen_extras.append(f"Penetración: {fmt_num(penetration)}m")
+        if drop_dist > 0:
+            pen_extras.append(f"Caída daño: desde {fmt_num(drop_dist)}m")
+        if pen_extras:
+            lines.append(" | ".join(pen_extras))
+
+        return "\\n".join(lines)
+    else:
+        # Non-beam: use standard build_stats_block
+        return build_stats_block(item, category)
+
+
+def load_tested_weapons(version_dir, fps_items):
+    """
+    Load weapon stats from tested spreadsheet CSV.
+
+    Returns: dict of className -> (item_dict, category, stats_block)
+    """
+    csv_path = version_dir / "sources" / "tested" / "sin_crafteo" / "tab_Item.csv"
+    if not csv_path.is_file():
+        print(f"ERROR: {csv_path} not found.", file=sys.stderr)
+        sys.exit(1)
+
+    print(f"CSV: {csv_path}")
+
+    # Build name mapping and penetration data from scunpacked
+    name_map = _build_scunpacked_name_map(fps_items)
+    pen_map = _build_penetration_map(fps_items)
+
+    # Parse CSV: group rows by weapon (sub-rows have empty col 0)
+    raw_weapons = []  # list of (name, [(row_data), ...])
+    current_name = None
+    current_rows = []
+
+    with open(csv_path, "r", encoding="utf-8") as f:
+        reader = csv.reader(f)
+        next(reader)  # skip header
+
+        for row in reader:
+            if len(row) < 20:
+                continue
+
+            name = row[0].strip().replace('\xa0', ' ')
+
+            if name:
+                # Check if it's a category header
+                if name in EXCEL_CATEGORY_HEADERS:
+                    # Save previous weapon if any
+                    if current_name and current_rows:
+                        raw_weapons.append((current_name, current_rows))
+                    current_name = None
+                    current_rows = []
+                    continue
+
+                # Check if it looks like a sub-header row (all 1's or empty DPS)
+                dps_val = row[19].strip() if len(row) > 19 else ''
+                fire_mode = row[7].strip() if len(row) > 7 else ''
+                if not fire_mode or dps_val in ('', '1'):
+                    # Sub-header or separator row
+                    if current_name and current_rows:
+                        raw_weapons.append((current_name, current_rows))
+                    current_name = None
+                    current_rows = []
+                    continue
+
+                # New weapon
+                if current_name and current_rows:
+                    raw_weapons.append((current_name, current_rows))
+                current_name = name
+                current_rows = [row]
+            else:
+                # Sub-row (alternate fire mode)
+                if current_name:
+                    current_rows.append(row)
+
+        # Don't forget last weapon
+        if current_name and current_rows:
+            raw_weapons.append((current_name, current_rows))
+
+    # Process each weapon: select best fire mode
+    weapons = {}
+    skipped_zero_dps = 0
+    skipped_no_match = 0
+    matched = 0
+
+    for weapon_name, rows in raw_weapons:
+        # Select the best row:
+        # 1. If a "Combined" mode exists, use that
+        # 2. Otherwise, use the mode with highest DPS Sustained
+        best_row = None
+        best_dps = -1
+
+        for row in rows:
+            fire_mode = row[7].strip() if len(row) > 7 else ''
+            dps_s_str = row[19].strip() if len(row) > 19 else ''
+
+            if not dps_s_str:
+                continue
+
+            try:
+                dps_s = _parse_csv_float(dps_s_str)
+            except ValueError:
+                continue
+
+            if "combined" in fire_mode.lower():
+                best_row = row
+                best_dps = dps_s
+                break  # Combined always wins
+
+            if dps_s > best_dps:
+                best_dps = dps_s
+                best_row = row
+
+        if best_row is None or best_dps <= 0:
+            skipped_zero_dps += 1
+            continue
+
+        # Extract stats from best row
+        fire_mode = best_row[7].strip()
+        speed = _parse_csv_float(best_row[8]) if len(best_row) > 8 else 0
+        range_m = _parse_csv_float(best_row[10]) if len(best_row) > 10 else 0
+        pellets = int(_parse_csv_float(best_row[12])) if len(best_row) > 12 else 1
+        if pellets < 1:
+            pellets = 1
+        dmg_pellet = _parse_csv_float(best_row[14]) if len(best_row) > 14 else 0
+        dmg_shot = _parse_csv_float(best_row[15]) if len(best_row) > 15 else 0
+        alpha = _parse_csv_float(best_row[16]) if len(best_row) > 16 else 0
+        fire_rate = _parse_csv_float(best_row[18]) if len(best_row) > 18 else 0
+        dps_sustained = _parse_csv_float(best_row[19]) if len(best_row) > 19 else 0
+        dps_burst = _parse_csv_float(best_row[20]) if len(best_row) > 20 else 0
+        drop_dist = _parse_csv_float(best_row[26]) if len(best_row) > 26 else 0
+        drop_pm = _parse_csv_float(best_row[27]) if len(best_row) > 27 else 0
+        drop_min = _parse_csv_float(best_row[28]) if len(best_row) > 28 else 0
+        dmg_mag = _parse_csv_float(best_row[98]) if len(best_row) > 98 else 0
+
+        # Match to className
+        class_name = _match_excel_name(weapon_name, name_map)
+        if not class_name:
+            skipped_no_match += 1
+            print(f"  WARNING: No className match for '{weapon_name}'")
+            continue
+
+        class_name_lower = class_name.lower()
+
+        # Get penetration from scunpacked
+        penetration = pen_map.get(class_name_lower, 0)
+        # Also check base className (without skin suffix)
+        if penetration == 0:
+            for pcn, pval in pen_map.items():
+                if class_name_lower == pcn or class_name_lower.startswith(pcn + "_"):
+                    penetration = pval
+                    break
+                if pcn.startswith(class_name_lower):
+                    penetration = pval
+                    break
+
+        # Classify weapon
+        category = classify_weapon_tested(fire_mode, pellets, alpha, dps_sustained, dps_burst, drop_dist)
+        if category is None:
+            skipped_zero_dps += 1
+            continue
+
+        # Detect burst
+        is_burst = "burst" in fire_mode.lower()
+
+        # Build item dict in scunpacked-compatible format
+        item = {
+            "className": class_name,
+            "stdItem": {
+                "Weapon": {
+                    "Damage": {
+                        "DpsTotal": dps_sustained,
+                        "AlphaTotal": alpha,
+                        "MaxPerMag": dmg_mag,
+                        "Dps": {},   # Not used for tested — active_dps won't show type breakdown
+                        "Alpha": {},
+                    },
+                    "Modes": [{"FireType": "burst" if is_burst else fire_mode.lower(), "PelletsPerShot": pellets}],
+                    "FireMode": fire_mode,
+                },
+                "Ammunition": {
+                    "Speed": speed,
+                    "Range": range_m,
+                    "MaxPenetrationThickness": penetration,
+                    "DamageDropMinDistance": {"Physical": drop_dist} if drop_dist > 0 else {},
+                    "DamageDropPerMeter": {"Physical": drop_pm} if drop_pm > 0 else {},
+                    "DamageDropMinDamage": {"Physical": drop_min} if drop_min > 0 else {},
+                },
+            },
+        }
+
+        # Build stats block
+        stats_block = build_stats_block_tested(item, category)
+        if stats_block is None:
+            continue
+
+        # Store for ALL skins of this base weapon
+        # The base className maps to the item_Desc key
+        weapons[class_name_lower] = (item, category, stats_block)
+
+        # Also map all skin variants
+        for sname, cn in name_map.items():
+            cn_lower = cn.lower()
+            if cn_lower.startswith(class_name_lower) and cn_lower != class_name_lower:
+                # Skin variant — copy same stats
+                skin_item = dict(item)
+                skin_item["className"] = cn
+                weapons[cn_lower] = (skin_item, category, stats_block)
+
+        matched += 1
+
+    # Also map all skins from scunpacked that share a base className
+    # We need to find ALL classNames in fps_items that share the same base
+    base_classes = {}  # base_cn_lower -> stats tuple
+    for cn_lower, val in list(weapons.items()):
+        base_classes[cn_lower] = val
+
+    for fps_item in fps_items:
+        if fps_item.get("type") != "WeaponPersonal":
+            continue
+        cn = fps_item.get("className", "").lower()
+        if cn in weapons:
+            continue
+        # Check if any base className is a prefix
+        for base_cn, val in base_classes.items():
+            if cn.startswith(base_cn + "_") or cn == base_cn:
+                skin_item = dict(val[0])
+                skin_item["className"] = fps_item.get("className", "")
+                weapons[cn] = (skin_item, val[1], val[2])
+                break
+
+    print(f"Weapons matched from CSV: {matched}")
+    print(f"  Total entries (incl. skins): {len(weapons)}")
+    print(f"  Skipped (zero DPS): {skipped_zero_dps}")
+    print(f"  Skipped (no className match): {skipped_no_match}")
+    print()
+
+    return weapons
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
-def main():
-    parser = argparse.ArgumentParser(description="Inject real weapon stats into global.ini")
-    parser.add_argument("--version", type=str, default=None,
-                        help="Version directory name (default: auto-detect latest)")
-    parser.add_argument("--dry-run", action="store_true",
-                        help="Show changes without writing")
-    args = parser.parse_args()
+def load_scunpacked_weapons(fps_items):
+    """
+    Load weapon stats from scunpacked fps-items.json (original behavior).
 
-    # Resolve version
-    version = args.version or detect_latest_version()
-    if not version:
-        print("ERROR: No version directory found.", file=sys.stderr)
-        sys.exit(1)
-
-    version_dir = VERSIONS_DIR / version
-    fps_json_path = version_dir / "sources" / "scunpacked" / "fps-items.json"
-    global_ini_path = version_dir / "output" / "global.ini"
-
-    if not fps_json_path.is_file():
-        print(f"ERROR: {fps_json_path} not found.", file=sys.stderr)
-        sys.exit(1)
-    if not global_ini_path.is_file():
-        print(f"ERROR: {global_ini_path} not found.", file=sys.stderr)
-        sys.exit(1)
-
-    print(f"Version: {version}")
-    print(f"FPS JSON: {fps_json_path}")
-    print(f"global.ini: {global_ini_path}")
-    print()
-
-    # Load FPS items
-    with open(fps_json_path, "r", encoding="utf-8") as f:
-        fps_items = json.load(f)
-
-    # Filter to WeaponPersonal items with stats
+    Returns: dict of className -> (item_dict, category, stats_block)
+    """
     weapons = {}
     skipped_no_data = 0
     skipped_zero_dps = 0
@@ -468,10 +856,8 @@ def main():
         if override:
             category = override["category"]
             if category == "custom":
-                # Direct stats line, no calculation needed
                 stats_block = override["stats_line"]
             else:
-                # Apply manual override to the item's data so build_stats_block works
                 if not weapon:
                     weapon = {"Damage": {}, "Modes": []}
                     si["Weapon"] = weapon
@@ -499,12 +885,10 @@ def main():
             dps_total = damage.get("DpsTotal") or 0
             has_beam = "BeamData" in si
 
-            # Skip zero-DPS non-beam items (gadgets, tools, etc.)
             if dps_total <= 0 and not has_beam:
                 skipped_zero_dps += 1
                 continue
 
-            # Beam weapons with DPS=0 and no useful beam data — skip
             if has_beam and dps_total <= 0:
                 beam = si.get("BeamData", {})
                 if not beam.get("FullDamageRange") and not beam.get("ZeroDamageRange"):
@@ -529,6 +913,52 @@ def main():
     print(f"  Skipped (zero DPS / non-combat): {skipped_zero_dps}")
     print(f"  Skipped (bad penetration data): {skipped_penetration}")
     print()
+
+    return weapons
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Inject real weapon stats into global.ini")
+    parser.add_argument("--version", type=str, default=None,
+                        help="Version directory name (default: auto-detect latest)")
+    parser.add_argument("--dry-run", action="store_true",
+                        help="Show changes without writing")
+    parser.add_argument("--source", choices=["scunpacked", "tested"], default="scunpacked",
+                        help="Data source: scunpacked (default) or tested (spreadsheet CSV)")
+    args = parser.parse_args()
+
+    # Resolve version
+    version = args.version or detect_latest_version()
+    if not version:
+        print("ERROR: No version directory found.", file=sys.stderr)
+        sys.exit(1)
+
+    version_dir = VERSIONS_DIR / version
+    fps_json_path = version_dir / "sources" / "scunpacked" / "fps-items.json"
+    global_ini_path = version_dir / "output" / "global.ini"
+
+    if not fps_json_path.is_file():
+        print(f"ERROR: {fps_json_path} not found.", file=sys.stderr)
+        sys.exit(1)
+    if not global_ini_path.is_file():
+        print(f"ERROR: {global_ini_path} not found.", file=sys.stderr)
+        sys.exit(1)
+
+    print(f"Version: {version}")
+    print(f"Source: {args.source}")
+    print(f"FPS JSON: {fps_json_path}")
+    print(f"global.ini: {global_ini_path}")
+    print()
+
+    # Load FPS items (always needed — for scunpacked stats or for name/penetration mapping)
+    with open(fps_json_path, "r", encoding="utf-8") as f:
+        fps_items = json.load(f)
+
+    # Load weapons based on source
+    if args.source == "tested":
+        weapons = load_tested_weapons(version_dir, fps_items)
+    else:
+        weapons = load_scunpacked_weapons(fps_items)
 
     # Load global.ini (UTF-8 with BOM)
     with open(global_ini_path, "r", encoding="utf-8-sig") as f:
