@@ -607,26 +607,32 @@ def build_stats_block_tested(item, category):
     lines = []
 
     if all_modes and len(all_modes) >= 1:
-        # Multi-mode or labeled single mode
         for m in all_modes:
             label = _fire_mode_label(m["mode"])
             if label is None:
                 continue
-            lines.append(f"{label}: DPS: {fmt_num(m['dps_sus'])} | Alpha: {fmt_num(m['alpha'])}")
+            m_speed = m.get("speed", 0) or 0
+            m_range = m.get("range", 0) or 0
+            parts = [f"{label}: DPS: {fmt_num(m['dps_sus'])} | Alpha: {fmt_num(m['alpha'])}"]
+            if m_speed > 0:
+                parts.append(f"{fmt_num(m_speed)} m/s")
+            if m_range > 0:
+                parts.append(f"{fmt_num(m_range)}m")
+            lines.append(" | ".join(parts))
     else:
-        # Fallback: single mode from primary data
         fire_mode = weapon.get("FireMode", "")
-        label = _fire_mode_label(fire_mode) or "Normal"
-        lines.append(f"{label}: DPS: {fmt_num(dps_total)} | Alpha: {fmt_num(alpha_total)}")
+        label = _fire_mode_label(fire_mode) or "Auto"
+        parts = [f"{label}: DPS: {fmt_num(dps_total)} | Alpha: {fmt_num(alpha_total)}"]
+        if speed > 0:
+            parts.append(f"{fmt_num(speed)} m/s")
+        ammo_range = ammo.get("Range", 0) or 0
+        if ammo_range > 0:
+            parts.append(f"{fmt_num(ammo_range)}m")
+        lines.append(" | ".join(parts))
 
-    # Shared stats: Dmg/Cargador | Vel. Proyectil
-    extras2 = []
+    # Shared stats: Dmg/Cargador
     if max_per_mag > 0:
-        extras2.append(f"Dmg/Cargador: {fmt_num(max_per_mag)}")
-    if speed > 0:
-        extras2.append(f"Vel. Proyectil: {fmt_num(speed)} m/s")
-    if extras2:
-        lines.append(" | ".join(extras2))
+        lines.append(f"Dmg/Cargador: {fmt_num(max_per_mag)}")
 
     # Shared stats: Penetración | Caída daño
     extras3 = []
@@ -735,7 +741,9 @@ def load_tested_weapons(version_dir, fps_items):
             pel = int(_parse_csv_float(row[12])) if len(row) > 12 and row[12].strip() else 1
             if pel < 1:
                 pel = 1
-            parsed_modes.append({"row": row, "mode": fm, "dps_sus": dps_s, "dps_burst": dps_b, "alpha": a, "pellets": pel})
+            m_speed = _parse_csv_float(row[8]) if len(row) > 8 else 0
+            m_range = _parse_csv_float(row[10]) if len(row) > 10 else 0
+            parsed_modes.append({"row": row, "mode": fm, "dps_sus": dps_s, "dps_burst": dps_b, "alpha": a, "pellets": pel, "speed": m_speed, "range": m_range})
 
         if not parsed_modes:
             skipped_zero_dps += 1
