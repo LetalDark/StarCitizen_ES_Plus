@@ -86,7 +86,6 @@ OWN_STATS_PREFIXES = (
     "Alpha:",
     "Dmg/Cargador:",
     "Vel. Proyectil:",
-    "Penetración:",
     "Daño completo:",
     "Caída daño:",
     "Cero daño:",
@@ -107,14 +106,14 @@ MANUAL_OVERRIDES = {
     # Parallax: hybrid projectile(210 DPS)->beam(260 DPS)
     "volt_rifle_energy_01": {
         "category": "custom",
-        "stats_line": "DPS: 210-260 | Alpha: 21\\nDmg/Cargador: 1680 | Vel. Proyectil: 600 m/s\\nPenetración: 0.5m",
+        "stats_line": "DPS: 210-260 | Alpha: 21\\nDmg/Cargador: 1680 | Vel. Proyectil: 600 m/s",
     },
     # Fresnel: sequence x3 barrels, heat ramp (RPM baja, alpha sube)
     "volt_lmg_energy_01": {
         "category": "energy",
         "DpsTotal": 82.5, "AlphaTotal": 9,
         "Dps": {"Physical": 0, "Energy": 82.5, "Distortion": 0},
-        "MaxPerMag": 1485, "Speed": 1100, "Penetration": 0.3,
+        "MaxPerMag": 1485, "Speed": 1100,
     },
     # Prism: heat ramp, 200-450 rpm, 5.75 dmg/shot
     "volt_shotgun_energy_01": {
@@ -126,7 +125,7 @@ MANUAL_OVERRIDES = {
         "category": "ballistic",
         "DpsTotal": 36, "AlphaTotal": 36,
         "Dps": {"Physical": 36, "Energy": 0, "Distortion": 0},
-        "MaxPerMag": 432, "Speed": 550, "Penetration": 0.5,
+        "MaxPerMag": 432, "Speed": 550,
         "DamageDropDist": 10,
     },
 }
@@ -660,9 +659,6 @@ def build_stats_block_tested(item, category):
     alpha_total = damage.get("AlphaTotal") or 0
     max_per_mag = damage.get("MaxPerMag") or 0
     speed = ammo.get("Speed", 0) or 0
-    penetration = ammo.get("MaxPenetrationThickness", 0) or 0
-    if penetration > 10:
-        penetration = 0
     drop_dist = get_damage_drop_distance(ammo)
 
     # Get all modes from item
@@ -704,19 +700,14 @@ def build_stats_block_tested(item, category):
     if mass_parts:
         lines.append(" | ".join(mass_parts))
 
-    # Shared stats: Penetración | Caída daño
-    extras3 = []
-    if 0 < penetration <= 10:
-        extras3.append(f"Penetración: {fmt_num(penetration)}m")
+    # Shared stats: Caída daño
     if drop_dist > 0:
-        extras3.append(f"Caída daño: desde {fmt_num(drop_dist)}m")
-    if extras3:
-        lines.append(" | ".join(extras3))
+        lines.append(f"Caída daño: desde {fmt_num(drop_dist)}m")
 
     return "\\n".join(lines)
 
 
-def load_tested_weapons(version_dir, global_ini_path, fps_items=None):
+def load_tested_weapons(version_dir, global_ini_path):
     """
     Load weapon stats from tested spreadsheet CSV.
 
@@ -738,8 +729,7 @@ def load_tested_weapons(version_dir, global_ini_path, fps_items=None):
     # Build name mapping from English game files (global_p4k_en.ini)
     name_map = _build_name_map_from_ini(version_dir)
 
-    # Build penetration map from scunpacked if available, else empty
-    pen_map = _build_penetration_map(fps_items) if fps_items else {}
+    # Penetration removed — only came from scunpacked, not from game files or Excel
 
     # Parse CSV: group rows by weapon (sub-rows have empty col 0)
     raw_weapons = []  # list of (name, [(row_data), ...])
@@ -923,18 +913,6 @@ def load_tested_weapons(version_dir, global_ini_path, fps_items=None):
 
         class_name_lower = class_name.lower()
 
-        # Get penetration from scunpacked
-        penetration = pen_map.get(class_name_lower, 0)
-        # Also check base className (without skin suffix)
-        if penetration == 0:
-            for pcn, pval in pen_map.items():
-                if class_name_lower == pcn or class_name_lower.startswith(pcn + "_"):
-                    penetration = pval
-                    break
-                if pcn.startswith(class_name_lower):
-                    penetration = pval
-                    break
-
         # Classify weapon
         category = classify_weapon_tested(fire_mode, pellets, alpha, dps_sustained, dps_burst, drop_dist)
         if category is None:
@@ -991,7 +969,6 @@ def load_tested_weapons(version_dir, global_ini_path, fps_items=None):
                 "Ammunition": {
                     "Speed": speed,
                     "Range": range_m,
-                    "MaxPenetrationThickness": penetration,
                     "DamageDropMinDistance": {"Physical": drop_dist} if drop_dist > 0 else {},
                     "DamageDropPerMeter": {"Physical": drop_pm} if drop_pm > 0 else {},
                     "DamageDropMinDamage": {"Physical": drop_min} if drop_min > 0 else {},
@@ -1025,32 +1002,17 @@ def load_tested_weapons(version_dir, global_ini_path, fps_items=None):
     for cn_lower, val in list(weapons.items()):
         base_classes[cn_lower] = val
 
-    if fps_items:
-        for fps_item in fps_items:
-            if fps_item.get("type") != "WeaponPersonal":
-                continue
-            cn = fps_item.get("className", "").lower()
-            if cn in weapons:
-                continue
-            # Check if any base className is a prefix
-            for base_cn, val in base_classes.items():
-                if cn.startswith(base_cn + "_") or cn == base_cn:
-                    skin_item = dict(val[0])
-                    skin_item["className"] = fps_item.get("className", "")
-                    weapons[cn] = (skin_item, val[1], val[2])
-                    break
-    else:
-        # Without fps_items, map skin variants from name_map
-        for sname, cn in name_map.items():
-            cn_lower = cn.lower()
-            if cn_lower in weapons:
-                continue
-            for base_cn, val in base_classes.items():
-                if cn_lower.startswith(base_cn + "_") or cn_lower.startswith(base_cn):
-                    skin_item = dict(val[0])
-                    skin_item["className"] = cn
-                    weapons[cn_lower] = (skin_item, val[1], val[2])
-                    break
+    # Map skin variants from name_map (built from game files)
+    for sname, cn in name_map.items():
+        cn_lower = cn.lower()
+        if cn_lower in weapons:
+            continue
+        for base_cn, val in base_classes.items():
+            if cn_lower.startswith(base_cn + "_") or cn_lower.startswith(base_cn):
+                skin_item = dict(val[0])
+                skin_item["className"] = cn
+                weapons[cn_lower] = (skin_item, val[1], val[2])
+                break
 
     print(f"Weapons matched from CSV: {matched}")
     print(f"  Total entries (incl. skins): {len(weapons)}")
@@ -1179,34 +1141,23 @@ def main():
         print(f"ERROR: {global_ini_path} not found.", file=sys.stderr)
         sys.exit(1)
 
-    # fps-items.json is required for scunpacked, optional for tested
+    print(f"Version: {version}")
+    print(f"Source: {args.source}")
+    print(f"global.ini: {global_ini_path}")
+    print()
+
+    # Load weapons based on source
     fps_items = None
-    if args.source == "scunpacked":
+    if args.source == "tested":
+        weapons = load_tested_weapons(version_dir, global_ini_path)
+    else:
+        # scunpacked source requires fps-items.json
         if not fps_json_path.is_file():
             print(f"ERROR: {fps_json_path} not found.", file=sys.stderr)
             sys.exit(1)
         with open(fps_json_path, "r", encoding="utf-8") as f:
             fps_items = json.load(f)
-    else:
-        # tested: load fps-items.json if available (for penetration data)
-        if fps_json_path.is_file():
-            with open(fps_json_path, "r", encoding="utf-8") as f:
-                fps_items = json.load(f)
-            print(f"FPS JSON: {fps_json_path} (optional, loaded for penetration data)")
-        else:
-            print(f"FPS JSON: not found (penetration data will be omitted)")
-
-    print(f"Version: {version}")
-    print(f"Source: {args.source}")
-    if fps_items and args.source == "scunpacked":
         print(f"FPS JSON: {fps_json_path}")
-    print(f"global.ini: {global_ini_path}")
-    print()
-
-    # Load weapons based on source
-    if args.source == "tested":
-        weapons = load_tested_weapons(version_dir, global_ini_path, fps_items)
-    else:
         weapons = load_scunpacked_weapons(fps_items)
 
     # Load global.ini (UTF-8 with BOM)
@@ -1311,15 +1262,6 @@ def main():
                         except ValueError:
                             pass
 
-            # Also build from scunpacked for fallback (only if available)
-            if fps_items:
-                for fps_item in fps_items:
-                    si = fps_item.get("stdItem", {})
-                    if si.get("Type", "").startswith("WeaponAttachment.Magazine"):
-                        cn = fps_item.get("className", "").lower()
-                        m = si.get("Mass", 0)
-                        if cn and m and cn not in mag_mass:
-                            mag_mass[cn] = m
 
             mag_pattern = re.compile(r"^item_Desc(.+_mag[^=]*)=", re.IGNORECASE)
             for i, line in enumerate(modified_lines):
@@ -1364,20 +1306,7 @@ def main():
         "10": {"stun": 15, "impact": 0, "mass_by_slot": {"Undersuit": 1}},    # Undersuit
     }
 
-    # Build mass map from scunpacked: global.ini key -> mass
-    # Try matching with and without leading underscore
-    armor_mass_map = {}
-    if fps_items:
-        for fps_item in fps_items:
-            if not fps_item.get("type", "").startswith("Char_Armor_"):
-                continue
-            si = fps_item.get("stdItem", {})
-            mass = si.get("Mass", 0) or 0
-            if mass <= 0:
-                continue
-            cn = fps_item.get("className", "").lower()
-            armor_mass_map[cn] = mass
-            armor_mass_map["_" + cn] = mass  # global.ini uses leading underscore
+    # Armor mass from tier-based data (no scunpacked dependency)
 
     reduction_pattern = re.compile(r"[Rr]educci[oó]n de da[nñ]os?:\s*(\d+)%")
     for i, line in enumerate(modified_lines):
@@ -1402,20 +1331,9 @@ def main():
         if not tier:
             continue
 
-        mass = armor_mass_map.get(key_cn, 0)
-        # Fuzzy match: normalize both by removing numbers and comparing word sets
-        if mass <= 0:
-            # Strip leading underscore, numbers, and split into word set
-            key_words = set(re.sub(r'[\d_]+', ' ', key_cn.lstrip('_')).split())
-            for acn, amass in armor_mass_map.items():
-                acn_words = set(re.sub(r'[\d_]+', ' ', acn.lstrip('_')).split())
-                # Match if all significant words from the key are in the scunpacked name
-                if key_words and key_words.issubset(acn_words):
-                    mass = amass
-                    break
-
-        # Tier-based mass fallback: detect slot from className
-        if mass <= 0 and "mass_by_slot" in tier:
+        # Tier-based mass: detect slot from className
+        mass = 0
+        if "mass_by_slot" in tier:
             cn_lower = key_cn.lower().lstrip('_')
             slot = None
             if "core" in cn_lower or "torso" in cn_lower:
