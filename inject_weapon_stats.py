@@ -144,6 +144,26 @@ def fmt_num(v):
     return str(int(v))
 
 
+def fmt_k(v):
+    """Format a number with K suffix for values >= 1000. For DPS, Alpha, Dmg/Cargador."""
+    if v is None:
+        return "0"
+    if isinstance(v, str):
+        try:
+            v = float(v)
+        except ValueError:
+            return v
+    if abs(v) >= 1000:
+        k = v / 1000
+        rounded = round(k, 1)
+        if rounded == int(rounded):
+            return f"{int(rounded)}K"
+        return f"{rounded:.1f}K"
+    if isinstance(v, float) and v != int(v):
+        return f"{v:.1f}"
+    return str(int(v))
+
+
 def detect_latest_version():
     """Return the most recently modified version directory name."""
     if not VERSIONS_DIR.is_dir():
@@ -613,7 +633,7 @@ def build_stats_block_tested(item, category):
                 continue
             m_speed = m.get("speed", 0) or 0
             m_range = m.get("range", 0) or 0
-            parts = [f"{label}: DPS: {fmt_num(m['dps_sus'])} | Alpha: {fmt_num(m['alpha'])}"]
+            parts = [f"[{label}] DPS: {fmt_k(m['dps_sus'])} | Alpha: {fmt_k(m['alpha'])}"]
             if m_speed > 0:
                 parts.append(f"{fmt_num(m_speed)} m/s")
             if m_range > 0:
@@ -622,7 +642,7 @@ def build_stats_block_tested(item, category):
     else:
         fire_mode = weapon.get("FireMode", "")
         label = _fire_mode_label(fire_mode) or "Auto"
-        parts = [f"{label}: DPS: {fmt_num(dps_total)} | Alpha: {fmt_num(alpha_total)}"]
+        parts = [f"[{label}] DPS: {fmt_k(dps_total)} | Alpha: {fmt_k(alpha_total)}"]
         if speed > 0:
             parts.append(f"{fmt_num(speed)} m/s")
         ammo_range = ammo.get("Range", 0) or 0
@@ -636,7 +656,7 @@ def build_stats_block_tested(item, category):
     if mass > 0:
         mass_parts.append(f"{fmt_num(mass)} kg")
     if max_per_mag > 0:
-        mass_parts.append(f"Dmg/Cargador: {fmt_num(max_per_mag)}")
+        mass_parts.append(f"Dmg/Cargador: {fmt_k(max_per_mag)}")
     if mass_parts:
         lines.append(" | ".join(mass_parts))
 
