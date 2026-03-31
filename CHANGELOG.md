@@ -5,8 +5,8 @@
 **Stats reales de armas FPS, cargadores y armaduras inyectados en las descripciones del juego.**
 
 **Fuentes de datos:**
-- scunpacked-data (StarCitizenWiki/scunpacked-data) — mismos datos que erkul/spviewer
-- Spreadsheet comunitario con tests in-game (sin y con crafteo)
+- Tests in-game: spreadsheet comunitario con DPS/Alpha/FR medidos (sin y con crafteo)
+- Data.p4k: nombres en ingles y datos de penetracion extraidos del juego
 
 **Armas FPS (329 descripciones):**
 - DPS, Alpha, Velocidad, Rango, Dmg/Cargador, Penetración, Caída de daño, Peso
@@ -47,7 +47,7 @@ python inject_weapon_stats.py --dry-run           # preview sin escribir
 
 **Estadísticas:**
 - Líneas en global.ini: 87.656
-- Armas FPS parcheadas: 329
+- Armas FPS parcheadas: 328
 - Cargadores parcheados: 42
 - Armaduras parcheadas: 774
 - Nombres corregidos: 10

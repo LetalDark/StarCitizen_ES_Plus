@@ -27,7 +27,6 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 | **MrKraken / StarStrings** | Blueprints de misiones, clase/grado de componentes, mejoras de hauling y QoL | [github.com/MrKraken/StarStrings](https://github.com/MrKraken/StarStrings) |
 | **ExoAE / ScCompLangPack** | Clase/grado de componentes, blueprints, avisos de sustancias ilegales | [github.com/ExoAE/ScCompLangPack](https://github.com/ExoAE/ScCompLangPack/) |
 | **BeltaKoda / ScCompLangPackRemix** | Tracking type de misiles/bombas, prefijos compactos de componentes | [github.com/BeltaKoda/ScCompLangPackRemix](https://github.com/BeltaKoda/ScCompLangPackRemix) |
-| **scunpacked-data** | Stats reales de armas, naves y componentes (mismos datos que erkul/spviewer) | [github.com/StarCitizenWiki/scunpacked-data](https://github.com/StarCitizenWiki/scunpacked-data) |
 | **Tests in-game** | DPS, Alpha, Fire Rate medidos in-game (sin y con crafteo) | Spreadsheet comunitario |
 | **Data.p4k** | Textos oficiales EN/ES extraidos del propio juego con `extract_p4k.py` | Instalacion local de Star Citizen |
 
@@ -46,9 +45,9 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 | 9 | Minerales | Hephaestanite → Heph + unificacion de (Raw)/(Crudo) a (Bruto) | 19 | MrKraken/ExoAE |
 | 10 | Hauling titles | Ruta origen>destino en titulos de transporte de carga | 5 | MrKraken |
 | 11 | Limpieza | Trailing spaces eliminados | 604 | BeltaKoda |
-| 12 | Stats armas FPS | DPS, Alpha, Vel, Rango, Peso, Penetracion, modos de fuego | 329 | Tests in-game + scunpacked |
-| 13 | Stats cargadores | Peso del cargador | 42 | Tests in-game + scunpacked |
-| 14 | Stats armaduras | Peso, Reduccion Stun, Reduccion Impacto | 774 | scunpacked |
+| 12 | Stats armas FPS | DPS, Alpha, Vel, Rango, Peso, Penetracion, modos de fuego | 328 | Tests in-game + Data.p4k |
+| 13 | Stats cargadores | Peso del cargador | 42 | Tests in-game |
+| 14 | Stats armaduras | Peso, Reduccion Stun, Reduccion Impacto | 774 | Tests in-game + Data.p4k |
 | 15 | Correcciones nombres | Nombres de armadura incorrectos (pieza equivocada) | 10 | Verificacion manual |
 
 **Total: 87.656 claves**
