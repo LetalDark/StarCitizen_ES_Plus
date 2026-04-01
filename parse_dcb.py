@@ -345,8 +345,15 @@ class DataForge:
 
     # --- Read a struct instance from the data blob ---
 
-    def read_instance(self, struct_idx, variant_idx, depth=0, max_depth=8):
-        """Read a struct instance, returning a dict of property values."""
+    # Safety limit for arrays to prevent MemoryError from corrupted/misread counts
+    MAX_ARRAY_COUNT = 10000
+
+    def read_instance(self, struct_idx, variant_idx, depth=0, max_depth=8, at_offset=None):
+        """Read a struct instance, returning a dict of property values.
+
+        at_offset: if provided, read from this absolute offset instead of computing
+                   from struct_data_offsets. Used for inline Class properties.
+        """
         if depth > max_depth:
             return {"__type": self.struct_name(struct_idx), "__truncated": True}
 
@@ -354,11 +361,14 @@ class DataForge:
             return {"__type": f"<invalid_struct_{struct_idx}>"}
 
         sd = self.struct_defs[struct_idx]
-        base_offset = self.data_offset + self.struct_data_offsets.get(struct_idx, 0)
-        instance_offset = base_offset + sd["record_size"] * variant_idx
+
+        if at_offset is not None:
+            pos = at_offset
+        else:
+            base_offset = self.data_offset + self.struct_data_offsets.get(struct_idx, 0)
+            pos = base_offset + sd["record_size"] * variant_idx
 
         result = {"__type": self.struct_name(struct_idx)}
-        pos = instance_offset
         props = self.struct_properties(struct_idx)
 
         for pi in props:
@@ -374,10 +384,29 @@ class DataForge:
                 # Array: read count + first_index
                 array_count, first_index = struct.unpack_from("<II", self.data, pos)
                 pos += 8
+                if array_count > self.MAX_ARRAY_COUNT:
+                    result[pname] = f"<array_too_large:{array_count}>"
+                    continue
                 if ct == CT_CLASS_ARRAY or (ct in (CT_COMPLEX_ARRAY, CT_SIMPLE_ARRAY) and dt == DT_CLASS):
                     items = []
                     for ai in range(array_count):
                         items.append(self.read_instance(pd["index"], first_index + ai, depth + 1, max_depth))
+                    result[pname] = items
+                elif ct in (CT_COMPLEX_ARRAY, CT_SIMPLE_ARRAY) and dt == DT_STRONG_PTR:
+                    # Resolve StrongPointer arrays (e.g. Components in EntityClassDefinition)
+                    items = []
+                    for i in range(array_count):
+                        idx = first_index + i
+                        if idx < len(self.strong_values):
+                            si, vi, _ = self.strong_values[idx]
+                            if si == 0xFFFFFFFF or si >= len(self.struct_defs):
+                                items.append(None)
+                            elif depth < max_depth:
+                                items.append(self.read_instance(si, vi, depth + 1, max_depth))
+                            else:
+                                items.append({"__ptr": f"{self.struct_name(si)}[{vi}]"})
+                        else:
+                            items.append(None)
                     result[pname] = items
                 else:
                     result[pname] = self._read_array_values(dt, first_index, array_count)
@@ -470,12 +499,17 @@ class DataForge:
                 return None, pos
             return {"__ref": guid}, pos
         elif dt == DT_CLASS:
-            return self.read_instance(pd["index"], 0, depth + 1, max_depth), pos
+            child_struct_idx = pd["index"]
+            child_sd = self.struct_defs[child_struct_idx]
+            val = self.read_instance(child_struct_idx, 0, depth + 1, max_depth, at_offset=pos)
+            return val, pos + child_sd["record_size"]
         else:
             return f"<unknown_dt_{dt:#x}>", pos + 4
 
     def _read_array_values(self, dt, first_index, count):
         """Read values from the typed value arrays."""
+        if count > self.MAX_ARRAY_COUNT:
+            return [f"<array_too_large:{count}>"]
         values = []
         for i in range(count):
             idx = first_index + i

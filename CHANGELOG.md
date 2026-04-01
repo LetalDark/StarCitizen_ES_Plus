@@ -1,5 +1,29 @@
 # Changelog
 
+## v1.4.0 — 2026-04-01
+
+**Stats de armas de nave extraídos del Game2.dcb — 125 armas parcheadas.**
+
+**Nuevo: armas de nave (125 descripciones):**
+- Stats extraídos directamente de los archivos del juego (Game2.dcb), no de fuentes externas
+- 19 tipos de arma cubiertos: LaserRepeater, LaserCannon, LaserGatling, NeutronRepeater, NeutronCannon, PlasmaCannon, BallisticGatling, BallisticRepeater, BallisticCannon, BallisticScatterGun, LaserScattergun, DistortionRepeater, DistortionCannon, DistortionScatterGun, TachyonCannon, MassDriver, MassDriverCannon, ScatterGun
+- Datos verificados contra SPViewer: DPS, Alpha, RPM, velocidad, rango, penetración, dispersión, capacitor/munición, masa, HP, firma EM, consumo energía, AoE
+
+**Nuevo: parser del DCB arreglado (parse_dcb.py):**
+- Fix: clases inline (DT_CLASS) no avanzaban posición — todos los campos posteriores leían basura
+- Fix: arrays de StrongPointer no se resolvían — componentes de entidades salían como punteros
+- Fix: sin límite en arrays — MemoryError con counts grandes
+- Ahora puede leer cualquier entidad completa del DCB (armas, componentes, ammo, etc.)
+
+**Nuevo: script extract_ship_weapons.py:**
+- Extrae stats de todas las armas de nave del DCB automáticamente
+- Integrado en inject_weapon_stats.py con `--source dcb`
+
+**Estadísticas:**
+- Líneas en global.ini: 87,656
+- Armas de nave parcheadas: 125
+- Armas FPS parcheadas: 328 + 41 cargadores + 774 armaduras + ~1,996 items varios
+
 ## v1.3.5 — 2026-04-01
 
 **Nuevas inyecciones de stats, corrección de bugs y verificación automática.**

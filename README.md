@@ -16,8 +16,9 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 8. **Acorta nombres largos** en el HUD de mineria para evitar solapamiento (Hephaestanite → Heph, Inestabilidad → Inest:)
 9. **Inyecta stats reales de armas FPS** (DPS, Alpha, Velocidad, Peso, Caida de daño) con datos testeados in-game
 10. **Inyecta stats de armaduras** (Peso, Reduccion Stun, Reduccion Impacto), peso de cargadores, mochilas, ropa, accesorios y mas (1,996 items en total)
-11. **Completa claves que faltan** extrayendo los textos oficiales directamente del Data.p4k del juego
-12. **Corrige errores** de las fuentes originales (GUIDs nulos, pools faltantes, nombres de armadura incorrectos)
+11. **Inyecta stats de armas de nave** (DPS, Alpha, RPM, Velocidad, Rango, Penetracion, Capacitor, Masa, HP, EM, AoE) extraidos directamente del Game2.dcb (125 armas)
+12. **Completa claves que faltan** extrayendo los textos oficiales directamente del Data.p4k del juego
+13. **Corrige errores** de las fuentes originales (GUIDs nulos, pools faltantes, nombres de armadura incorrectos)
 
 ## Fuentes
 
@@ -54,6 +55,7 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 | 18 | Stats accesorios arma | Stats de miras, cañones, suppressors | 48 | Tests in-game |
 | 19 | Stats accesorios multitool | Peso de cutter, mining, salvage, healing, tractor beam | 5 | Tests in-game |
 | 20 | Correcciones nombres | Nombres de armadura incorrectos (pieza equivocada) | 10 | Verificacion manual |
+| 21 | Stats armas de nave | DPS, Alpha, RPM, Vel, Rango, Penetracion, Dispersión, Capacitor, Masa, HP, EM, Energía, AoE | 125 | Game2.dcb |
 
 **Total: 87.656 claves**
 
@@ -149,6 +151,29 @@ Stun: 45% | Impacto: 31%
 Casco: 5 | Pechera: 5 | Brazos: 4 | Piernas: 6 kg
 ```
 
+## Formato de stats de armas de nave
+
+Stats extraidos directamente del Game2.dcb del juego. 6 lineas agrupadas por tipo:
+
+```
+DPS: 817.9 | Alpha: 65.43 | 750 RPM
+1800 m/s | 3006m | Disp: 0.6
+Pen: 1 | Radio: 0.05-0.1
+Cap: 75 | Coste: 72.7 | Reg: 15/s | CD: 0.84s
+375 kg | HP: 1650 | EM: 304 | Energía: 0.9
+```
+
+| Linea | Grupo | Contenido |
+|---|---|---|
+| 1 | Daño | DPS burst, Alpha por disparo, cadencia |
+| 2 | Proyectil | Velocidad, rango maximo, dispersion |
+| 3 | Penetracion | Distancia de penetracion, radio de impacto |
+| 4 | Sustain | Capacitor (energia) o Municion (balistica) |
+| 5 | Fisico/firma | Masa, vida, firma EM, consumo energia |
+| 6 | Solo distortion | Radio de explosion (AoE) |
+
+Armas balisticas muestran `Mun: X` en vez de capacitor. Armas de distorsion muestran `Alpha: X Dist` y linea AoE. Scatterguns muestran pellets: `Alpha: 560 (8×70)`.
+
 ## Herramientas incluidas
 
 ### rebuild_outputs.py — Generar global.ini
@@ -198,19 +223,21 @@ python parse_dcb.py --dump BlueprintPoolRecord -o x.json  # Exportar a JSON
 Inyecta stats reales en el global.ini: armas FPS, armaduras, cargadores, mochilas, ropa, accesorios y mas.
 
 ```bash
-python inject_weapon_stats.py --source tested       # Datos testeados in-game (recomendado)
-python inject_weapon_stats.py --source game           # Pendiente: desde archivos del juego
+python inject_weapon_stats.py --source tested       # Armas FPS (datos testeados in-game)
+python inject_weapon_stats.py --source dcb          # Armas de nave (datos del Game2.dcb)
 python inject_weapon_stats.py --dry-run             # Preview sin escribir
 python inject_weapon_stats.py --output test.ini     # Escribir a otro fichero
 python inject_weapon_stats.py --verify              # 6 checks de calidad + idempotencia
 ```
 
-### patch_beam_stats.py — Parchear DPS de armas beam (fuente alternativa)
+### extract_ship_weapons.py — Extraer stats de armas de nave
 
-Parchea DPS de armas beam en JSONs agregados. Solo necesario para fuentes alternativas.
+Extrae stats de todas las armas de nave del Game2.dcb (125 armas, 19 tipos).
 
 ```bash
-python patch_beam_stats.py                          # Parchear fps-items.json y ship-items.json
+python extract_ship_weapons.py                      # Tabla resumen
+python extract_ship_weapons.py --dry-run            # Preview de stats formateados
+python extract_ship_weapons.py --json -o out.json   # Exportar datos completos
 ```
 
 ### Herramientas de verificacion

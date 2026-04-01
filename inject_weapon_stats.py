@@ -104,6 +104,19 @@ OWN_STATS_PREFIXES = (
     "Cargado:",
     "Descargado:",
     "Dmg/Cargador:",
+    # Ship weapon stats (from DCB)
+    "Pen:",
+    "Radio:",
+    "Cap:",
+    "Coste:",
+    "Reg:",
+    "CD:",
+    "Mun:",
+    "Disp:",
+    "AoE:",
+    "EM:",
+    "Energía:",
+    "Energia:",
 )
 
 DAMAGE_LABELS = {
@@ -1274,8 +1287,8 @@ def main():
                         help="Version directory name (default: auto-detect latest)")
     parser.add_argument("--dry-run", action="store_true",
                         help="Show changes without writing")
-    parser.add_argument("--source", choices=["tested", "game", "scunpacked"], default="tested",
-                        help="Data source: scunpacked (default) or tested (spreadsheet CSV)")
+    parser.add_argument("--source", choices=["tested", "dcb", "game", "scunpacked"], default="tested",
+                        help="Data source: tested (FPS from CSV), dcb (ship weapons from Game2.dcb)")
     parser.add_argument("--output", type=str, default=None,
                         help="Write to a different file instead of overwriting global.ini")
     parser.add_argument("--verify", action="store_true",
@@ -1304,13 +1317,20 @@ def main():
     # Load weapons based on source
     if args.source == "tested":
         weapons = load_tested_weapons(version_dir, global_ini_path)
+    elif args.source == "dcb":
+        from extract_ship_weapons import load_dcb_ship_weapons
+        dcb_path = BASE_DIR / "Game2.dcb"
+        weapons = load_dcb_ship_weapons(str(dcb_path))
+        if not weapons:
+            print("ERROR: No se pudieron extraer armas del DCB.", file=sys.stderr)
+            sys.exit(1)
     elif args.source == "game":
-        print("ERROR: --source game no implementado todavía. Usa --source tested.", file=sys.stderr)
-        print("Pendiente: arreglar parse_dcb.py para extraer stats de armas del Game2.dcb.")
+        print("ERROR: --source game no implementado todavía. Usa --source tested o dcb.",
+              file=sys.stderr)
         sys.exit(1)
     else:
-        print("ERROR: --source scunpacked desactivado. Usa --source tested.", file=sys.stderr)
-        print("scunpacked no es una fuente fiable. Pendiente: --source game desde archivos del juego.")
+        print("ERROR: --source scunpacked desactivado. Usa --source tested o dcb.",
+              file=sys.stderr)
         sys.exit(1)
 
     # Load global.ini (UTF-8 with BOM)
