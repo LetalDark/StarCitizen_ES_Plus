@@ -1,5 +1,42 @@
 # Changelog
 
+## v1.3.5 — 2026-04-01
+
+**Nuevas inyecciones de stats, corrección de bugs y verificación automática.**
+
+**Nuevas inyecciones (1,222 descripciones adicionales):**
+- Ropa y accesorios (615): peso por tipo (camisetas 0.25 kg, chaquetas 0.5 kg, pantalones 0.4 kg, gorros 0.25 kg, calzado 0.3 kg, guantes 0.1 kg, MobiGlas 0.5 kg)
+- Items FPS varios (111): peso de granadas, multitools, gadgets, flares, etc.
+- Mochilas (102): peso 6 kg
+- Accesorios de arma (48): stats de miras, cañones, suppressors (+/- cadencia, daño, dispersión, retroceso...)
+- Cargadores extra (47): peso añadido (ParaMed Refill 0.32 kg, P8-AR civilian, etc.)
+- Accesorios multitool (5): peso 0.1 kg (cutter, mining, salvage, healing, tractor beam)
+
+**Mejoras en stats existentes:**
+- Caída de daño detallada: `[Red. daño] 100% 30m | 50% 45m | 0% 80m`
+- Peso desglosado en armas: `Cargado: 6.5 kg | Descargado: 5.2 kg`
+- Stats de armadura reposicionados: ahora van después de los metadatos, antes de la descripción
+- 19 armaduras con descripción compartida: tabla de pesos por pieza (`*Descripción compartida entre piezas\nCasco: 5 | Pechera: 5 | Brazos: 4 | Piernas: 6 kg`)
+- 84 armaduras extra parcheadas (flightsuits, cascos undersuit, suits completos)
+
+**Correcciones:**
+- Fix: 6 multitools con texto blueprint sin traducir (XMAnFacturer → Fabricante, XXMAZAZINE → Batería)
+- Fix: peso de accesorios multitool después de "Clase:", no antes de "Fabricante:"
+- Fix: accesorios multitool ya no heredan peso 2.32 kg de la multitool base
+- Fix: cargadores limpiados — stats de arma heredados eliminados de 39 descripciones
+- Fix: matching mejorado de magazines (fuzzy suffix swap, mapeo via p4k names)
+- Fix: matching mejorado de attachments (FieldLite, FarSight skins via word match y _base suffix)
+- Fix: armaduras con `Item_Desc` (I mayúscula) ahora se procesan
+
+**Script (`inject_weapon_stats.py`):**
+- Nuevo flag `--output` para escribir a otro fichero sin tocar el original
+- Nuevo flag `--verify` con 6 checks: orphans, duplicados, doble kg, texto perdido, idempotencia, claves p4k
+- Limpieza automática de marcadores X-prefix de MrKraken
+
+**Estadísticas:**
+- Líneas en global.ini: 87,656
+- Total items con stats: 1,996 (294 armas + 774 armaduras + 47 cargadores + 102 mochilas + 615 ropa + 111 items FPS + 48 accesorios arma + 5 accesorios multitool)
+
 ## v1.3.0 — 2026-03-31
 
 **Stats reales de armas FPS, cargadores y armaduras inyectados en las descripciones del juego.**
