@@ -1,5 +1,29 @@
 # Changelog
 
+## v1.4.2 — 2026-04-01
+
+**Prefijos [CLS|tam|grado], eliminación de líneas redundantes y Disto/masa en Coolers.**
+
+**Nuevo formato de prefijo en nombres de componentes:**
+- Antes: `[Civ-2B] Radiance` → Ahora: `[CIV|2|B] Radiance`
+- 383 componentes con prefijo (antes 191)
+- Fallback DCB para componentes sin datos en ExoAE (890J, Idris, Reclaimer)
+- Bespoke/Hecho a medida = Grade A (confirmado DCB/SPViewer/Erkul)
+
+**Eliminadas líneas redundantes de descripciones:**
+- Tamaño, Grado y Clase eliminados de 377 descripciones de componentes
+- Ya se muestran en el prefijo del nombre y en los campos nativos del UI
+
+**Fix: stats de Coolers ampliados:**
+- Añadido Disto/Disipa/Rec y masa a los 75 enfriadores
+
+**Estadísticas:**
+- Líneas en global.ini: 87,656
+- Componentes con prefijo: 383
+- Componentes de nave parcheados: 339
+- Armas de nave parcheadas: 125
+- Armas FPS parcheadas: 328 + 41 cargadores + 774 armaduras + ~1,996 items varios
+
 ## v1.4.1 — 2026-04-01
 
 **Stats de componentes de nave extraídos del Game2.dcb — 339 componentes parcheados.**

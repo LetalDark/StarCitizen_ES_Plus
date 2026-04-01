@@ -8,7 +8,7 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 
 1. **Parte de la traduccion de Thord82**, la traduccion comunitaria al español mas completa
 2. **Añade datos de blueprints** de las misiones que dan planos, con la lista de posibles recompensas traducida al español
-3. **Añade clase/grado a los componentes** de naves (coolers, power plants, quantum drives, shields, radars) con prefijo compacto (ej: `[Mil-2A] Bracer` = Militar, Tamaño 2, Grado A)
+3. **Añade clase/grado a los componentes** de naves (coolers, power plants, quantum drives, shields, radars) con prefijo compacto (ej: `[MIL|2|A] Bracer` = Militar, Tamaño 2, Grado A)
 4. **Añade tracking type a misiles** (IR/EM/CS) y tamaño a bombas (B3/B5/B10) para saber que contramedida usar
 5. **Marca misiones con blueprints** con `[BP]` en el titulo para identificarlas rapidamente
 6. **Marca sustancias ilegales** con `[!]` para avisar antes de transportarlas
@@ -40,7 +40,7 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 | 2 | Blueprints misiones | Planos posibles en misiones, traducidos al ES + correcciones | 232 | MrKraken + nuestras |
 | 3 | Traducciones p4k | Claves que faltan en Thord82, traducidas del ingles oficial | 874 | Data.p4k CIG |
 | 4 | [BP] en titulos | Marca `[BP]` en misiones que dan blueprints | 216 | ExoAE |
-| 5 | Componentes clase/grado | Prefijo `[Mil-2A]`, `[Civ-1C]`, etc. en componentes de naves | 368 | ExoAE |
+| 5 | Componentes clase/grado | Prefijo `[MIL|2|A]`, `[CIV|1|C]`, etc. en componentes de naves | 383 | ExoAE + DCB |
 | 6 | Misiles y bombas | Tracking type `IR`/`EM`/`CS` en misiles, tamaño `B#` en bombas | 115 | BeltaKoda |
 | 7 | Sustancias ilegales | Marca `[!]` en drogas (WiDoW, SLAM, Maze, etc.) | 8 | ExoAE |
 | 8 | HUD mining | Abreviaturas para evitar solapamiento (Inest:, Res:) | 2 | MrKraken/ExoAE |
@@ -75,19 +75,21 @@ StarCitizen/
 
 ## Formato de componentes
 
-Los componentes de naves llevan un prefijo con 3 partes: **Clase + Tamaño + Grado**
+Los componentes de naves llevan un prefijo con 3 partes separadas por `|`: **Clase + Tamaño + Grado**
 
 | Clase | Prefijo |
 |---|---|
-| Militar | `Mil` |
-| Civil | `Civ` |
-| Competicion | `Com` |
-| Industrial | `Ind` |
-| Sigilo | `Sig` |
+| Militar | `MIL` |
+| Civil | `CIV` |
+| Competicion | `COM` |
+| Industrial | `IND` |
+| Sigilo | `SIG` |
 
 Grado: A (mejor) a D (peor). Tamaño: 0-4.
 
-Ejemplo: `[Mil-2A] Bracer` = Bracer, clase Militar, tamaño 2, grado A.
+Ejemplo: `[MIL|2|A] Bracer` = Bracer, clase Militar, tamaño 2, grado A.
+
+Las lineas de Tamaño, Grado y Clase se han eliminado de las descripciones ya que esta informacion se muestra en el prefijo del nombre y en los campos nativos del UI del juego.
 
 ## Formato de misiles y bombas
 
@@ -209,6 +211,8 @@ Energía: 1-4 | EM: 1650 | HP: 750
 ```
 Enfriamiento: 60
 Energía: 2-5 | EM: 2480 | IR: 12700 | HP: 1800
+Disto: 8.5K | Disipa: 566.67/s | Rec: 19.5s
+1900 kg
 ```
 
 **Radar:**
