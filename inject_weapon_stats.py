@@ -40,10 +40,12 @@ HEADER_PREFIXES = (
     "tipo de ítem:",
     "tipo de item:",
     "clase:",
+    "grado:",
     "tamaño:",
     "item type:",
     "manufacturer:",
     "class:",
+    "grade:",
     "size:",
     "attachment",
     "attachments:",
@@ -117,6 +119,31 @@ OWN_STATS_PREFIXES = (
     "EM:",
     "Energía:",
     "Energia:",
+    # Ship component stats (from DCB)
+    "Escudo:",
+    "Regen:",
+    "Tiempo:",
+    "Retardo:",
+    "Caído:",
+    "Resist. Energía:",
+    "Enfriamiento:",
+    "Asist:",
+    "Margen:",
+    "IR:",
+    "CS:",
+    "RS:",
+    "Vel:",
+    "Carga:",
+    "Calibración:",
+    "Alineación:",
+    "Combustible:",
+    "Disto:",
+    "Disipa:",
+    "Rec:",
+    "EM/Seg:",
+    "EM Decay:",
+    "Consumo:",
+    "[Eficiencia/tanque]",
 )
 
 DAMAGE_LABELS = {
@@ -406,6 +433,9 @@ def parse_description(desc):
             return True
         # Lines like "4 kg | Dmg/Cargador: 518.4" or "0.1 kg"
         if re.match(r'^\d+\.?\d*\s*kg\b', s):
+            return True
+        # Ship weapon stats: "1600 m/s | 2000m | Disp: 0.6"
+        if re.match(r'^\d+\.?\d*\s*m/s\b', s):
             return True
         return False
 
@@ -1287,8 +1317,10 @@ def main():
                         help="Version directory name (default: auto-detect latest)")
     parser.add_argument("--dry-run", action="store_true",
                         help="Show changes without writing")
-    parser.add_argument("--source", choices=["tested", "dcb", "game", "scunpacked"], default="tested",
-                        help="Data source: tested (FPS from CSV), dcb (ship weapons from Game2.dcb)")
+    parser.add_argument("--source", choices=["tested", "dcb", "dcb-components", "game", "scunpacked"],
+                        default="tested",
+                        help="Data source: tested (FPS from CSV), dcb (ship weapons), "
+                             "dcb-components (ship components: powerplants, qdrives, etc.)")
     parser.add_argument("--output", type=str, default=None,
                         help="Write to a different file instead of overwriting global.ini")
     parser.add_argument("--verify", action="store_true",
@@ -1323,6 +1355,13 @@ def main():
         weapons = load_dcb_ship_weapons(str(dcb_path))
         if not weapons:
             print("ERROR: No se pudieron extraer armas del DCB.", file=sys.stderr)
+            sys.exit(1)
+    elif args.source == "dcb-components":
+        from extract_ship_components import load_dcb_ship_components
+        dcb_path = BASE_DIR / "Game2.dcb"
+        weapons = load_dcb_ship_components(str(dcb_path))
+        if not weapons:
+            print("ERROR: No se pudieron extraer componentes del DCB.", file=sys.stderr)
             sys.exit(1)
     elif args.source == "game":
         print("ERROR: --source game no implementado todavía. Usa --source tested o dcb.",

@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.4.1 — 2026-04-01
+
+**Stats de componentes de nave extraídos del Game2.dcb — 339 componentes parcheados.**
+
+**Nuevo: componentes de nave (339 descripciones):**
+- 6 tipos: Power Plant (78), Quantum Drive (58), Jump Drive (8), Shield (68), Cooler (75), Radar (66)
+- Stats extraídos del Game2.dcb, verificados contra SPViewer y Erkul
+- Quantum Drive incluye rango de eficiencia min-max según tanque QT de la nave
+
+**Nuevo: script extract_ship_components.py:**
+- Extrae stats de los 6 tipos de componente del DCB
+- Integrado en inject_weapon_stats.py con `--source dcb-components`
+
+**Estadísticas:**
+- Líneas en global.ini: 87,656
+- Componentes de nave parcheados: 339
+- Armas de nave parcheadas: 125
+- Armas FPS parcheadas: 328 + 41 cargadores + 774 armaduras + ~1,996 items varios
+
 ## v1.4.0 — 2026-04-01
 
 **Stats de armas de nave extraídos del Game2.dcb — 125 armas parcheadas.**

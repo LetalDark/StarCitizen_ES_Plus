@@ -17,8 +17,9 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 9. **Inyecta stats reales de armas FPS** (DPS, Alpha, Velocidad, Peso, Caida de daño) con datos testeados in-game
 10. **Inyecta stats de armaduras** (Peso, Reduccion Stun, Reduccion Impacto), peso de cargadores, mochilas, ropa, accesorios y mas (1,996 items en total)
 11. **Inyecta stats de armas de nave** (DPS, Alpha, RPM, Velocidad, Rango, Penetracion, Capacitor, Masa, HP, EM, AoE) extraidos directamente del Game2.dcb (125 armas)
-12. **Completa claves que faltan** extrayendo los textos oficiales directamente del Data.p4k del juego
-13. **Corrige errores** de las fuentes originales (GUIDs nulos, pools faltantes, nombres de armadura incorrectos)
+12. **Inyecta stats de componentes de nave** (339 componentes): Power Plants, Quantum Drives, Jump Drives, Shields, Coolers y Radars con datos del Game2.dcb
+13. **Completa claves que faltan** extrayendo los textos oficiales directamente del Data.p4k del juego
+14. **Corrige errores** de las fuentes originales (GUIDs nulos, pools faltantes, nombres de armadura incorrectos)
 
 ## Fuentes
 
@@ -56,6 +57,7 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 | 19 | Stats accesorios multitool | Peso de cutter, mining, salvage, healing, tractor beam | 5 | Tests in-game |
 | 20 | Correcciones nombres | Nombres de armadura incorrectos (pieza equivocada) | 10 | Verificacion manual |
 | 21 | Stats armas de nave | DPS, Alpha, RPM, Vel, Rango, Penetracion, Dispersión, Capacitor, Masa, HP, EM, Energía, AoE | 125 | Game2.dcb |
+| 22 | Stats componentes nave | Power Plants, Quantum Drives, Jump Drives, Shields, Coolers, Radars | 339 | Game2.dcb |
 
 **Total: 87.656 claves**
 
@@ -174,6 +176,58 @@ Cap: 75 | Coste: 72.7 | Reg: 15/s | CD: 0.84s
 
 Armas balisticas muestran `Mun: X` en vez de capacitor. Armas de distorsion muestran `Alpha: X Dist` y linea AoE. Scatterguns muestran pellets: `Alpha: 560 (8×70)`.
 
+## Formato de stats de componentes de nave
+
+Stats extraidos del Game2.dcb. Cada tipo de componente muestra stats relevantes:
+
+**Power Plant:**
+```
+Energía: 25 | HP: 2700
+Disto: 13K | Disipa: 866.67/s | Rec: 19.5s
+EM/Seg: 496 | EM Decay: 0.15
+2200 kg
+```
+
+**Quantum Drive:**
+```
+Vel: 324 Mm/s | Consumo: 0.024
+Carga: 6s | Enfriamiento: 22.86s
+Disto: 7K | Disipa: 466.67/s
+440 kg | HP: 840 | EM: 26300 | Energía: 4
+[Eficiencia/tanque] 1.65 SCU: 1.2 | 5.6 SCU: 4.2
+```
+
+**Shield:**
+```
+Escudo: 13.2K | Regen: 1452/s | Tiempo: 9.1s
+Retardo: 5.27s | Caído: 10.5s
+Resist. Energía: -10%
+Energía: 1-4 | EM: 1650 | HP: 750
+```
+
+**Cooler:**
+```
+Enfriamiento: 60
+Energía: 2-5 | EM: 2480 | IR: 12700 | HP: 1800
+```
+
+**Radar:**
+```
+Asist: 1300-2184m | Margen: 90m
+IR: 90% | EM: 90% | CS: 90% | RS: 100%
+Energía: 2-8 | EM: 2160 | HP: 1380
+```
+
+**Jump Drive:**
+```
+Calibración: 0.22 | Alineación: 0.2
+Combustible: x1.5
+Disto: 1.2K | Disipa: 240/s
+320 kg | HP: 350
+```
+
+La eficiencia del Quantum Drive depende del tanque cuantico de la nave. Se muestra el rango min-max para todas las naves compatibles con ese tamaño de QDrive.
+
 ## Herramientas incluidas
 
 ### rebuild_outputs.py — Generar global.ini
@@ -225,6 +279,7 @@ Inyecta stats reales en el global.ini: armas FPS, armaduras, cargadores, mochila
 ```bash
 python inject_weapon_stats.py --source tested       # Armas FPS (datos testeados in-game)
 python inject_weapon_stats.py --source dcb          # Armas de nave (datos del Game2.dcb)
+python inject_weapon_stats.py --source dcb-components # Componentes de nave (datos del Game2.dcb)
 python inject_weapon_stats.py --dry-run             # Preview sin escribir
 python inject_weapon_stats.py --output test.ini     # Escribir a otro fichero
 python inject_weapon_stats.py --verify              # 6 checks de calidad + idempotencia
@@ -238,6 +293,17 @@ Extrae stats de todas las armas de nave del Game2.dcb (125 armas, 19 tipos).
 python extract_ship_weapons.py                      # Tabla resumen
 python extract_ship_weapons.py --dry-run            # Preview de stats formateados
 python extract_ship_weapons.py --json -o out.json   # Exportar datos completos
+```
+
+### extract_ship_components.py — Extraer stats de componentes de nave
+
+Extrae stats de 6 tipos de componente del Game2.dcb (339 componentes).
+
+```bash
+python extract_ship_components.py                      # Tabla resumen
+python extract_ship_components.py --dry-run            # Preview de stats formateados
+python extract_ship_components.py --type Shield        # Filtrar por tipo
+python extract_ship_components.py --json -o out.json   # Exportar datos completos
 ```
 
 ### Herramientas de verificacion
