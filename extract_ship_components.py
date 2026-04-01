@@ -504,7 +504,7 @@ def format_stats_block(c):
         cooling = c.get("cooling", 0)
         if cooling:
             lines.append(f"Enfriamiento: {fmt_num(cooling)}")
-        # Line 2: Físico/firma
+        # Line 2: Energía/firma
         parts2 = []
         pw = c.get("power_draw", 0)
         pw_min_frac = c.get("power_min_fraction", 0)
@@ -525,6 +525,19 @@ def format_stats_block(c):
             parts2.append(f"HP: {fmt_num(hp)}")
         if parts2:
             lines.append(" | ".join(parts2))
+        # Line 3: Distorsión
+        disto_max = c.get("disto_max", 0)
+        if disto_max:
+            parts3 = [f"Disto: {fmt_k(disto_max)}",
+                       f"Disipa: {fmt_num(c.get('disto_decay', 0))}/s"]
+            rec = c.get("disto_rec", 0)
+            if rec:
+                parts3.append(f"Rec: {fmt_num(rec)}s")
+            lines.append(" | ".join(parts3))
+        # Line 4: Masa
+        mass = c.get("mass", 0)
+        if mass:
+            lines.append(f"{fmt_num(mass)} kg")
 
     elif comp_type == "Radar":
         # Line 1: Asistencia de apuntado
