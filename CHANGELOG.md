@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.5.1 — 2026-04-03
+
+**Build:** 4.7.0-HOTFIX_11568150
+
+**Cambios:**
+- Corregidos stats de 9 armas de nave que mostraban valores erróneos
+  - Revenant, GVSR Repeater, Tarantula GT-870 Mk3, M9A Cannon, entre otras
+- YellowJacket GT-210 actualizada con stats correctos (DPS 201.6)
+- Verificado contra spviewer y erkul
+
+**Estadísticas:**
+- Líneas en global.ini: 87,670
+
 ## v1.5.0 — 2026-04-02
 
 **Build:** 4.7.0-HOTFIX_11568150
