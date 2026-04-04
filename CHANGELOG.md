@@ -2,7 +2,7 @@
 
 ## v1.5.4 — 2026-04-04
 
-**Build:** 4.7.0-LIVE_11545720
+**Build:** 4.7.0-HOTFIX_11576750
 
 **Cambios:**
 - Corregidos 10 nombres de armadura que mostraban la pieza equivocada
@@ -12,7 +12,7 @@
   - Horizon Crusader: casco mostraba "Pechera" en vez de "Casco"
 
 **Estadísticas:**
-- Líneas en global.ini: 87,656
+- Líneas en global.ini: 87,683
 
 ## v1.5.3 — 2026-04-04
 
