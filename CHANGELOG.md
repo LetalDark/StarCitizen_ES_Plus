@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.5.3 — 2026-04-04
+
+**Build:** 4.7.0-HOTFIX_11576750
+
+**Cambios:**
+- Abreviados nombres de minerales en el HUD de minería: "(Mineral)" → "(Mnl)" (15 minerales)
+- Fix visual: los números de calidad ya no se solapan con el texto del material en el scanner
+
+**Estadísticas:**
+- Líneas en global.ini: 87,613
+
 ## v1.5.2 — 2026-04-04
 
 **Build:** 4.7.0-HOTFIX_11576750
