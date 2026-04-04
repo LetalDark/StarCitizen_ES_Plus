@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.6.1 — 2026-04-04
+
+**Build:** 4.7.0-LIVE_11576750
+
+**Cambios:**
+- Traducidas 11 descripciones que estaban completamente en ingles (misiones, armaduras, tutorial)
+- Nuevo check de verificacion para detectar descripciones sin traducir
+
+**Estadísticas:**
+- Líneas en global.ini: 87,613
+
 ## v1.6.0 — 2026-04-04
 
 **Build:** 4.7.0-LIVE_11576750
