@@ -40,13 +40,13 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 | 2 | Blueprints misiones | Planos posibles en misiones, traducidos al ES + correcciones | 440 | MrKraken + nuestras |
 | 3 | Traducciones p4k | Claves que faltan en Thord82, traducidas del ingles oficial | 70 | Data.p4k CIG |
 | 4 | [BP] en titulos | Marca `[BP]` en misiones que dan blueprints | 242 | ExoAE |
-| 5 | Componentes clase/grado | Prefijo `[MIL|2|A]`, `[CIV|1|C]`, etc. en componentes de naves | 378 | ExoAE + datos del juego |
+| 5 | Componentes clase/grado | Prefijo `[MIL|2|A]`, `[CIV|1|C]`, etc. en componentes de naves | 379 | ExoAE + datos del juego |
 | 6 | Misiles y bombas | Tracking type `IR`/`EM`/`CS` en misiles, tamaño `B#` en bombas | 114 | BeltaKoda |
 | 7 | Sustancias ilegales | Marca `[!]` en drogas (WiDoW, SLAM, Maze, etc.) | 8 | ExoAE |
 | 8 | HUD mining | Abreviaturas para evitar solapamiento (Inest:, Res:) | 2 | MrKraken/ExoAE |
 | 9 | Minerales | Hephaestanite → Heph + unificacion de (Raw)/(Crudo) a (Bruto) | 19 | MrKraken/ExoAE |
 | 10 | Hauling titles | Ruta origen>destino en titulos de transporte de carga | 5 | MrKraken |
-| 11 | Limpieza | Trailing spaces eliminados | 604 | BeltaKoda |
+| 11 | Limpieza | Trailing spaces eliminados | 605 | BeltaKoda |
 | 12 | Stats armas FPS | DPS, Alpha, Vel, Peso, Caida de daño, modos de fuego | 295 | Tests in-game + Data.p4k |
 | 13 | Stats cargadores | Peso del cargador | 42 | Tests in-game |
 | 14 | Stats armaduras | Peso, Reduccion Stun, Reduccion Impacto | 694 | Tests in-game + Data.p4k |
@@ -55,7 +55,7 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 | 17 | Stats armas de nave | DPS, Alpha, RPM, Vel, Rango, Penetracion, Dispersión, Capacitor, Masa, HP, EM, Energía, AoE | 122 | Datos del juego |
 | 18 | Stats componentes nave | Power Plants, Quantum Drives, Jump Drives, Shields, Coolers, Radars | 334 | Datos del juego |
 
-**Total: 87.683 claves**
+**Total: 87,613 claves**
 
 ## Instalacion
 
@@ -64,10 +64,7 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 3. La estructura queda asi:
 ```
 StarCitizen/
-├── LIVE/
-│   ├── data/Localization/spanish_(spain)/global.ini
-│   └── user.cfg
-└── HOTFIX/          ← solo si hay hotfix activo
+└── LIVE/
     ├── data/Localization/spanish_(spain)/global.ini
     └── user.cfg
 ```
@@ -233,5 +230,5 @@ La eficiencia del Quantum Drive depende del tanque cuantico de la nave. Se muest
 
 ## Version actual
 
-- **Star Citizen Alpha 4.7.0-HOTFIX** (build 11576750)
+- **Star Citizen Alpha 4.7.0-LIVE** (build 11576750)
 - Ver [CHANGELOG.md](CHANGELOG.md) para el historial completo

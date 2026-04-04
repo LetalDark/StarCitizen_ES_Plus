@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.6.0 — 2026-04-04
+
+**Build:** 4.7.0-LIVE_11576750
+
+**Cambios:**
+- Nueva version LIVE: la build 11576750 pasa de HOTFIX a LIVE oficial
+- Rebuild completo con todas las capas y verificaciones
+
+**Estadísticas:**
+- Líneas en global.ini: 87,613
+
 ## v1.5.6 — 2026-04-04
 
 **Build:** 4.7.0-HOTFIX_11576750
