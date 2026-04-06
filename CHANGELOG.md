@@ -1,5 +1,22 @@
 # Changelog
 
+## v1.6.3 — 2026-04-06
+
+**Build:** 4.7.0-LIVE_11576750
+
+**Cambios:**
+- Normalizar nombres de producto: mantener nombre EN en modulos mineria y radares
+  - "Modulo de sobretension" → "Modulo Surge", "Modulo para Lifeline" → "Modulo Lifeline"
+  - "Cazador" → "Hunter", "Profeta" → "Prophet" (radares Balter)
+- Labels del MFD traducidos al español (consistencia completa):
+  - HEAT→TEMP, SHIELDS→ESCUDOS, WEAPONS→ARMAS, COMMS→COMNS
+  - SECURITY→SEGURD., TRGT. STATUS→ESTADO OBJ., TARGET SELECTOR→SEL. OBJ.
+  - ENERGÍA→ENERG (acortado para caber en MFD)
+- Fix tabla del README que se renderizaba mal en GitHub
+
+**Estadísticas:**
+- Líneas en global.ini: 87,683
+
 ## v1.6.2 — 2026-04-05
 
 **Build:** 4.7.0-LIVE_11576750
