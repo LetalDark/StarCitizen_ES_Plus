@@ -1,5 +1,31 @@
 # Changelog
 
+## v1.8.1 — 2026-04-10
+
+**Build:** 4.7.1-LIVE_11592622 (sin cambio de version del juego)
+
+Pesos correctos en consumibles del SRT, fix del boton de encendido en cabinas tipo Apolo Medivac, y recuperacion de 34 misiones que perdian el marcador `[BP]` en el titulo + 25 listas de "Posibles Planos" perdidas desde versiones antiguas.
+
+**Pesos correctos en contenedores RMC del Cambio SRT:**
+- `Contenedor SRT Cambio` (grande): añadido `1.3 kg` (antes no aparecia)
+- `Contenedor SRT Cambio-Lite` (multi-herramienta): corregido `0.1 kg` → `0.82 kg`
+
+**Boton de encendido en cabinas tipo Apolo Medivac:**
+- El label del boton de encendido (cuando esta apagada) decia "Listo para despegue", pero su par opuesto (cuando esta encendida) dice "Desactivar energia". El nuevo label unifica ambos estados como "Activar energia" / "Desactivar energia"
+
+**Recuperadas 34 misiones con marcador `[BP]`:**
+- Mejorada la deteccion de misiones que recompensan blueprints. Antes el sistema fallaba cuando una capa intermedia no marcaba la mision aunque el juego siguiera dandole blueprints. Ahora se detectan directamente desde los datos del juego
+- Total de titulos con `[BP]`: 200 → 234 (+34 misiones recuperadas, principalmente variantes de sabotaje, defensa de bases, headhunters y bounties FPS)
+
+**Restauradas 25 listas de "Posibles Planos" perdidas:**
+- Auditoria detecto que 25 misiones aparecian con el marcador `[BP]` en el HUD pero su descripcion no listaba los planos posibles. La regresion se arrastraba desde una version antigua donde el archivo de blueprints se regenero perdiendo entradas
+- Despues del fix: 229 misiones con `[BP]` muestran ademas la lista de posibles planos en su descripcion (antes 200)
+
+**Estadisticas:**
+- Lineas en global.ini: 87.718 (sin cambio)
+- Blueprints traducidos: 502 (antes 477)
+- Misiones con `[BP]`: 234 (antes 200)
+
 ## v1.8.0 — 2026-04-09
 
 **Build:** 4.7.1-LIVE_11592622 (sin cambio de version del juego)

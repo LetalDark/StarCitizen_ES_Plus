@@ -38,9 +38,9 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 | # | Capa | Descripcion | Claves | Fuente |
 |---|---|---|---|---|
 | 1 | Traduccion base ES | Traduccion comunitaria completa al español | 87.591 | Thord82 |
-| 2 | Blueprints misiones | Planos posibles en misiones, traducidos al ES + correcciones | 477 | MrKraken + nuestras |
+| 2 | Blueprints misiones | Planos posibles en misiones, traducidos al ES + correcciones | 502 | MrKraken + nuestras |
 | 3 | Traducciones p4k | Claves que faltan en Thord82, traducidas del ingles oficial | 82 | Data.p4k CIG |
-| 4 | [BP] en titulos | Marca `[BP]` en misiones que dan blueprints | 243 | ExoAE |
+| 4 | [BP] en titulos | Marca `[BP]` en misiones que dan blueprints | 234 | datos del juego + ExoAE |
 | 5 | Componentes clase/grado | Prefijo `[MIL\|2\|A]`, `[CIV\|1\|C]`, etc. en componentes de naves | 379 | ExoAE + datos del juego |
 | 6 | Misiles y bombas | Tracking type `IR`/`EM`/`CS` en misiles, tamaño `B#` en bombas | 114 | BeltaKoda |
 | 7 | Sustancias ilegales | Marca `[!]` en drogas (WiDoW, SLAM, Maze, etc.) | 8 | ExoAE |
