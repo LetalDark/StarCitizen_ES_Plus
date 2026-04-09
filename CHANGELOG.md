@@ -1,5 +1,34 @@
 # Changelog
 
+## v1.7.0 — 2026-04-09
+
+**Build:** 4.7.1-LIVE_11592622
+
+Actualizacion al parche 4.7.1 con nuevos contenidos, limpieza de descripciones y mejoras de verificacion.
+
+**Cambios:**
+- 35 claves nuevas traducidas del parche 4.7.1:
+  - Greycat UTV (vehiculo nuevo) y sus 5 pinturas (Resistor Camo, Bonanza, Wilderness Camo, Reckoner, Keystone)
+  - 5 pinturas nuevas para el MISC Hull B (Empyrean, Dusk, Horizon, Keystone, First Light)
+  - Rack de misiles integrado del Hull B (S6, 8xS3)
+  - 3 pinturas mas: Buccaneer Redline, Hermes Keystone, RAFT Keystone
+  - 3 interactores de la torreta tractora (entrar / izquierda / derecha)
+  - Nuevo tier "Extrapequeño" para misiones Covalex Recover Cargo
+- Journal "Mining Compendium" reescrito con ubicaciones mucho mas detalladas por Lagrange points (ARC-L1..L5, CRU-L1..L5, HUR-L1..L5, MIC-L1..L5), cinturones (Glaciem Ring, cinturon Keeger, anillo de Yela, Akiro Cluster) y estaciones (QV Breaker en Nyx). Minerales comunes traducidos al español (Cobre, Oro, Hierro, Aluminio, Cuarzo, Estaño, Titanio, Tungsteno, Hielo, Silicio).
+- 50 descripciones limpiadas de etiquetas en ingles que persistian desde versiones anteriores (Manufacturer:, Item Type:, Damage Reduction:, Tracking Signal:, etc.) en misiles, mochilas, armaduras y pistolas Klaus & Werner.
+- Etiqueta `[BP]` añadida a misiones generales del Bounty Hunters Guild que no la tenian.
+
+**Correcciones importantes:**
+- Recuperacion de 70 claves perdidas entre versiones del juego. CIG renombro el casing de varias claves de dialogos y notificaciones (ejemplo: `Dlg_SC_mc_lose_Position*` → `Dlg_SC_mc_lose_position*`), y el merge anterior las descartaba silenciosamente dejando solo la version antigua obsoleta.
+- Correcciones manuales aplicadas en el orden correcto para evitar prefijos duplicados tipo `[SIG|1|B] [SIG|1|B] Hunter`.
+
+**Estadísticas:**
+- Líneas en global.ini: 87,718 (antes 87,683)
+- Claves nuevas añadidas vs 4.7.0: 35
+- Descripciones limpiadas EN→ES: 50
+- Claves recuperadas: 70
+- [BP] en titulos: 243
+
 ## v1.6.3 — 2026-04-06
 
 **Build:** 4.7.0-LIVE_11576750
