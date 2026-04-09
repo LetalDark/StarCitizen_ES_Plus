@@ -1,5 +1,36 @@
 # Changelog
 
+## v1.8.0 — 2026-04-09
+
+**Build:** 4.7.1-LIVE_11592622 (sin cambio de version del juego)
+
+Reestructura del compendio de mineria del diario, unificacion del formato de minerales en el HUD y limpieza de un placeholder con un marcador fantasma.
+
+**Compendio de mineria reorganizado por rareza:**
+- El "Compendio general de mineria" del diario del juego ahora esta organizado en 6 secciones por rareza (Legendario, Epico, Raro, Poco comun, Comun, Minables a mano), con los minerales en orden alfabetico dentro de cada seccion.
+- Antes era un listado plano alfabetico; ahora es mucho mas facil localizar los minerales raros y saber a primera vista en que categoria estan.
+- Encabezados en español y marcador "(Raro)" redundante eliminado de Quantainium (ya esta bajo "Legendario").
+
+**Minerales en el HUD de nave:**
+- Los 4 minerales que antes aparecian con formatos inconsistentes o en ingles ahora siguen la convencion `(Bto)` raw / `(Mnl)` mena:
+  - `Raw Ice` (en ingles) → `Hielo (Bto)`
+  - `Quantainium C.` → `Quant (Bto)` (formato `C.` eliminado)
+  - `Hephaestanite` (sin marca) → `Heph (Bto)`
+  - `Feynmalin (Bto)` (nombre truncado) → `Feynma (Bto)`
+- 3 nombres de mena que se salian del ancho del HUD acortados de forma natural:
+  - `Savrilium (Mnl)` → `Savril (Mnl)`
+  - `Saldynium (Mnl)` → `Saldyn (Mnl)`
+  - `Lindinium (Mnl)` → `Lindin (Mnl)`
+- Añadido acortamiento `Glacosite (Bto)` → `Glacos (Bto)`
+- El commodity refinado de Hephaestanite revertido al nombre completo (ya no hace falta abreviar porque el raw es el que lleva la marca).
+
+**Fix en el placeholder de localizacion:**
+- La clave de error de localizacion `LOC_UNINITIALIZED` arrastraba un marcador `<EM4>[BP]</EM4>` fantasma. Este placeholder se muestra cuando el motor del juego no puede resolver un texto y no tiene nada que ver con misiones de blueprints, asi que el marcador estaba fuera de lugar. Ahora se muestra limpio.
+
+**Estadisticas:**
+- Lineas en global.ini: 87,718 (sin cambio respecto a v1.7.1)
+- Correcciones manuales totales: 100
+
 ## v1.7.1 — 2026-04-09
 
 **Build:** 4.7.1-LIVE_11592622 (sin cambio de version del juego)

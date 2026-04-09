@@ -14,12 +14,13 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 6. **Marca sustancias ilegales** con `[!]` para avisar antes de transportarlas
 7. **Mejora titulos de hauling** añadiendo la ruta (origen>destino) al titulo del contrato
 8. **Acorta nombres largos** en el HUD de mineria para evitar solapamiento (Hephaestanite → Heph, ore → (Mnl), raw → (Bto), Inestabilidad → Inest:)
-9. **Inyecta stats reales de armas FPS** (DPS, Alpha, Velocidad, Peso, Caida de daño) con datos testeados in-game
-10. **Inyecta stats de armaduras** (Peso, Reduccion Stun, Reduccion Impacto), peso de cargadores, mochilas, ropa, accesorios y mas
-11. **Inyecta stats de armas de nave** (DPS, Alpha, RPM, Velocidad, Rango, Penetracion, Capacitor, Masa, HP, EM, AoE) extraidos directamente de los datos del juego (122 armas)
-12. **Inyecta stats de componentes de nave** (334 componentes): Power Plants, Quantum Drives, Jump Drives, Shields, Coolers y Radars con datos del juego
-13. **Completa claves que faltan** extrayendo los textos oficiales directamente del Data.p4k del juego
-14. **Corrige errores** de las fuentes originales (GUIDs nulos, pools faltantes, nombres de armadura incorrectos)
+9. **Reestructura el compendio de mineria** del diario del juego en 6 secciones por rareza (Legendario, Epico, Raro, Poco comun, Comun, Minables a mano) con orden alfabetico dentro
+10. **Inyecta stats reales de armas FPS** (DPS, Alpha, Velocidad, Peso, Caida de daño) con datos testeados in-game
+11. **Inyecta stats de armaduras** (Peso, Reduccion Stun, Reduccion Impacto), peso de cargadores, mochilas, ropa, accesorios y mas
+12. **Inyecta stats de armas de nave** (DPS, Alpha, RPM, Velocidad, Rango, Penetracion, Capacitor, Masa, HP, EM, AoE) extraidos directamente de los datos del juego (122 armas)
+13. **Inyecta stats de componentes de nave** (334 componentes): Power Plants, Quantum Drives, Jump Drives, Shields, Coolers y Radars con datos del juego
+14. **Completa claves que faltan** extrayendo los textos oficiales directamente del Data.p4k del juego
+15. **Corrige errores** de las fuentes originales (GUIDs nulos, pools faltantes, nombres de armadura incorrectos)
 
 ## Fuentes
 
@@ -44,14 +45,14 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 | 6 | Misiles y bombas | Tracking type `IR`/`EM`/`CS` en misiles, tamaño `B#` en bombas | 114 | BeltaKoda |
 | 7 | Sustancias ilegales | Marca `[!]` en drogas (WiDoW, SLAM, Maze, etc.) | 8 | ExoAE |
 | 8 | HUD mining | Abreviaturas para evitar solapamiento (Inest:, Res:) | 2 | MrKraken/ExoAE |
-| 9 | Minerales | Heph + ore (Mnl) + raw (Bto) + ajustes nombres largos (max 15 chars) | 39 | MrKraken/ExoAE |
+| 9 | Minerales | Heph + ore (Mnl) + raw (Bto) + ajustes nombres largos (max 14 chars) | 47 | MrKraken/ExoAE |
 | 10 | Hauling titles | Ruta origen>destino en titulos de transporte de carga | 5 | MrKraken |
 | 11 | Limpieza | Trailing spaces eliminados | 607 | BeltaKoda |
 | 12 | Stats armas FPS | DPS, Alpha, Vel, Peso, Caida de daño, modos de fuego | 295 | Tests in-game + Data.p4k |
 | 13 | Stats cargadores | Peso del cargador | 42 | Tests in-game |
 | 14 | Stats armaduras | Peso, Reduccion Stun, Reduccion Impacto | 713 | Tests in-game + Data.p4k |
 | 15 | Stats ropa y accesorios | Peso de ropa, calzado, mochilas, accesorios arma, multitools, granadas y mas | 910 | Tests in-game |
-| 16 | Correcciones manuales | Nombres armadura, descripciones, placeholders de misiones, traducciones recuperadas | 98 | Verificacion manual |
+| 16 | Correcciones manuales | Nombres armadura, descripciones, placeholders de misiones, traducciones recuperadas | 100 | Verificacion manual |
 | 17 | Stats armas de nave | DPS, Alpha, RPM, Vel, Rango, Penetracion, Dispersión, Capacitor, Masa, HP, EM, Energía, AoE | 122 | Datos del juego |
 | 18 | Stats componentes nave | Power Plants, Quantum Drives, Jump Drives, Shields, Coolers, Radars | 334 | Datos del juego |
 
