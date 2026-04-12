@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.8.3 — 2026-04-12
+
+**Build:** 4.7.1-LIVE_11592622 (sin cambio de version del juego)
+
+Fix de un nombre roto en la armadura ORC-mkV y restauracion de listas de "Posibles Planos" perdidas en muchas variantes de descripcion de mision.
+
+**Fix nombre roto en armadura ORC-mkV:**
+- Las piernas modificadas de la ORC-mkV mostraban una cadena de basura pegada al nombre (`ORC-mkVbbbbbbbbbbbbbbbbbbbbbbbb (Piernas Modificadas)`). Corregido a `ORC-mkV (Piernas Modificadas)`.
+
+**Restauradas 45 listas de "Posibles Planos" en descripciones de mision:**
+- Muchas misiones con el marcador `[BP]` en el titulo mostraban la descripcion **sin la lista de planos** en el panel de oferta.
+- Causa: el juego puede mostrar varias variantes de descripcion para la misma mision (segun fase, contexto o submision), y la lista de planos solo estaba en una de ellas. Las demas variantes quedaban "huerfanas".
+- Ahora la lista de planos se propaga automaticamente a todas las variantes hermanas de cada mision, asi siempre se ve sin importar la version del texto que muestre el juego.
+- Misiones afectadas: variantes de asesinatos selectivos en UGFs, defensas de naves CFP en Nyx, caza de fauna en Highpoint, ataques de Headhunters, defensas Foxwell, sondas legales y mas.
+
+**Estadisticas:**
+- Lineas en global.ini: 87 718
+- Descripciones con "Posibles Planos": 249 → 294 (+45)
+
 ## v1.8.1 — 2026-04-10
 
 **Build:** 4.7.1-LIVE_11592622 (sin cambio de version del juego)
