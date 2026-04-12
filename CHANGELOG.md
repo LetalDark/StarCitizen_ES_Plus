@@ -1,5 +1,29 @@
 # Changelog
 
+## v1.9.1 — 2026-04-12
+
+**Build:** 4.7.1-LIVE_11592622 (sin cambio de version del juego)
+
+Recuperacion de traducciones que se perdian entre versiones y traduccion de varios titulos y mensajes que seguian en ingles.
+
+**Traducciones recuperadas (47):**
+- Lineas del comentarista de carreras (`Lose Position` y `Moving Up Position`) que volvian a aparecer en ingles tras cada actualizacion del juego.
+- Avisos de sensores en HUD: `Bogey` -> `Espectro`, `Contact` -> `Contacto`, `Radar contact` -> `Radar contacto` (variantes ANVL, ORIG, RSI).
+- `Cambiar Posicion de la torreta` (UI de tripulacion).
+- Resumen rapido de la mision Siege of Orison y aviso de cierre del evento del LPA.
+- Frases cortas de NPC en combate y sociales.
+- Tutorial de combate (consejo profesional sobre contramedidas).
+- Briefing del contrato `hurston_UGF_defend` (Hurston Dynamics Outsourcing).
+
+**Nuevas traducciones de textos heredados (10):**
+- Mensaje de objetivo de reabastecimiento: *"Reabastecimiento al X% completado. Por favor, manten la posicion actual."*
+- Titulo de mision: *"Lucha por un Pyro Libre"*
+- Sobres del Año Lunar (Caballo, Mono, Carnero, Gallo).
+- 4 titulos de mision de HeadHunters - Recuperar Carga: *"Recuperando lo nuestro"*, *"Terminar el trabajo"*, *"Vale la pena"*, *"Obteniendo lo que merecemos"*.
+
+**Estadisticas:**
+- Lineas en global.ini: 87718
+
 ## v1.9.0 — 2026-04-12
 
 **Build:** 4.7.1-LIVE_11592622 (sin cambio de version del juego)
