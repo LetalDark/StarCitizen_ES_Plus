@@ -55,7 +55,7 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 13 | Stats cargadores | Peso del cargador | 42 | Tests in-game |
 | 14 | Stats armaduras | Peso, Reduccion Stun, Reduccion Impacto | 713 | Tests in-game + Data.p4k |
 | 15 | Stats ropa y accesorios | Peso de ropa, calzado, mochilas, accesorios arma, multitools, granadas y mas | 910 | Tests in-game |
-| 16 | Correcciones manuales | Nombres armadura normalizados al formato `<Set> (Parte)`, descripciones, placeholders de misiones, traducciones recuperadas | 161 | Verificacion manual |
+| 16 | Correcciones manuales | Nombres armadura normalizados al formato `<Set> (Parte)`, trajes de exploración Novikov/Pembroke/Zeus/Stirling con `(Traje exploración)`, cascos de carreras, descripciones, placeholders de misiones, traducciones recuperadas | 251 | Verificacion manual |
 | 17 | Stats armas de nave | DPS, Alpha, RPM, Vel, Rango, Penetracion, Dispersión, Capacitor, Masa, HP, EM, Energía, AoE | 122 | Datos del juego |
 | 18 | Stats componentes nave | Power Plants, Quantum Drives, Jump Drives, Shields, Coolers, Radars | 334 | Datos del juego |
 
@@ -150,6 +150,17 @@ Las variantes "Modificado/a/s" concuerdan en género con la parte: `(Pecho Modif
 Ejemplos: `Citadel Dark Red (Pecho)`, `Aves Starchaser (Piernas)`, `ADP-mk4 Big Boss (Casco)`, `DCP Camuflaje Cazador (Brazos)`, `ADP-mk4 (Pecho Modificado)`.
 
 Los trajes tipo pantalón (Antium, Palatino) usan `(Pantalones)` como variante para reflejar que son prendas de tela, no armadura rígida.
+
+**Mochilas y subtrajes (v1.9.6)** siguen el mismo esquema:
+- **Mochila** → `CSP-68L Forest Camo (Mochila)`, `Aril Black Cherry (Mochila)`, variante modificada `(Mochila Modificada)`
+- **Subtraje** → calco ES de "undersuit". `TCS-4 Woodland (Subtraje)`, `Guardian (Subtraje)`, variante modificada `(Subtraje Modificado)`
+
+**Trajes de exploración** (Novikov, Pembroke, Zeus, Stirling) son una pieza única integrada in-game (brazos+piernas+pecho+subtraje) y llevan marcadores propios:
+- Traje completo → `Novikov (Traje exploración)`, `Stirling Sediment Edition (Traje exploración)`
+- Casco (item separado) → `Zeus Starscape (Casco exploración)`
+- Mochila (item separada) → `Pembroke RSI Sunburst Edition (Mochila exploración)`
+
+**Cascos de carreras** (flightsuit helmets temáticos de naves/ligas) usan `(Casco carreras)`: `Mirai (Casco carreras)`, `Murray Cup (Casco carreras)`, `Origin 350r (Casco carreras)`.
 
 ## Formato de stats de armaduras
 

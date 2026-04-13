@@ -1,5 +1,48 @@
 # Changelog
 
+## v1.9.6 — 2026-04-14
+
+**Build:** 4.7.1-HOTFIX_11617053
+
+Extensión del refactor v1.9.5 a mochilas, subtrajes y trajes de exploración, más un fix importante de un bug que había dejado ~24 cascos con el nombre roto en la versión anterior.
+
+**Fix cascos rotos v1.9.5:**
+- En v1.9.5, el refactor de nombres dejó ~24 cascos con el prefijo truncado cuando el nombre original contenía una preposición (ej. `Casco de Exploración Zeus` quedó como `de Exploración Zeus (Casco)`). Todos corregidos: `Zeus (Casco exploración)`, `Stirling Sediment Edition (Casco exploración)`, `Advocacy Interceptor (Casco)`, etc.
+
+**Trajes de exploración — pieza única (~85 claves):**
+Los trajes Novikov, Pembroke, Zeus y Stirling son una pieza única integrada in-game (brazos+piernas+pecho+subtraje) y ahora llevan marcador propio para diferenciarlos del resto de armadura:
+- Traje completo → `Novikov (Traje exploración)`, `Stirling Sediment Edition (Traje exploración)`
+- Casco (item separado) → `Zeus Starscape (Casco exploración)`
+- Mochila (item separada) → `Pembroke RSI Sunburst Edition (Mochila exploración)`
+
+**Cascos de carreras (6 claves):**
+Los cascos de piloto temáticos de naves/ligas de carreras usan `(Casco carreras)`:
+- `Mirai (Casco carreras)` · `Origin (Casco carreras)` · `Murray Cup (Casco carreras)` · `Star Kitten (Casco carreras)` · `Fortuna (Casco carreras)` · `Origin 350r (Casco carreras)`
+
+**Mochilas — ~130 claves al formato unificado:**
+Todas las mochilas pasan del prefijo heredado `Mochila X` al formato `<Set> <Variante> (Mochila)`, coherente con el refactor de armaduras de v1.9.5.
+```
+CSP-68L Forest Camo (Mochila)
+Aril Black Cherry (Mochila)
+Geist Whiteout (Mochila)
+```
+
+**Subtrajes — ~198 claves al formato unificado:**
+Palabra nueva **Subtraje** como calco español de "undersuit" (sub+traje). Más específica que "traje" genérico, transparente para quien consulta guías en inglés, y evita colisión con "traje" en otros contextos del juego.
+```
+TCS-4 Woodland (Subtraje)
+Guardian (Subtraje)
+Advocacy Interceptor (Subtraje)
+```
+
+**Cambios menores:**
+- Variantes "Modificado/a/s" con concordancia de género: `(Mochila Modificada)`, `(Subtraje Modificado)`, `(Traje exploración Modificado)`.
+- ~5 correcciones puntuales de cascos/subtrajes con nombres preposicionales (Field Recon, Microid Battle, etc.).
+
+**Estadísticas:**
+- ~430 entradas tocadas en total
+- Líneas en global.ini: 87626 (sin cambio)
+
 ## v1.9.5 — 2026-04-13
 
 **Build:** 4.7.1-HOTFIX_11617053
