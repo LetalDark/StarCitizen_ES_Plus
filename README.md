@@ -6,7 +6,7 @@ Traduccion al español de Star Citizen que combina multiples fuentes para ofrece
 
 Star Citizen no tiene traduccion oficial completa al español. Existen proyectos comunitarios que traducen los textos del juego, pero ninguno incluye toda la informacion disponible. Este proyecto:
 
-1. **Parte de la traduccion de Thord82**, la traduccion comunitaria al español mas completa
+1. **Hereda y construye sobre la traduccion comunitaria de Thord82** como base evolutiva. Desde v1.9.0 el proyecto es independiente: cada version arranca de la anterior y aplica solo el delta del juego, sin re-mergear automaticamente fuentes externas
 2. **Añade datos de blueprints** de las misiones que dan planos, con la lista de posibles recompensas traducida al español
 3. **Añade clase/grado a los componentes** de naves (coolers, power plants, quantum drives, shields, radars) con prefijo compacto (ej: `[MIL|2|A] Bracer` = Militar, Tamaño 2, Grado A)
 4. **Añade tracking type a misiles** (IR/EM/CS) y tamaño a bombas (B3/B5/B10) para saber que contramedida usar
@@ -21,12 +21,15 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 13. **Inyecta stats de componentes de nave** (334 componentes): Power Plants, Quantum Drives, Jump Drives, Shields, Coolers y Radars con datos del juego
 14. **Completa claves que faltan** extrayendo los textos oficiales directamente del Data.p4k del juego
 15. **Corrige errores** de las fuentes originales (GUIDs nulos, pools faltantes, nombres de armadura incorrectos)
+16. **Limpieza automatica** de claves obsoletas que el juego ya no usa (renombres antiguos, contenido retirado), con migracion automatica de las traducciones a los nombres nuevos
 
-## Fuentes
+## Fuentes y agradecimientos
+
+Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automaticos del juego, su base y la inspiracion para muchas de las funcionalidades vienen de los siguientes proyectos comunitarios. Sin su trabajo este parche no existiria — el credito y el reconocimiento les pertenecen.
 
 | Fuente | Descripcion | Enlace |
 |---|---|---|
-| **Thord82** | Traduccion comunitaria al español. Base principal del proyecto | [github.com/Thord82/Star_citizen_ES](https://github.com/Thord82/Star_citizen_ES/) |
+| **Thord82** | Traduccion comunitaria al español. Base evolutiva heredada del proyecto | [github.com/Thord82/Star_citizen_ES](https://github.com/Thord82/Star_citizen_ES/) |
 | **MrKraken / StarStrings** | Blueprints de misiones, clase/grado de componentes, mejoras de hauling y QoL | [github.com/MrKraken/StarStrings](https://github.com/MrKraken/StarStrings) |
 | **ExoAE / ScCompLangPack** | Clase/grado de componentes, blueprints, avisos de sustancias ilegales | [github.com/ExoAE/ScCompLangPack](https://github.com/ExoAE/ScCompLangPack/) |
 | **BeltaKoda / ScCompLangPackRemix** | Tracking type de misiles/bombas, prefijos compactos de componentes | [github.com/BeltaKoda/ScCompLangPackRemix](https://github.com/BeltaKoda/ScCompLangPackRemix) |
@@ -52,7 +55,7 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 | 13 | Stats cargadores | Peso del cargador | 42 | Tests in-game |
 | 14 | Stats armaduras | Peso, Reduccion Stun, Reduccion Impacto | 713 | Tests in-game + Data.p4k |
 | 15 | Stats ropa y accesorios | Peso de ropa, calzado, mochilas, accesorios arma, multitools, granadas y mas | 910 | Tests in-game |
-| 16 | Correcciones manuales | Nombres armadura, descripciones, placeholders de misiones, traducciones recuperadas | 120 | Verificacion manual |
+| 16 | Correcciones manuales | Nombres armadura, descripciones, placeholders de misiones, traducciones recuperadas | 132 | Verificacion manual |
 | 17 | Stats armas de nave | DPS, Alpha, RPM, Vel, Rango, Penetracion, Dispersión, Capacitor, Masa, HP, EM, Energía, AoE | 122 | Datos del juego |
 | 18 | Stats componentes nave | Power Plants, Quantum Drives, Jump Drives, Shields, Coolers, Radars | 334 | Datos del juego |
 
