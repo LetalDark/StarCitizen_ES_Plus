@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.9.11 — 2026-04-26
+
+**Build:** 4.7.2-HOTFIX_11715810
+
+Patch sobre v1.9.10 para arreglar un bug visual del HUD en misiones de patrulla `[BP] Patrullar...`. Durante el primer objetivo el juego mostraba "Esperar el despliegue: %ls" con el `%ls` literal en pantalla (un placeholder técnico que el motor del juego debería sustituir pero no lo hace en español). En inglés el motor lo sustituye por una cadena vacía y el bug pasa desapercibido. La traducción ahora omite el placeholder y queda solo "Esperar el despliegue", limpio. El cronómetro de la misión sigue apareciendo aparte en su widget.
+
+**Cambios:**
+- `SP_Wait_Obj`: "Esperar el despliegue: %ls" → "Esperar el despliegue".
+
+**Estadísticas:**
+- Líneas en global.ini: 87 626 (sin cambio)
+- Cobertura de blueprints en misiones: 100 %
+
 ## v1.9.10 — 2026-04-25
 
 **Build:** 4.7.2-HOTFIX_11715810
