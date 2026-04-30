@@ -1,5 +1,76 @@
 # Changelog
 
+## v1.10.0 — 2026-04-30
+
+**Builds:** 4.7.2-LIVE_11715810 + 4.8.0-PTU_11753569
+
+Primer release dual-canal del proyecto. Coexisten un LIVE estable
+(4.7.2 build 11715810) y un PTU de pruebas (4.8.0 build 11753569) con
+contenido nuevo masivo de la actualización 4.8. El ZIP de distribución
+contiene ambos `global.ini` en subcarpetas separadas (`LIVE/` y `PTU/`)
+para que cada usuario instale el que corresponde a su rama del RSI
+Launcher.
+
+**Cambios principales — canal LIVE 4.7.2:**
+- `global.ini` prácticamente idéntico a v1.9.11 (mismo contenido,
+  reorganización interna de carpetas).
+- Mejora de hauling: los títulos de transporte de carga Covalex ahora
+  preservan la marca `[BP]` cuando el contrato da planos como recompensa
+  (antes la perdían silenciosamente al reescribir el título con la ruta).
+
+**Cambios principales — canal PTU 4.8.0:**
+- **+1 009 claves nuevas** del enorme parche 4.8 traducidas con un
+  glosario consolidado (Antiaéreo, Tanque pesado/ligero, Caza pesado,
+  Pathfinder → Explorador, Subtraje, Casco de vuelo, Repostaje, Boquilla
+  de combustible, Cañonera, etc.).
+- **Sistema de repostaje completo** traducido: 33 claves de UI (Boquilla
+  de combustible, Módulo de combustible, Cancelar repostaje, Distribución
+  de combustible, etc.).
+- **Diálogos NPC en misiones** (309 líneas habladas): conversaciones
+  cortas estilo radio bajo presión durante misiones Intersec, Foxwell,
+  TheCollector (con tono pidgin-Banu de Wikelo preservado), UWC, TSG.
+- **Misiones nuevas con título y descripción**: Intersec_TSG_*,
+  Foxwell_DefendDestructibleEntites_*, FTLCourier_*, HeadHunters_*,
+  TheCollector_*, Adagio_Industrial_Salvage_*, Eckhart_*.
+- **Re-categorización masiva de naves** (126 descripciones): el Focus
+  de combate y especialización ha sido rehecho para precisar el rol
+  (Cyclone AA → Antiaéreo, Storm → Tanque ligero, Nova → Tanque pesado,
+  Vanguard Sentinel → Heavy Fighter, Perseus → Cañonera pesada, etc.).
+- **Destructor Vanduul Mauler** (nueva nave capital enemiga) con sus
+  componentes Gen2 y armas IGNITER/STRIKER/RAGE/ANNIHILATOR/ERADICATOR.
+- **Crafting UI** (20 slots): Iris de apertura, Barras colectoras,
+  Disipador térmico, Procesador de señal, etc.
+- **Stats GPP nuevos** (15): Integridad, Eficiencia, Radio, Salud máxima,
+  Pips de energía, Consumo de combustible cuántico, etc.
+- **Minerales mineabletype** (35 primarios + variantes): Agricium,
+  Aluminium, Aslarite, etc. (nombres propios sin traducir).
+- **Items commodities** (23): contramedidas (señuelos/bengalas),
+  munición, ranking ShatteredBlade, etc.
+- **Foundation Festival** + variantes Purgatory Camo de equipo cosmético
+  (Aopoa, Anvil, MISC, RSI, Tumbril).
+
+**"Posibles Planos" auto-generados (nuevo):**
+- Las descripciones de misiones que dan planos ahora incluyen un bloque
+  "Posibles Planos" con la lista de items que la misión puede recompensar,
+  en español. Antes esta lista solo aparecía en las misiones que existían
+  en versiones históricas; ahora se genera automáticamente para
+  cualquier misión con planos en los datos del juego.
+- Resultado en PTU 4.8: **291** misiones con `[BP]` en título (+57
+  nuevas etiquetadas), **385** descripciones con "Posibles Planos"
+  (+59 vs v1.9.11). Cobertura efectiva del 99 %; las 5 misiones
+  restantes son casos en los que el propio juego no tiene aún el
+  nombre localizado del item recompensa
+  (`salvage_modifier_scraper_*`, etc.).
+- 194 nuevos blueprints añadidos a los pools de misión por la
+  actualización 4.8: 161 (83 %) ya tienen su nombre español;
+  33 (17 %) están a la espera del nombre localizado oficial.
+
+**Estadísticas:**
+- Líneas en `global.ini` LIVE 4.7.2: 87 626 (sin cambio neto vs v1.9.11).
+- Líneas en `global.ini` PTU 4.8.0: 88 586 (+960 netas).
+- Claves nuevas en PTU vs LIVE: 1 009.
+- Cobertura de blueprints en misiones: 99 % (PTU) / 100 % (LIVE).
+
 ## v1.9.11 — 2026-04-26
 
 **Build:** 4.7.2-HOTFIX_11715810

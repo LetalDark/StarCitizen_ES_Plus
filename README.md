@@ -43,7 +43,8 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 1 | Traduccion base ES | Traduccion comunitaria completa al español | 87.591 | Thord82 |
 | 2 | Blueprints misiones | Planos posibles en misiones, traducidos al ES + correcciones | 502 | MrKraken + nuestras |
 | 3 | Traducciones p4k | Claves que faltan en Thord82, traducidas del ingles oficial | 82 | Data.p4k CIG |
-| 4 | [BP] en titulos | Marca `[BP]` en misiones que dan blueprints | 234 | datos del juego + ExoAE |
+| 4 | [BP] en titulos | Marca `[BP]` en misiones que dan blueprints | 227 LIVE / 291 PTU | datos del juego |
+| 5 | Posibles Planos auto-generados | Bloque "Posibles Planos" en descripciones, generado automaticamente desde los datos del juego resolviendo cada blueprint a su nombre español (v1.10.0) | 287 LIVE / 385 PTU | datos del juego |
 | 5 | Componentes clase/grado | Prefijo `[MIL\|2\|A]`, `[CIV\|1\|C]`, etc. en componentes de naves | 382 | datos del juego |
 | 6 | Misiles y bombas | Tracking type `IR`/`EM`/`CS` en misiles, tamaño `B#` en bombas (estilo uniforme) | 136 | datos del juego |
 | 7 | Sustancias ilegales | Marca `[!]` en drogas (WiDoW, SLAM, Maze, etc.) | 8 | ExoAE |
@@ -59,16 +60,19 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 17 | Stats armas de nave | DPS, Alpha, RPM, Vel, Rango, Penetracion, Dispersión, Capacitor, Masa, HP, EM, Energía, AoE | 122 | Datos del juego |
 | 18 | Stats componentes nave | Power Plants, Quantum Drives, Jump Drives, Shields, Coolers, Radars | 334 | Datos del juego |
 
-**Total: 87,626 claves**
+**Total: 87 626 claves (LIVE 4.7.2) — 88 586 claves (PTU 4.8.0)**
 
 ## Instalacion
 
 1. Descarga el ZIP de la ultima release
 2. Extrae el contenido en la carpeta de Star Citizen (ej: `C:\Program Files\Roberts Space Industries\StarCitizen\`)
-3. La estructura queda asi:
+3. La estructura queda asi (cada carpeta es un canal del RSI Launcher; instala solo la que uses):
 ```
 StarCitizen/
-└── LIVE/
+├── LIVE/
+│   ├── data/Localization/spanish_(spain)/global.ini
+│   └── user.cfg
+└── PTU/
     ├── data/Localization/spanish_(spain)/global.ini
     └── user.cfg
 ```
@@ -260,5 +264,8 @@ La eficiencia del Quantum Drive depende del tanque cuantico de la nave. Se muest
 
 ## Version actual
 
-- **Star Citizen Alpha 4.7.2-HOTFIX** (build 11715810)
+Release dual-canal: el ZIP contiene un `global.ini` por cada rama del juego.
+
+- **Canal LIVE: Star Citizen Alpha 4.7.2-LIVE** (build 11715810)
+- **Canal PTU: Star Citizen Alpha 4.8.0-PTU** (build 11753569)
 - Ver [CHANGELOG.md](CHANGELOG.md) para el historial completo
