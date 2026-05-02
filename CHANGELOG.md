@@ -1,5 +1,39 @@
 # Changelog
 
+## v1.11.0 — 2026-05-02
+
+**Builds:** 4.7.2-LIVE_11715810 (sin cambios) + 4.8.0-PTU_11768487 (nuevo).
+
+Actualización del canal PTU al último build 4.8.0 (11768487). El canal
+LIVE 4.7.2 no recibe cambios — su `global.ini` es idéntico a v1.10.1.
+
+**Cambios — canal PTU 4.8.0:**
+- **30 claves nuevas traducidas:**
+  - 26 líneas de voz de la nueva misión Squadron Battle del *Tranquility*
+    (Captain Aniss Martel de la facción **People's Alliance**, enfrentamiento
+    con la facción **Shattered Blade** y posterior ataque del destructor
+    Vanduul **Mauler** en sistema **Nyx** — incluye rescate del piloto Gabe).
+  - Reputación de la nueva facción **People's Alliance**.
+  - Objetivo corto del refuel de naves (`ShipRefuel_obj_short`).
+  - Etiqueta HUD `Resistencia anti-G prevista`.
+- **4 typos del juego corregidos** que CIG arregló en este build:
+  `Allrighty`→`Alrighty`, `hotstiles`→`hostiles`, `Suport`→`Support`, y
+  ajuste del prefijo del objetivo `Intersec_TSG_Assist_Solo_obj_short_01`.
+- **3 errores heredados corregidos** en español:
+  - Nombre de la nave `Tranqulity` → `Tranquility` en líneas de fallo
+    de misión de Captain Martel.
+  - Tags de director (`<death scream>`, `<scream>`) traducidos a
+    `<grito de muerte>` / `<grito>` siguiendo la convención usada
+    históricamente en el archivo (los corchetes son de CIG, no se tocan).
+- **Fix de UI: cabecera del Administrador de Flota.** En 4.8.0 CIG añadió
+  un nuevo checkbox "Mostrar naves locales" pegado al título de la
+  ventana, y los textos en español no cabían (se solapaban). Hemos
+  abreviado el título a "Admin. de Flota" y el checkbox a "Naves locales"
+  para que ambos quepan correctamente en la cabecera.
+
+**Cambios — canal LIVE 4.7.2:**
+- Sin cambios (`global.ini` idéntico a v1.10.1).
+
 ## v1.10.1 — 2026-04-30
 
 **Builds:** 4.7.2-LIVE_11715810 + 4.8.0-PTU_11753569 (sin cambios de upstream).
