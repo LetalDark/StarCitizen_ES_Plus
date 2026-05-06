@@ -60,7 +60,7 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 17 | Stats armas de nave | DPS, Alpha, RPM, Vel, Rango, Penetracion, Dispersión, Capacitor, Masa, HP, EM, Energía, AoE | 122 | Datos del juego |
 | 18 | Stats componentes nave | Power Plants, Quantum Drives, Jump Drives, Shields, Coolers, Radars | 334 | Datos del juego |
 
-**Total: 87 626 claves (LIVE 4.7.2) — 88 589 claves (PTU 4.8.0)**
+**Total: 87 626 claves (LIVE 4.7.2) — 88 596 claves (PTU 4.8.0 build 11777743)**
 
 ## Instalacion
 
@@ -267,5 +267,5 @@ La eficiencia del Quantum Drive depende del tanque cuantico de la nave. Se muest
 Release dual-canal: el ZIP contiene un `global.ini` por cada rama del juego.
 
 - **Canal LIVE: Star Citizen Alpha 4.7.2-LIVE** (build 11715810)
-- **Canal PTU: Star Citizen Alpha 4.8.0-PTU** (build 11768487)
+- **Canal PTU: Star Citizen Alpha 4.8.0-PTU** (build 11777743)
 - Ver [CHANGELOG.md](CHANGELOG.md) para el historial completo

@@ -1,5 +1,63 @@
 # Changelog
 
+## v1.12.0 — 2026-05-06
+
+**Builds:** 4.7.2-LIVE_11715810 + **4.8.0-PTU_11777743** (PTU bumpeado).
+
+Esta release añade el último build PTU 4.8.0 (build 11777743) y refactoriza el
+formato de nombres de **trajes de vuelo, cascos de pilotaje y subtrajes** a una
+convención unificada compatible con el resto de armadura.
+
+**Cambios — PTU 4.8.0 build 11777743:**
+- **Etiquetas de ascensor en hábitats Pyro:** `B1`–`B10` → `Planta B1`–`Planta B10`
+  (CIG añadió la palabra "Floor" al inicio en este build).
+- **Tooltips del minijuego de repostaje:** mensaje de bienvenida y selección
+  del Modo repostaje para atracar con un cliente.
+- **Panel mobiGlas de CryAstro:** lista de artículos registrados, advertencias
+  de enfriamiento, indicador "Acoplado".
+- **Título de panel UI nuevo:** "Control maestro" (`Master Control`).
+- **Pinturas Syulen** (Chui'a, Tao'moa, Thlun): CIG arregló la codificación bug
+  del apóstrofo (`?` → `'` ASCII recto). Nos alineamos con CIG: pasamos de las
+  formas estilizadas con macrones (Chui'ā, Tao'moa, Thlūn) a las simples
+  Chui'a, Tao'moa, Thlun, igual que el EN canónico.
+- **Typos CIG corregidos:** `Refuelling Mode` → `Refueling Mode`,
+  `Fuel Cannister` → `Fuel Canister`.
+
+**Refactor — Trajes de vuelo y cascos de pilotaje (56 entradas):**
+
+Hasta ahora los trajes de vuelo (flight suits) y sus cascos llevaban un
+formato heredado mezclado (`Traje de Vuelo Mirai Racing`, `Mono de vuelo
+Fortuna Racing`, `Undersuit Odyssey Desert`, `(Casco)` ambiguo, etc.).
+Ahora siguen el mismo esquema `<Set> [Variante] (Tag)` que ya usan armaduras,
+mochilas y subtrajes, con un tag distinto por categoría:
+
+| Tag | Cuándo aplica | Ejemplo |
+|---|---|---|
+| `(Traje vuelo)` | Trajes de vuelo militares/civiles sin armadura ni racing | `Sol-III Aviator (Traje vuelo)` |
+| `(Traje carreras)` | Trajes de vuelo de competición | `Mirai (Traje carreras)`, `WhiteHot (Traje carreras)` |
+| `(Traje vuelo blindado)` | OMNI-AFS-Sapphire (4 variantes) | `OMNI-AFS-Sapphire Slate (Traje vuelo blindado)` |
+| `(Casco vuelo)` | Cascos de pilotaje no-racing | `AVS-E (Casco vuelo)`, `Odyssey Black (Casco vuelo)` |
+| `(Casco carreras)` | Cascos racing temáticos | `Mirai (Casco carreras)`, `Origin 350r (Casco carreras)` |
+| `(Subtraje)` | Subtrajes RSI Odyssey, Navy AVS-E, Shubin GP-88 | `Odyssey Desert (Subtraje)`, `AVS-E (Subtraje)` |
+
+Las variantes/colores de los sets pilot (Odyssey Tan/Aqua/Black, OMNI-AFS
+Slate/Jungle/Alpine, Sol-III Aviator/Bombardier…) se mantienen en inglés
+para coherencia con el set canónico de CIG.
+
+**Otros:**
+- Fix incoherencia previa: WhiteHot/BlackFire/BlueFlame `(Casco)` → `(Casco carreras)`.
+- Documentación de armadura corregida: la nota sobre `(Pantalones)` (Antium,
+  Palatino) decía erróneamente que eran "prendas de tela". Son armadura completa
+  con corte tipo pantalón ajustado — el marcador refleja la **forma física**, no
+  el material.
+
+**Aplicado a:**
+- LIVE 4.7.2 (sin cambios estructurales)
+- PTU 4.8.0 build 11777743 (canal en pruebas)
+
+El ZIP de release contiene ambos `global.ini` (LIVE + PTU) en subcarpetas
+separadas — instala el `global.ini` del canal que tengas activo en el RSI Launcher.
+
 ## v1.11.2 — 2026-05-02
 
 **Builds:** 4.7.2-LIVE_11715810 + 4.8.0-PTU_11768487 (sin cambios de upstream).
