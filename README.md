@@ -56,7 +56,7 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 13 | Stats cargadores | Peso del cargador | 42 | Tests in-game |
 | 14 | Stats armaduras | Peso, Reduccion Stun, Reduccion Impacto | 713 | Tests in-game + Data.p4k |
 | 15 | Stats ropa y accesorios | Peso de ropa, calzado, mochilas, accesorios arma, multitools, granadas y mas | 910 | Tests in-game |
-| 16 | Correcciones manuales | Nombres armadura normalizados al formato `<Set> (Parte)`, trajes de exploración Novikov/Pembroke/Zeus/Stirling con `(Traje exploración)`, cascos de carreras, descripciones, placeholders de misiones, traducciones recuperadas | 251 | Verificacion manual |
+| 16 | Correcciones manuales | Nombres armadura normalizados al formato `<Set> (Parte)`, trajes de exploración Novikov/Pembroke/Zeus/Stirling con `(Traje exploración)`, cascos de carreras, descripciones, placeholders de misiones, traducciones recuperadas, fix doble paréntesis (Exo-8 Usado, ORC-mkX XenoThreat, Horizon Variante Crusader) | 275 | Verificacion manual |
 | 17 | Stats armas de nave | DPS, Alpha, RPM, Vel, Rango, Penetracion, Dispersión, Capacitor, Masa, HP, EM, Energía, AoE | 122 | Datos del juego |
 | 18 | Stats componentes nave | Power Plants, Quantum Drives, Jump Drives, Shields, Coolers, Radars | 334 | Datos del juego |
 

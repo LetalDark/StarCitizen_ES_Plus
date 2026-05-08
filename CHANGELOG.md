@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.13.1 — 2026-05-09
+
+**Builds:** 4.7.2-LIVE_11715810 + 4.8.0-PTU_11777743 (sin cambios de juego;
+correcciones aplicadas a ambos canales).
+
+Pulido de 10 nombres de armadura que mostraban dos paréntesis seguidos
+(`Exo-8 (Usado) (Casco)`, `ORC-mkX (XenoThreat) (Brazos)`...). El descriptor
+ahora se integra dentro del tag de parte o, si es un nombre propio de
+facción, se mueve fuera del paréntesis para formar parte del nombre.
+
+**Cambios:**
+
+- `Exo-8 (Usado) (Casco)` → `Exo-8 (Casco Usado)`.
+- `Horizon (Variante Crusader) (Casco)` → `Horizon (Casco Variante Crusader)`.
+- `ORC-mkX (XenoThreat) (Brazos|Pecho|Casco|Piernas)` ×4 →
+  `ORC-mkX XenoThreat (Brazos|Pecho|Casco|Piernas)`.
+- `ORC-mkX (XenoThreat v2) (Brazos|Pecho|Casco|Piernas)` ×4 →
+  `ORC-mkX XenoThreat v2 (Brazos|Pecho|Casco|Piernas)`.
+
 ## v1.13.0 — 2026-05-09
 
 **Builds:** 4.7.2-LIVE_11715810 + 4.8.0-PTU_11777743 (sin cambios de juego;
