@@ -16,7 +16,7 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 8. **Acorta nombres largos** en el HUD de mineria para evitar solapamiento (Hephaestanite → Heph, ore → (Mnl), raw → (Bto), Inestabilidad → Inest:)
 9. **Reestructura el compendio de mineria** del diario del juego en 6 secciones por rareza (Legendario, Epico, Raro, Poco comun, Comun, Minables a mano) con orden alfabetico dentro
 10. **Inyecta stats reales de armas FPS** (DPS, Alpha, Velocidad, Peso, Caida de daño) con datos testeados in-game
-11. **Inyecta stats de armaduras** (Peso, Reduccion Stun, Reduccion Impacto), peso de cargadores, mochilas, ropa, accesorios y mas
+11. **Inyecta stats de armaduras** (Peso, Reduccion Stun, Reduccion Impacto, Tolerancia a fuerza G), peso de cargadores, mochilas, ropa, accesorios y mas. Datos extraidos directamente del juego — captan los rebalances entre versiones (ej. en 4.8.0 los subtrajes pasaron de 15% a 10% Stun)
 12. **Inyecta stats de armas de nave** (DPS, Alpha, RPM, Velocidad, Rango, Penetracion, Capacitor, Masa, HP, EM, AoE) extraidos directamente de los datos del juego (122 armas)
 13. **Inyecta stats de componentes de nave** (334 componentes): Power Plants, Quantum Drives, Jump Drives, Shields, Coolers y Radars con datos del juego
 14. **Completa claves que faltan** extrayendo los textos oficiales directamente del Data.p4k del juego
@@ -54,7 +54,8 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 12 | Limpieza | Trailing spaces eliminados | 607 | BeltaKoda |
 | 13 | Stats armas FPS | DPS, Alpha, Vel, Peso, Caida de daño, modos de fuego | 295 | Tests in-game + Data.p4k |
 | 14 | Stats cargadores | Peso del cargador | 42 | Tests in-game |
-| 15 | Stats armaduras | Peso, Reduccion Stun, Reduccion Impacto | 713 | Tests in-game + Data.p4k |
+| 15 | Stats armaduras | Peso, Reduccion Stun, Reduccion Impacto (datos del juego desde v1.14.1) | 713 LIVE / 836 PTU | Datos del juego |
+| 15b | Tolerancia a fuerza G | Penalización/bonus de tolerancia a fuerzas G por pieza (subtrajes +90/+97.5/+100%, armadura pesada −12.5/−25/−50%, cascos vuelo −2.5%, cascos carreras 0%) — v1.14.1 | — / 839 PTU | Datos del juego |
 | 16 | Stats ropa y accesorios | Peso de ropa, calzado, mochilas, accesorios arma, multitools, granadas y mas | 910 | Tests in-game |
 | 17 | Correcciones manuales | Nombres armadura normalizados al formato `<Set> (Parte)`, trajes de exploración Novikov/Pembroke/Zeus/Stirling con `(Traje exploración)`, cascos de carreras (refactor v1.14.0: `Traje vuelo carreras`), traducciones recuperadas, fixes doble paréntesis | 275 | Verificacion manual |
 | 18 | Stats armas de nave | DPS, Alpha, RPM, Vel, Rango, Penetracion, Dispersión, Capacitor, Masa, HP, EM, Energía, AoE | 122 | Datos del juego |
@@ -62,7 +63,7 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 20 | Loadout Calculator JSON | Masa y fórmulas de velocidad (Sprint, Run, ADS, Duration) para calculadora externa | 199 | Tests in-game |
 | 21 | CIG missing strings parcheados (v1.13.2) | Items que el juego mostraba con texto crudo `@ITEM_NAME_...` por faltar la entrada de localización: set Wrecker base + variantes ropa civil. Se retira el override cuando el juego los localice | 14 | Verificacion manual |
 
-**Total: 87 640 claves (LIVE 4.7.2) — 89 045 claves (PTU 4.8.0 build 11811531 "Tactical Strike")**
+**Total: 87 640 claves (LIVE 4.7.2) — 89 001 claves (PTU 4.8.0 build 11811531 "Tactical Strike")**
 
 ## Instalacion
 
@@ -170,10 +171,11 @@ Los trajes tipo pantalón (Antium, Palatino) usan `(Pantalones)` como variante p
 
 ## Formato de stats de armaduras
 
-Cada pieza de armadura muestra peso, reduccion de stun y reduccion de impacto justo despues de los metadatos:
+Cada pieza de armadura muestra tolerancia a fuerza G + peso/stun/impacto justo despues de los metadatos. Datos extraidos directamente del juego (v1.14.1):
 
 ```
 Mochilas: Medianas, Ligeras
+Tolerancia a fuerza G: -25%
 5 kg | Stun: 45% | Impacto: 31%
 
 Fuerza y velocidad se combinan...
@@ -182,10 +184,28 @@ Fuerza y velocidad se combinan...
 Las armaduras con descripcion compartida (sin pieza especifica) muestran tabla de pesos:
 
 ```
+Tolerancia a fuerza G: -25%
 Stun: 45% | Impacto: 31%
 *Descripción compartida entre piezas
 Casco: 5 | Pecho: 5 | Brazos: 4 | Piernas: 6 kg
 ```
+
+**Tolerancia a fuerza G** (v1.14.1) — penalización o bonus que cada pieza aporta a la tolerancia del piloto frente a las fuerzas G en cabina:
+
+| Pieza | G |
+|---|---|
+| Subtraje normal (Odyssey II, Levin…) | +90% |
+| Traje de vuelo (Tailwind suit, A23 suit…) | +97.5% |
+| Traje de carreras (Mirai full suit) | +100% |
+| Casco de carreras (Mirai, Origin, Murray Cup…) | **0%** ← mejor opción para pilotar |
+| Casco de vuelo (Tailwind, A23) | −2.5% |
+| Casco ligero | −3.1% |
+| Casco medio | −6.2% |
+| Casco pesado (Caudillo) | −12.5% |
+| Brazos pesados | −12.5% |
+| Piernas pesadas | −25% |
+| Torso pesado | −50% |
+| Bespokesuit (traje pesado completo) | −87.5% |
 
 ## Formato de stats de armas de nave
 

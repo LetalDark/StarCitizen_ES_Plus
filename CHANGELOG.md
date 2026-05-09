@@ -1,5 +1,33 @@
 # Changelog
 
+## v1.14.1 — 2026-05-09
+
+**Builds:** 4.7.2-LIVE_11715810 + 4.8.0-PTU_11811531 "Tactical Strike" (sin cambios upstream — patch interno).
+
+Mejora amplia de los stats inyectados en armaduras, cascos y subtrajes. Los datos ahora se leen directamente del juego en lugar de una tabla por categoría — esto captura los rebalances que hace el juego sobre items individuales entre versiones, y cubre los items nuevos de 4.8.0 que antes quedaban sin línea de stats.
+
+**Mejoras visibles in-game:**
+
+- **Nueva línea "Tolerancia a fuerza G"** en 839 piezas. Hasta ahora solo se mostraba en algunos subtrajes nuevos del 4.8.0; ahora aparece en toda armadura, casco y traje. Información clave para pilotar:
+  - Subtrajes y trajes de vuelo dan **+90%, +97.5% o +100%** de bonus
+  - Cascos de carreras dan exactamente **0%** (la mejor opción para pilotar)
+  - Cascos de vuelo dan **−2.5%**, ligeros **−3.1%**, medios **−6.2%**, pesados **−12.5%**
+  - Armadura pesada de torso te quita **−50%**, piernas −25%, brazos −12.5%
+  - El "Bespokesuit" pesado completo penaliza **−87.5%**
+- **Stats de armaduras refrescados al balance 4.8.0**: el juego ha bajado en silencio la resistencia de los subtrajes (Stun 15% → 10%, Reducción 10% → 5%) y de los trajes de combate (Stun 25% → 20%). Antes mostrábamos los valores antiguos; ahora reflejan el balance real.
+- **Cobertura ampliada**: el Odyssey II Alpha y los CDS Tactical Combat Suit (subtrajes nuevos del 4.8.0) ahora muestran su línea de peso/stun. Antes salían sin esa línea por ser una categoría que el sistema antiguo no contemplaba.
+- **Reasignaciones de tier en el juego**: algunos cascos que antes salían con stats de armadura pesada ahora muestran stats de subtraje porque el juego los ha reasignado entre versiones (Caudillo, gys_helmet_03, thp_helmet_01). Si ves un casco descrito como "Armadura pesada / Reducción 40%" pero con `Stun: 10%` no es un error nuestro — es que el motor del juego ya no le aplica el daño que dice su descripción.
+
+**Bug corregido:**
+
+- 27 mochilas con descripción de dos párrafos (CSP-68L Epoque, Cayman, Forest/Night Camo, Testudo Disrupt, Warden Daimyo y 22 más) tenían el `6 kg` de peso en mitad de la descripción en lugar de junto a los metadatos. Reposicionado correctamente tras `Compatibilidad: ...`.
+
+**Estadísticas:**
+
+- Líneas en global.ini: 89 001 (sin cambio en cardinalidad)
+- Items con línea G-Force: 54 → 839 (+785)
+- Items con línea de stats de armadura: 773 → 836 (+63)
+
 ## v1.14.0 — 2026-05-09
 
 **Builds:** 4.7.2-LIVE_11715810 + 4.8.0-PTU_11811531 "Tactical Strike".
