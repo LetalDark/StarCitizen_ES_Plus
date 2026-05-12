@@ -66,7 +66,7 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 23 | Contratos curados con marca asterisco (v1.16.0) | 97 contratos nuevos del juego sin texto oficial (Adagio Component, GoblinG, Certificaciones BHG, Mods ATLS, EliminateAll Rockcracker, Highpoint Killanimals, Maintenance, KillShip_FF, etc.). Texto provisional siguiendo el estilo de cada facción + marca `*` al inicio para distinguir traducción provisional. Se retira cuando el juego los localice | 97 (solo PTU) | Verificacion manual |
 | 24 | Auto-placeholders para contratos sin texto (v1.16.0) | 242 referencias internas del juego a textos que aún no existen en ningún idioma oficial. Mostramos un nombre humanizado con marca `*` para que el panel no aparezca con un código crudo | 242 (solo PTU) | Auto-generado |
 
-**Total: 87 640 claves (LIVE 4.7.2) — 88 308 claves (PTU 4.8.0 build 11812390 "Tactical Strike")**
+**Total: 87 640 claves (LIVE 4.7.2) — 89 390 claves (PTU 4.8.0 RC1 build 11817467 "Tactical Strike")**
 
 ## Instalacion
 
@@ -292,5 +292,5 @@ La eficiencia del Quantum Drive depende del tanque cuantico de la nave. Se muest
 Release dual-canal: el ZIP contiene un `global.ini` por cada rama del juego.
 
 - **Canal LIVE: Star Citizen Alpha 4.7.2-LIVE** (build 11715810)
-- **Canal PTU: Star Citizen Alpha 4.8.0-PTU "Tactical Strike"** (build 11812390)
+- **Canal PTU: Star Citizen Alpha 4.8.0-PTU "Tactical Strike"** (RC1 build 11817467)
 - Ver [CHANGELOG.md](CHANGELOG.md) para el historial completo

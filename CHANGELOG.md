@@ -1,5 +1,32 @@
 # Changelog
 
+## v1.17.0 — 2026-05-12
+
+**Builds:** 4.7.2-LIVE_11715810 (sin cambios) + 4.8.0-PTU RC1 build 11817467 "Tactical Strike" (build nuevo, contenido masivo restaurado y traducido).
+
+El juego ha publicado el RC1 hacia 4.8 LIVE. Esta versión es enorme: trae de vuelta más de 1100 textos que el build anterior había retirado y añade el evento DefenseCon 2956 completo (la convención de defensa con todas las naves expuestas), un sistema de Repostaje rediseñado con nuevos depósitos y boquillas, y contratos nuevos de Foxwell y UWC. También arregla bugs históricos del juego que llevaban arrastrándose.
+
+**Cambios visibles in-game:**
+
+- **Versión correcta en el menú principal**: el juego ahora muestra "4.8 - Tactical Strike" en la esquina superior izquierda con el formato oficial.
+- **Tolerancia a fuerza G restaurada**: las descripciones de cascos y trajes vuelven a mostrar la línea "Tolerancia a fuerza G: ±X%" (el juego la había retirado temporalmente en el build anterior). Cobertura: 839 items con G-Force correctamente.
+- **Evento DefenseCon 2956**: ~120 naves con liveries del evento expo (Anvil, Drake, Kruger, MurrayCup), facciones outlaw (Nine Tails, Shattered Blade, XenoThreat, Vanduul) — todo en español.
+- **Sistema de Repostaje rediseñado**: nuevos depósitos de combustible y boquillas (Greycat, MISC, Shubin, Stor*All) con datos de flujo separado de hidrógeno y cuántico. UI consistente con el resto de componentes (Velocidad de flujo, Modificador de flujo, Capacidad, Integridad máx.).
+- **Cyclone Focus actualizado**: el juego refinó las descripciones de Tumbril (Cyclone MT "Anti-Air", RN "Pathfinder", TR "Anti-Vehicle", Nova "Heavy Tank", Storm "Light Tank") — todas reflejan correctamente en español.
+- **Aurora Mk I**: el juego cambió el nombre corto de "Aurora Mk I CL/ES/LN/LX" a "Aurora CL/ES/LN/LX" — actualizado.
+- **APOS → AVS-E**: el casco del traje de pilotaje Navy renombrado por el juego, ahora aparece como "AVS-E (Casco vuelo)".
+- **Antium Maroon → Antium Jet**: el juego reutilizó la ranura del item con un casco nuevo, traducción actualizada.
+- **Contratos sin localización oficial**: añadidos textos provisionales (con marca `*`) para 17 contratos nuevos del DCB que aún no tenían traducción oficial — Foxwell DefendEntitesAndEscort (5 niveles de dificultad), UWC Refueling (United Wayfarers Club, contratos de repostaje con riesgo), C11 Trap Refuel (emboscada en repostaje) y similares.
+
+**Cómo se mantiene el archivo consistente con el juego:**
+
+Esta versión introduce una nueva auditoría automática que detecta valores obsoletos heredados de versiones anteriores. Por ejemplo, si el juego cambia "4.8.0" a "4.8 - Tactical Strike" en alguna clave, antes podríamos haber mantenido el valor viejo silenciosamente. Ahora se detecta antes de publicar y se corrige. En este release se corrigieron 8 valores que arrastraban desde hace varias versiones (Frontend_PU_Version, etiquetas de teclado, E.V.A., etc.).
+
+**Estadísticas:**
+- Líneas en global.ini: 89 390 (PTU)
+- Total claves añadidas/actualizadas: 1366 nuevas + 353 modificadas vs build anterior
+- Contratos con traducción provisional (marca `*`): 17 (Foxwell + UWC + otros)
+
 ## v1.16.0 — 2026-05-11
 
 **Builds:** 4.7.2-LIVE_11715810 (sin cambios) + 4.8.0-PTU_11812390 "Tactical Strike" (mismo build, contenido restaurado).
