@@ -57,7 +57,7 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 15 | Stats armaduras | Peso, Reduccion Stun, Reduccion Impacto (datos del juego desde v1.14.1) | 787 | Datos del juego |
 | 15b | Tolerancia a fuerza G | Penalización/bonus de tolerancia a fuerzas G por pieza (subtrajes +90/+97.5/+100%, armadura pesada −12.5/−25/−50%, cascos vuelo −2.5%, cascos carreras 0%) — v1.14.1 | 790 | Datos del juego |
 | 16 | Stats ropa y accesorios | Peso de ropa, calzado, mochilas, accesorios arma, multitools, granadas y mas | 910 | Tests in-game |
-| 17 | Correcciones manuales | Nombres armadura normalizados al formato `<Set> (Parte)`, trajes de exploración Novikov/Pembroke/Zeus/Stirling con `(Traje exploración)`, cascos de carreras (refactor v1.14.0: `Traje vuelo carreras`), traducciones recuperadas, fixes doble paréntesis | 275 | Verificacion manual |
+| 17 | Correcciones manuales | Nombres armadura normalizados al formato `<Set> (Parte)`, trajes de exploración Novikov/Pembroke/Zeus/Stirling con `(Traje exploración)`, cascos de carreras (refactor v1.14.0: `Traje vuelo carreras`), traducciones recuperadas, fixes doble paréntesis, nombres de componente corregidos (v1.18.1) | 283 | Verificacion manual |
 | 18 | Stats armas de nave | DPS, Alpha, RPM, Vel, Rango, Penetracion, Dispersión, Capacitor, Masa, HP, EM, Energía, AoE | 122 | Datos del juego |
 | 19 | Stats componentes nave | Power Plants, Quantum Drives, Jump Drives, Shields, Coolers, Radars | 334 | Datos del juego |
 | 20 | Loadout Calculator JSON | Masa y fórmulas de velocidad (Sprint, Run, ADS, Duration) para calculadora externa | 199 | Tests in-game |

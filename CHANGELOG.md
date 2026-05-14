@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.18.1 — 2026-05-14
+
+Corrección de nombres de varios componentes de nave que aparecían traducidos o con erratas.
+
+**Cambios:**
+
+- Los motores cuánticos de Tarsus vuelven a su nombre original en inglés (Drifter, Wanderer, Ranger, Wayfare, Quest). Estaban traducidos y, además, "Drifter" y "Wanderer" mostraban ambos el mismo nombre ("Vagabundo") pese a ser componentes distintos.
+- Corregida la mayúscula inicial del motor cuántico Tyche y de la boquilla de combustible Norfield.
+- Corregido el nombre de la boquilla de combustible MISC: "RN-7" → "RN-7s".
+
+**Estadísticas:**
+- Líneas en global.ini: 89 388
+
 ## v1.18.0 — 2026-05-14
 
 Star Citizen Alpha 4.8.0 "Tactical Strike" llega a LIVE estable (build 11825000). Esta versión es la promoción del canal PTU a LIVE: el texto oficial del juego es idéntico al del último RC, así que todo el trabajo de traducción de la 4.8.0 se mantiene tal cual.
