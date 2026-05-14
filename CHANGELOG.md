@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.18.2 — 2026-05-14
+
+Corrección de textos provisionales que tapaban el texto real de varias misiones.
+
+**Cambios:**
+
+- Corregido un fallo que hacía que los objetivos y descripciones de varias misiones (el Guantelete de Combate, atracos de datos, entregas y otras) mostraran un texto provisional ("Descripción provisional del contrato...") en lugar del texto real del juego. Eran 194 entradas que sustituían indebidamente a cadenas oficiales que ya existían.
+
+**Estadísticas:**
+
+- Líneas en global.ini: 89 194
+
 ## v1.18.1 — 2026-05-14
 
 Corrección de nombres de varios componentes de nave que aparecían traducidos o con erratas.
