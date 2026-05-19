@@ -22,6 +22,7 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 14. **Completa claves que faltan** extrayendo los textos oficiales directamente del Data.p4k del juego
 15. **Corrige errores** de las fuentes originales (GUIDs nulos, pools faltantes, nombres de armadura incorrectos)
 16. **Limpieza automatica** de claves obsoletas que el juego ya no usa (renombres antiguos, contenido retirado), con migracion automatica de las traducciones a los nombres nuevos
+17. **Bloque de reputación en cada misión** (v1.20.0): añade al final de la descripción la reputación que da la misión con su facción y sub-carrera (scope), la penalización por fallar y el daño cross-faction si aplica. Para misiones donde varias dificultades comparten la misma descripción (Recompensa Verificada, Certificación de Rastreador, etc.), los valores se etiquetan con la dificultad del título para que sepas exactamente qué rep recibes sin tener que salir del juego a consultar webs. 750 misiones cubiertas
 
 ## Fuentes y agradecimientos
 
@@ -65,6 +66,7 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 22 | Textos restaurados del sistema de Repostaje (v1.16.0) | El juego retiró 254 textos del rework de Repostaje (hints, notificaciones, diario, diálogos NPC, tooltips) pero su código sigue consultándolos. Restauramos las traducciones del build anterior hasta que el juego se reconcilie | 254 | Restauración automática |
 | 23 | Contratos curados con marca asterisco (v1.16.0) | 97 contratos nuevos del juego sin texto oficial (Adagio Component, GoblinG, Certificaciones BHG, Mods ATLS, EliminateAll Rockcracker, Highpoint Killanimals, Maintenance, KillShip_FF, etc.). Texto provisional siguiendo el estilo de cada facción + marca `*` al inicio para distinguir traducción provisional. Se retira cuando el juego los localice | 97 | Verificacion manual |
 | 24 | Auto-placeholders para contratos sin texto (v1.16.0) | Referencias internas del juego a textos que aún no existen en ningún idioma oficial. Mostramos un nombre humanizado con marca `*` para que el panel no aparezca con un código crudo. v1.18.2: retirados 194 placeholders que tapaban indebidamente texto real del juego en misiones como el Guantelete de Combate | 48 | Auto-generado |
+| 25 | Bloque Reputación en descripciones (v1.20.0) | Bloque al final de cada descripción con la rep que da la misión: ganancia, daño cross-faction, penalización por fallo. Correlación por dificultad en multi-tier (Muy bajo +500 / Bajo +1.000 / ...) para localizar tu valor exacto al leer el "X riesgo" del título. 45 sub-carreras/scopes resueltos | 750 | Datos del juego |
 
 **Total: 89 189 claves (4.8.0 "Tactical Strike" — LIVE 11825000 / HOTFIX 11854421)**
 

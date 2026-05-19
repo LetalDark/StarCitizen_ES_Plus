@@ -1,5 +1,28 @@
 # Changelog
 
+## v1.20.0 — 2026-05-19
+
+Nueva sección "Reputación" en la descripción de cada misión: ahora puedes ver de un vistazo qué rep ganas, con qué facción y qué scope (sub-carrera), si la misión te quita rep con otra facción al completarla, y la penalización por fallar — sin tener que salir del juego a consultar webs externas.
+
+**Cambios:**
+
+- **Bloque "Reputación:" al final de cada descripción de misión** (~750 misiones cubiertas):
+  - Ganancia en azul: `Reputación: +500 Eckhart Security (Seguridad)`
+  - Penalización por fallo con marker `[!]`: `[!] Si fallas: -4.000 Eckhart Security (Seguridad)`
+  - Daño cross-faction (misiones que dañan reputación con otra facción al completarse, ej. las de CFP en Pyro que reducen rep con Headhunters): `[!] Reduce: -190.500 Headhunters (General)`
+- **Correlación por dificultad**: en misiones donde varios niveles comparten la misma descripción (Recompensa Verificada, Certificación de Rastreador del Gremio, etc.), los valores se etiquetan con la dificultad visible en el título — así puedes leer el "muy bajo riesgo" del título y localizar tu valor exacto en la línea:
+  ```
+  Reputación: Recontrato/Muy bajo +500 / Bajo +1.000 / Moderado/Alto +2.000 /
+  Muy alto +8.000 / Extremo +16.000 Gremio de cazarrecompensas (Caza de recompensas)
+  ```
+- **Cobertura de scopes especializados**: 45 scopes resueltos (Caza de recompensas, Combate de Naves, Asesinato, Salvamento, Mantenimiento, Carreras, Trueque/Wikelo, etc.) — útil para saber exactamente qué sub-carrera estás subiendo.
+- **Misiones de valor fijo** (la mayoría) se ven sin etiquetas de dificultad, limpias. Solo las multi-tier llevan los labels.
+
+**Estadísticas:**
+
+- Líneas en global.ini: 89 189 (sin cambios respecto a v1.19.8 — los bloques de reputación se añaden a descripciones existentes)
+- Bloques de reputación añadidos: 750
+
 ## v1.19.8 — 2026-05-19
 
 Pulido visual de las descripciones de misión y limpieza de descripciones obsoletas.
