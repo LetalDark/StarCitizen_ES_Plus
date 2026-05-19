@@ -66,7 +66,7 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 23 | Contratos curados con marca asterisco (v1.16.0) | 97 contratos nuevos del juego sin texto oficial (Adagio Component, GoblinG, Certificaciones BHG, Mods ATLS, EliminateAll Rockcracker, Highpoint Killanimals, Maintenance, KillShip_FF, etc.). Texto provisional siguiendo el estilo de cada facción + marca `*` al inicio para distinguir traducción provisional. Se retira cuando el juego los localice | 97 | Verificacion manual |
 | 24 | Auto-placeholders para contratos sin texto (v1.16.0) | Referencias internas del juego a textos que aún no existen en ningún idioma oficial. Mostramos un nombre humanizado con marca `*` para que el panel no aparezca con un código crudo. v1.18.2: retirados 194 placeholders que tapaban indebidamente texto real del juego en misiones como el Guantelete de Combate | 48 | Auto-generado |
 
-**Total: 89 203 claves (4.8.0 "Tactical Strike" — LIVE 11825000 / HOTFIX 11854421)**
+**Total: 89 189 claves (4.8.0 "Tactical Strike" — LIVE 11825000 / HOTFIX 11854421)**
 
 ## Instalacion
 

@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.19.8 — 2026-05-19
+
+Pulido visual de las descripciones de misión y limpieza de descripciones obsoletas.
+
+**Cambios:**
+
+- **Separador visual entre secciones de carta**: las cartas largas de Adagio, Ling Family Hauling, Hurston, Covalex, Shubin, etc. tenían un hueco vacío gigante (hasta 8 líneas en blanco) entre la firma del contratista y el aviso legal, que obligaba a scrollear mucho. Ahora se muestra una línea de guiones `----` que separa visualmente las secciones de forma compacta. **138 misiones afectadas**.
+- **"Posibles Planos" sin duplicados**: las misiones Adagio Salvage listaban "Modulo raspador Cinch" tres veces porque el deduplicador interno no detectaba que varios planos distintos del juego comparten el mismo nombre. Ahora cada nombre aparece una sola vez en la lista.
+- **14 descripciones de misión corregidas**: contratos de Shubin (minería manual y de naves), BitZeros (recuperación de cajas negras) y Hockrow (instalaciones) mostraban el título y "Posibles Planos" pero sin el cuerpo de descripción. Era un residuo heredado de builds antiguos que pisaba al texto real del juego. Ahora se muestra la descripción completa.
+
+**Estadísticas:**
+
+- Líneas en global.ini: 89 189 (-14 respecto a v1.19.7 por las descripciones obsoletas purgadas)
+
 ## v1.19.7 — 2026-05-19
 
 Soporte para el HOTFIX 4.8.0 build 11854421 + mejoras acumuladas de cobertura de misiones y stats de ropa.
