@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.19.7 — 2026-05-19
+
+Soporte para el HOTFIX 4.8.0 build 11854421 + mejoras acumuladas de cobertura de misiones y stats de ropa.
+
+**Cambios:**
+
+- **Soporte para la nueva carpeta `HOTFIX/`** del launcher (build 11854421). Es un parche de compatibilidad del juego sin cambios en textos ni datos respecto al LIVE 11825000, así que el `global.ini` empaquetado es el mismo en ambas carpetas.
+- **Misiones Adagio Salvage marcadas con `[BP]`**: las 12 misiones de Salvage Universal / Component Salvage (Trawler, Abrade y Cinch) ahora muestran `[BP]` en el título y "Posibles Planos" en la descripción con los nombres reales de los módulos raspadores. Antes el marcador no aplicaba y los planos no se listaban.
+- **Plurales de títulos de misión**: 7 títulos que el juego renderiza en plural según el contexto gramatical (variantes Foxwell Defend + recuperación de cajas negras) ahora llevan el marcador `[BP]` también en su forma plural. Antes solo lo tenía la forma singular y el plural aparecía sin él.
+- **Stats de masa y aturdimiento en ropa y subtrajes**: cascos, subtrajes y prendas de ropa civil ahora muestran su peso en kg y, donde aplica, el porcentaje de reducción de aturdimiento ("Stun"). Antes solo aparecía en armadura.
+- **Calculadora de loadout (web)**: las piezas de armadura ya desglosan los valores de resistencia al daño y tolerancia a fuerza G por cada pieza individual. Cascos y subtrajes se categorizan correctamente según su descriptor (vuelo, carreras, blindado, etc.).
+
+**Estadísticas:**
+
+- Líneas en global.ini: 89 203 (+9 respecto a v1.19.1)
+- Marcadores `[BP]` en misiones: 334 (+28)
+- "Posibles Planos" generados: 456 (+13)
+
 ## v1.19.1 — 2026-05-17
 
 Corrección de un fallo de formato en las descripciones de tres armas montadas en naves y un retoque en la batería de la multiherramienta.
