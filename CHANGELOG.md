@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.20.1 — 2026-05-21
+
+Compatibilidad con el nuevo build LIVE 11875683 de 4.8.0 (sucede al HOTFIX 11854421, ya obsoleto). CIG ha añadido un nuevo **Modo Reclamar** al montacargas (FreightElevator) para reclamar pinturas y cosméticos desde el kiosco — los 5 textos de UI ya vienen traducidos.
+
+**Cambios:**
+
+- Modo Reclamar del montacargas traducido (botón "Reclamar", toggle entre "Modo Carga" / "Modo Reclamar", opción "Excluir Pinturas" y tooltip "Modo Reclamar solo disponible en tu ubicación de inicio")
+- Resto del archivo idéntico byte a byte a v1.20.0: todas las traducciones, blueprints, bloques Reputación y stats inyectados se mantienen sin cambios
+
+**Estadísticas:**
+- Líneas en global.ini: 89.194 (+5)
+
+---
+
 ## v1.20.0 — 2026-05-19
 
 Nueva sección "Reputación" en la descripción de cada misión: ahora puedes ver de un vistazo qué rep ganas, con qué facción y qué scope (sub-carrera), si la misión te quita rep con otra facción al completarla, y la penalización por fallar — sin tener que salir del juego a consultar webs externas.

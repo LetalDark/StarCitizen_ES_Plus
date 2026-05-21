@@ -68,7 +68,7 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 24 | Auto-placeholders para contratos sin texto (v1.16.0) | Referencias internas del juego a textos que aún no existen en ningún idioma oficial. Mostramos un nombre humanizado con marca `*` para que el panel no aparezca con un código crudo. v1.18.2: retirados 194 placeholders que tapaban indebidamente texto real del juego en misiones como el Guantelete de Combate | 48 | Auto-generado |
 | 25 | Bloque Reputación en descripciones (v1.20.0) | Bloque al final de cada descripción con la rep que da la misión: ganancia, daño cross-faction, penalización por fallo. Correlación por dificultad en multi-tier (Muy bajo +500 / Bajo +1.000 / ...) para localizar tu valor exacto al leer el "X riesgo" del título. 45 sub-carreras/scopes resueltos | 750 | Datos del juego |
 
-**Total: 89 189 claves (4.8.0 "Tactical Strike" — LIVE 11825000 / HOTFIX 11854421)**
+**Total: 89 194 claves (4.8.0 "Tactical Strike" — LIVE 11875683; v1.20.1 añadió 5 strings de UI del nuevo Modo Reclamar del montacargas)**
 
 ## Instalacion
 
@@ -77,10 +77,7 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 3. La estructura queda asi (cada carpeta es el canal del RSI Launcher):
 ```
 StarCitizen/
-├── LIVE/
-│   ├── data/Localization/spanish_(spain)/global.ini
-│   └── user.cfg
-└── HOTFIX/
+└── LIVE/
     ├── data/Localization/spanish_(spain)/global.ini
     └── user.cfg
 ```
@@ -291,8 +288,7 @@ La eficiencia del Quantum Drive depende del tanque cuantico de la nave. Se muest
 
 ## Version actual
 
-El ZIP contiene el `global.ini` para los canales LIVE y HOTFIX (mismo archivo en ambas carpetas — el HOTFIX 11854421 es un parche de compatibilidad sin cambios en localización ni datos del juego respecto al LIVE 11825000).
+El ZIP contiene el `global.ini` para el canal LIVE de Star Citizen.
 
-- **Canal LIVE: Star Citizen Alpha 4.8.0-LIVE "Tactical Strike"** (build 11825000)
-- **Canal HOTFIX: Star Citizen Alpha 4.8.0-HOTFIX "Tactical Strike"** (build 11854421)
+- **Canal LIVE: Star Citizen Alpha 4.8.0-LIVE "Tactical Strike"** (build 11875683 — sucede a HOTFIX 11854421, ya obsoleto)
 - Ver [CHANGELOG.md](CHANGELOG.md) para el historial completo
