@@ -1,5 +1,31 @@
 # Changelog
 
+## v1.21.0 — 2026-05-22
+
+Cuatro mejoras nuevas en las descripciones de misiones, todas extraídas directamente de los datos del juego. Ahora cada contrato te da más información de un vistazo sin tener que salir a consultar fuera.
+
+**Cambios:**
+
+- **Bloque "Escenario:" en contratos de eventos dinámicos** (60 contratos cubiertos): muestra los puntos de progresión que aporta cada contrato al evento al que pertenece, y avisa cuando los puntos se reparten entre el equipo en lugar de darse a cada miembro entero:
+  - `Escenario: +225 pts (Clean Air)`
+  - `Escenario: +120.000 pts (Return of Xenothreat) (compartido entre el equipo)`
+  - 3 eventos activos cubiertos: Clean Air, Resource Gathering, Return of Xenothreat
+
+- **Etiqueta de dificultad en "Posibles Planos"**: cuando varios contratos comparten un mismo título base pero diferentes niveles (E/M/H/VH/S) y la dificultad cambia los blueprints que pueden caerte, ahora el bloque te indica qué variante estás leyendo (`Posibles Planos (Dificultad: Difícil)`). Aplicado conservadoramente a las 4 series donde el escalado está confirmado: Eckhart EscortShips, Eckhart ShipAmbush, HeadHunters DefendEntitesAndEscort y Foxwell DefendEntitesAndEscort.
+
+- **Tipo de componente tras cada blueprint** (842 líneas mejoradas): los componentes core llevaban hasta ahora solo prefijo `[Clase|Tamaño|Grado]` pero el tipo (escudo, radar, enfriador…) no estaba claro a simple vista. Ahora aparece entre paréntesis tras el nombre:
+  - `[SIG|1|A] Mirage (Escudo)`
+  - `[CIV|1|C] Tundra (Enfriador)`
+  - `[CIV|2|A] XL1 (Quantum Drive)`
+  - 6 tipos cubiertos: Generador / Enfriador / Escudo / Radar / Quantum Drive / Jump Drive
+
+- **Línea en blanco antes de los bloques al final de descs** (Posibles Planos / Reputación / Escenario): mejora la legibilidad en mobiGlas — antes los bloques quedaban pegados al texto del contratista, ahora hay un salto visual que los destaca.
+
+**Estadísticas:**
+- Líneas en global.ini: 89.194 (igual que v1.20.1)
+
+---
+
 ## v1.20.1 — 2026-05-21
 
 Compatibilidad con el nuevo build LIVE 11875683 de 4.8.0 (sucede al HOTFIX 11854421, ya obsoleto). CIG ha añadido un nuevo **Modo Reclamar** al montacargas (FreightElevator) para reclamar pinturas y cosméticos desde el kiosco — los 5 textos de UI ya vienen traducidos.
