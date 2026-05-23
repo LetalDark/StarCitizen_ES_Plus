@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.22.1 — 2026-05-23
+
+Hotfix de v1.22.0 + mejora visible en muchas más armas. Hubo un bug en la pasada anterior por el que muchas armas perdieron slots in-game (por ejemplo el Custodian SMG mostraba solo 1 slot cuando debe tener 3). Esto se ha arreglado y, de paso, ahora la línea de Accesorios sale para muchas armas que CIG nunca documentó en el archivo de localización (Killshot rifle, todas las skins/variantes de pistolas/rifles/SMGs/snipers/LMGs/escopetas, binoculares Behring…).
+
+**Cambios:**
+
+- **Arreglada la pérdida de slots de v1.22.0** — todas las armas afectadas recuperan los 3 slots correctos (Óptica/Cañón/Subcañón). El parser interno se ha reescrito para que su propio resultado sea entendible si se re-procesa.
+
+- **Más cobertura de armas** (152 → 290 armas con línea Accesorios). Antes solo se mostraban los slots de las armas cuya descripción base de CIG ya los incluía. Ahora se leen directamente de los datos internos del juego, lo que cubre Killshot, todas las skins/variantes (azul, verde, store, contestedzonereward, IAE/CitizenCon edition, etc.) y armas como los binoculares Behring que CIG no documentaba en ningún sitio visible.
+
+**Estadísticas:**
+- Líneas en global.ini: 89.194 (igual que v1.22.0)
+- Armas FPS con línea Accesorios: 290 (vs 152 en v1.22.0, vs 156 en v1.21.0)
+
 ## v1.22.0 — 2026-05-23
 
 Limpieza de inconsistencias visuales heredadas en las descripciones. Muchos stats venían mostrándose con varios nombres distintos para lo mismo (radiación con 12 variantes, slots de accesorios con 14, "Tipo de artículo" con 7…). Ahora cada stat tiene un único nombre canónico, lo que mejora la lectura in-game sin cambiar la información.
