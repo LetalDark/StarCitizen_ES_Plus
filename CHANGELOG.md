@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.22.0 — 2026-05-23
+
+Limpieza de inconsistencias visuales heredadas en las descripciones. Muchos stats venían mostrándose con varios nombres distintos para lo mismo (radiación con 12 variantes, slots de accesorios con 14, "Tipo de artículo" con 7…). Ahora cada stat tiene un único nombre canónico, lo que mejora la lectura in-game sin cambiar la información.
+
+**Cambios:**
+
+- **Stats de armadura unificados** (1014 piezas): la línea de "limpieza de radiación" pasaba por 12 nombres distintos según la pieza (Tasa de depuración / Velocidad de limpieza / Tasa de descontaminación…) — ahora todas dicen **`Purga de radiación`**. Lo mismo con **`Protección contra radiación`**, **`Rango térmico`** (antes Rango de temperatura / Calificación / Resistencia térmica / Índice de temperatura) y **`Reducción de daño`** (typo histórico arreglado).
+
+- **Línea "Accesorios:" de armas FPS unificada** (152 armas, 74 formas distintas → 13): slots con nombre canónico **Óptica / Cañón / Subcañón** (antes mezclaba "optica/Ópticas", "Cañon/Caño/Barril/Barrel", "Bajo cañón/Debajo del cañon/Bajocañón/Underbarrel/Inferior"…). Cuando todos los slots tienen el mismo tamaño se factoriza al final (`Accesorios: Óptica, Cañón, Subcañón (S1)`), cuando dos adyacentes lo comparten se agrupan con "y" (`Óptica (S3), Cañón y Subcañón (S2)`), y los slots inexistentes se omiten en lugar de mostrar `(N/A)`. Orden fijo Óptica→Cañón→Subcañón. Ahorra ~11 caracteres por arma en el caso uniforme (62 % de las armas).
+
+- **Labels misceláneos unificados** (285 ítems): **`Tipo de artículo`** mayoritaria (antes Tipo de Artículo / objeto / Objeto / ítem / Item / item / articulo), **`Tamaño del cargador`** (antes Tamaño del Cargador / Capacidad del cargador / Capacidad del Cargador), **`Tamaño de la batería`** (antes Tamaño de batería / Batería / bateria), **`Clase: Balística`** femenino concordando con "Clase" (antes Balístico / Balistico / Balistica), **`Clase: Láser`** con tilde (antes Laser).
+
+**Estadísticas:**
+- Líneas en global.ini: 89.194 (igual que v1.21.0)
+- Valores cambiados por normalizaciones: 2076
+
 ## v1.21.0 — 2026-05-22
 
 Cuatro mejoras nuevas en las descripciones de misiones, todas extraídas directamente de los datos del juego. Ahora cada contrato te da más información de un vistazo sin tener que salir a consultar fuera.
