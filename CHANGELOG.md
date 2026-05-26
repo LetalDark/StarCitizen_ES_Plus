@@ -1,5 +1,27 @@
 # Changelog
 
+## v1.22.2 — 2026-05-27
+
+Las descripciones de armadura en el juego mentían sobre la reducción de daño real. El texto decía una cosa ("Armadura media / 30%") pero los datos internos del juego decían otra (subtraje / 5%). El motor del juego usa los datos internos para calcular el daño que recibes, no el texto — así que muchos cascos y trajes anunciaban una protección que no daban. A partir de v1.22.2 las descripciones muestran lo que realmente vas a recibir in-game.
+
+**Cambios:**
+
+- **Exo-8 (Casco Usado)**: el texto decía "Armadura media / 30%" pero los datos reales son "Subtraje / 5%". Ahora muestra el dato real.
+- **Caudillo (RSI Odyssey)** — 7 variantes de color: decían "Armadura pesada / 40%" pero son "Subtraje / 5%". Corregido.
+- **J-5 / J-5 Pirotécnico**: decían "Casco ligero / 20%", reales 5%. Corregido el porcentaje (mantiene "Casco ligero" como descripción visual).
+- **Sol-III Bombardier / Sol-III Aviator (Pecho)**: decían "Armadura ligera / 20%", reales "Traje de vuelo de combate / 15%". El cambio aparente es para mal, pero estos torsos son los **únicos del juego con bonus positivo de tolerancia a fuerzas G (+97.5%)** — son el mejor equipo de vuelo disponible, ahora etiquetado correctamente.
+- **Ixonia Desértico**: decía "Casco pesado / 40%", real "Armadura media / 30%". Corregido.
+- **11 cascos vanity de vuelo** (Hill Horror y Reborn, Parasite Replica y Dark Birth, Lost Plague ×3, Fieldsbury Dark Bear, Snarling Vanduul, Inmate Work): decían "Casco de vuelo / 10%", reales 5%. Corregido el porcentaje.
+- **6 subtrajes** (Lamont, Levin Restaurado, One Light Azul/Rojo/Teal, Stoneskin): decían "Subtraje / 10%", reales 5%. Corregido.
+- **OMNI-AFS-Sapphire (Casco vuelo)**: decía "Casco de vuelo / 15%" pero los datos reales le dan 20%. Caso inverso a favor del jugador.
+- **Unificación de etiquetas inconsistentes**: el juego usaba 4 nombres distintos ("Armadura pesada", "Utilitario pesado", "Utilidad pesada", "Equipo pesado") para los mismos trajes Novikov / Pembroke / Stirling / Siebe. Ahora todos aparecen como **"Utilidad pesada"** (con su reducción real del 25%).
+
+Total: 30 armaduras con descripción corregida para reflejar lo que realmente reciben in-game.
+
+**Estadísticas:**
+
+- Líneas en global.ini: 89 194 (igual que v1.22.1)
+
 ## v1.22.1 — 2026-05-23
 
 Hotfix de v1.22.0 + mejora visible en muchas más armas. Hubo un bug en la pasada anterior por el que muchas armas perdieron slots in-game (por ejemplo el Custodian SMG mostraba solo 1 slot cuando debe tener 3). Esto se ha arreglado y, de paso, ahora la línea de Accesorios sale para muchas armas que CIG nunca documentó en el archivo de localización (Killshot rifle, todas las skins/variantes de pistolas/rifles/SMGs/snipers/LMGs/escopetas, binoculares Behring…).
