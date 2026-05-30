@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.22.3 — 2026-05-30
+
+El panel de Reputación del mobiGlas mostraba nombres sin traducir en varias facciones — salía un código tipo `@REPSCOPE_SHIPCOMBAT_HEADHUNTERS_NAME` superpuesto con el texto de al lado — porque el juego nunca llegó a definir esos nombres en ningún idioma. v1.22.3 los rellena, además de pulir un par de textos del panel y de las jurisdicciones.
+
+**Cambios:**
+
+- **Nombres de scope de reputación**: las columnas del panel que salían como código (en Headhunters, Citizens for Prosperity, Gremio de Cazarrecompensas, Foxwell, etc.) ahora muestran su nombre real: "Combate Espacial", "Combate FPS", "Trabajador", "Carreras", "Aerodeslizador", "Terrestre".
+- **Cabecera de la columna de reputación general**: "Vigente" → "General" (traducción más correcta de "Standing").
+- **Jurisdicciones**: las zonas "Ungoverned" y "Autonomous" del HUD ahora salen como "la Anarquía" y "la Autonomía".
+
+**Estadísticas:**
+- Líneas en global.ini: 89 203
+
 ## v1.22.2 — 2026-05-27
 
 Las descripciones de armadura en el juego mentían sobre la reducción de daño real. El texto decía una cosa ("Armadura media / 30%") pero los datos internos del juego decían otra (subtraje / 5%). El motor del juego usa los datos internos para calcular el daño que recibes, no el texto — así que muchos cascos y trajes anunciaban una protección que no daban. A partir de v1.22.2 las descripciones muestran lo que realmente vas a recibir in-game.
