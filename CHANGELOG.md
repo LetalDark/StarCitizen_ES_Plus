@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.22.4 — 2026-06-03
+
+Actualización de compatibilidad con **Star Citizen Alpha 4.8.1 LIVE**. El juego promociona la 4.8.1 reutilizando exactamente el mismo build (11875683) que la 4.8.0 LIVE, así que el contenido nuevo que anuncian las notas (Ship Battles V3 / misiones Defend Location) ya estaba presente y traducido desde versiones anteriores. La traducción es idéntica a la de v1.22.3; esta versión solo actualiza la etiqueta para los jugadores que ya están en 4.8.1.
+
+**Cambios:**
+
+- Etiquetado de la traducción para el canal **4.8.1 LIVE**. No hay cambios en el contenido del `global.ini` respecto a v1.22.3 — si ya tienes la v1.22.3 instalada, funciona igual en 4.8.1.
+
+**Estadísticas:**
+- Líneas en global.ini: 89 203
+
 ## v1.22.3 — 2026-05-30
 
 El panel de Reputación del mobiGlas mostraba nombres sin traducir en varias facciones — salía un código tipo `@REPSCOPE_SHIPCOMBAT_HEADHUNTERS_NAME` superpuesto con el texto de al lado — porque el juego nunca llegó a definir esos nombres en ningún idioma. v1.22.3 los rellena, además de pulir un par de textos del panel y de las jurisdicciones.
