@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.23.0 — 2026-06-06
+
+Actualización para el nuevo build de **Star Citizen Alpha 4.8.1 LIVE** (11952564). El juego añadió textos para el sistema de transferencias de dinero entre jugadores y renombró una pintura de la Syulen.
+
+**Cambios:**
+
+- **Transferencias de dinero entre jugadores**: traducidos los 11 textos nuevos del sistema de envío de créditos — la oferta de transferencia, los botones de aceptar/rechazar, los mensajes de error (destinatario no encontrado, transacción fallida, transferencia caducada o rechazada) y el aviso de espera.
+- **Pintura Syulen "Xy'kara"**: el juego renombró la livery bronce/gris/rojo de la Syulen, antes llamada "Kenglath". Nombre y descripción actualizados.
+
+**Estadísticas:**
+- Líneas en global.ini: 89 214
+
 ## v1.22.4 — 2026-06-03
 
 Actualización de compatibilidad con **Star Citizen Alpha 4.8.1 LIVE**. El juego promociona la 4.8.1 reutilizando exactamente el mismo build (11875683) que la 4.8.0 LIVE, así que el contenido nuevo que anuncian las notas (Ship Battles V3 / misiones Defend Location) ya estaba presente y traducido desde versiones anteriores. La traducción es idéntica a la de v1.22.3; esta versión solo actualiza la etiqueta para los jugadores que ya están en 4.8.1.
