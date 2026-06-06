@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.23.1 — 2026-06-06
+
+Pulido de calidad: corrección de erratas de traducción y de etiquetas de formato. No cambia el contenido del juego, solo arregla textos.
+
+**Cambios:**
+
+- **Erratas corregidas:** "refrigeración" (sistemas de refrigeración de naves, antes "refigeración"), "salvamento" en los contratos de Adagio, "ubicaciones", "generador" (aviso de sobrecalentamiento), "laboratorio", "propietarios", "atención", "llamar" (ascensor del Idris), "jugadores", "confirmación", "empiece", "resolución", "Balística" (clase del lanzagranadas), "arresta" (contratos de caza), "obtener", "arriesgas", "personalización", entre otras. La marca de seguimiento ocular **EyeX** ya no se traduce por error.
+- **Textos de armadura y pintura:** la armadura Testudo ahora "absorbe la humedad" (antes texto incorrecto); descripción de la pintura IceBreak de la serie 100 pulida.
+- **Saltos de línea:** corregidas las historias de hangar de Revel & York, VFG Industrial y Aeroview, que mostraban caracteres sueltos en vez de saltos de línea.
+- **Formato de resaltado:** corregidas varias descripciones de contrato cuyo resaltado de palabras clave estaba mal cerrado.
+
+**Estadísticas:**
+- Líneas en global.ini: 89 214
+
 ## v1.23.0 — 2026-06-06
 
 Actualización para el nuevo build de **Star Citizen Alpha 4.8.1 LIVE** (11952564). El juego añadió textos para el sistema de transferencias de dinero entre jugadores y renombró una pintura de la Syulen.

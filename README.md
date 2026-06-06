@@ -68,7 +68,7 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 24 | Auto-placeholders para contratos sin texto (v1.16.0) | Referencias internas del juego a textos que aún no existen en ningún idioma oficial. Mostramos un nombre humanizado con marca `*` para que el panel no aparezca con un código crudo. v1.18.2: retirados 194 placeholders que tapaban indebidamente texto real del juego en misiones como el Guantelete de Combate | 48 | Auto-generado |
 | 25 | Bloque Reputación en descripciones (v1.20.0) | Bloque al final de cada descripción con la rep que da la misión: ganancia, daño cross-faction, penalización por fallo. Correlación por dificultad en multi-tier (Muy bajo +500 / Bajo +1.000 / ...) para localizar tu valor exacto al leer el "X riesgo" del título. 45 sub-carreras/scopes resueltos | 750 | Datos del juego |
 
-**Total: 89 214 claves (4.8.1 "Tactical Strike" — LIVE 11952564; v1.23.0 añade los textos de transferencia de dinero entre jugadores y renombra la livery Syulen a "Xy'kara")**
+**Total: 89 214 claves (4.8.1 "Tactical Strike" — LIVE 11952564; v1.23.1 corrige erratas de traducción heredadas y etiquetas de formato)**
 
 ## Instalacion
 
