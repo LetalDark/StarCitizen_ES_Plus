@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.25.0 — 2026-06-07
+
+Gran pulido de calidad de la traducción. No cambia el contenido del juego: corrige de forma masiva errores que arrastraba la traducción base.
+
+**Cambios:**
+
+- **Más de 1.880 correcciones** de erratas, acentos, falsos amigos y contrasentidos heredados.
+- **Acentos** repuestos en cientos de textos (acción, presión, máquinas, vehículos, página…).
+- **Traducciones corregidas**: "combate aéreo" (antes "pelea de perros"), "Pulsa" (antes "Grifo"), cerveza "de barril" (antes "Borrador"), "cañón de masa", "Tapa central", "cañón" del arma (antes "barril"), entre muchas otras.
+- **Nombres propios** de naves y fabricantes que se traducían por error ahora se respetan (Alliance Startech, Sabre Raven, Cutlass Black, Constellation, Bengal, Redeemer, Faceware…).
+- **"Livery" → "Pintura"** en los 80 nombres y descripciones de pinturas de nave.
+- **Frases rotas o cortadas** reconstruidas (contratos, diarios, descripciones) y limpieza de textos con residuos sueltos.
+
+**Estadísticas:**
+- Líneas en global.ini: 89 214
+
 ## v1.23.1 — 2026-06-06
 
 Pulido de calidad: corrección de erratas de traducción y de etiquetas de formato. No cambia el contenido del juego, solo arregla textos.

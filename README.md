@@ -58,7 +58,7 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 15 | Stats armaduras | Peso, Reduccion Stun, Reduccion Impacto (datos del juego desde v1.14.1) | 787 | Datos del juego |
 | 15b | Tolerancia a fuerza G | Penalización/bonus de tolerancia a fuerzas G por pieza (subtrajes +90/+97.5/+100%, armadura pesada −12.5/−25/−50%, cascos vuelo −2.5%, cascos carreras 0%) — v1.14.1 | 790 | Datos del juego |
 | 16 | Stats ropa y accesorios | Peso de ropa, calzado, mochilas, accesorios arma, multitools, granadas y mas | 910 | Tests in-game |
-| 17 | Correcciones manuales | Nombres armadura normalizados al formato `<Set> (Parte)`, trajes de exploración Novikov/Pembroke/Zeus/Stirling con `(Traje exploración)`, cascos de carreras (refactor v1.14.0: `Traje vuelo carreras`), traducciones recuperadas, fixes doble paréntesis, nombres de componente corregidos (v1.18.1) | 283 | Verificacion manual |
+| 17 | Correcciones manuales | Nombres armadura normalizados al formato `<Set> (Parte)`, trajes de exploración Novikov/Pembroke/Zeus/Stirling con `(Traje exploración)`, cascos de carreras (refactor v1.14.0: `Traje vuelo carreras`), traducciones recuperadas, fixes doble paréntesis, nombres de componente corregidos (v1.18.1), **gran auditoría de la traducción base v1.25.0 (+1.886: acentos, falsos amigos, contrasentidos, nombres propios, Livery→Pintura, frases rotas)** | 2.379 | Verificacion manual |
 | 18 | Stats armas de nave | DPS, Alpha, RPM, Vel, Rango, Penetracion, Dispersión, Capacitor, Masa, HP, EM, Energía, AoE | 122 | Datos del juego |
 | 19 | Stats componentes nave | Power Plants, Quantum Drives, Jump Drives, Shields, Coolers, Radars | 334 | Datos del juego |
 | 20 | Loadout Calculator JSON | Masa y fórmulas de velocidad (Sprint, Run, ADS, Duration) para calculadora externa | 199 | Tests in-game |
@@ -68,7 +68,7 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 24 | Auto-placeholders para contratos sin texto (v1.16.0) | Referencias internas del juego a textos que aún no existen en ningún idioma oficial. Mostramos un nombre humanizado con marca `*` para que el panel no aparezca con un código crudo. v1.18.2: retirados 194 placeholders que tapaban indebidamente texto real del juego en misiones como el Guantelete de Combate | 48 | Auto-generado |
 | 25 | Bloque Reputación en descripciones (v1.20.0) | Bloque al final de cada descripción con la rep que da la misión: ganancia, daño cross-faction, penalización por fallo. Correlación por dificultad en multi-tier (Muy bajo +500 / Bajo +1.000 / ...) para localizar tu valor exacto al leer el "X riesgo" del título. 45 sub-carreras/scopes resueltos | 750 | Datos del juego |
 
-**Total: 89 214 claves (4.8.1 "Tactical Strike" — LIVE 11952564; v1.23.1 corrige erratas de traducción heredadas y etiquetas de formato)**
+**Total: 89 214 claves (4.8.1 "Tactical Strike" — LIVE 11952564; v1.25.0 aplica una gran auditoría de la traducción base: 1.886 correcciones de acentos, falsos amigos, contrasentidos, nombres propios y "Livery"→"Pintura")**
 
 ## Instalacion
 
