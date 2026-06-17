@@ -68,7 +68,7 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 24 | Auto-placeholders para contratos sin texto (v1.16.0) | Referencias internas del juego a textos que aún no existen en ningún idioma oficial. Mostramos un nombre humanizado con marca `*` para que el panel no aparezca con un código crudo. v1.18.2: retirados 194 placeholders que tapaban indebidamente texto real del juego en misiones como el Guantelete de Combate | 48 | Auto-generado |
 | 25 | Bloque Reputación en descripciones (v1.20.0) | Bloque al final de cada descripción con la rep que da la misión: ganancia, daño cross-faction, penalización por fallo. Correlación por dificultad en multi-tier (Muy bajo +500 / Bajo +1.000 / ...) para localizar tu valor exacto al leer el "X riesgo" del título. 45 sub-carreras/scopes resueltos | 750 | Datos del juego |
 
-**Total: 89 214 claves (4.8.1 "Tactical Strike" — LIVE 11952564; v1.25.0 aplica una gran auditoría de la traducción base: 1.886 correcciones de acentos, falsos amigos, contrasentidos, nombres propios y "Livery"→"Pintura")**
+**Total: 89 265 claves (4.8.2 "Tactical Strike" — LIVE 12030094; +51 claves nuevas vs 4.8.1: nave Gatac Tyilui, soportes de bombas Eclipse/Retaliator/Gladiator, bastidores de misiles Railen y nuevas pinturas)**
 
 ## Instalacion
 
@@ -290,5 +290,5 @@ La eficiencia del Quantum Drive depende del tanque cuantico de la nave. Se muest
 
 El ZIP contiene el `global.ini` para el canal LIVE de Star Citizen.
 
-- **Canal LIVE: Star Citizen Alpha 4.8.1-LIVE "Tactical Strike"** (build 11952564)
+- **Canal LIVE: Star Citizen Alpha 4.8.2-LIVE "Tactical Strike"** (build 12030094)
 - Ver [CHANGELOG.md](CHANGELOG.md) para el historial completo

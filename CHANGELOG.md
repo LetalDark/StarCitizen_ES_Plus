@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.26.0 — 2026-06-17
+
+Actualización a Star Citizen Alpha **4.8.2** (LIVE, build 12030094).
+
+**Cambios:**
+- Nueva nave **Gatac Tyilui** (miniportanaves xi'an): nombre y descripción.
+- **Soportes de bombas** para Aegis Eclipse (S3/S5/S10), Aegis Retaliator (delantero/trasero S3/S5) y Anvil Gladiator (S3/S5).
+- **Bastidores de misiles** Gatac para la Railen (2xS2 y 8xS1).
+- Nuevas **pinturas** de nave: Caterpillar Pirate y varias liveries de Railen y Tyilui.
+- Redacción actualizada de la pintura Insularis del Stinger.
+
+**Estadísticas:**
+- Líneas en global.ini: 89 265
+
 ## v1.25.0 — 2026-06-07
 
 Gran pulido de calidad de la traducción. No cambia el contenido del juego: corrige de forma masiva errores que arrastraba la traducción base.
