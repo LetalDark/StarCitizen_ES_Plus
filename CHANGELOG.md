@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.26.1 — 2026-06-22
+
+Corrección de los planos mostrados en misiones de recompensa (build 12061511).
+
+**Cambios:**
+- **Corregida la lista de "Posibles Planos" en misiones cuyos contratos dan recompensas
+  distintas según el sistema estelar o la región** (Foxwell, HeadHunters, Citizens For
+  Prosperity, Shubin, Eckhart… unas 50 misiones). Antes se mostraba solo la lista de un
+  sistema —a veces de uno que ni siquiera es accesible—, por lo que un jugador podía ver
+  planos que nunca obtendría en su zona. Ahora cada misión muestra **todas las variantes,
+  etiquetadas por sistema y región** (`Stanton`, `Pyro`, `Región A/B/C/D`…), para que sepas
+  exactamente qué planos puedes conseguir donde estés.
+
+**Estadísticas:**
+- Líneas en global.ini: 89 265
+
 ## v1.26.0 — 2026-06-17
 
 Actualización a Star Citizen Alpha **4.8.2** (LIVE, build 12030094).
