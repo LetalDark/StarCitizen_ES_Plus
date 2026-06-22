@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.26.2 — 2026-06-22
+
+Unificación de la terminología de los soportes de armamento y correcciones menores de texto (build 12061511).
+
+**Cambios:**
+- **Unificada la terminología de los soportes de armamento de nave** (racks de misiles,
+  bombas y torpedos). Antes convivían hasta 9 nombres distintos para lo mismo ("Riel de
+  Misiles", "Bastidor de misiles", "Puerto de misiles", "Lanzadera"…) e incluso varios a
+  medio traducir en inglés ("MSD-322 Missile Rack"). Ahora se respetan los **cuatro tipos
+  que distingue el propio juego**: *Soporte de misiles*, *Soporte de bombas*, *Soporte de
+  torpedos* y *Lanzamisiles* (lanzadores integrados como los del MOTH, Reliant Tana o Ares).
+- Corregidos dos textos del soporte de la MISC Hull B que aparecían **duplicados**.
+- Corregidos tres avisos de **transferencia de dinero entre jugadores**: trato de usted
+  inconsistente ("Su transferencia" → "Tu transferencia"), un doble espacio y espacios
+  sobrantes que no encajaban con el formato del juego.
+
+**Estadísticas:**
+- Líneas en global.ini: 89 265
+
 ## v1.26.1 — 2026-06-22
 
 Corrección de los planos mostrados en misiones de recompensa (build 12061511).
