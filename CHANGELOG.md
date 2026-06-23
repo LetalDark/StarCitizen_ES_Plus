@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.26.3 — 2026-06-23
+
+Corrección de la reputación que no se mostraba en varios contratos de planos (build 12061511).
+
+**Cambios:**
+- Corregida la **reputación que no aparecía** en 8 contratos con plano. Las misiones de Foxwell
+  Enforcement de "Defender/Proteger … y escoltar a los empleados" (las cinco dificultades) y tres
+  contratos de repostaje de UWC mostraban la lista de Posibles Planos pero no la línea
+  *Reputación: +XXX*. Esos contratos siempre dieron reputación; solo era el texto el que no la
+  reflejaba. Ahora se muestra correctamente en los ocho.
+
+**Estadísticas:**
+- Líneas en global.ini: 89.257
+
 ## v1.26.2 — 2026-06-22
 
 Unificación de la terminología de los soportes de armamento y correcciones menores de texto (build 12061511).

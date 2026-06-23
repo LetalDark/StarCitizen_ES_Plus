@@ -45,7 +45,7 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 2 | Blueprints misiones | Planos posibles en misiones, traducidos al ES + correcciones | 502 | MrKraken + nuestras |
 | 3 | Traducciones p4k | Claves que faltan en Thord82, traducidas del ingles oficial | 529 | Data.p4k CIG |
 | 4 | [BP] en titulos | Marca `[BP]` en misiones que dan blueprints | 298 | datos del juego |
-| 5 | Posibles Planos auto-generados | Bloque "Posibles Planos" en descripciones, generado automaticamente desde los datos del juego resolviendo cada blueprint a su nombre español (v1.10.0) | 442 | datos del juego |
+| 5 | Posibles Planos auto-generados | Bloque "Posibles Planos" en descripciones, generado automaticamente desde los datos del juego resolviendo cada blueprint a su nombre español (v1.10.0) | 434 | datos del juego |
 | 6 | Componentes clase/grado | Prefijo `[MIL\|2\|A]`, `[CIV\|1\|C]`, etc. en componentes de naves | 382 | datos del juego |
 | 7 | Misiles y bombas | Tracking type `IR`/`EM`/`CS` en misiles, tamaño `B#` en bombas (estilo uniforme) | 136 | datos del juego |
 | 8 | Sustancias ilegales | Marca `[!]` en drogas (WiDoW, SLAM, Maze, etc.) | 8 | ExoAE |
@@ -69,7 +69,7 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 25 | Bloque Reputación en descripciones (v1.20.0) | Bloque al final de cada descripción con la rep que da la misión: ganancia, daño cross-faction, penalización por fallo. Correlación por dificultad en multi-tier (Muy bajo +500 / Bajo +1.000 / ...) para localizar tu valor exacto al leer el "X riesgo" del título. 45 sub-carreras/scopes resueltos | 750 | Datos del juego |
 | 26 | Soportes de armamento unificados (v1.26.2) | Los racks de misiles, bombas y torpedos usan ahora los cuatro nombres que distingue el propio juego: *Soporte de misiles*, *Soporte de bombas*, *Soporte de torpedos* y *Lanzamisiles* (lanzadores integrados como los del MOTH, Reliant Tana o Ares). Elimina los nombres a medio traducir en inglés (p.ej. "Missile Rack") y las variantes inconsistentes heredadas ("Riel", "Bastidor", "Puerto"…) | 64 | Datos del juego |
 
-**Total: 89 265 claves (4.8.2 "Tactical Strike" — LIVE 12061511; +51 claves nuevas vs 4.8.1: nave Gatac Tyilui, soportes de bombas Eclipse/Retaliator/Gladiator, bastidores de misiles Railen y nuevas pinturas)**
+**Total: 89 257 claves (4.8.2 "Tactical Strike" — LIVE 12061511; +51 claves nuevas vs 4.8.1: nave Gatac Tyilui, soportes de bombas Eclipse/Retaliator/Gladiator, bastidores de misiles Railen y nuevas pinturas)**
 
 ## Instalacion
 
