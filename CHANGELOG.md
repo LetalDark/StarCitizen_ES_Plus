@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.26.4 — 2026-06-30
+
+Nueva información de fabricación en las materias primas y unificación de la terminología de armas.
+
+**Cambios:**
+- **Información de fabricación en materiales** (26 materiales): la descripción de cada mineral o material indica ahora qué puedes fabricar con él — componentes de nave (por clase: Militar, Sigilo, Industrial, Civil, Competición; y grado), armas de nave, armas FPS, armaduras y equipo de minería. Cuando un material solo sirve para una receta concreta, esta se nombra directamente (ej. "Cañón Singe", "CSP-68L").
+- **Terminología de armas unificada**: "Mass Driver" pasa a "impulsor de masa" y "Neutron" a "Neutrón" en nombres, tipos y descripciones, en línea con los nombres que ya se usaban para los cañones de taquiones y de neutrones.
+
+**Estadísticas:**
+- Líneas en global.ini: 89.257
+
 ## v1.26.3 — 2026-06-23
 
 Corrección de la reputación que no se mostraba en varios contratos de planos (build 12061511).
