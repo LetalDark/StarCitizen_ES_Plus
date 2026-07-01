@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.27.0 — 2026-07-01
+
+Recalibración de los stats de armas y equipo FPS en las descripciones para cuadrar con los valores reales del juego.
+
+**Cambios:**
+- Cadencias de fuego de varias armas de energía y multi-modo corregidas (Quartz, Ripper, Parallax, Fresnel, Lumin V, Killshot, Deadrig y más).
+- Retroceso de accesorios (compensadores, ocultadores de fogonazo, estabilizadores) ahora reflejado en sus descripciones.
+- Masas y radios de cargadores, misiles, granadas y consumibles revisados; se elimina información de relleno que no aportaba nada.
+- Mira 5x del Arrowhead: velocidad y alcance corregidos para cuadrar con el arma base.
+
+**Estadísticas:**
+- Líneas en global.ini: 89257
+
 ## v1.26.4 — 2026-06-30
 
 Nueva información de fabricación en las materias primas y unificación de la terminología de armas.
