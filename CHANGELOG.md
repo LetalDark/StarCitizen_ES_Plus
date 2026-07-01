@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.27.1 — 2026-07-01
+
+Corrección de cadencia de fuego de 4 armas de nave.
+
+**Cambios:**
+- Corregida la cadencia (RPM) y el DPS de 4 armas de nave que el juego exponía de forma ambigua: repetidor BRVS, repetidor Echion, dispersora PyroBurst y cañón Slayer.
+
+**Estadísticas:**
+- Líneas en global.ini: 89 257
+
 ## v1.27.0 — 2026-07-01
 
 Recalibración de los stats de armas y equipo FPS en las descripciones para cuadrar con los valores reales del juego.

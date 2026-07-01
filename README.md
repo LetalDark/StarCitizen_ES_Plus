@@ -17,7 +17,7 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 9. **Reestructura el compendio de mineria** del diario del juego en 6 secciones por rareza (Legendario, Epico, Raro, Poco comun, Comun, Minables a mano) con orden alfabetico dentro
 10. **Inyecta stats reales de armas FPS** (DPS, Alpha, Velocidad, Peso, Caida de daño) con datos testeados in-game
 11. **Inyecta stats de armaduras** (Peso, Reduccion Stun, Reduccion Impacto, Tolerancia a fuerza G), peso de cargadores, mochilas, ropa, accesorios y mas. Datos extraidos directamente del juego — captan los rebalances entre versiones (ej. en 4.8.0 los subtrajes pasaron de 15% a 10% Stun)
-12. **Inyecta stats de armas de nave** (DPS, Alpha, RPM, Velocidad, Rango, Penetracion, Capacitor, Masa, HP, EM, AoE) extraidos directamente de los datos del juego (122 armas)
+12. **Inyecta stats de armas de nave** (DPS, Alpha, RPM, Velocidad, Rango, Penetracion, Capacitor, Masa, HP, EM, AoE) extraidos directamente de los datos del juego (122 armas). v1.27.1: 4 cadencias que el juego expone ambiguas (BRVS, Echion, PyroBurst, Slayer) corregidas a su valor real
 13. **Inyecta stats de componentes de nave** (334 componentes): Power Plants, Quantum Drives, Jump Drives, Shields, Coolers y Radars con datos del juego
 14. **Completa claves que faltan** extrayendo los textos oficiales directamente del Data.p4k del juego
 15. **Corrige errores** de las fuentes originales (GUIDs nulos, pools faltantes, nombres de armadura incorrectos)
