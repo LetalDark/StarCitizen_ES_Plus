@@ -80,7 +80,7 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 31 | Compendio de minería por rareza | El compendio de minería del diario del juego se reorganiza en 6 secciones por rareza (Legendario, Épico, Raro, Poco común, Común, Minables a mano), con orden alfabético dentro de cada una | 1 | Reorganización |
 | 32 | Etiquetas unificadas (armadura, accesorios, varios) (v1.22.0) | El mismo dato deja de aparecer con varios nombres heredados: las etiquetas de stats de armadura, la línea de accesorios de armas y varias etiquetas (Tipo de artículo, Cargador, Batería, Clase) se unifican a una forma canónica. Además el tipo y la reducción de daño de las armaduras se corrigen para cuadrar con los valores reales del juego (v1.22.2) | ~2.076 | Reorganización |
 
-**Total: 89 257 claves (4.8.2 "Tactical Strike" — LIVE 12061511; +51 claves nuevas vs 4.8.1: nave Gatac Tyilui, soportes de bombas Eclipse/Retaliator/Gladiator, bastidores de misiles Railen y nuevas pinturas)**
+**Total: 89 257 claves (4.8.3 "Tactical Strike" — LIVE 12122953; misma traducción que 4.8.2: el parche 4.8.3 no cambió textos ni datos del juego)**
 
 ## Instalacion
 
@@ -302,5 +302,5 @@ La eficiencia del Quantum Drive depende del tanque cuantico de la nave. Se muest
 
 El ZIP contiene el `global.ini` para el canal LIVE de Star Citizen.
 
-- **Canal LIVE: Star Citizen Alpha 4.8.2-LIVE "Tactical Strike"** (build 12061511)
+- **Canal LIVE: Star Citizen Alpha 4.8.3-LIVE "Tactical Strike"** (build 12122953)
 - Ver [CHANGELOG.md](CHANGELOG.md) para el historial completo

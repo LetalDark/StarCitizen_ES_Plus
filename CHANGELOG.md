@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.27.2 — 2026-07-01
+
+Compatibilidad con la build 4.8.3 LIVE del juego.
+
+**Cambios:**
+- Actualizada la compatibilidad a Star Citizen Alpha 4.8.3-LIVE (build 12122953). La traducción es la misma que la de 4.8.2: el parche 4.8.3 no modificó textos ni datos del juego, así que el `global.ini` no cambia.
+
+**Estadísticas:**
+- Líneas en global.ini: 89 257
+
 ## v1.27.1 — 2026-07-01
 
 Corrección de cadencia de fuego de 4 armas de nave.
