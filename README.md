@@ -1,6 +1,6 @@
-# Star Citizen - ES Plus
+# Star Citizen — Traducción al español (ES Plus)
 
-Traduccion al español de Star Citizen que combina multiples fuentes para ofrecer la experiencia mas completa posible en español.
+Traducción al español de Star Citizen que combina múltiples fuentes para ofrecer la experiencia más completa posible en español. Compatible con la última versión del juego (canal LIVE), actualizada en cada parche.
 
 ## Que hace este proyecto
 
@@ -82,17 +82,22 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 
 **Total: 89 257 claves (4.8.3 "Tactical Strike" — LIVE 12122953; misma traducción que 4.8.2: el parche 4.8.3 no cambió textos ni datos del juego)**
 
-## Instalacion
+## Instalación — cómo poner Star Citizen en español
 
-1. Descarga el ZIP de la ultima release
-2. Extrae el contenido en la carpeta de Star Citizen (ej: `C:\Program Files\Roberts Space Industries\StarCitizen\`)
-3. La estructura queda asi (cada carpeta es el canal del RSI Launcher):
+1. Descarga el ZIP de la [última release](https://github.com/LetalDark/StarCitizen_ES_Plus/releases/latest)
+2. Extrae el contenido en la carpeta de instalación de Star Citizen (ej: `C:\Program Files\Roberts Space Industries\StarCitizen\`)
+3. La estructura queda así (cada carpeta es el canal del RSI Launcher):
 ```
 StarCitizen/
 └── LIVE/
     ├── data/Localization/spanish_(spain)/global.ini
     └── user.cfg
 ```
+4. Inicia el juego desde el RSI Launcher — los textos aparecerán en español
+
+**Actualizar la traducción**: tras cada parche del juego, descarga la release nueva y sobrescribe los archivos.
+
+**Volver al inglés**: borra el archivo `user.cfg` de la carpeta del canal (`LIVE/user.cfg`).
 
 ## Formato de componentes
 
