@@ -1,6 +1,6 @@
 # Star Citizen — Traducción al español (ES Plus)
 
-Traducción al español de Star Citizen que combina múltiples fuentes para ofrecer la experiencia más completa posible en español. Compatible con la última versión del juego (canal LIVE), actualizada en cada parche.
+Traducción al español de Star Citizen que combina múltiples fuentes para ofrecer la experiencia más completa posible en español. Compatible con la última versión del juego (canales LIVE y PTU cuando hay parche en pruebas), actualizada en cada parche.
 
 ## Que hace este proyecto
 
@@ -80,16 +80,19 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 31 | Compendio de minería por rareza | El compendio de minería del diario del juego se reorganiza en 6 secciones por rareza (Legendario, Épico, Raro, Poco común, Común, Minables a mano), con orden alfabético dentro de cada una | 1 | Reorganización |
 | 32 | Etiquetas unificadas (armadura, accesorios, varios) (v1.22.0) | El mismo dato deja de aparecer con varios nombres heredados: las etiquetas de stats de armadura, la línea de accesorios de armas y varias etiquetas (Tipo de artículo, Cargador, Batería, Clase) se unifican a una forma canónica. Además el tipo y la reducción de daño de las armaduras se corrigen para cuadrar con los valores reales del juego (v1.22.2) | ~2.076 | Reorganización |
 
-**Total: 89 257 claves (4.8.3 "Tactical Strike" — LIVE 12122953; misma traducción que 4.8.2: el parche 4.8.3 no cambió textos ni datos del juego)**
+**Total: 89 257 claves (4.8.3 "Tactical Strike" — LIVE 12122953). El canal PTU 4.9.0 (build 12148226) lleva 90 277 claves: +1 035 nuevas del parche 4.9.0 traducidas (Asedio de Orison 2, People's Alliance, Ayuda a Orison y más)**
 
 ## Instalación — cómo poner Star Citizen en español
 
 1. Descarga el ZIP de la [última release](https://github.com/LetalDark/StarCitizen_ES_Plus/releases/latest)
 2. Extrae el contenido en la carpeta de instalación de Star Citizen (ej: `C:\Program Files\Roberts Space Industries\StarCitizen\`)
-3. La estructura queda así (cada carpeta es el canal del RSI Launcher):
+3. La estructura queda así (cada carpeta es el canal del RSI Launcher; el ZIP incluye LIVE y, si hay parche en pruebas, también PTU):
 ```
 StarCitizen/
-└── LIVE/
+├── LIVE/
+│   ├── data/Localization/spanish_(spain)/global.ini
+│   └── user.cfg
+└── PTU/
     ├── data/Localization/spanish_(spain)/global.ini
     └── user.cfg
 ```
@@ -305,7 +308,8 @@ La eficiencia del Quantum Drive depende del tanque cuantico de la nave. Se muest
 
 ## Version actual
 
-El ZIP contiene el `global.ini` para el canal LIVE de Star Citizen.
+El ZIP contiene el `global.ini` de cada canal activo de Star Citizen en subcarpetas separadas.
 
 - **Canal LIVE: Star Citizen Alpha 4.8.3-LIVE "Tactical Strike"** (build 12122953)
+- **Canal PTU: Star Citizen Alpha 4.9.0-PTU** (build 12148226) — parche 4.9.0 completo en español: vuelve el Asedio de Orison, misiones de Ayuda a Orison, la People's Alliance de Levski, nuevas armas y componentes
 - Ver [CHANGELOG.md](CHANGELOG.md) para el historial completo

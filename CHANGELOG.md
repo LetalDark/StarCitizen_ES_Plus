@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.29.0 — 2026-07-03
+
+Traducción completa del parche 4.9.0 (canal PTU). El ZIP ahora incluye ambos canales: LIVE (4.8.3) y PTU (4.9.0).
+
+**Cambios:**
+- Traducidas las 1 035 claves nuevas del parche 4.9.0: vuelve el **Asedio de Orison** (misiones, diálogos y objetivos del evento), las misiones de **Ayuda a Orison** (pedidos de fabricación y materiales), el arco de misiones de historia de Battaglia, la facción People's Alliance de Levski (antes Miners Amalgamated, renombrada por el juego) y la nueva facción Moraine
+- Nuevas armas FPS del parche con sus stats (Vendetta HMG, rifles CQ7 y Arlington) y el nuevo catálogo de plantas de energía de nave
+- Unificación de términos en todo el archivo: "El visor es compatible con la retícula AR." (77 variantes históricas), tecnología **Grav-Lev** con la grafía oficial del juego (antes aparecía como "Nivel de gravedad", que era un error), "Fabricador de artículos" en las misiones que lo mencionan (coincide con el nombre de la máquina en pantalla), cabecera única "RESUMEN DEL TRABAJO" en las misiones de People's Alliance
+- Corregida la cadencia de 3 armas de nave más (familia SW16BR "Buzzsaw/Sawbuck/Shredder" de Preacher) a su valor real in-game
+- Nuevas misiones muestran su bloque de escenario "Orison Relief" con los puntos que otorgan
+- Ajuste del lanzagranadas GP-33 MOD al gran rebalanceo del parche (explosión ×6)
+
+**Estadísticas:**
+- Líneas en global.ini (PTU 4.9.0): 90 278
+- Líneas en global.ini (LIVE 4.8.3): 89 257
+
 ## v1.28.2 — 2026-07-03
 
 Corrección del panel de stats del láser de minería.
