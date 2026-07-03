@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.28.2 — 2026-07-03
+
+Corrección del panel de stats del láser de minería.
+
+**Cambios:**
+- La etiqueta "Tamaño de ventana" era demasiado larga para el panel de minería y se superponía a los números (reportado por un usuario con el láser Klein-S2). Ahora es "Tam. Ventana", siguiendo el mismo estilo de abreviación que usa el juego en inglés
+- Normalizadas las demás etiquetas del panel: "Fractura PWR", "Daño Rotura", "Agrupación" (con tilde) y "Extracc. PWR"
+
+**Estadísticas:**
+- Líneas en global.ini: 89 257
+
 ## v1.27.2 — 2026-07-01
 
 Compatibilidad con la build 4.8.3 LIVE del juego.
