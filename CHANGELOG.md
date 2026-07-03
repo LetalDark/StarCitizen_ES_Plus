@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.29.2 — 2026-07-04
+
+Actualización de mantenimiento del canal LIVE (4.8.3): las mejoras de texto que estrenó el parche 4.9.0 llegan también a la versión que se juega ahora.
+
+**Cambios (canal LIVE 4.8.3 — 89 textos):**
+- Unificado "El visor es compatible con la retícula AR." en las descripciones de 77 cascos (antes convivían varias redacciones con "visera")
+- "Fabricador de artículos" en los textos de recompensa que lo mencionan, y nombres de facción People's Alliance / Miners Amalgamated respetados como nombres propios
+- Corregidas las estadísticas del refrigerador y la planta de energía exclusivos del 890 Jump y del radar Ecouter (mostraban valores de otro componente)
+- Corregida la cadencia real de los repetidores balísticos SW16BR "Buzzsaw" y "Sawbuck" (mismo ajuste que ya llevaba el canal PTU)
+- Recuperados dos textos del modo operador de repostaje que el juego sigue usando aunque el parche los retirara de los archivos oficiales
+- El canal PTU (4.9.0) no cambia en esta versión
+
+**Estadísticas:**
+- Líneas en global.ini: LIVE 89 257 · PTU 90 278
+
 ## v1.29.0 — 2026-07-03
 
 Traducción completa del parche 4.9.0 (canal PTU). El ZIP ahora incluye ambos canales: LIVE (4.8.3) y PTU (4.9.0).
