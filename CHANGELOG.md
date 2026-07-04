@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.29.4 — 2026-07-04
+
+Correcciones de precisión en accesorios de arma y en las recompensas de blueprint de las misiones. Ambos canales (LIVE 4.8.3 y PTU 4.9.0).
+
+**Cambios:**
+- **"Fogonazo: -100%" en ocultadores y supresores**: los 3 Ocultadores de Fogonazo Veil y los 9 supresores (Tacit, Quell, Stoic) eliminan por completo el fogonazo del arma, y ahora sus descripciones lo dicen — el juego omite este dato en sus textos. Los Veil además llevaban "Tipo" y "Punto de acoplamiento" sin traducir y alguna errata
+- **"Posibles Planos" solo donde tocan** (reporte de la comunidad): las misiones Covalex de rango bajo (Principiante/Junior) mostraban la lista de planos del rango superior sin dar ninguno — solo las rutas interestelares los sueltan. Corregido en todas las familias de misión afectadas (~61 descripciones): recetas de The Collector, recompensas genéricas de cazarrecompensas, escoltas de CFP y otras ya no prometen planos que no dan. Las misiones que sí los dan conservan su lista intacta
+- **11 nombres de accesorios corregidos**: las miras telescópicas Behr recuperan su nombre oficial (EE04 y EE08, como su hermana EE16); eliminado un residuo ",P" del Estabilizador Escalate 2 y de una armadura Marine; las ediciones "Tweaker" usan el mismo orden que el resto de su familia; "Omarof (16x Telescópico)" traducido; y dos linternas FieldLite corregidas
+
+**Estadísticas:**
+- Líneas en global.ini: 89.257 (LIVE) / 90.278 (PTU)
+
 ## v1.29.3 — 2026-07-04
 
 Más información útil en las descripciones: fabricación completa en minerales y stats reales en todos los accesorios de arma. Ambos canales (LIVE 4.8.3 y PTU 4.9.0).
