@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.29.3 — 2026-07-04
+
+Más información útil en las descripciones: fabricación completa en minerales y stats reales en todos los accesorios de arma. Ambos canales (LIVE 4.8.3 y PTU 4.9.0).
+
+**Cambios:**
+- **Fabricación completa en materiales**: las gemas de minado a mano (Aphorite, Dolivine, Hadanite, Beradom, Glacosite, Janalite, Carinite, Feynmaline, Sadaryx), el mineral de saldynium y el ojo de yormandi ahora indican qué se fabrica con ellos. El mineral en bruto también lo muestra ("Fabricación (tras refinar):" en los refinables)
+- **Stats reales en todos los accesorios de arma**: los compensadores Vera, Torrent y Stark, los supresores Quell y Stoic, el estabilizador Escalate y las ediciones especiales ("Scorched", "Tweaker") muestran sus efectos reales — cada familia tiene ventajas distintas que el juego no documenta (ej. el Stark aumenta el daño a cambio de cadencia; los Quell/Stoic silencian sin penalizar daño)
+- **Reducción de retroceso de las miras**: varias ópticas (HG-3, FocalWave, Tau Plus, Behr X4, OT4-RF) reducen la sacudida o la subida del arma al disparar y el juego no lo cuenta — ahora sus descripciones lo indican ("Sacudida/Subida (retroceso)")
+- **Etiquetas de accesorios unificadas**: "Tiempo de apuntado", "Punto de acoplamiento", "Aumento" y "Fogonazo" como formas únicas (antes convivían "Tiempo de apuntamiento", "Punto de conexión/sujeción/acople", "Ampliación/Magnificación" y el anglicismo "Flash")
+- Corregida una duplicación de líneas de stats en descripciones de algunos accesorios
+
+**Estadísticas:**
+- Líneas en global.ini: LIVE 89 257 · PTU 90 278
+
 ## v1.29.2 — 2026-07-04
 
 Actualización de mantenimiento del canal LIVE (4.8.3): las mejoras de texto que estrenó el parche 4.9.0 llegan también a la versión que se juega ahora.
