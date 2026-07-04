@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.29.5 — 2026-07-05
+
+Corrección puntual de nombres en ambos canales (LIVE 4.8.3 y PTU 4.9.0).
+
+**Cambios:**
+- Corregido el nombre de la edición Xy'kara de la Ballesta Novian: decía "Ballesta Novia" en el nombre, el nombre corto y dos veces en su descripción — ahora "Ballesta Novian \"Xy'kara\"", como el resto de ediciones de su familia
+
+**Estadísticas:**
+- Líneas en global.ini: 89.257 (LIVE) / 90.278 (PTU)
+
 ## v1.29.4 — 2026-07-04
 
 Correcciones de precisión en accesorios de arma y en las recompensas de blueprint de las misiones. Ambos canales (LIVE 4.8.3 y PTU 4.9.0).
