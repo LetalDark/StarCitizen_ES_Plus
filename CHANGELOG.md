@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.29.6 — 2026-07-05
+
+Daño real en las granadas, en su sitio. Ambos canales (LIVE 4.8.3 y PTU 4.9.0).
+
+**Cambios:**
+- **Granada de plasma Scorch**: la línea de stats aparecía colgada al final de la descripción; ahora va en la cabecera, debajo del tipo de daño. Además muestra el daño real de su zona de peligro persistente — "Daño total: 250 (25/s) | Radio: 4.25m" — en lugar del daño simbólico de la explosión de impacto
+- **Granada Fragmentadora MK-4** (solo PTU): daño actualizado al valor de 4.9 ("Alpha: 684" — el parche multiplica por 6 su explosión). En LIVE conserva su valor correcto (114)
+- Corregido el peso de 13 consumibles médicos CureLife en PTU (0.25 → 0.1 kg, cambio real de 4.9 que no se reflejaba)
+
+**Estadísticas:**
+- Líneas en global.ini: 89.257 (LIVE) / 90.278 (PTU)
+
 ## v1.29.5 — 2026-07-05
 
 Corrección puntual de nombres en ambos canales (LIVE 4.8.3 y PTU 4.9.0).
