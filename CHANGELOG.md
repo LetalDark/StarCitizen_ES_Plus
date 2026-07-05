@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.29.7 — 2026-07-05
+
+Corrección del daño de las granadas publicado en v1.29.6. Ambos canales (LIVE 4.8.3 y PTU 4.9.0).
+
+**Cambios:**
+- **Granadas: daño real, sin inflar** (reporte in-game): el valor publicado ayer aplicaba por error un factor de los lanzadores. La Granada Fragmentadora MK-4 muestra ahora su daño verdadero: "Alpha: 20" en LIVE y "Alpha: 120" en PTU (verificado contra el juego). La zona de peligro de la Scorch no cambia (Daño total: 250, 25/s)
+- **Lanzamisiles Animus**: peso cargado real de 25.57 kg (el cargador incluye sus 3 misiles) y su cargador indica "Capacidad: 3 | 8.74 kg"; el misil suelto ya no arrastra por error los stats del arma completa y muestra su peso real (2.83 kg)
+
+**Estadísticas:**
+- Líneas en global.ini: 89.257 (LIVE) / 90.278 (PTU)
+
 ## v1.29.6 — 2026-07-05
 
 Daño real en las granadas, en su sitio. Ambos canales (LIVE 4.8.3 y PTU 4.9.0).
