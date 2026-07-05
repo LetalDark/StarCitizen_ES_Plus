@@ -31,6 +31,7 @@ Star Citizen no tiene traduccion oficial completa al español. Existen proyectos
 23. **Stats reales en todos los accesorios de arma** (v1.29.3): los accesorios que el juego no documenta llevan sus efectos reales en la descripción — incluidos los compensadores Vera/Torrent/Stark, supresores Quell/Stoic y ediciones especiales, y la reducción de retroceso percibido de varias miras ("Sacudida/Subida (retroceso)"). Etiquetas unificadas ("Tiempo de apuntado", "Punto de acoplamiento", "Aumento", "Fogonazo")
 24. **Correcciones de precisión** (v1.29.4): los ocultadores de fogonazo y supresores muestran su supresión total del fogonazo ("Fogonazo: -100%" — el juego omite este dato); la lista de "Posibles Planos" solo aparece en las misiones que de verdad dan planos (las misiones Covalex de rango bajo mostraban las recompensas del rango superior sin darlas — reporte de la comunidad); 12 nombres de accesorios y armas corregidos (las miras Behr recuperan su nombre oficial EE04/EE08, ediciones "Tweaker" reordenadas, restos sin traducir; v1.29.5: la Ballesta Novian edición Xy'kara ya no dice "Ballesta Novia")
 25. **Daño real en granadas** (v1.29.6, corregido v1.29.7): las granadas letales muestran su daño verdadero en la descripción, junto al tipo de daño — la MK-4 con el valor real de cada canal (20 en LIVE, 120 en PTU tras el buff de 4.9), y la granada de plasma Scorch el daño de su zona de peligro persistente ("Daño total: 250 (25/s) | Radio: 4.25m") en lugar del daño simbólico de su impacto. El Lanzamisiles Animus documenta además su peso cargado real (25.57 kg) y la capacidad de su cargador (3 misiles)
+26. **Todos los modos de disparo reales + limpieza de planos fantasma** (v1.29.8): las armas con regímenes mixtos muestran todos sus modos — el rifle Parallax estrena su haz (`[Beam] DPS: 210 | Alpha: 7 | 40% calor`, entra solo al calentar el arma) y su promedio `[Combinado]`; la Killshot separa sus dos cañones (`Balístico` / `Energía`) con el combinado real a 450 rpm; y la escopeta Prism corrige su ficha invertida (el modo frío dispara 8 perdigones a 46 de daño y el Slug es el régimen caliente). La velocidad de proyectil pasa a una línea única "Velocidad:" en todas las armas. La mira OT4-RF "Scorched" muestra sus stats reales (+5% de apuntado y Sacudida -10%, no las del modelo base). Y las misiones de transporte de Red Wind dejan de anunciar "Posibles Planos" que no dan (reporte de la comunidad; en PTU 4.9 también las de defensa de naves de Foxwell, cuyos planos retiró el parche)
 
 ## Fuentes y agradecimientos
 
@@ -53,7 +54,7 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 2 | Blueprints misiones | Planos posibles en misiones, traducidos al ES + correcciones | 502 | MrKraken + nuestras |
 | 3 | Traducciones p4k | Claves que faltan en Thord82, traducidas del ingles oficial | 529 | Data.p4k CIG |
 | 4 | [BP] en titulos | Marca `[BP]` en misiones que dan blueprints | 298 | datos del juego |
-| 5 | Posibles Planos auto-generados | Bloque "Posibles Planos" en descripciones, generado automaticamente desde los datos del juego resolviendo cada blueprint a su nombre español (v1.10.0) | 434 | datos del juego |
+| 5 | Posibles Planos auto-generados | Bloque "Posibles Planos" en descripciones, generado automaticamente desde los datos del juego resolviendo cada blueprint a su nombre español (v1.10.0); desde v1.29.8 solo en misiones que DE VERDAD dan planos (fósiles de contratos retirados barridos) | 361 | datos del juego |
 | 6 | Componentes clase/grado | Prefijo `[MIL\|2\|A]`, `[CIV\|1\|C]`, etc. en componentes de naves | 382 | datos del juego |
 | 7 | Misiles y bombas | Tracking type `IR`/`EM`/`CS` en misiles, tamaño `B#` en bombas (estilo uniforme) | 136 | datos del juego |
 | 8 | Sustancias ilegales | Marca `[!]` en drogas (WiDoW, SLAM, Maze, etc.) | 8 | ExoAE |
@@ -61,7 +62,7 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 10 | Minerales | Heph + ore (Mnl) + raw (Bto) + ajustes nombres largos (max 14 chars) | 47 | MrKraken/ExoAE |
 | 11 | Hauling titles | Ruta origen>destino en titulos de transporte de carga | 5 | MrKraken |
 | 12 | Limpieza | Trailing spaces eliminados | 607 | BeltaKoda |
-| 13 | Stats armas FPS | DPS, Alpha, Vel, Peso, Caida de daño, modos de fuego | 295 | Tests in-game + Data.p4k |
+| 13 | Stats armas FPS | DPS, Alpha, Peso, Caida de daño y TODOS los modos de fuego reales (v1.29.8: [Combinado] en armas mixtas, calificadores como "40% calor", velocidad en línea única "Velocidad:") | 303 | Tests in-game + Data.p4k |
 | 14 | Stats cargadores | Peso del cargador | 42 | Tests in-game |
 | 15 | Stats armaduras | Peso, Reduccion Stun, Reduccion Impacto (datos del juego desde v1.14.1) | 787 | Datos del juego |
 | 15b | Tolerancia a fuerza G | Penalización/bonus de tolerancia a fuerzas G por pieza (subtrajes +90/+97.5/+100%, armadura pesada −12.5/−25/−50%, cascos vuelo −2.5%, cascos carreras 0%) — v1.14.1 | 790 | Datos del juego |

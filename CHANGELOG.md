@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.29.8 — 2026-07-05
+
+Todos los modos de disparo reales en las armas de regímenes mixtos + limpieza de "Posibles Planos" fantasma. Ambos canales (LIVE 4.8.3 y PTU 4.9.0).
+
+**Cambios:**
+- **Rifle Parallax con sus 3 regímenes reales**: `[Auto] DPS: 130 | Alpha: 13`, `[Beam] DPS: 210 | Alpha: 7 | 40% calor` (el haz entra solo al calentar el arma — el juego lo cuenta en la prosa pero no lo listaba) y `[Combinado] DPS: 192.99` (promedio del ciclo mixto). Alcance real del proyectil: 1200 m
+- **Rifle Killshot con sus 2 cañones separados**: `[Auto] 82.5 | Balístico` / `[Auto] 71.25 | Energía` + `[Combinado] 153.75` a la cadencia real de 450 rpm — el arma alterna ambos cañones a la fuerza
+- **Escopeta Prism: ficha corregida (estaba invertida)**: el modo frío es el semi de 8 perdigones (46 de daño, 385 rpm) y el **Slug es el régimen caliente** (`40% calor`); estrena además su `[Combinado] 242.52`
+- **Velocidad de proyectil en línea única** "Velocidad: V m/s" en todas las armas FPS — las líneas de modo quedan más cortas; los modos cargados con velocidad propia (Scourge, Karna, francotirador Zenith) la conservan en su línea
+- **Mira OT4-RF "Scorched" con sus stats reales** (incongruencia cazada por la comunidad): +5% de apuntado, Sacudida -10% y zoom variable 2.5x–4x — es una edición con mejoras reales, no una skin, y mostraba los valores del modelo base (+25%, sin Sacudida)
+- **"Posibles Planos" fantasma eliminados** (reporte de la comunidad): las misiones de transporte de Red Wind anunciaban planos industriales (Breton/Genoa/Durango) de una recompensa retirada del juego — 13 descripciones limpiadas en ambos canales; en PTU 4.9 también las 6 de defensa de naves de Foxwell (el parche 4.9 retiró sus planos; en LIVE siguen activos y se conservan)
+- La LMG Fresnel recupera stats al día en su descripción (llevaba varios builds con valores antiguos) y la cadencia primaria de la Prism se corrige a 385 rpm
+
+**Estadísticas:**
+- Líneas en global.ini: 89.257 (LIVE) / 90.278 (PTU)
+
 ## v1.29.7 — 2026-07-05
 
 Corrección del daño de las granadas publicado en v1.29.6. Ambos canales (LIVE 4.8.3 y PTU 4.9.0).
