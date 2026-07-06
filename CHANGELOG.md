@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.29.10 — 2026-07-06
+
+Corrección de fichas de armas y accesorios: retroceso real en los accesorios de cañón, Animus con los datos de su misil, y masas/alcances que quedaban con valores antiguos. Ambos canales (LIVE 4.8.3 y PTU 4.9.0).
+
+**Cambios:**
+- **Retroceso real en accesorios de cañón**: las líneas "Retroceso al apuntar"/"Retroceso visual" muestran el efecto que el juego aplica de verdad. El compensador Sion "Tweaker" decía -20% cuando en realidad EMPEORA el retroceso un +35%; los ocultadores Veil ya no muestran reducciones que el juego ignora; varias ediciones especiales corrigen signo y magnitud
+- **Lanzamisiles Animus**: velocidad y alcance del misil real — 1000 m/s y 30 km (antes 700 m/s / 3000 m) — y DPS sostenido (11.8K en vez del pico de ráfaga)
+- **SMG de electrones Quartz y Ripper SB**: línea de caída de daño corregida (mostraba un alcance imposible de 1 m; el haz efectivo llega a 25 m / 35 m)
+- **Masas reales**: pistola de juguete WowBlast Desperado (0.21 kg cargada / 0.1 kg — decía 1.4/1.1) y dispositivo médico ParaMed (1.75 kg / 1 kg — decía 1.82/1.5)
+- Nota PTU: el cargador del rifle CQ7 dice "45 Cap" en su nombre oficial pero el juego le da capacidad 40 — divergencia del propio juego, documentada
+
+**Estadísticas:**
+- Líneas en global.ini: 89.257 (LIVE) / 90.278 (PTU)
+
+
 ## v1.29.8 — 2026-07-05
 
 Todos los modos de disparo reales en las armas de regímenes mixtos + limpieza de "Posibles Planos" fantasma. Ambos canales (LIVE 4.8.3 y PTU 4.9.0).
