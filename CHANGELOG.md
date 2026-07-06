@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.29.12 — 2026-07-06
+
+Corrección de una misión de historia que aparecía en inglés y con el texto corrupto.
+
+**Cambios:**
+- La misión **"Proyecto Hyperion"** (agencia Hockrow) mostraba su título en inglés sin traducir y, en una de sus variantes, con el español y el inglés pegados sin separación. Ahora aparece correctamente como **"Dosier Jorrit: Proyecto Hyperion"**. Corregido en LIVE (4.8.3) y PTU (4.9.0)
+
+**Estadísticas:**
+- Líneas en global.ini: 89.257 (LIVE) / 90.278 (PTU)
+
 ## v1.29.10 — 2026-07-06
 
 Corrección de fichas de armas y accesorios: retroceso real en los accesorios de cañón, Animus con los datos de su misil, y masas/alcances que quedaban con valores antiguos. Ambos canales (LIVE 4.8.3 y PTU 4.9.0).
