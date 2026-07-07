@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.29.13 — 2026-07-07
+
+Revisión misión a misión del marcado de misiones con planos: ahora **todas** las que dan planos llevan el marcador `[BP]` en el título y su lista de "Posibles Planos" en la descripción, y las que no dan (o no están activas en el juego) ya no lo muestran. LIVE (4.8.3) y PTU (4.9.0).
+
+**Cambios:**
+- Se detectaron y marcaron misiones con planos que antes se quedaban sin `[BP]`: las **defensas de nave contra los Shattered Blade** (Citizens for Prosperity y Eckhart) y las **30 misiones de derechos mineros de Shubin** (estaciones QV Breaker), entre otras.
+- Se retiró el marcador de misiones que en realidad no dan planos o que no están activas en el juego — antes mostraban un `[BP]` que ningún jugador llegaba a ver.
+- **"Proyecto Hyperion" (agencia Hockrow) vuelve a marcar planos**: en la corrección anterior se le quitó el marcador por error; esa misión **sí da planos** en su variante repetible, así que ahora los muestra de nuevo, conservando la traducción "Dosier Jorrit: Proyecto Hyperion".
+- Verificado contra un listado comunitario independiente de misiones: coincidencia total en los títulos de misión con plano.
+
+**Estadísticas:**
+- Líneas en global.ini: 89.257 (LIVE) / 90.278 (PTU)
+
 ## v1.29.12 — 2026-07-06
 
 Corrección de una misión de historia que aparecía en inglés y con el texto corrupto.
