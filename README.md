@@ -87,7 +87,7 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 32 | Etiquetas unificadas (armadura, accesorios, varios) (v1.22.0, ampliado v1.29.3) | El mismo dato deja de aparecer con varios nombres heredados: las etiquetas de stats de armadura, la línea de accesorios de armas y varias etiquetas (Tipo de artículo, Cargador, Batería, Clase) se unifican a una forma canónica. Además el tipo y la reducción de daño de las armaduras se corrigen para cuadrar con los valores reales del juego (v1.22.2). v1.29.3 unifica las de los accesorios de arma ("Tiempo de apuntado", "Punto de acoplamiento", "Aumento", "Fogonazo") | ~2.116 | Reorganización |
 | 33 | Stats reales en todos los accesorios de arma (v1.29.3) | Los accesorios que el juego no documenta llevan sus efectos reales en la descripción: compensadores Vera/Torrent/Stark, supresores Quell/Stoic, estabilizadores, ediciones especiales; y la reducción de retroceso percibido de varias miras y el compensador Sion 1 ("Sacudida/Subida (retroceso)") | 70 | Datos del juego |
 
-**Total: 89 257 claves (4.8.3 "Tactical Strike" — LIVE 12122953). El canal PTU 4.9.0 (build 12148226) lleva 90 278 claves: +1 035 nuevas del parche 4.9.0 traducidas (Asedio de Orison 2, People's Alliance, Ayuda a Orison y más)**
+**Total: 89 257 claves (4.8.3 "Tactical Strike" — LIVE 12122953). El canal PTU 4.9.0 (build 12170061) lleva 90 295 claves: parche 4.9.0 completo en español (Asedio de Orison 2, People's Alliance, Ayuda a Orison y más), con el rifle CQ7 renombrado, las naves mineras de librea Alliance, la armadura superpesada BUL-H4 con sus skins y el arco de misiones Battaglia actualizado)**
 
 ## Instalación — cómo poner Star Citizen en español
 
@@ -318,5 +318,5 @@ La eficiencia del Quantum Drive depende del tanque cuantico de la nave. Se muest
 El ZIP contiene el `global.ini` de cada canal activo de Star Citizen en subcarpetas separadas.
 
 - **Canal LIVE: Star Citizen Alpha 4.8.3-LIVE "Tactical Strike"** (build 12122953)
-- **Canal PTU: Star Citizen Alpha 4.9.0-PTU** (build 12148226) — parche 4.9.0 completo en español: vuelve el Asedio de Orison, misiones de Ayuda a Orison, la People's Alliance de Levski, nuevas armas y componentes
+- **Canal PTU: Star Citizen Alpha 4.9.0-PTU** (build 12170061) — parche 4.9.0 completo en español: vuelve el Asedio de Orison, misiones de Ayuda a Orison, la People's Alliance de Levski, nuevas armas y componentes. Novedades del build: rifle CQ7 (antes "Bullpup") con cargador de 40, naves mineras de librea Alliance (MOLE, Golem, Prospector), armadura superpesada BUL-H4 y skins/ediciones nuevas, y el arco Battaglia reformulado
 - Ver [CHANGELOG.md](CHANGELOG.md) para el historial completo

@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.30.0 — 2026-07-07
+
+Nuevo build del canal PTU (Star Citizen Alpha 4.9.0-PTU, build 12170061) traducido. El canal LIVE (4.8.3) no cambia.
+
+**Cambios (PTU 4.9.0):**
+- **Rifle CQ7 de Behring** (antes "Bullpup"): renombrado en todas sus variantes (Blacklist, Snowfire, Infantry), cargador reducido de 45 a 40 balas y nueva edición "Goldsmith". Traducido con las cifras al día.
+- **Tres naves mineras con librea "Alliance"** de la People's Alliance de Nyx: Argo MOLE, Drake Golem y MISC Prospector — descripciones traducidas.
+- **Armadura superpesada BUL-H4** y unas 30 skins y ediciones nuevas (Geist, Palatino, Testudo, Calico, DustUp, Defiance, Bellator, Doubleback...): el juego rellenó sus nombres y descripciones oficiales, ahora en español.
+- **Arco de misiones Battaglia** (People's Alliance en Nyx): siete briefings reformulados por el juego, con las traducciones puestas al día y sus listas de "Posibles Planos" recalculadas.
+- Nuevas ubicaciones de Nyx (Glaciem Ring, cinturón Keeger) y textos de la base Moraine.
+
+**Estadísticas:**
+- Líneas en global.ini: 89 257 (LIVE, sin cambios) / 90 295 (PTU)
+
 ## v1.29.13 — 2026-07-07
 
 Revisión misión a misión del marcado de misiones con planos: ahora **todas** las que dan planos llevan el marcador `[BP]` en el título y su lista de "Posibles Planos" en la descripción, y las que no dan (o no están activas en el juego) ya no lo muestran. LIVE (4.8.3) y PTU (4.9.0).
