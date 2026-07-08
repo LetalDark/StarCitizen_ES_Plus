@@ -1,5 +1,22 @@
 # Changelog
 
+## v1.31.0 — 2026-07-08
+
+Nuevo build del canal PTU (Star Citizen Alpha 4.9.0-PTU, build 12180844) traducido, más correcciones de estadísticas en ambos canales.
+
+**Novedades (PTU 4.9.0):**
+- **Nuevo contacto de reputación: Recco Battaglia** (People's Alliance, Levski): su ficha y sus contratas de escaneo de mena, con recompensas especiales de nave (Drake Golem, MISC Prospector).
+- **Contratas de repostaje del United Wayfarers Club**: "Repostaje crítico de grupo de combate" y "Repostaje urgente de flota capital".
+- **Armaduras nuevas**: set Kiba de QuirinusTech (cascos Kiba, Oni Kiba y Shogun Kiba, más máscaras) y armadura pesada Wrecker; moneda coleccionable del Chairman's Club.
+
+**Correcciones de estadísticas (ahora reflejan los valores reales del juego):**
+- **HMG Vendetta** (PTU): el cargador mostraba 500 y es de 1000.
+- **Ropa Bellator** (PTU — chaquetas, pantalones y camisas): la reducción de daño mostraba 5% y es del 20%.
+- **Dos rifles de francotirador** (ambos canales): cargador corregido a sus valores reales (12 y 8 balas).
+
+**Estadísticas:**
+- Líneas en global.ini: PTU 90 312 / LIVE 89 257
+
 ## v1.30.3 — 2026-07-08
 
 Corrección de estadísticas en el canal PTU 4.9.0. El canal LIVE (4.8.3) no cambia.
