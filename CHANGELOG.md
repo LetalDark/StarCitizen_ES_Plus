@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.30.3 — 2026-07-08
+
+Corrección de estadísticas en el canal PTU 4.9.0. El canal LIVE (4.8.3) no cambia.
+
+**Cambios (PTU 4.9.0):**
+- **HMG Vendetta de Apocalypse Arms**: su descripción mostraba las estadísticas a cero (DPS 0 / Alpha 0). Ahora refleja los valores reales del arma: 18,5 de daño por disparo, 800 m/s de velocidad, cadencia de 1000 rpm y cargador de 1000.
+
+**Estadísticas:**
+- Líneas en global.ini: PTU 90 295 / LIVE 89 257
+
 ## v1.30.0 — 2026-07-07
 
 Nuevo build del canal PTU (Star Citizen Alpha 4.9.0-PTU, build 12170061) traducido. El canal LIVE (4.8.3) no cambia.
