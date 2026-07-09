@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.31.3 — 2026-07-09
+
+Corrección de la etiqueta `[BP]` en títulos de misión: ya no aparece en rangos que no otorgan planos.
+
+**Cambios:**
+- Las misiones cuyo título es compartido por varios rangos (por ejemplo, los transportes de carga de Covalex) mostraban la etiqueta `[BP]` incluso en los rangos bajos, donde la misión **no** da planos. Ahora `[BP]` solo se muestra en misiones que realmente pueden otorgar un plano; el bloque "Posibles Planos" de la descripción sigue apareciendo únicamente en las variantes que sí los dan. Afecta a 23 títulos de misión.
+- Corregido un nombre de misión que aparecía duplicado en la variante plural de las misiones de "recuperar caja negra".
+
+**Estadísticas:**
+- Líneas en global.ini: 89 257 (LIVE 4.8.3) / 90 312 (PTU 4.9.0)
+
 ## v1.31.0 — 2026-07-08
 
 Nuevo build del canal PTU (Star Citizen Alpha 4.9.0-PTU, build 12180844) traducido, más correcciones de estadísticas en ambos canales.
