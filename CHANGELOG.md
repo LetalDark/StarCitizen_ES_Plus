@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.31.4 — 2026-07-15
+
+Marcador de planos condicionales `[BP]*` en misiones de título compartido.
+
+**Cambios:**
+- Algunas misiones comparten el mismo título entre varias variantes y solo algunas dan planos. En v1.31.3 esos títulos quedaban sin marcador; ahora llevan **`[BP]*`** ("puede dar planos") y la descripción incluye una línea **«Condición:»** que explica cuándo los da:
+  - por **sistema** (Foxwell y otras solo en Stanton / Nyx),
+  - por **proveedor** (recuperación de caja negra: solo las de BitZeros, no las de Hockrow),
+  - por **recurso** (recolección de Rayari: solo Perla u Ojos de Valakkar irradiados),
+  - por **ubicación**, **región** (defensa de puestos en Pyro IV-V, no en Terminus), si es la versión **repetible** (Hockrow), el **objetivo** (asesinatos de Vaughn) o el **rango** (carga de Covalex: solo a rango Máster).
+- Así se distingue de un vistazo `[BP]` (siempre da planos) de `[BP]*` (condicional — mira la descripción). Afecta a 23 familias de misión, en LIVE y PTU.
+
+**Estadísticas:**
+- Líneas en global.ini: 89.257 (LIVE) / 90.312 (PTU)
+
 ## v1.31.3 — 2026-07-09
 
 Corrección de la etiqueta `[BP]` en títulos de misión: ya no aparece en rangos que no otorgan planos.
