@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.31.5 — 2026-07-15
+
+Nuevo build de Star Citizen 4.9.0-PTU (12218630) traducido al español.
+
+**Cambios:**
+- Nuevas libreas de nave: Foundation Fest (ATLS, Aurora Mk II, Golem, Salvation), Foundation Guide (Aurora Mk II) y Fury Goldsmith.
+- Nuevos ítems de equipo: armadura Strata Levski Edición (brazos, pecho, piernas y mochila), casco Artimex Ultimatum y pasamontañas Volatus Balaclava.
+- Nuevas materias primas del Valakkar (Colmillo de Valakkar y su variante Apex).
+- Estaciones renombradas a Base Moraine, nuevos estados del selector de nave (Capturado, Fuera de alcance, Retirado del almacén), avisos del ascensor de carga y ubicaciones de misión de Delamar y el Glaciem Ring actualizadas.
+- Informe de misión Battaglia (equipo de minería desaparecido) reescrito.
+- Cadencia de la C-788 Cannon corregida a 50 RPM.
+
+**Estadísticas:**
+- Líneas en global.ini: 89 257 (LIVE 4.8.3) / 90 322 (PTU 4.9.0)
+
 ## v1.31.4 — 2026-07-15
 
 Marcador de planos condicionales `[BP]*` en misiones de título compartido.
