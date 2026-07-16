@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.32.1 — 2026-07-16
+
+Correcciones de estadísticas sobre 4.9.0 LIVE.
+
+**Cambios:**
+- **Leonids Cannon** (el cañón del RSI Meteor): el DPS mostrado ahora es el real (1810,7 — su cadencia efectiva es mayor que la del dato base, validada contra referencia externa de stats de nave).
+- Corregidas las masas de los 4 módulos de la Multi-Tool Pyro RYT (médico 0,12 kg, minería 0,25 kg, salvamento 0,38 kg, rayo tractor 0,25 kg — antes todos mostraban 0,1 kg) y de los contenedores RMC de salvamento (Cambio 0,75 kg, Cambio-Lite 0,25 kg).
+- La línea de peso de algunos objetos (ParaMed edición AA Support, pistola de juguete WowBlast) aparece ahora junto al resto de características, no en mitad de la descripción.
+
+**Estadísticas:**
+- Líneas en global.ini: 90.344
+
 ## v1.32.0 — 2026-07-16
 
 Star Citizen 4.9.0 "Frontier Tensions" ya está en LIVE (build 12232306) — traducción completa del parche en español, ahora en un solo canal.
