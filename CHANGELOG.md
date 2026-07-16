@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.32.0 — 2026-07-16
+
+Star Citizen 4.9.0 "Frontier Tensions" ya está en LIVE (build 12232306) — traducción completa del parche en español, ahora en un solo canal.
+
+**Cambios:**
+- Vehículo nuevo Grey's Basher traducido: nombre y descripción, sus cuatro pinturas (Razorburn, Corroded, Nightmare, Blue Blossom), sus armas (Gatling Deathroll S2 y Repetidor Snapper S2), el bodykit "Chopper" y sus puertos cosméticos.
+- Corrección de las estadísticas de 31 armas de nave: la PyroBurst Scattergun mostraba valores de otro arma (cadencia, daño y capacitor ya son los reales), los 9 rocket pods estrenan bloque de estadísticas y varios cañones de defensa de punto y variantes también se corrigen.
+- Los cohetes ya no aparecen etiquetados como daño de distorsión: hacen daño físico.
+
+**Estadísticas:**
+- Líneas en global.ini: 90 344
+
 ## v1.31.5 — 2026-07-15
 
 Nuevo build de Star Citizen 4.9.0-PTU (12218630) traducido al español.

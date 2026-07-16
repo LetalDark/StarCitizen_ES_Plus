@@ -88,7 +88,7 @@ Aunque desde v1.9.0 el proyecto es independiente y solo recibe deltas automatico
 | 32 | Etiquetas unificadas (armadura, accesorios, varios) (v1.22.0, ampliado v1.29.3) | El mismo dato deja de aparecer con varios nombres heredados: las etiquetas de stats de armadura, la línea de accesorios de armas y varias etiquetas (Tipo de artículo, Cargador, Batería, Clase) se unifican a una forma canónica. Además el tipo y la reducción de daño de las armaduras se corrigen para cuadrar con los valores reales del juego (v1.22.2). v1.29.3 unifica las de los accesorios de arma ("Tiempo de apuntado", "Punto de acoplamiento", "Aumento", "Fogonazo") | ~2.116 | Reorganización |
 | 33 | Stats reales en todos los accesorios de arma (v1.29.3) | Los accesorios que el juego no documenta llevan sus efectos reales en la descripción: compensadores Vera/Torrent/Stark, supresores Quell/Stoic, estabilizadores, ediciones especiales; y la reducción de retroceso percibido de varias miras y el compensador Sion 1 ("Sacudida/Subida (retroceso)") | 70 | Datos del juego |
 
-**Total: 89 257 claves (4.8.3 "Tactical Strike" — LIVE 12122953). El canal PTU 4.9.0 (build 12218630) lleva 90 322 claves: parche 4.9.0 completo en español (Asedio de Orison 2, People's Alliance, Ayuda a Orison y más), con las nuevas libreas Foundation Fest/Guide y Fury Goldsmith, la armadura Strata Levski Edición, el casco Artimex Ultimatum, el pasamontañas Volatus Balaclava, las materias primas del Valakkar, las estaciones Base Moraine y el informe de misión Battaglia reescrito)**
+**Total: 90 344 claves (4.9.0 "Frontier Tensions" — LIVE 12232306). Parche 4.9.0 completo en español: Asedio de Orison 2, People's Alliance, Ayuda a Orison, misiones de Recco Battaglia, el vehículo Grey's Basher y más**
 
 ## Instalación — cómo poner Star Citizen en español
 
@@ -316,8 +316,7 @@ La eficiencia del Quantum Drive depende del tanque cuantico de la nave. Se muest
 
 ## Version actual
 
-El ZIP contiene el `global.ini` de cada canal activo de Star Citizen en subcarpetas separadas.
+El ZIP contiene el `global.ini` del canal activo de Star Citizen (con 4.9.0 ya en LIVE vuelve a haber un solo canal).
 
-- **Canal LIVE: Star Citizen Alpha 4.8.3-LIVE "Tactical Strike"** (build 12122953)
-- **Canal PTU: Star Citizen Alpha 4.9.0-PTU "Frontier Tensions"** (build 12218630) — parche 4.9.0 completo en español: vuelve el Asedio de Orison, misiones de Ayuda a Orison, la People's Alliance de Levski, nuevas armas y componentes. Novedades del build: nuevas libreas Foundation Fest y Foundation Guide (ATLS, Aurora Mk II, Golem, Salvation) y Fury Goldsmith, armadura Strata Levski Edición, casco Artimex Ultimatum, pasamontañas Volatus Balaclava, materias primas del Valakkar (colmillos), estaciones Base Moraine, y el informe de misión Battaglia reescrito
+- **Canal LIVE: Star Citizen Alpha 4.9.0-LIVE "Frontier Tensions"** (build 12232306) — parche 4.9.0 completo en español: vuelve el Asedio de Orison, misiones de Ayuda a Orison, la People's Alliance de Levski, misiones de Recco Battaglia, nuevas armas y componentes. Novedades del build: el vehículo Grey's Basher con sus cuatro pinturas (Razorburn, Corroded, Nightmare, Blue Blossom), sus armas (Gatling Deathroll S2 y Repetidor Snapper S2) y su bodykit Chopper; además, corrección de las estadísticas de 31 armas de nave (los rocket pods estrenan bloque de stats y la PyroBurst Scattergun muestra por fin sus valores reales)
 - Ver [CHANGELOG.md](CHANGELOG.md) para el historial completo
