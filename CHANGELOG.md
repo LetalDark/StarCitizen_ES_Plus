@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.32.3 — 2026-07-16
+
+Corrección de los modos de disparo de dos armas FPS sobre 4.9.0 LIVE.
+
+**Cambios:**
+- **Rifle CQ7** (Behring): su descripción mostraba dos líneas `[Auto]`. La segunda es en realidad su modo de **ráfaga de 4 disparos** (72 de daño por pulsación) — ahora aparece como `[Burst] DPS: 143.2 | Alpha: 72`.
+- **Lumin V SMG** (Klaus & Werner): su único modo de disparo es una ráfaga de 3 que se repite al mantener el gatillo; la línea de stats pasa de `[Auto]` a `[Burst]` para reflejarlo.
+
+**Estadísticas:**
+- Líneas en global.ini: 90.344
+
 ## v1.32.1 — 2026-07-16
 
 Correcciones de estadísticas sobre 4.9.0 LIVE.
