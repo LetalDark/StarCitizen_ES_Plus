@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.32.5 — 2026-07-17
+
+Reputación de misiones con el total real y formato más claro, sobre 4.9.0 LIVE.
+
+**Cambios:**
+- La línea `Reputación:` de las misiones muestra ahora el **total real** cuando la misión da varias recompensas de reputación a la vez (87 contratos afectados). Ejemplo: "La tripulación no ha dado señales" de Recco Battaglia mostraba el confuso `Muy bajo +60 / Muy bajo +100` — ahora muestra `+160`, que es lo que recibes al completarla (reporte de la comunidad)
+- Formato simplificado: se retiran las etiquetas de dificultad (Muy bajo/Bajo/Moderado...); las misiones donde varias dificultades comparten descripción listan los valores de menor a mayor con la nota «según dificultad» (ej. `+500/+1.000/+2.000/+8.000/+16.000`), ocupando la mitad que antes
+- De regalo: varias misiones de Citizens For Prosperity infra-reportaban su reputación (`+50/+75/+150` cuando lo real es `+50/+125/+200`) — corregido
+- 38 descripciones de misión actualizadas (Recco Battaglia, recuperación de carga de 6 facciones, prospección de Shubin, Highpoint, Foxwell, recompensas del Gremio)
+
+**Estadísticas:**
+- Líneas en global.ini: 90.344
+
 ## v1.32.4 — 2026-07-17
 
 Listas de planos completas, formato único de miras, daño real de explosivos y 31 correcciones de traducción sobre 4.9.0 LIVE.
