@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.32.4 — 2026-07-17
+
+Listas de planos completas, formato único de miras, daño real de explosivos y 31 correcciones de traducción sobre 4.9.0 LIVE.
+
+**Cambios:**
+- Listas de "Posibles Planos" completas: las misiones de escaneo de Recco Battaglia listaban 2 de sus 4 recompensas reales (faltaban el láser minero S00 Hofstede y la boquilla RN-7s — reporte de la comunidad); +53 misiones ganan su marcador `[BP]` y su lista al completarse la resolución de recompensas, verificado misión a misión contra un listado comunitario independiente
+- Todas las miras con formato único `(Tipo Aumento)`: Holográfica, Telescópica, Réflex, Punto rojo, Monitor (antes convivían 6 formatos distintos, algunos en inglés)
+- Los 4 lanzadores explosivos (GP-33, Scourge Railgun, Animus, Boomtube) muestran el daño real del parche 4.9 (el juego cambió sus fórmulas; los valores antiguos iban inflados)
+- El lema de la People's Alliance aparece traducido en sus 42 misiones: "Más fuertes cuando estamos unidos"
+- Minerales reales en español: Berilo y Corindón (como ya estaban Oro, Cuarzo, Cobre...); "Sistema Pyro" y "Sistema Stanton" (antes en inglés)
+- Interfaz de repostaje unificada ("brazo" en todas las pantallas), pantallas de comm arrays hackeados en español (respetando el estilo "hackeado"), trenes de aterrizaje del Merlin y el Khartu-al, estaciones sociales de Nyx, Centro de llegadas de Crusader, receta "Francotirador de nieve", rangos "Cap.", unidades (m, km) y una veintena de correcciones menores más
+- Corregido un texto de contratos de recompensa FPS de Crusader que el juego mostraba sin resolver (error del propio juego, parcheado en la traducción)
+
+**Estadísticas:**
+- Líneas en global.ini: 90.344
+
 ## v1.32.3 — 2026-07-16
 
 Corrección de los modos de disparo de dos armas FPS sobre 4.9.0 LIVE.
