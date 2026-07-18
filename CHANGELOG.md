@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.33.0 — 2026-07-18
+
+Compatibilidad con el build 12248363 de 4.9.0 LIVE + terminal Admin. de Flota por fin legible (reporte de la comunidad).
+
+**Cambios:**
+- **Terminal de flota (Admin. de Flota) legible**: la fuente de ese terminal no tiene letras acentuadas en mayúscula y las pintaba como huecos en blanco ("VEH CULOS" en vez de "VEHÍCULOS") — le pasa incluso al texto oficial del juego. Todos sus textos van ahora sin tildes para que se lean completos.
+- **Botones del gestor de flota que caben**: "Asegurar" y "Guardar" en una línea (antes "Asegurar configuración" y "Almacenar" se partían en 2-3 líneas dentro de su columna).
+- **Panel de llamada de ascensor**: "LLAMAR" y "EN CAMINO" sin palabras cortadas (la pantalla partía "ASCENSO/R"; también ocurre en inglés con "ELEVATOR").
+- **Quiosco de refinería**: "CENTRO DE REFINADO" — el título anterior desbordaba la pantalla dejando un "TO" suelto sobre el botón; además "refinado" es el término industrial correcto y se aplica en todo el bloque de la refinería.
+- **Soportes de armamento unificados también en tipos y puertos de nave** (105 textos): la columna TIPO del gestor de flota y los puertos del gestor de equipamiento decían "Bastidor/Estante/Puerto de misiles" — ahora **Soporte de misiles**, como el resto del juego; "Lanzador de misiles" pasa a **Lanzamisiles** (Kahix, I'rhal).
+- **Lema de la People's Alliance asegurado**: "Más fuertes cuando estamos unidos" en las 42 misiones de Recco Battaglia (una parte del proceso podía dejarlo en inglés).
+- Compatibilidad con el build 12248363 (el juego no cambió textos en este build).
+
+**Estadísticas:**
+- Líneas en global.ini: 90.344
+
 ## v1.32.5 — 2026-07-17
 
 Reputación de misiones con el total real y formato más claro, sobre 4.9.0 LIVE.
