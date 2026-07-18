@@ -1,5 +1,22 @@
 # Changelog
 
+## v1.33.1 — 2026-07-18
+
+Segunda tanda de correcciones del día, a partir de reportes de la comunidad jugando: más pantallas y avisos por fin legibles.
+
+**Cambios:**
+- **Letreros de la bóveda legibles**: la fuente de esos paneles LED no tiene letras acentuadas y "BÓVEDA CERRADA" se veía "B VEDA CERRADA"; además el panel pequeño de la puerta no tiene sitio para el texto completo. Ahora muestran solo el estado, con decoración para distinguirlos de un vistazo: `||CERRADA||`, `**ABRIENDOSE**`, `**CERRANDOSE**`, `**ABIERTA**`.
+- **"Mantener" al comprar en estanterías**: el aviso de compra decía "COMPRA - ESPERANDO [F]" cuando lo que hay que hacer es mantener pulsada la tecla — ahora dice "Mantener".
+- **Avisos de teclas que caben**: los avisos de control usaban el nombre largo de las teclas donde el juego usa nombres cortos, y textos como "AGUANTAR RESPIRACIÓN (MIRA)" perdían letras. Ahora: "Mayús izq.", "Mayús der.", "Ctrl izq./der.", "Alt izq./der.", "Num 0-9/+/-/Intro". El ajuste de distancia de la mira del francotirador pasa de "Distancia de la mira +/-" (salía cortado "NCIA DE LA MIRA") a "Dist. de mira +/-".
+- **Botón "Pedir"** en el gestor de flota: "Recuperar" no cabía en su columna y se partía — ahora el trío de acciones es Asegurar / Guardar / Pedir.
+- **"Tumbarse (salir)" y "Levantarse"**: al ir cuerpo a tierra el aviso decía "Propenso (salida)" (mala traducción de "Prone") — corregido también en la opción del menú ("Alternar posición tumbado").
+- **Placas Comp-Board del hangar ejecutivo**: sus 9 descripciones decían "tablero de compuerta" — ahora describen el comp-board con el mismo término que su nombre.
+- **Contrato de recuperación de caja negra**: el título repetía el nombre del contratista dos veces — corregido.
+- Correcciones menores: velocímetro "m/s" sin espacios raros, "Aguantar respiración" con tilde, nombre de la tecla Mayús con tilde y género correcto.
+
+**Estadísticas:**
+- Líneas en global.ini: 90.343
+
 ## v1.33.0 — 2026-07-18
 
 Compatibilidad con el build 12248363 de 4.9.0 LIVE + terminal Admin. de Flota por fin legible (reporte de la comunidad).
