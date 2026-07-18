@@ -1,5 +1,25 @@
 # Changelog
 
+## v1.33.2 — 2026-07-19
+
+Gran repaso del HUD y las pantallas multifunción (MFD): los textos cortos de la interfaz revisados uno a uno contra el inglés actual del juego, más nuevos reportes de la comunidad.
+
+**Cambios:**
+- **Botón de compra de las tiendas**: "Compra Rapida" no cabía en el botón — ahora **"Comprar ya"**.
+- **Contramedidas**: el contador "CHAFF" pasa a **"RUIDO"** — el juego renombró esa contramedida a "Noise" hace tiempo (una nube de interferencia que enmascara tu firma) y el término viejo ya ni existe en inglés. "BNGL" (bengalas/señuelos) se queda.
+- **Selector de pantallas MFD**: "CONFIGURACIÓN DE ARMAS" desbordaba el rótulo — ahora **"CONFIG. DE ARMAS"** (el propio inglés abrevia: "Weapon Config").
+- **Pestaña de fabricación**: "Órdenes completadas" se comía el contador "(10)" — ahora **"Órdenes completas"**.
+- **Repaso completo de las 657 etiquetas cortas del HUD y los MFD**, con errores de siempre por fin corregidos:
+  - Malas traducciones: "MISILES DE BRAZO" (era **ARMAR MISILES**), "VELOCIDAD MACH" (era **IGUALAR VEL.**), "HUELGA" como tipo de carga de misil (era **ATAQUE**), "SENTIDOS" en los pilotos del salpicadero (son los **sensores**), "Tono relativo" en torretas (es el **cabeceo**), un "oh" suelto que hacía leer el oxígeno como "oh2", "Defensa de puntos" (es **defensa de punto**), "Curso bloqueado" (es **rumbo fijado**)…
+  - Textos que seguían en inglés: Engineering Override → **Anulación ingeniería**, STANDBY → **ESPERA**, WPN → **ARMA**, Fixed - Precision → **Fijo - Precisión**, Role → **Rol**…
+  - Estados mal conjugados ("Calcular la resistencia" mientras escaneas una roca → **"Calculando resistencia"**), unas 35 tildes recuperadas en minería, escaneo y avisos legales ("Gráfico de extracción", "Clasificación", "ÁREA RESTRINGIDA", "HEMORRAGIA"…), y el contador de reanimación ya no sale pegado al texto.
+  - "CrimeStat" unificado: el escáner decía "Estadistica del crimen" cuando todo el juego usa CrimeStat.
+  - Etiquetas que excedían el hueco de su panel, recortadas al tamaño del inglés ("Resumen energía", "MUY CERCA", "Vel. máx. segura"…).
+
+**Estadísticas:**
+- Líneas en global.ini: 90.343
+- Textos corregidos: 129
+
 ## v1.33.1 — 2026-07-18
 
 Segunda tanda de correcciones del día, a partir de reportes de la comunidad jugando: más pantallas y avisos por fin legibles.
