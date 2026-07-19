@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.33.3 — 2026-07-19
+
+Letreros de las estaciones Rest & Relax por fin legibles (reporte de la comunidad).
+
+**Cambios:**
+- **Señalética de estaciones R&R**: la fuente de los letreros físicos de las estaciones no tiene vocales acentuadas y pintaba un hueco en su lugar — "HUR-L5 ESTACI N HIGH COURSE". Los nombres de las 24 estaciones de Stanton y las clínicas ("Estación" → "Estacion", "Clínica" → "Clinica") van ahora sin tilde para que el letrero se lea completo. Las descripciones del mobiGlas, cuya fuente sí es correcta, conservan todos los acentos.
+
+**Estadísticas:**
+- Líneas en global.ini: 90.343
+- Textos corregidos: 48
+
 ## v1.33.2 — 2026-07-19
 
 Gran repaso del HUD y las pantallas multifunción (MFD): los textos cortos de la interfaz revisados uno a uno contra el inglés actual del juego, más nuevos reportes de la comunidad.
