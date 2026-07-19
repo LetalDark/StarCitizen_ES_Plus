@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.33.4 — 2026-07-19
+
+Nombres del equipo de minería unificados (reporte de la comunidad).
+
+**Cambios:**
+- **Nombres de producto recuperados**: "Impact" (láseres de Thermyte Concern) y "Torrent" (módulos de minería) son nombres propios y no deben traducirse — "Impacto I Laser Minero" pasa a **"Láser de minería Impact I"**, y "Modulo de torrents"/"Modulo Torrente II/III" a **"Módulo Torrent / II / III"**.
+- **Los 20 láseres mineros unificados** a un único patrón "Láser de minería \<nombre\>" (antes convivían tres formatos distintos, con y sin tilde y con el orden del inglés).
+- **Tildes recuperadas** en 14 módulos, raspadores y consumibles de minería ("Módulo Rieger", "Módulo raspador Cinch", "Módulo Lifeline"...), en la etiqueta de tipo "Módulos de minería" y en las descripciones de los 3 módulos raspadores.
+- **49 misiones** (Recco Battaglia, Shubin, Adagio) muestran los nombres corregidos en sus listas de "Posibles Planos".
+
+**Estadísticas:**
+- Líneas en global.ini: 90.343
+- Textos corregidos: 90
+
 ## v1.33.3 — 2026-07-19
 
 Letreros de las estaciones Rest & Relax por fin legibles (reporte de la comunidad).
