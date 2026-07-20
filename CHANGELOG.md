@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.33.6 — 2026-07-20
+
+Información de reputación honesta por contrato y título corregido (reporte de la comunidad).
+
+**Cambios:**
+- **La reputación indica dónde aplica**: varias familias de misiones (Headhunters, Foxwell, búsqueda de desaparecidos, Eckhart, CFP...) anunciaban dos ramas de reputación cuando cada contrato solo da UNA — el juego reutiliza los mismos textos para contratos de Stanton, Pyro y Nyx con recompensas distintas. Ahora cada línea lo aclara: «+2.000 Headhunters (Combate de Naves; **solo en Stanton y Pyro**)» / «+150 Headhunters (General; **solo en Nyx**)», y «**según contrato**» cuando la recompensa varía por zona o contratista (60 misiones actualizadas).
+- **Título corregido**: «Segura Nuestro Espacio Aéreo» recupera la A que le faltaba — **«Asegura Nuestro Espacio Aéreo»**.
+
+**Estadísticas:**
+- Líneas en global.ini: 90.343
+- Textos corregidos: 61
+
 ## v1.33.4 — 2026-07-19
 
 Nombres del equipo de minería unificados (reporte de la comunidad).
