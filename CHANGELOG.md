@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.33.7 — 2026-07-21
+
+Estadísticas de armas actualizadas al parche actual.
+
+**Cambios:**
+- **4 armas con sus valores reales**: las descripciones de la escopeta R97, la pistola Yubarev, el francotirador Atzkav y la LMG Fresnel mostraban daños y cadencias de un parche anterior. Ahora reflejan los valores vigentes del juego — la R97 hace 32 de daño por cartucho a 375 disparos/min (antes mostraba 28.8), el Atzkav dispara a 30/min, y la Fresnel a 550/min (17 descripciones actualizadas contando las ediciones especiales).
+
+**Estadísticas:**
+- Líneas en global.ini: 90.343
+
 ## v1.33.6 — 2026-07-20
 
 Información de reputación honesta por contrato y título corregido (reporte de la comunidad).
