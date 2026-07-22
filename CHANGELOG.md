@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.34.0 — 2026-07-22
+
+Compatibilidad con el build 12269732 del 20 de julio y corrección del "=GONER'S DEAL" (reporte de la comunidad).
+
+**Cambios:**
+- **Actualizado al build 4.9.0-LIVE 12269732** (update de CIG del 20 de julio; el juego no cambió ningún texto en este build).
+- **Goner's Deal sin el "=" delante**: el puesto de avanzada de Pyro IV salía como "=GONER'S DEAL" en el mapa estelar y los contratos. El mismo defecto (un `=` espurio delante del texto) afectaba a **Harper's Point** (Stanton) y a 6 subtítulos de diálogo de Arena Commander — los 8 corregidos.
+- **Estadísticas nuevas del parche en 3 cascos**: los cascos Kiba y el casco pesado slaver estrenan las líneas `Tolerancia a fuerza G`, peso, aturdimiento e impacto que el juego les añadió en este build.
+- **C-788 Cannon con su cadencia real**: 40 disparos/min (antes mostraba 50, con el DPS inflado en consecuencia).
+
+**Estadísticas:**
+- Líneas en global.ini: 90.343
+
 ## v1.33.7 — 2026-07-21
 
 Estadísticas de armas actualizadas al parche actual.
