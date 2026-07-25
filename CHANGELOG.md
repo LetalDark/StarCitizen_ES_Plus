@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.35.1 — 2026-07-25
+
+Corrección de la descripción de la LMG Fresnel.
+
+**Cambios:**
+- **LMG de energía Fresnel**: su descripción mostraba una segunda línea de estadísticas de "modo caliente" (`[Hot] DPS: 156.8 | Alpha: 31.5`) con valores que no se corresponden con el arma actual — retirada en el arma base y en sus 7 ediciones de color. La descripción muestra ahora su modo real: `[Auto] DPS: 82.5 | Alpha: 9`. (El comportamiento especial del arma — más daño y menos cadencia a medida que se calienta — sigue descrito en el texto del fabricante.)
+
+**Estadísticas:**
+- Líneas en global.ini: 90.343
+
 ## v1.35.0 — 2026-07-25
 
 Compatibilidad con el build 12302499 del 24 de julio.
