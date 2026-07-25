@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.35.0 — 2026-07-25
+
+Compatibilidad con el build 12302499 del 24 de julio.
+
+**Cambios:**
+- **Actualizado al build 4.9.0-LIVE 12302499** (update de CIG del 24 de julio; el juego no cambió ningún texto ni dato de juego en este build — la traducción es idéntica a la v1.34.0, esta versión certifica la compatibilidad con el build nuevo).
+
+**Estadísticas:**
+- Líneas en global.ini: 90.343
+
 ## v1.34.0 — 2026-07-22
 
 Compatibilidad con el build 12269732 del 20 de julio y corrección del "=GONER'S DEAL" (reporte de la comunidad).
