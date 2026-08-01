@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.36.1 — 2026-08-01
+
+Corrección del rifle Arlington en el canal PTU.
+
+**Cambios:**
+- **Rifle Arlington (PTU 4.10)**: su modo escopeta mostraba el daño de la munición equivocada (640, el del cartucho 44mm multiplicado por los perdigones). El cartucho de escopeta tiene sus propios valores en el juego: 8 perdigones de 12,5 de energía = 100 de daño por disparo, a 300 m/s. La descripción muestra ahora los dos modos reales del arma: `[Auto] DPS: 113.3 | Alpha: 80` (44mm) y `[Semi] DPS: 141.7 | Alpha: 100 | 300 m/s` (escopeta)
+- Solo afecta al canal PTU; el canal LIVE queda idéntico a v1.36.0
+
+**Estadísticas:**
+- Líneas en global.ini: 90.513 (PTU) / 90.343 (LIVE)
+
 ## v1.36.0 — 2026-08-01
 
 Estreno del ciclo 4.10: traducción del primer parche de pruebas 4.10.0-PTU y compatibilidad con el nuevo build del canal LIVE.
