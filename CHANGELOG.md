@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.36.0 — 2026-08-01
+
+Estreno del ciclo 4.10: traducción del primer parche de pruebas 4.10.0-PTU y compatibilidad con el nuevo build del canal LIVE.
+
+**Cambios:**
+- **Canal PTU 4.10.0 "Siege of Orison"** (build 12368639) traducido al completo desde su primer parche de pruebas:
+  - Arco de misiones de Recco Battaglia en Nyx (rescate de la nave minera *Blinding Hope* y búsqueda de Isaac Kepler), con títulos, cartas, objetivos y todos los diálogos hablados
+  - Sets de armadura nuevos: ediciones **Stronghold** (BUL-H4, Geist, Testudo, Palatino, Morozov) y **Ultimatum** (Calico, DustUp, Defiance) — incluidos 17 nombres que en el juego salían como "PH" literal
+  - Rebalance del parche reflejado en las descripciones: los subtrajes pierden la capacidad de carga (y varios bajan su reducción de daño al 5%), las mochilas ganan capacidad, el rifle Arlington pasa a cargador de 20 (texto completo corregido, incluida la parte que el juego dejó desactualizada) y los módulos raspadores muestran su velocidad real
+  - 3 ediciones de color del Arlington (Gamekeeper, Widowmaker, Watchpoint), la mira Myers (Telescópica 4x), 5 pinturas de nave y los módulos raspadores Comer y Hart
+  - Corregida la errata del juego "Tetsudo" → **Testudo** en las 2 piezas nuevas del set
+  - Nuevas categorías del montacargas («Adquisiciones», «Entregas») y del terminal de naves traducidas
+  - Restauradas 3 ayudas de repostaje que el juego retiró de sus textos pero sigue mostrando
+- **Canal LIVE 4.9.0** (build 12344265): compatibilidad con el build del 29 de julio — el juego no cambió ningún texto, la traducción es idéntica a v1.35.1
+
+**Estadísticas:**
+- Líneas en global.ini: 90.513 (PTU) / 90.343 (LIVE)
+
 ## v1.35.1 — 2026-07-25
 
 Corrección de la descripción de la LMG Fresnel.
