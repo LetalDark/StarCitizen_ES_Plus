@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.37.0 — 2026-08-04
+## v1.36.2 — 2026-08-04
 
 Traducción del parche PTU del 3 de agosto (build 12373313).
 
