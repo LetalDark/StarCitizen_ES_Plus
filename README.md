@@ -42,7 +42,7 @@ StarCitizen/
 Star Citizen no tiene traducción oficial completa al español. Este proyecto la construye de forma independiente sobre la base comunitaria de Thord82 y, además de traducir cada parche, **enriquece los textos con datos reales del juego**:
 
 - **Traducción completa y al día** — cada parche se traduce desde su primer build de pruebas; se restauran textos que el juego retiró pero sigue usando, se completan claves que faltan y se corrigen erratas del propio juego
-- **Misiones con toda la información**: marcador `[BP]` (siempre da planos) / `[BP]*` (condicional, con línea «Condición:») y lista de "Posibles Planos" traducida; bloque de **Reputación** al final de cada descripción (ganancia real, dónde aplica, penalización por fallo); puntos de **Escenario** en eventos dinámicos; ruta origen>destino en los títulos de transporte; y marca `[!]` en sustancias ilegales
+- **Misiones con toda la información**: marcador `[BP]` (siempre da planos) / `[BP]*` (condicional, con línea «Condición:») y lista de "Posibles Planos" traducida; bloque de **Reputación** al final de cada descripción (ganancia real, dónde aplica, penalización por fallo); puntos de **Escenario** en eventos dinámicos; títulos de transporte de carga compactos (rango y tipo de ruta a la vista); y marca `[!]` en sustancias ilegales
 - **Stats reales en armas FPS y equipo**: DPS, daño, todos los modos de disparo reales, velocidad, caída de daño, peso de armaduras/ropa/cargadores, tolerancia a fuerza G, daño de granadas y efectos reales de todos los accesorios — extraídos del propio juego en cada parche
 - **Stats reales en naves**: 122 armas de nave (DPS, Alpha, cadencia, alcance, capacitor…) y 334 componentes con prefijo compacto de clase/tamaño/grado (ej. `[MIL|2|A] Bracer`)
 - **Misiles y bombas identificados**: tipo de tracking (IR/EM/CS) para saber qué contramedida usar, y tamaño en bombas (B3/B5/B10)
@@ -52,24 +52,22 @@ Star Citizen no tiene traducción oficial completa al español. Este proyecto la
 
 ## Qué incluye el global.ini final
 
+Recuentos hechos sobre el archivo real del canal LIVE (el PTU añade además las claves nuevas de su parche):
+
 | Capa | Contenido | Claves |
 |---|---|---|
-| Traducción base ES | Base comunitaria completa heredada (Thord82) | 87.591 |
-| Textos añadidos y restaurados | Claves oficiales que faltaban (529), textos retirados que el juego sigue usando (268), contratos sin texto oficial con marca `*` (145) | 942 |
-| Misiones — planos | Marcadores `[BP]`/`[BP]*` y listas de "Posibles Planos" completas, con dificultad y tipo de componente | 2.095 |
-| Misiones — reputación y eventos | Bloque Reputación (782 misiones) + bloque Escenario en eventos dinámicos (60) | 842 |
-| Hauling y sustancias ilegales | Ruta origen>destino en títulos de transporte + marca `[!]` | 13 |
-| Armas FPS | Stats y modos de disparo reales, peso de cargadores, efectos reales de todos los accesorios | 415 |
-| Armaduras y ropa | Peso, stun, impacto, tolerancia a fuerza G, daño de granadas, mochilas, multitools y más | 2.487 |
-| Armas de nave | DPS, Alpha, RPM, velocidad, alcance, capacitor, masa… | 122 |
-| Componentes de nave | Prefijo clase\|tamaño\|grado (382) + stats de los 6 tipos de componente (334) | 716 |
-| Misiles y bombas | Tracking `IR`/`EM`/`CS` en misiles + tamaño `B#` en bombas | 136 |
-| Minería | HUD abreviado sin solapamientos, nombres de minerales, compendio por rareza | 50 |
-| Fabricación en materiales | Qué se fabrica con cada mineral o material (refinado y en bruto) | 50 |
-| Terminología y etiquetas unificadas | Soportes de armamento, etiquetas de stats de armadura/accesorios, nombres de arma coherentes | ~2.197 |
-| Correcciones manuales | Nombres de armadura normalizados, gran auditoría de la traducción base, reportes de la comunidad | 2.705 |
-| Limpieza | Claves obsoletas retiradas y espacios finales eliminados | 607 |
-| Loadout Calculator | Masa y fórmulas de velocidad para calculadora externa | 199 |
+| Traducción al español | Todas las claves del juego, traducidas y mantenidas de forma independiente sobre una base evolutiva propia (origen: comunidad Thord82, hoy auditada al completo) | 90.343 |
+| Misiones — planos | Títulos con `[BP]` (371, de ellos 29 condicionales `[BP]*` con línea «Condición:») + listas de "Posibles Planos" (352) | 723 |
+| Misiones — reputación y eventos | Bloque Reputación (782) + bloque Escenario en eventos dinámicos (73) | 855 |
+| Transporte y sustancias ilegales | Títulos de carga compactos con rango y tipo de ruta (4) + marca `[!]` en drogas (8) | 12 |
+| Armas FPS | Descripciones con stats y modos de disparo reales: DPS, Alpha, velocidad, caída de daño, todos los modos | 320 |
+| Armaduras, ropa y equipo | Claves con la masa real del objeto; incluye 880 piezas con Peso/Stun/Impacto y 862 con tolerancia a fuerza G | 1.736 |
+| Armas de nave | Descripciones con el bloque completo de stats (DPS, Alpha, RPM, penetración, capacitor, masa…) | 133 |
+| Componentes de nave | Prefijo clase\|tamaño\|grado en el nombre + stats por tipo en la descripción | 383 |
+| Misiles y bombas | Prefijo de tracking `IR`/`EM`/`CS` en misiles (137) + tamaño `B#` en bombas (6) | 143 |
+| Minería | Nombres abreviados del HUD y compendio del diario reorganizado por rareza | 40 |
+| Fabricación en materiales | Bloque "Fabricación" en minerales y materiales (refinado y en bruto) | 50 |
+| Correcciones manuales | Registro vivo de la auditoría de la traducción heredada y de los reportes de la comunidad | 2.508 |
 
 **Total: 90 343 claves en LIVE (4.9.0 "Frontier Tensions", build 12344265) + 90 523 claves en PTU (4.10.0 "Siege of Orison", build 12373313). Parche 4.9.0 completo en español y el nuevo ciclo 4.10 traducido desde su primer parche de pruebas**
 
@@ -163,18 +161,20 @@ Las bombas llevan prefijo de tamaño: `B3`, `B5`, `B10`. Ejemplo: `IR Misil Mark
 Las armas muestran sus modos de fuego etiquetados con stats reales:
 
 ```
-Fabricante: Kastak Arms
-Tipo de artículo: SMG
-Clase: Laser
-Tamaño de la bateria: 60
-Accesorios: optica (S1), Cañon (S1), Debajo del cañon (S1)
-[Auto] DPS: 173.3 | Alpha: 13 | 600 m/s
-[Burst] DPS: 48.8 | Alpha: 39 | 600 m/s
-[Full] DPS: 44.6 | Alpha: 171.6 | 600 m/s
-Dmg/Cargador: 780
-Cargado: 3.18 kg | Descargado: 2.75 kg
-[Red. daño] 100% 15m | 73% 77m | 0% 950m
+Fabricante: Desconocido
+Tipo de artículo: Rifle de asalto
+Clase: Balística
+Tamaño del cargador: 45
+Accesorios: Óptica, Cañón, Subcañón (S2)
+[Auto] DPS: 82.5 | Alpha: 22 | Balístico
+[Auto] DPS: 71.25 | Alpha: 19 | Energía
+[Combinado] DPS: 153.75 | Alpha: 20.5
+Velocidad: 875 m/s
+Cargado: 6.1 kg | Descargado: 4.99 kg
+[Red. daño] 100% 60m | 45% 300m | 0% 1750m
 ```
+
+La velocidad de proyectil va en una línea única `Velocidad:`; solo los modos con munición propia (cargados/escopeta divergente) la muestran en su línea. Los modos pueden llevar calificadores: tipo de daño por cañón (`Balístico`/`Energía`) o condición de entrada (p. ej. `40% calor`).
 
 | Etiqueta | Significado |
 |---|---|
