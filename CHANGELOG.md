@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.37.0 — 2026-08-04
+
+Traducción del parche PTU del 3 de agosto (build 12373313).
+
+**Cambios:**
+- **Canal PTU 4.10.0**: traducido el equipo de minería nuevo del parche — los contenedores de mineral **GOLEM MC-4** (20 SCU, para el vehículo GOLEM de Drake) y **MISC mejorado** (15 SCU), y los módulos de minería **Clearcut** (activo), **Deluge** y **Overrun** (pasivos)
+- Recuperadas 3 indicaciones de repostaje (solicitud de acoplamiento y desacoplamiento) que el juego sigue mostrando aunque fueron retiradas de sus textos oficiales
+- Canal LIVE sin cambios: idéntico a v1.36.1
+
+**Estadísticas:**
+- Líneas en global.ini: 90.523 (PTU) / 90.343 (LIVE)
+
 ## v1.36.1 — 2026-08-01
 
 Corrección del rifle Arlington en el canal PTU.
