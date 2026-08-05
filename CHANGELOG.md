@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.36.3 — 2026-08-05
+
+Traducción del parche PTU del 4 de agosto (build 12381782).
+
+**Cambios:**
+- **Canal PTU 4.10.0**: los 3 módulos de minería del parche anterior muestran ya sus valores reales (el juego traía marcadores `XX%`) — **Clearcut** (potencia del láser de minería +15%, tasa de carga óptima +30%, duración 30 s, 6 usos), **Deluge** (resistencia −15.5%, potencia +15%, extracción −15%) y **Overrun** (resistencia −24.8%, potencia +8%, extracción −15%)
+- Corregida la descripción del Deluge: decía «reducir la eficiencia» donde el sentido real es «reducir las ineficiencias» (contradecía la propia frase siguiente)
+- **Canal LIVE 4.9.0**: sin cambios — idéntico a v1.36.2
+
+**Estadísticas:**
+- Líneas en global.ini: 90.523 (PTU) / 90.343 (LIVE)
+
 ## v1.36.2 — 2026-08-04
 
 Traducción del parche PTU del 3 de agosto (build 12373313).

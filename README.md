@@ -16,8 +16,8 @@ Traducción al español de Star Citizen, actualizada en cada parche del juego (c
 ## Versión actual
 
 - **LIVE — Alpha 4.9.0 "Frontier Tensions"** (build 12344265): parche completo en español
-- **PTU — Alpha 4.10.0 "Siege of Orison"** (build 12373313): ciclo 4.10 traducido desde su primer parche de pruebas
-- Última release: **v1.36.2** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
+- **PTU — Alpha 4.10.0 "Siege of Orison"** (build 12381782): ciclo 4.10 traducido desde su primer parche de pruebas
+- Última release: **v1.36.3** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
 
 ## Instalación — cómo poner Star Citizen en español
 
