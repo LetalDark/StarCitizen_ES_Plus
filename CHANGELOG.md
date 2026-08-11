@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.36.4 — 2026-08-11
+
+Traducción del parche PTU del 10 de agosto (build 12418393) y gran limpieza de unificación de terminología en ambos canales.
+
+**Cambios:**
+- **PTU 4.10.0 (build 12418393)**: traducidos los textos nuevos del parche — mensajes de error del montacargas de carga (transferencia fallida, sobrecarga, artículos robados o de misión), un datapad de misión y la "Unidad de datos" genérica. La torreta de morro del Star Runner pasa a llamarse "Montura de morro Mercury doble S3" (renombrada oficialmente en el juego) con su descripción retraducida
+- **Menú de vuelo del MFD**: "Spacebrake Permite Boost" (a medio traducir) → "Freno - Permite Impulso"; "Habilitar UI del Dashboard" → "Habilitar UI del Panel"; textos de ayuda del panel PWR ahora citan "ACELERADOR DE POTENCIA" como la etiqueta real
+- **Terminología unificada en todo el archivo**: el panel de instrumentos de la nave es siempre "panel de control" (antes convivían Dashboard/Tablero/salpicadero); el arma electromagnética es siempre **PEM** en español (avisos, "Granada PEM EP-5", "Módulo PEM", generadores y descripciones; corregidos además dos nombres descolocados: "Generador PEM REP-8" y "Generador PEM REP-VS")
+- **Arena Commander revisado a fondo** (~80 textos): corregidos errores graves de significado (DRAW → "EMPATE", RESPAWNS → "REAPARICIONES", Match Speed → "Igualar velocidad", Rolling → "Alabeo", Strafing → "Desplazamiento lateral"), dos naves piratas que compartían nombre por error (ambas "Sable NovaRider" — ahora NovaRider Cutlass y NovaRider Sabre), el marcador de bajas unificado ("Muerte de As", "Asistencia de captura", "Desangrado"...), los apodos de los pilotos rivales recuperan su nombre original (Boom Boom, Fluster, Headcase, Vixen...) y reparados varios formatos rotos de distancias y créditos (aUEC)
+- LIVE 4.9.0: mismo build del juego (12344265), actualizado con todas las correcciones de unificación
+
+**Estadísticas:**
+- Líneas en global.ini: 90.535 (PTU) / 90.343 (LIVE)
+
 ## v1.36.3 — 2026-08-05
 
 Traducción del parche PTU del 4 de agosto (build 12381782).
