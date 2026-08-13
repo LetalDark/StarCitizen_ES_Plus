@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.36.5 — 2026-08-13
+
+Traducción del parche PTU del 12 de agosto (build 12442953) y corrección de la ficha de las armaduras de festival en ambos canales.
+
+**Cambios:**
+- **PTU 4.10.0 (build 12442953)**: el juego renombró al coordinador de contratos de Foxwell Enforcement — todos sus contratos los firma ahora **Eugene Walton** (antes Kevin Walton o Marcus Clenn, según el contrato). Traducción al día con el cambio, listas de "Posibles Planos" intactas
+- **Tokens de misión reparados**: dos textos mostraban un código literal en pantalla por una errata del juego (`~misssion`) — el aviso del club de reabastecimiento United Wayfarers y un objetivo de la misión del robo de la espada; ahora muestran el dato real (el objeto o tipo de combustible)
+- **Armaduras de festival — ficha corregida (LIVE y PTU)**: en la armadura Chiron del Festival de la Fundación y una veintena de armaduras especiales más (9Tails, ediciones Clanguard/festival), las líneas "Tolerancia a fuerza G" y "kg | Stun | Impacto" aparecían sueltas al final de la descripción; ahora están en el bloque de características junto al resto de datos, como en todas las demás
+
+**Estadísticas:**
+- Líneas en global.ini: 90.540 (PTU) / 90.343 (LIVE)
+
 ## v1.36.4 — 2026-08-11
 
 Traducción del parche PTU del 10 de agosto (build 12418393) y gran limpieza de unificación de terminología en ambos canales.
