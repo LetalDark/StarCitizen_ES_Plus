@@ -16,8 +16,8 @@ Traducción al español de Star Citizen, actualizada en cada parche del juego (c
 ## Versión actual
 
 - **LIVE — Alpha 4.9.0 "Frontier Tensions"** (build 12344265): parche completo en español
-- **PTU — Alpha 4.10.0 "Siege of Orison"** (build 12442953): ciclo 4.10 traducido desde su primer parche de pruebas
-- Última release: **v1.36.5** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
+- **PTU — Alpha 4.10.0 "Siege of Orison"** (build 12464883): ciclo 4.10 traducido desde su primer parche de pruebas
+- Última release: **v1.36.6** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
 
 ## Instalación — cómo poner Star Citizen en español
 
@@ -42,7 +42,7 @@ StarCitizen/
 Star Citizen no tiene traducción oficial completa al español. Este proyecto la construye de forma independiente sobre la base comunitaria de Thord82 y, además de traducir cada parche, **enriquece los textos con datos reales del juego**:
 
 - **Traducción completa y al día** — cada parche se traduce desde su primer build de pruebas; se restauran textos que el juego retiró pero sigue usando, se completan claves que faltan y se corrigen erratas del propio juego
-- **Misiones con toda la información**: marcador `[BP]` (siempre da planos) / `[BP]*` (condicional, con línea «Condición:») y lista de "Posibles Planos" traducida; bloque de **Reputación** al final de cada descripción (ganancia real, dónde aplica, penalización por fallo); puntos de **Escenario** en eventos dinámicos; títulos de transporte de carga compactos (rango y tipo de ruta a la vista); y marca `[!]` en sustancias ilegales
+- **Misiones con toda la información**: marcador `[BP]` (siempre da planos) / `[BP]*` (condicional, con línea «Condición:») y lista «[Posibles Planos]» traducida, con la **zona real** de cada variante regional («Zona: Pyro I, Monox, PYR3 L3-L5», «Zona: Pyro IV, Pyro V y sus lunas Ignis, Vatra, Adir, Fairo, Fuego, Vuur»…); bloque de **Reputación** al final de cada descripción (ganancia real, dónde aplica, penalización por fallo); puntos de **Escenario** en eventos dinámicos; títulos de transporte de carga compactos (rango y tipo de ruta a la vista); y marca `[!]` en sustancias ilegales
 - **Stats reales en armas FPS y equipo**: DPS, daño, todos los modos de disparo reales, velocidad, caída de daño, peso de armaduras/ropa/cargadores, tolerancia a fuerza G, daño de granadas y efectos reales de todos los accesorios — extraídos del propio juego en cada parche
 - **Stats reales en naves**: 122 armas de nave (DPS, Alpha, cadencia, alcance, capacitor…) y 334 componentes con prefijo compacto de clase/tamaño/grado (ej. `[MIL|2|A] Bracer`)
 - **Misiles y bombas identificados**: tipo de tracking (IR/EM/CS) para saber qué contramedida usar, y tamaño en bombas (B3/B5/B10)
@@ -57,7 +57,7 @@ Recuentos hechos sobre el archivo real del canal LIVE (el PTU añade además las
 | Capa | Contenido | Claves |
 |---|---|---|
 | Traducción al español | Todas las claves del juego, traducidas y mantenidas de forma independiente sobre una base evolutiva propia (origen: comunidad Thord82, hoy auditada al completo) | 90.343 |
-| Misiones — planos | Títulos con `[BP]` (371, de ellos 29 condicionales `[BP]*` con línea «Condición:») + listas de "Posibles Planos" (352) | 723 |
+| Misiones — planos | Títulos con `[BP]` (371, de ellos 29 condicionales `[BP]*` con línea «Condición:») + listas «[Posibles Planos]» (352, con la zona real de cada variante regional) | 723 |
 | Misiones — reputación y eventos | Bloque Reputación (782) + bloque Escenario en eventos dinámicos (73) | 855 |
 | Transporte y sustancias ilegales | Títulos de carga compactos con rango y tipo de ruta (4) + marca `[!]` en drogas (8) | 12 |
 | Armas FPS | Descripciones con stats y modos de disparo reales: DPS, Alpha, velocidad, caída de daño, todos los modos | 320 |
@@ -67,9 +67,9 @@ Recuentos hechos sobre el archivo real del canal LIVE (el PTU añade además las
 | Misiles y bombas | Prefijo de tracking `IR`/`EM`/`CS` en misiles (137) + tamaño `B#` en bombas (6) | 143 |
 | Minería | Nombres abreviados del HUD y compendio del diario reorganizado por rareza | 40 |
 | Fabricación en materiales | Bloque "Fabricación" en minerales y materiales (refinado y en bruto) | 50 |
-| Correcciones manuales | Registro vivo de la auditoría de la traducción heredada y de los reportes de la comunidad | 2.640 |
+| Correcciones manuales | Registro vivo de la auditoría de la traducción heredada (tildes sistemáticas incluidas) y de los reportes de la comunidad | 8.562 |
 
-**Total: 90 343 claves en LIVE (4.9.0 "Frontier Tensions", build 12344265) + 90 540 claves en PTU (4.10.0 "Siege of Orison", build 12442953). Parche 4.9.0 completo en español y el nuevo ciclo 4.10 traducido desde su primer parche de pruebas**
+**Total: 90 343 claves en LIVE (4.9.0 "Frontier Tensions", build 12344265) + 90 541 claves en PTU (4.10.0 "Siege of Orison", build 12464883). Parche 4.9.0 completo en español y el nuevo ciclo 4.10 traducido desde su primer parche de pruebas**
 
 ## Guía de formatos
 

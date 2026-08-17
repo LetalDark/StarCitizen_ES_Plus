@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.36.6 — 2026-08-18
+
+Traducción del parche PTU del 17 de agosto (build 12464883), zona real en los planos de misión y gran repaso de tildes en ambos canales.
+
+**Cambios:**
+- **PTU 4.10.0 (build 12464883)**: el juego corrige el nombre del contratista Cornerstone Developments y estrena la camiseta **microTech (Camisa)** como objeto real — traducidos
+- **Planos de misión con la ZONA real (LIVE y PTU)**: en las misiones cuyos planos cambian según la región de Pyro, las variantes ya no se llaman «Región A/B/C/D» (una letra interna sin significado) sino que dicen dónde aplican — **«Zona: Pyro I, Monox, PYR3 L3-L5»**, **«Zona: Bloom»**, **«Zona: Pyro IV, Pyro V y sus lunas Ignis, Vatra, Adir, Fairo, Fuego, Vuur»**, **«Zona: Terminus»** (73 variantes en 24 misiones); las que sirven a dos regiones lo muestran junto («Zona: Pyro I, Monox, Bloom»)
+- **Cabecera «[Posibles Planos]»** entre corchetes, en línea con el marcador `[BP]` del título (también en sus variantes «(condicional)» y «(Dificultad: X)»)
+- **Gran repaso de tildes (LIVE y PTU)**: corregidas más de 18.000 faltas de acento sistemáticas heredadas de la base — «también», «después», «fácil», «misión», «láser», «tecnología», «cuántico», «estándar», «precisión», «batería», «prepárate», «dirígete», «asegúrate»… en unas 6.400 líneas (diálogos, misiones, descripciones, interfaz), respetando los textos que se muestran en fuentes sin acentos (terminal ASOP, letreros) y los nombres propios
+- **«Cañon» → «Cañón»** en 44 armas de nave (Omnisky, Deadbolt, Lightstrike, Tarantula, KBAR 9/10/11-Series, FL-11/22/33, familia Vanduul…) y sus descripciones
+- **Puntos de Lagrange** «PIR1 L2», «PIR2 L4»… → «PYR1 L2», «PYR2 L4» como en el original
+
+**Estadísticas:**
+- Líneas en global.ini: 90.541 (PTU) / 90.343 (LIVE)
+
 ## v1.36.5 — 2026-08-13
 
 Traducción del parche PTU del 12 de agosto (build 12442953) y corrección de la ficha de las armaduras de festival en ambos canales.
