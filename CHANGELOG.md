@@ -1,5 +1,22 @@
 # Changelog
 
+## v1.36.7 — 2026-08-23
+
+Update del PTU 4.10.0 (build 12497254, RC1) y mejoras de legibilidad de la interfaz en ambos canales.
+
+**Cambios:**
+- Nave nueva **Kruger S-65 Stingray** traducida al completo: descripción, repetidor Whiptail STR-E2, soportes de misiles, soporte de gimbal y sus 4 pinturas (Manta, Marina, Protocol, Domain Camo), con estadísticas reales
+- El periódico del menú principal pasa de Vox Populi a **Terra Gazette**, con sus 5 noticias del parche 4.10 traducidas íntegras
+- Opciones de diálogo de Battaglia retraducidas con redacción natural («Háblame del trabajo.», «Entonces, ¿cuál es el trabajo?»)
+- Interfaz más legible donde la fuente del juego no muestra letras acentuadas españolas: el botón «ATRÁS» pasa a **«Volver»** (se veía «ATR S»), la despedida del administrador a **«Hasta luego.»** (se veía «ADI S.») y el hangar asignado a **«Hangar Pequeno»** (se veía «HANGAR PEQUE O»)
+- Cabeceras del gestor de flota que se cortaban por ancho, acortadas: **«Solicitud de Entrega»**, **«Reclamar Seguro»**, **«Reclamar Veh. Retenido»**
+- El aviso de controles «Menú de PEN» pasa a **«Menú PIT»** (su nombre real)
+- Nuevo aviso de cuántico «OBJETIVO EN LA INSTANCIA» y 4 botones nuevos del gestor de flota
+- Corregido el nombre de la tarjeta del Alternador IFF (Hartmoore)
+
+**Estadísticas:**
+- Líneas en global.ini: 90 564 (PTU) / 90 343 (LIVE)
+
 ## v1.36.6 — 2026-08-18
 
 Traducción del parche PTU del 17 de agosto (build 12464883), zona real en los planos de misión y gran repaso de tildes en ambos canales.

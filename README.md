@@ -16,8 +16,8 @@ Traducción al español de Star Citizen, actualizada en cada parche del juego (c
 ## Versión actual
 
 - **LIVE — Alpha 4.9.0 "Frontier Tensions"** (build 12344265): parche completo en español
-- **PTU — Alpha 4.10.0 "Siege of Orison"** (build 12464883): ciclo 4.10 traducido desde su primer parche de pruebas
-- Última release: **v1.36.6** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
+- **PTU — Alpha 4.10.0 "Siege of Orison"** (build 12497254, RC1): ciclo 4.10 traducido desde su primer parche de pruebas
+- Última release: **v1.36.7** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
 
 ## Instalación — cómo poner Star Citizen en español
 
@@ -67,9 +67,9 @@ Recuentos hechos sobre el archivo real del canal LIVE (el PTU añade además las
 | Misiles y bombas | Prefijo de tracking `IR`/`EM`/`CS` en misiles (137) + tamaño `B#` en bombas (6) | 143 |
 | Minería | Nombres abreviados del HUD y compendio del diario reorganizado por rareza | 40 |
 | Fabricación en materiales | Bloque "Fabricación" en minerales y materiales (refinado y en bruto) | 50 |
-| Correcciones manuales | Registro vivo de la auditoría de la traducción heredada (tildes sistemáticas incluidas) y de los reportes de la comunidad | 8.562 |
+| Correcciones manuales | Registro vivo de la auditoría de la traducción heredada (tildes sistemáticas incluidas) y de los reportes de la comunidad | 8.574 |
 
-**Total: 90 343 claves en LIVE (4.9.0 "Frontier Tensions", build 12344265) + 90 541 claves en PTU (4.10.0 "Siege of Orison", build 12464883). Parche 4.9.0 completo en español y el nuevo ciclo 4.10 traducido desde su primer parche de pruebas**
+**Total: 90 343 claves en LIVE (4.9.0 "Frontier Tensions", build 12344265) + 90 564 claves en PTU (4.10.0 "Siege of Orison", build 12497254). Parche 4.9.0 completo en español y el nuevo ciclo 4.10 traducido desde su primer parche de pruebas**
 
 ## Guía de formatos
 
