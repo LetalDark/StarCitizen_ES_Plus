@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.37.0 — 2026-08-26
+
+El parche **4.10.0 "Siege of Orison" llega a LIVE** y la traducción sale el mismo día, completa: todo lo trabajado durante el ciclo de pruebas pasa al canal estable.
+
+**Cambios:**
+- **4.10.0 LIVE (build 12519617) traducido al completo desde el día de su salida**: nave Kruger S-65 Stingray, periódico Terra Gazette, arco de misiones de Battaglia, sets Stronghold/Ultimatum, planos de misión con la zona real, correcciones de legibilidad del gestor de flota… todo lo del ciclo 4.10 ya está en LIVE. El texto del juego no cambió respecto al último parche de pruebas
+- **Últimas tildes pendientes del gran repaso**: 78 correcciones que no se podían aplicar mientras convivían dos canales con textos distintos — «detrás», «mínimo», «escáner», «queríamos», «cláusula» — en avisos del HUD, ayuda del panel de energía, descripciones de naves y componentes, diálogos y misiones
+- El aviso del HUD «MODO ESCaNER DE OBJETIVO» pasa a **«MODO ESCÁNER DE OBJETIVO»**
+- El ZIP vuelve a traer una sola carpeta (`LIVE/`) mientras no haya canal de pruebas abierto
+
+**Estadísticas:**
+- Líneas en global.ini: 90 564
+
 ## v1.36.7 — 2026-08-23
 
 Update del PTU 4.10.0 (build 12497254, RC1) y mejoras de legibilidad de la interfaz en ambos canales.

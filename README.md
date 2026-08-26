@@ -15,9 +15,8 @@ Traducción al español de Star Citizen, actualizada en cada parche del juego (c
 
 ## Versión actual
 
-- **LIVE — Alpha 4.9.0 "Frontier Tensions"** (build 12344265): parche completo en español
-- **PTU — Alpha 4.10.0 "Siege of Orison"** (build 12497254, RC1): ciclo 4.10 traducido desde su primer parche de pruebas
-- Última release: **v1.36.7** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
+- **LIVE — Alpha 4.10.0 "Siege of Orison"** (build 12519617): parche completo en español
+- Última release: **v1.37.0** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
 
 ## Instalación — cómo poner Star Citizen en español
 
@@ -26,13 +25,12 @@ Traducción al español de Star Citizen, actualizada en cada parche del juego (c
 3. La estructura queda así (cada carpeta es el canal del RSI Launcher):
 ```
 StarCitizen/
-├── LIVE/
-│   ├── data/Localization/spanish_(spain)/global.ini
-│   └── user.cfg
-└── PTU/
+└── LIVE/
     ├── data/Localization/spanish_(spain)/global.ini
     └── user.cfg
 ```
+> Mientras CIG tenga abierto un canal de pruebas, el ZIP trae además una carpeta `PTU/` con la misma estructura dentro.
+
 4. Inicia el juego desde el RSI Launcher — los textos aparecerán en español
 
 **Actualizar la traducción**: tras cada parche del juego, descarga la release nueva y sobrescribe los archivos. **Volver al inglés**: borra el archivo `user.cfg` de la carpeta del canal (ej. `LIVE/user.cfg`).
@@ -52,24 +50,24 @@ Star Citizen no tiene traducción oficial completa al español. Este proyecto la
 
 ## Qué incluye el global.ini final
 
-Recuentos hechos sobre el archivo real del canal LIVE (el PTU añade además las claves nuevas de su parche):
+Recuentos hechos sobre el archivo real del canal LIVE:
 
 | Capa | Contenido | Claves |
 |---|---|---|
-| Traducción al español | Todas las claves del juego, traducidas y mantenidas de forma independiente sobre una base evolutiva propia (origen: comunidad Thord82, hoy auditada al completo) | 90.343 |
-| Misiones — planos | Títulos con `[BP]` (371, de ellos 29 condicionales `[BP]*` con línea «Condición:») + listas «[Posibles Planos]» (352, con la zona real de cada variante regional) | 723 |
-| Misiones — reputación y eventos | Bloque Reputación (782) + bloque Escenario en eventos dinámicos (73) | 855 |
+| Traducción al español | Todas las claves del juego, traducidas y mantenidas de forma independiente sobre una base evolutiva propia (origen: comunidad Thord82, hoy auditada al completo) | 90.564 |
+| Misiones — planos | Títulos con `[BP]` (375, de ellos 29 condicionales `[BP]*` con línea «Condición:») + listas «[Posibles Planos]» (359, con la zona real de cada variante regional) | 734 |
+| Misiones — reputación y eventos | Bloque Reputación (785) + bloque Escenario en eventos dinámicos (78) | 863 |
 | Transporte y sustancias ilegales | Títulos de carga compactos con rango y tipo de ruta (4) + marca `[!]` en drogas (8) | 12 |
-| Armas FPS | Descripciones con stats y modos de disparo reales: DPS, Alpha, velocidad, caída de daño, todos los modos | 320 |
-| Armaduras, ropa y equipo | Claves con la masa real del objeto; incluye 880 piezas con Peso/Stun/Impacto y 862 con tolerancia a fuerza G | 1.736 |
-| Armas de nave | Descripciones con el bloque completo de stats (DPS, Alpha, RPM, penetración, capacitor, masa…) | 133 |
+| Armas FPS | Descripciones con stats y modos de disparo reales: DPS, Alpha, velocidad, caída de daño, todos los modos | 324 |
+| Armaduras, ropa y equipo | Claves con la masa real del objeto; incluye 891 piezas con Peso/Stun/Impacto y 872 con tolerancia a fuerza G | 1.751 |
+| Armas de nave | Descripciones con el bloque completo de stats (DPS, Alpha, RPM, penetración, capacitor, masa…) | 134 |
 | Componentes de nave | Prefijo clase\|tamaño\|grado en el nombre + stats por tipo en la descripción | 383 |
 | Misiles y bombas | Prefijo de tracking `IR`/`EM`/`CS` en misiles (137) + tamaño `B#` en bombas (6) | 143 |
 | Minería | Nombres abreviados del HUD y compendio del diario reorganizado por rareza | 40 |
 | Fabricación en materiales | Bloque "Fabricación" en minerales y materiales (refinado y en bruto) | 50 |
-| Correcciones manuales | Registro vivo de la auditoría de la traducción heredada (tildes sistemáticas incluidas) y de los reportes de la comunidad | 8.574 |
+| Correcciones manuales | Registro vivo de la auditoría de la traducción heredada (tildes sistemáticas incluidas) y de los reportes de la comunidad | 8.618 |
 
-**Total: 90 343 claves en LIVE (4.9.0 "Frontier Tensions", build 12344265) + 90 564 claves en PTU (4.10.0 "Siege of Orison", build 12497254). Parche 4.9.0 completo en español y el nuevo ciclo 4.10 traducido desde su primer parche de pruebas**
+**Total: 90 564 claves en LIVE (4.10.0 "Siege of Orison", build 12519617). Parche 4.10 completo en español desde el día de su salida**
 
 ## Guía de formatos
 
