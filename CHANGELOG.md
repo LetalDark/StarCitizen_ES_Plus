@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.37.1 — 2026-08-27
+
+Repaso de terminología a partir de reportes in-game y revisión a fondo de los datos de armas y naves.
+
+**Cambios:**
+- **Nombres de sitios con mayúscula inicial** (a partir de una captura del panel de ascensor, donde «estación de Transporte» aparecía en minúscula junto a «Lobby» y «Centro de llegadas»): eran 35 rótulos heredados — los 20 «Garaje NN», «Hangar», «Cubierta», «Refinería», los avisos del gestor de flota y 5 de las 6 estaciones de tránsito de Orison («Estación Cloudview», «Estación Providence», «Estación Dunlow»…). De paso, «pasaréla» pierde la tilde que nunca tuvo y «estación Visión» pasa a «Estación Vision», que es nombre propio
+- **La parte delantera de una nave es el «morro», no la «nariz»**: el archivo mezclaba las dos formas para lo mismo. Ahora es «Torreta de morro», «Pistola montada en el morro», «Arma - Morro»… La nariz humana (creador de personaje, expresiones de los NPC) se queda como está. Y la «Cucharada de nariz Mustang» resulta que era una **toma de aire**: ahora «Toma de morro Mustang»
+- **Camisa, camiseta y camiseta de tirantes dejan de mezclarse**: 110 prendas estaban etiquetadas como «(Camisa)» cuando el juego las llama *T-shirt* o *tank top*. Las de tirantes además arrastraban el tipo sin traducir en el nombre («Tank Top Tempus Sable») o traducido a medias («sin mangas Tempus Horizon»); ahora son «Tempus Sable (Camiseta de tirantes)»
+- **Repetidor Whiptail STR-E2** (el arma propia de la Kruger Stingray): mostraba 180 disparos por minuto y 90 de DPS cuando el juego da **550 y 275**. Corregido
+- Mejoras internas de verificación: los datos de armas, componentes, armaduras y misiones se comparan ahora entre versiones del juego y contra varias referencias externas, de forma que un cambio de CIG no puede pasar desapercibido
+
+**Estadísticas:**
+- Líneas en global.ini: 90 564
+
 ## v1.37.0 — 2026-08-26
 
 El parche **4.10.0 "Siege of Orison" llega a LIVE** y la traducción sale el mismo día, completa: todo lo trabajado durante el ciclo de pruebas pasa al canal estable.
