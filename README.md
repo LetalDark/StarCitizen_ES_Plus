@@ -16,7 +16,7 @@ Traducción al español de Star Citizen, actualizada en cada parche del juego (c
 ## Versión actual
 
 - **LIVE — Alpha 4.10.0 "Siege of Orison"** (build 12519617): parche completo en español
-- Última release: **v1.37.1** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
+- Última release: **v1.37.2** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
 
 ## Instalación — cómo poner Star Citizen en español
 
@@ -54,7 +54,7 @@ Recuentos hechos sobre el archivo real del canal LIVE:
 
 | Capa | Contenido | Claves |
 |---|---|---|
-| Traducción al español | Todas las claves del juego, traducidas y mantenidas de forma independiente sobre una base evolutiva propia (origen: comunidad Thord82, hoy auditada al completo) | 90.564 |
+| Traducción al español | Todas las claves del juego, traducidas y mantenidas de forma independiente sobre una base evolutiva propia (origen: comunidad Thord82, hoy auditada al completo) | 90.565 |
 | Misiones — planos | Títulos con `[BP]` (375, de ellos 29 condicionales `[BP]*` con línea «Condición:») + listas «[Posibles Planos]» (359, con la zona real de cada variante regional) | 734 |
 | Misiones — reputación y eventos | Bloque Reputación (771) + bloque Escenario en eventos dinámicos (78) | 849 |
 | Transporte y sustancias ilegales | Títulos de carga compactos con rango y tipo de ruta (4) + marca `[!]` en drogas (8) | 12 |
@@ -67,7 +67,7 @@ Recuentos hechos sobre el archivo real del canal LIVE:
 | Fabricación en materiales | Bloque "Fabricación" en minerales y materiales (refinado y en bruto) | 50 |
 | Correcciones manuales | Registro vivo de la auditoría de la traducción heredada (tildes sistemáticas incluidas) y de los reportes de la comunidad | 12.407 |
 
-**Total: 90 564 claves en LIVE (4.10.0 "Siege of Orison", build 12519617). Parche 4.10 completo en español desde el día de su salida**
+**Total: 90 565 claves en LIVE (4.10.0 "Siege of Orison", build 12519617). Parche 4.10 completo en español desde el día de su salida**
 
 ## Guía de formatos
 

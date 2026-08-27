@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.37.2 — 2026-08-28
+
+Corrección de un accesorio que el juego mostraba con un código interno en lugar de su nombre.
+
+**Cambios:**
+- **La linterna Lux «Sniperglint» de VOLT** (la que se monta bajo el cañón y proyecta el destello de mira de francotirador) aparecía en el inventario como `@item_Descbehr_rifle_ballistic_1` tanto en el **nombre** como en la **descripción**. Es un fallo del propio juego: el accesorio apunta a un texto que no existe en ningún idioma —en inglés se ve exactamente igual—, y encima al de un rifle Behring. Ahora se llama **Linterna Lux "Sniperglint"**. Como el juego usa el mismo texto para el nombre y para la descripción, ambos muestran lo mismo: no se pueden separar desde la traducción
+
+**Estadísticas:**
+- Líneas en global.ini: 90 565
+
 ## v1.37.1 — 2026-08-27
 
 Repaso de terminología a partir de reportes in-game y revisión a fondo de los datos de armas y naves.
