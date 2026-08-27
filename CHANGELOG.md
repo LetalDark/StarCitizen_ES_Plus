@@ -11,6 +11,16 @@ Repaso de terminología a partir de reportes in-game y revisión a fondo de los 
 - **Repetidor Whiptail STR-E2** (el arma propia de la Kruger Stingray): mostraba 180 disparos por minuto y 90 de DPS cuando el juego da **550 y 275**. Corregido
 - Mejoras internas de verificación: los datos de armas, componentes, armaduras y misiones se comparan ahora entre versiones del juego y contra varias referencias externas, de forma que un cambio de CIG no puede pasar desapercibido
 
+**Además, esta release publica el repaso del 27 de agosto:**
+- **Nombres de estación unificados**: el tipo se traduce y el nombre propio se respeta — «Estación QV Logistics», «Estación de servicio Starlight», «Estación QV Breaker BRK-204», «Espaciopuerto August Dunlow» (August es la persona, no el mes). El archivo estaba partido: la misma estación se escribía de dos formas en textos hermanos
+- **Carteles del expositor de naves de Orison** con el nombre real del modelo: «LEVANTADOR ESTELAR HeRCULES» → **HERCULES STARLIFTER**, «CORREDOR DE ESTRELLA DE MERCURIO» → **MERCURY STAR RUNNER**, «Ares luchador de estrellas» → **ARES STAR FIGHTER**
+- **Mercancías reales traducidas** (63): Acero, Helio, Hidrógeno, Silicio, Suministros médicos, Petróleo crudo, Bienes de consumo… Los minerales de ficción del universo (Agricium, Laranite, Bexalite, Quantainium) conservan su nombre original
+- **Gran repaso de tildes**: 5.617 correcciones de acentuación por toda la traducción — «atención», «línea», «descripción», «quería», «cuántica», «balístico», «aéreo»…
+- **Reputación de misión más fiel**: retirados los bloques de contratos que el juego tiene desactivados y que el jugador no puede aceptar (aparecían en 197 descripciones), y añadidos los contratos de presentación que faltaban
+- **Línea de reducción de daño**: el último punto ya no dice «0 %» donde el arma sigue haciendo daño — ahora indica el alcance máximo. El Salvo decía «0% 1100m» cuando a esa distancia aún hace el 55,6 %
+- «Estación trituradora QV» → **«Estación QV Breaker»**, y destinos de Orison corregidos: «Centro de vista de la nube» → «Centro Cloudview», «Plataforma Providencia» → «Plataforma Providence»
+- La **UEE** pasa a femenino en todo el texto («la UEE»), como ya se usaba en la mayoría de los casos
+
 **Estadísticas:**
 - Líneas en global.ini: 90 564
 
