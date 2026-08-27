@@ -56,7 +56,7 @@ Recuentos hechos sobre el archivo real del canal LIVE:
 |---|---|---|
 | Traducción al español | Todas las claves del juego, traducidas y mantenidas de forma independiente sobre una base evolutiva propia (origen: comunidad Thord82, hoy auditada al completo) | 90.564 |
 | Misiones — planos | Títulos con `[BP]` (375, de ellos 29 condicionales `[BP]*` con línea «Condición:») + listas «[Posibles Planos]» (359, con la zona real de cada variante regional) | 734 |
-| Misiones — reputación y eventos | Bloque Reputación (785) + bloque Escenario en eventos dinámicos (78) | 863 |
+| Misiones — reputación y eventos | Bloque Reputación (771) + bloque Escenario en eventos dinámicos (78) | 849 |
 | Transporte y sustancias ilegales | Títulos de carga compactos con rango y tipo de ruta (4) + marca `[!]` en drogas (8) | 12 |
 | Armas FPS | Descripciones con stats y modos de disparo reales: DPS, Alpha, velocidad, caída de daño, todos los modos | 324 |
 | Armaduras, ropa y equipo | Claves con la masa real del objeto; incluye 891 piezas con Peso/Stun/Impacto y 872 con tolerancia a fuerza G | 1.751 |
@@ -65,7 +65,7 @@ Recuentos hechos sobre el archivo real del canal LIVE:
 | Misiles y bombas | Prefijo de tracking `IR`/`EM`/`CS` en misiles (137) + tamaño `B#` en bombas (6) | 143 |
 | Minería | Nombres abreviados del HUD y compendio del diario reorganizado por rareza | 40 |
 | Fabricación en materiales | Bloque "Fabricación" en minerales y materiales (refinado y en bruto) | 50 |
-| Correcciones manuales | Registro vivo de la auditoría de la traducción heredada (tildes sistemáticas incluidas) y de los reportes de la comunidad | 8.618 |
+| Correcciones manuales | Registro vivo de la auditoría de la traducción heredada (tildes sistemáticas incluidas) y de los reportes de la comunidad | 12.355 |
 
 **Total: 90 564 claves en LIVE (4.10.0 "Siege of Orison", build 12519617). Parche 4.10 completo en español desde el día de su salida**
 
