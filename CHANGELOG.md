@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.37.3 — 2026-08-29
+
+Repaso de nombres de prendas y equipo a partir de dos capturas in-game, más los datos de tres rifles que llevaban tiempo mal.
+
+**Cambios:**
+- **Prendas con el nombre partido por la mitad**: el juego llama a algunas piezas por sus **dos partes** —«Bellator Shirt and Waistcoat», «Keldur Hat and Indigo Goggles», «Navoi Boots and Pants»— y al quitar la palabra repetida se perdía media frase, dejando la conjunción suelta: **«y Chaleco Bellator (Camisa)»**. Eran 42 nombres en total: 17 empezaban por esa «y» huérfana, 8 habían perdido la palabra del tipo por el medio («Botas y Navoi»), 9 conservaban el inglés sin traducir («Taos Balaclava and Goggles») y 8 llevaban el tipo equivocado en la etiqueta. Ahora la etiqueta recoge las dos piezas cuando toca —«Bellator Anchor (Camisa y chaleco)»— o desaparece del nombre cuando no es un tipo de prenda —«Chada Sandalwood (Chaqueta)»
+- **Los abrigos dejan de ser chaquetas**: 8 prendas que el juego llama *Coat* salían como «(Chaqueta)» y además arrastraban la palabra dentro del nombre. Ahora son **(Abrigo)**, y las dos batas de laboratorio, **(Bata de laboratorio)**
+- **Las gorras dejan de ser sombreros**: 6 prendas que el juego llama *Cap* estaban etiquetadas «(Sombrero)»
+- **Delantales y bandanas**, que nunca se habían repasado: los 10 delantales pasan al formato del resto («Artisan Kel-To (Delantal)») y uno que se mostraba directamente en inglés, «ThermoWeave Coat», queda como **ThermoWeave (Delantal)**
+- **La mochila H4-PBF no mostraba su peso** y ahora indica sus **8 kg**. Además se llamaba «H4-PBF Ammo Carrier» dejando el tipo en inglés, cuando su propia descripción ya decía «Portador de munición» dos líneas más abajo: ahora es **H4-PBF (Portador de munición)**
+- **Railgun Scourge**: publicaba los valores de una versión antigua del juego. Su modo semiautomático pasa de 30 a **80 de daño** y de 35 a **93,3 de DPS**; el cargado se corrige a 6060 y 2121
+- **Rifle Arrowhead**: su disparo cargado indicaba 1000 m/s cuando son **4000**, y el alcance pasa de 4000 a **16 000 m**
+- **Rifle Zenith**: corregidos los tiempos y el ciclo de su disparo cargado
+- Las listas de «Posibles Planos» de las misiones muestran ahora los nombres actualizados de los objetos, en vez de quedarse con la forma antigua
+
+**Estadísticas:**
+- Líneas en global.ini: 90 565
+
 ## v1.37.2 — 2026-08-28
 
 Corrección de un accesorio que el juego mostraba con un código interno en lugar de su nombre.
