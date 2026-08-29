@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.37.4 — 2026-08-30
+
+La ficha de las armas se lee entera en español, y el Arlington deja de anunciar un modo de disparo que no tiene.
+
+**Cambios:**
+- **Los modos de disparo ya no están en inglés**. En la ficha de un arma aparecían `[Full]`, `[Burst]`, `[Beam]`, `[Hot]` y `[Slug]` en medio del texto en español. Ahora son **[Carga]**, **[Ráfaga]**, **[Haz]**, **[Caliente]** y **[Bala]**. `[Auto]` y `[Semi]` se quedan como estaban: ya son las palabras en español y además coinciden con lo que pone el juego al cambiar de modo
+- **Las ráfagas dicen cuántos disparos son**: **[Ráfaga 3]**, **[Ráfaga 4]**, **[Ráfaga 5]**. Antes el Gallant tenía dos ráfagas distintas —una de 3 y otra de 5— y en la ficha se llamaban igual
+- **El rifle Arlington no tiene modo automático, y lo anunciaba**. Su modo de bala salía como `[Auto]` cuando dispara un tiro por gatillazo, igual que el otro. Sus dos modos no se distinguen por el gatillo sino por la munición: **bala de 44 mm** contra **cartucho de 8 perdigones**. Ahora ese modo es **[Bala]**
+- **Las siete armas de disparo cargado** (Zenith, Karna, Arrowhead, Custodian, Salvo, Devastator y Scourge) mostraban **[SEMI]** en su modo cargado, que es la etiqueta del disparo suelto
+- **La velocidad del proyectil ya no aparece en dos sitios**. Cuando los modos de un arma van a velocidades distintas, cada uno muestra la suya y desaparece la línea general — antes uno la llevaba al lado y el otro la tenía implícita varias líneas más abajo, sin decir de cuál era. Afecta al Arlington, el Scourge, el Arrowhead, el Karna y el Zenith
+- **El cartucho de perdigones del Arlington hace daño de energía**, no físico como se anunciaba
+
+**Estadísticas:**
+- Líneas en global.ini: 90 565
+- Claves corregidas: 163
+
 ## v1.37.3 — 2026-08-29
 
 Repaso de nombres de prendas y equipo a partir de dos capturas in-game, más los datos de tres rifles que llevaban tiempo mal.

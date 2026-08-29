@@ -16,7 +16,7 @@ Traducción al español de Star Citizen, actualizada en cada parche del juego (c
 ## Versión actual
 
 - **LIVE — Alpha 4.10.0 "Siege of Orison"** (build 12519617): parche completo en español
-- Última release: **v1.37.3** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
+- Última release: **v1.37.4** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
 
 ## Instalación — cómo poner Star Citizen en español
 
@@ -172,17 +172,17 @@ Cargado: 6.1 kg | Descargado: 4.99 kg
 [Red. daño] 100% 60m | 45% 300m | 0% 1750m
 ```
 
-La velocidad de proyectil va en una línea única `Velocidad:`; solo los modos con munición propia (cargados/escopeta divergente) la muestran en su línea. Los modos pueden llevar calificadores: tipo de daño por cañón (`Balístico`/`Energía`) o condición de entrada (p. ej. `40% calor`).
+Si todos los modos comparten velocidad, va en la línea única `Velocidad:`; si difieren entre sí, cada modo lleva la suya y esa línea desaparece — así nunca hay dos velocidades en sitios distintos sin saber cuál es de cuál. Los modos pueden llevar calificadores: tipo de daño por cañón (`Balístico`/`Energía`) o condición de entrada (p. ej. `40% calor`).
 
 | Etiqueta | Significado |
 |---|---|
 | `[Auto]` | Modo automático |
 | `[Semi]` | Modo semiautomático |
-| `[Burst]` | Ráfaga |
-| `[Beam]` | Rayo continuo |
-| `[Full]` | Disparo cargado |
-| `[Hot]` | Modo caliente (heat ramp) |
-| `[Slug]` | Proyectil único (escopetas) |
+| `[Ráfaga N]` | Ráfaga de N disparos |
+| `[Haz]` | Rayo continuo |
+| `[Carga]` | Disparo cargado |
+| `[Caliente]` | Modo caliente (el arma cambia al calentarse) |
+| `[Bala]` | Proyectil único, frente al cartucho de perdigones |
 | `[Doble]` | Doble cañón |
 | `[Combinado]` | Promedio del ciclo mixto (armas con varios regímenes) |
 
