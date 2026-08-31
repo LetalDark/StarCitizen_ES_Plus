@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.37.5 — 2026-08-31
+
+Arreglos a partir de capturas de la comunidad en Levski, la zona nueva del sistema Nyx.
+
+**Cambios:**
+- **Recco Battaglia recupera su mayúscula**: el nombre que aparece delante de sus subtítulos salía como «[recco Battaglia]»
+- **Las respuestas al hablar con los personajes se leen enteras**: la fuente de esa pantalla no dibuja las vocales acentuadas (se veía «H BLAME DEL TRABAJO» o «ALGO M S?») — las opciones de conversación van ahora sin tildes para que no falte ninguna letra
+- **El objetivo de la misión de minería ya no enseña un código**: «mina %ls Asteroide de Titanio» pasa a «mina Asteroide de Titanio»
+- **«HABITACIONES Y HANGARES»** en el ascensor de Levski (le faltaba una letra)
+- Nota: el «Employment Center» del panel del ascensor no tiene arreglo posible desde la traducción — el juego no pasa ese texto por el sistema de idiomas. El resto de menciones sí aparecen como «Centro de empleo»
+
+**Estadísticas:**
+- Líneas en global.ini: 90.565
+
 ## v1.37.4 — 2026-08-30
 
 La ficha de las armas se lee entera en español, y el Arlington deja de anunciar un modo de disparo que no tiene.
