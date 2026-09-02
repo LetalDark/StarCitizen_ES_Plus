@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.37.6 — 2026-09-02
+
+Las listas de planos de las misiones se reorganizan: dónde sale cada misión y qué tipo de componente es cada plano.
+
+**Cambios:**
+- **Zona de cada misión con planos**: todas las descripciones con «[Posibles Planos]» indican ahora dónde se ofrece la misión, hasta el planeta («Stanton · Zona: todo el sistema», «Zona: Hurston», «Zona: Pyro I, Monox, PYR3 L3-L5», «Zona: sistema Nyx»). Antes solo aparecía en las misiones de Pyro con variantes por región
+- **Planos agrupados por tipo de componente**: Armas de nave, Escudos, Generadores, Enfriadores, Radares, Armas personales, Cargadores, Cascos, Armadura, Mochilas, Minería… Desaparecen los sub-apartados «Variante 1 / Variante 2», que eran tablas internas del juego y no ayudaban a saber qué se puede conseguir
+- **Variantes con la misma descripción** (por ejemplo los expedientes Jorrit de la Agencia Hockrow) se distinguen por su título, su contratante o el objetivo de la misión, en vez de «Opción 1 / Opción 2»
+- **Cargador «Fresnel Energy LMG Battery»** traducido: «Batería LMG de energía Fresnel (165 cap)»
+- Nota: el nombre del hangar personal que muestra el panel de tránsito nuevo (por ejemplo en GrimHex, «Medium Hangar») no pasa por el sistema de idiomas del juego y no tiene arreglo desde la traducción
+
+**Estadísticas:**
+- Líneas en global.ini: 90.565
+
 ## v1.37.5 — 2026-08-31
 
 Arreglos a partir de capturas de la comunidad en Levski, la zona nueva del sistema Nyx.
