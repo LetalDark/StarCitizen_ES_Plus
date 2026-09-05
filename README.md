@@ -16,7 +16,7 @@ Traducción al español de Star Citizen, actualizada en cada parche del juego (c
 ## Versión actual
 
 - **LIVE — Alpha 4.10.0 "Siege of Orison"** (build 12519617): parche completo en español
-- Última release: **v1.37.6** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
+- Última release: **v1.37.7** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
 
 ## Instalación — cómo poner Star Citizen en español
 
@@ -56,7 +56,7 @@ Recuentos hechos sobre el archivo real del canal LIVE:
 |---|---|---|
 | Traducción al español | Todas las claves del juego, traducidas y mantenidas de forma independiente sobre una base evolutiva propia (origen: comunidad Thord82, hoy auditada al completo) | 90.565 |
 | Misiones — planos | Títulos con `[BP]` (375, de ellos 29 condicionales `[BP]*` con línea «Condición:») + listas «[Posibles Planos]» (359, con la zona hasta el planeta y los planos por tipo de componente) | 734 |
-| Misiones — reputación y eventos | Bloque Reputación (771) + bloque Escenario en eventos dinámicos (78) | 849 |
+| Misiones — reputación y eventos | Bloque Reputación (789) + bloque Escenario en eventos dinámicos (78) | 867 |
 | Transporte y sustancias ilegales | Títulos de carga compactos con rango y tipo de ruta (4) + marca `[!]` en drogas (8) | 12 |
 | Armas FPS | Descripciones con stats y modos de disparo reales: DPS, Alpha, velocidad, caída de daño, todos los modos | 324 |
 | Armaduras, ropa y equipo | Claves con la masa real del objeto; incluye 891 piezas con Peso/Stun/Impacto y 872 con tolerancia a fuerza G | 1.755 |

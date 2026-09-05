@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.37.7 — 2026-09-05
+
+La reputación que da cada misión aparece en 18 descripciones que no la tenían y se corrige un importe erróneo.
+
+**Cambios:**
+- **Reputación en 18 misiones más**: la variante Shattered Blade de la Recompensa Verificada en Nyx (de +500 a +16.000 según dificultad), las 12 misiones de defensa de nave contra Shattered Blade de Citizens For Prosperity y Eckhart Security (+100 a +300), los 5 encargos de asesinato de Vaughan (+100 a +300) y el contrato de salvamento de Adagio (+100/+150)
+- **Importe corregido**: la variante Headhunters de la Recompensa Verificada en Pyro indicaba «+8.000»; sus niveles de riesgo moderado y alto dan +2.000, así que ahora muestra «+2.000/+8.000, según dificultad»
+- Nota sobre las Recompensas Verificadas del Gremio de cazarrecompensas: el juego usa un único texto de descripción para todos los niveles de riesgo de esa misión, por lo que la reputación exacta de cada nivel no se puede mostrar por separado. La lista de importes se corresponde, de menor a mayor, con los niveles de riesgo que se ven en el título (muy bajo, bajo, moderado y alto, muy alto, extremo)
+
+**Estadísticas:**
+- Líneas en global.ini: 90.565
+
 ## v1.37.6 — 2026-09-02
 
 Las listas de planos de las misiones se reorganizan: dónde sale cada misión y qué tipo de componente es cada plano.
