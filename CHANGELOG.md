@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.37.8 — 2026-09-07
+
+Las herramientas y la ropa muestran su peso real: la batería fija de la Multi-Tool, el Cambio SRT y el MaxLift cuenta en el peso base, y 44 prendas que no tenían peso ahora lo llevan.
+
+**Cambios:**
+- **Peso real de las herramientas**: la batería de la Multi-Tool, el Cambio SRT y el MaxLift no se puede quitar, así que cuenta en el peso base; lo que hace «Cargado» es el consumible (el contenedor de material reciclado o la botella del extintor). Cambio SRT «Cargado: 5.75 kg | Descargado: 5 kg», Multi-Tool 1.75 kg, MaxLift 4.5 kg, telémetro XDL 1.5 kg. Antes el Cambio decía 5.3 / 4, números que no eran del juego.
+- **Peso real de la ropa**: 44 prendas que nunca mostraban peso (máscaras, monos, delantales, cascos de ropa) ahora lo llevan; dos camisetas OCT pasan de 0.25 a 0.5 kg y el mobiGlas de 0.5 a 0.15 kg. Un condensador de nave y la cuerda de luces de Luminalia dejan de mostrar un peso que no era suyo.
+- **Máscaras Kiba**: su «Reducción de daño: 20%» lleva ahora la nota «(sin efecto en el juego)»: los datos del juego les asignan armadura ligera, pero probado en partida (máscara sola y con casco) no reducen nada.
+- **Cambio SRT**: descripción con el mismo estilo que su edición de tienda («Tamaño del contenedor», «Cadencia de fuego», «Alcance efectivo»).
+
+**Estadísticas:**
+- Líneas en global.ini: 90.565
+
 ## v1.37.7 — 2026-09-05
 
 La reputación que da cada misión aparece en 18 descripciones que no la tenían y se corrige un importe erróneo.
