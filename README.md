@@ -16,7 +16,7 @@ Traducción al español de Star Citizen, actualizada en cada parche del juego (c
 ## Versión actual
 
 - **LIVE — Alpha 4.10.0 "Siege of Orison"** (build 12519617): parche completo en español
-- Última release: **v1.37.8** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
+- Última release: **v1.37.9** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
 
 ## Instalación — cómo poner Star Citizen en español
 
@@ -41,7 +41,7 @@ Star Citizen no tiene traducción oficial completa al español. Este proyecto la
 
 - **Traducción completa y al día** — cada parche se traduce desde su primer build de pruebas; se restauran textos que el juego retiró pero sigue usando, se completan claves que faltan y se corrigen erratas del propio juego
 - **Misiones con toda la información**: marcador `[BP]` (siempre da planos) / `[BP]*` (condicional, con línea «Condición:») y lista «[Posibles Planos]» traducida, con la **zona hasta el planeta** de cada misión («Stanton · Zona: todo el sistema», «Zona: Hurston», «Zona: Pyro I, Monox, PYR3 L3-L5», «Zona: sistema Nyx»…) y los planos **agrupados por tipo de componente** (Armas de nave, Escudos, Radares, Armadura…); bloque de **Reputación** al final de cada descripción (ganancia real, dónde aplica, penalización por fallo); puntos de **Escenario** en eventos dinámicos; títulos de transporte de carga compactos (rango y tipo de ruta a la vista); y marca `[!]` en sustancias ilegales
-- **Stats reales en armas FPS y equipo**: DPS, daño, todos los modos de disparo reales, velocidad, caída de daño, peso de armaduras/ropa/cargadores, tolerancia a fuerza G, daño de granadas y efectos reales de todos los accesorios — extraídos del propio juego en cada parche
+- **Stats reales en armas FPS y equipo**: DPS, daño, todos los modos de disparo reales, velocidad, caída de daño, giro previo de las ametralladoras rotativas (tiempo hasta la primera bala), peso de armaduras/ropa/cargadores, tolerancia a fuerza G, daño de granadas y efectos reales de todos los accesorios — extraídos del propio juego en cada parche
 - **Stats reales en naves**: 122 armas de nave (DPS, Alpha, cadencia, alcance, capacitor…) y 334 componentes con prefijo compacto de clase/tamaño/grado (ej. `[MIL|2|A] Bracer`)
 - **Misiles y bombas identificados**: tipo de tracking (IR/EM/CS) para saber qué contramedida usar, y tamaño en bombas (B3/B5/B10)
 - **Minería mejorada**: HUD sin solapamientos, compendio del diario reorganizado por rareza, nombres de láseres y módulos unificados, y cada mineral indica qué se fabrica con él
@@ -58,7 +58,7 @@ Recuentos hechos sobre el archivo real del canal LIVE:
 | Misiones — planos | Títulos con `[BP]` (375, de ellos 29 condicionales `[BP]*` con línea «Condición:») + listas «[Posibles Planos]» (359, con la zona hasta el planeta y los planos por tipo de componente) | 734 |
 | Misiones — reputación y eventos | Bloque Reputación (789) + bloque Escenario en eventos dinámicos (78) | 867 |
 | Transporte y sustancias ilegales | Títulos de carga compactos con rango y tipo de ruta (4) + marca `[!]` en drogas (8) | 12 |
-| Armas FPS | Descripciones con stats y modos de disparo reales: DPS, Alpha, velocidad, caída de daño, todos los modos | 324 |
+| Armas FPS | Descripciones con stats y modos de disparo reales: DPS, Alpha, velocidad, caída de daño, todos los modos, giro previo de las rotativas | 324 |
 | Armaduras, ropa y equipo | Claves con la masa real del objeto; incluye 891 piezas con Peso/Stun/Impacto y 872 con tolerancia a fuerza G | 1.801 |
 | Armas de nave | Descripciones con el bloque completo de stats (DPS, Alpha, RPM, penetración, capacitor, masa…) | 134 |
 | Componentes de nave | Prefijo clase\|tamaño\|grado en el nombre + stats por tipo en la descripción | 383 |
@@ -171,6 +171,8 @@ Velocidad: 875 m/s
 Cargado: 6.1 kg | Descargado: 4.99 kg
 [Red. daño] 100% 60m | 45% 300m | 0% 1750m
 ```
+
+Las ametralladoras rotativas (F55, Vendetta) llevan además una línea `Giro: 0.4 s sin disparar | parada 0.15 s`: el tiempo desde que se pulsa el gatillo hasta la primera bala (no disparan mientras el cañón arranca) y lo que tarda el cañón en parar al soltar.
 
 Si todos los modos comparten velocidad, va en la línea única `Velocidad:`; si difieren entre sí, cada modo lleva la suya y esa línea desaparece — así nunca hay dos velocidades en sitios distintos sin saber cuál es de cuál. Los modos pueden llevar calificadores: tipo de daño por cañón (`Balístico`/`Energía`) o condición de entrada (p. ej. `40% calor`).
 

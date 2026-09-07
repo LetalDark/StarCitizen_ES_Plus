@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.37.9 — 2026-09-07
+
+Las ametralladoras rotativas muestran su giro previo: el F55 tarda 0.4 s en empezar a disparar y el Vendetta 0.33 s, y hasta ahora la ficha no lo decía.
+
+**Cambios:**
+- **Línea «Giro» en el F55 LMG y el Vendetta HMG** (y sus variantes): `Giro: 0.4 s sin disparar | parada 0.15 s` (F55) y `Giro: 0.33 s sin disparar | parada 1.33 s` (Vendetta). El primer número es el tiempo desde que pulsas el gatillo hasta la primera bala (el cañón arranca sin disparar); «parada» es lo que tarda en frenar al soltar. Son las únicas dos armas personales con giro; el resto disparan al instante.
+
+**Estadísticas:**
+- Líneas en global.ini: 90.565
+
 ## v1.37.8 — 2026-09-07
 
 Las herramientas y la ropa muestran su peso real: la batería fija de la Multi-Tool, el Cambio SRT y el MaxLift cuenta en el peso base, y 44 prendas que no tenían peso ahora lo llevan.
