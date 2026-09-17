@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.38.0 — 2026-09-17
+## v1.37.10 — 2026-09-17
 
 Traducción actualizada al parche 4.10.1 (LIVE): recompensas de Ayuda a Orison, nuevos resúmenes de refinería y ediciones Akuma, Skullcap y Streamline.
 
