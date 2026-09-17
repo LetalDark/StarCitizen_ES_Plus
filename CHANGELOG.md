@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.38.0 — 2026-09-17
+
+Traducción actualizada al parche 4.10.1 (LIVE): recompensas de Ayuda a Orison, nuevos resúmenes de refinería y ediciones Akuma, Skullcap y Streamline.
+
+**Cambios:**
+- **Recompensas de Ayuda a Orison**: los 6 niveles y sus piezas «SecondWind» (pistola S-38, armadura ligera FBL-8a, rifle P4-AR, armadura media ORC-mkX, subfusil Lumin V y armadura pesada ADP-mk4).
+- **Refinería**: los 9 métodos tienen un resumen nuevo, en orden Rendimiento // Costo // Velocidad y con los nuevos valores de velocidad del parche.
+- **Ediciones nuevas traducidas**: Akuma de la pistola LH86, el rifle de francotirador A03 y el P8-AR, con armadura y casco a juego; CQ7 «Skullcap» con su casco de vuelo; Demeco «Streamline»; pinturas del Sabre, Cutlass «Akuma» y Aurora Mk II «Streamline»; repetidor Akuma del ATLS GEO e inhibidor cuántico Vertine del Sabre Raven EX.
+- **Misiones de construcción de Orison**: texto actualizado (nuevo remitente, elevador de carga en el pedido pequeño) y puntos de escenario al día.
+- **Demeco «Streamline»**: el juego le asigna por error la descripción de la Fresnel de VOLT (otro fabricante, otra clase y otra batería); se muestra la de la Demeco con la frase de su edición.
+- **Nombre del fabricante VOLT**: «Verified Offworld Laser Technologies» vuelve a aparecer tal cual en las armas VOLT (salía como «Láser»). También se corrige una frase de la descripción de la Demeco.
+
+**Estadísticas:**
+- Líneas en global.ini: 90.639
+
 ## v1.37.9 — 2026-09-07
 
 Las ametralladoras rotativas muestran su giro previo: el F55 tarda 0.4 s en empezar a disparar y el Vendetta 0.33 s, y hasta ahora la ficha no lo decía.
