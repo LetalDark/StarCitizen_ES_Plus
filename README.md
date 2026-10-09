@@ -16,7 +16,7 @@ Traducción al español de Star Citizen, actualizada en cada parche del juego (c
 ## Versión actual
 
 - **LIVE — Alpha 4.10.1 "Siege of Orison"** (build 12660092): parche completo en español
-- Última release: **v1.37.10** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
+- Última release: **v1.37.11** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
 
 ## Instalación — cómo poner Star Citizen en español
 
@@ -40,7 +40,7 @@ StarCitizen/
 Star Citizen no tiene traducción oficial completa al español. Este proyecto la construye de forma independiente sobre la base comunitaria de Thord82 y, además de traducir cada parche, **enriquece los textos con datos reales del juego**:
 
 - **Traducción completa y al día** — cada parche se traduce desde su primer build de pruebas; se restauran textos que el juego retiró pero sigue usando, se completan claves que faltan y se corrigen erratas del propio juego
-- **Misiones con toda la información**: marcador `[BP]` (siempre da planos) / `[BP]*` (condicional, con línea «Condición:») y lista «[Posibles Planos]» traducida, con la **zona hasta el planeta** de cada misión («Stanton · Zona: todo el sistema», «Zona: Hurston», «Zona: Pyro I, Monox, PYR3 L3-L5», «Zona: sistema Nyx»…) y los planos **agrupados por tipo de componente** (Armas de nave, Escudos, Radares, Armadura…); bloque de **Reputación** al final de cada descripción (ganancia real, dónde aplica, penalización por fallo); puntos de **Escenario** en eventos dinámicos; títulos de transporte de carga compactos (rango y tipo de ruta a la vista); y marca `[!]` en sustancias ilegales
+- **Misiones con toda la información**: marcador `[BP]` (siempre da planos) / `[BP]*` (condicional, con línea «Condición:») y lista «[Posibles Planos]» traducida, con la **zona hasta el planeta** de cada misión («Stanton · Zona: todo el sistema», «Zona: Hurston», «Zona: Pyro I, Monox, PYR3 L3-L5», «Zona: sistema Nyx»…) y los planos **agrupados por tipo de componente** (Armas de nave, Escudos, Radares, Armadura…), con su **probabilidad** cuando no son seguros («25 % de probabilidad»); bloque de **Reputación** al final de cada descripción (ganancia real, dónde aplica, penalización por fallo); puntos de **Escenario** en eventos dinámicos; títulos de transporte de carga compactos (rango y tipo de ruta a la vista); y marca `[!]` en sustancias ilegales
 - **Stats reales en armas FPS y equipo**: DPS, daño, todos los modos de disparo reales, velocidad, caída de daño, giro previo de las ametralladoras rotativas (tiempo hasta la primera bala), peso de armaduras/ropa/cargadores, tolerancia a fuerza G, daño de granadas y efectos reales de todos los accesorios — extraídos del propio juego en cada parche
 - **Stats reales en naves**: 122 armas de nave (DPS, Alpha, cadencia, alcance, capacitor…) y 334 componentes con prefijo compacto de clase/tamaño/grado (ej. `[MIL|2|A] Bracer`)
 - **Misiles y bombas identificados**: tipo de tracking (IR/EM/CS) para saber qué contramedida usar, y tamaño en bombas (B3/B5/B10)

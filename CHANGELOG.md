@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.37.11 — 2026-10-09
+
+Los planos de las misiones de recolección de Rayari indican ahora que solo caen con un 25 % de probabilidad.
+
+**Cambios:**
+- **Misiones de recolección de Rayari** (gemas de Saldynium, Jaclium y Carinite, ojos de Yormandi y perlas de Valakkar irradiadas): su lista «[Posibles Planos]» dice ahora «25 % de probabilidad» junto al objetivo y la zona. Antes se presentaban como un plano seguro, igual que el resto de misiones, que sí lo dan siempre.
+
+**Estadísticas:**
+- Líneas en global.ini: 90.639
+
 ## v1.37.10 — 2026-09-17
 
 Traducción actualizada al parche 4.10.1 (LIVE): recompensas de Ayuda a Orison, nuevos resúmenes de refinería y ediciones Akuma, Skullcap y Streamline.
