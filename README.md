@@ -15,8 +15,8 @@ Traducción al español de Star Citizen, actualizada en cada parche del juego (c
 
 ## Versión actual
 
-- **LIVE — Alpha 4.10.1 "Siege of Orison"** (build 12660092): parche completo en español
-- Última release: **v1.37.11** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
+- **LIVE — Alpha 4.10.2 "Siege of Orison"** (build 12881860): parche completo en español
+- Última release: **v1.37.12** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
 
 ## Instalación — cómo poner Star Citizen en español
 
@@ -54,20 +54,20 @@ Recuentos hechos sobre el archivo real del canal LIVE:
 
 | Capa | Contenido | Claves |
 |---|---|---|
-| Traducción al español | Todas las claves del juego, traducidas y mantenidas de forma independiente sobre una base evolutiva propia (origen: comunidad Thord82, hoy auditada al completo) | 90.639 |
+| Traducción al español | Todas las claves del juego, traducidas y mantenidas de forma independiente sobre una base evolutiva propia (origen: comunidad Thord82, hoy auditada al completo) | 91.163 |
 | Misiones — planos | Títulos con `[BP]` (375, de ellos 29 condicionales `[BP]*` con línea «Condición:») + listas «[Posibles Planos]» (359, con la zona hasta el planeta y los planos por tipo de componente) | 734 |
-| Misiones — reputación y eventos | Bloque Reputación (789) + bloque Escenario en eventos dinámicos (78) | 867 |
+| Misiones — reputación y eventos | Bloque Reputación (791) + bloque Escenario en eventos dinámicos (108) | 899 |
 | Transporte y sustancias ilegales | Títulos de carga compactos con rango y tipo de ruta (4) + marca `[!]` en drogas (8) | 12 |
-| Armas FPS | Descripciones con stats y modos de disparo reales: DPS, Alpha, velocidad, caída de daño, todos los modos, giro previo de las rotativas | 329 |
-| Armaduras, ropa y equipo | Claves con la masa real del objeto; incluye 897 piezas con Peso/Stun/Impacto y 878 con tolerancia a fuerza G | 1.809 |
+| Armas FPS | Descripciones con stats y modos de disparo reales: DPS, Alpha, velocidad, caída de daño, todos los modos, giro previo de las rotativas | 335 |
+| Armaduras, ropa y equipo | Claves con la masa real del objeto; incluye 986 piezas con Peso/Stun/Impacto y 972 con tolerancia a fuerza G | 1.925 |
 | Armas de nave | Descripciones con el bloque completo de stats (DPS, Alpha, RPM, penetración, capacitor, masa…) | 135 |
-| Componentes de nave | Prefijo clase\|tamaño\|grado en el nombre + stats por tipo en la descripción | 383 |
+| Componentes de nave | Prefijo clase\|tamaño\|grado en el nombre + stats por tipo en la descripción | 395 |
 | Misiles y bombas | Prefijo de tracking `IR`/`EM`/`CS` en misiles (137) + tamaño `B#` en bombas (6) | 143 |
 | Minería | Nombres abreviados del HUD y compendio del diario reorganizado por rareza | 40 |
 | Fabricación en materiales | Bloque "Fabricación" en minerales y materiales (refinado y en bruto) | 50 |
-| Correcciones manuales | Registro vivo de la auditoría de la traducción heredada (tildes sistemáticas incluidas) y de los reportes de la comunidad | 12.418 |
+| Correcciones manuales | Registro vivo de la auditoría de la traducción heredada (tildes sistemáticas incluidas) y de los reportes de la comunidad | 14.564 |
 
-**Total: 90 639 claves en LIVE (4.10.1 "Siege of Orison", build 12660092). Parche 4.10 completo en español desde el día de su salida**
+**Total: 91 163 claves en LIVE (4.10.2 "Siege of Orison", build 12881860). Parche 4.10 completo en español desde el día de su salida**
 
 ## Guía de formatos
 

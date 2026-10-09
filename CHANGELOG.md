@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.37.12 — 2026-10-09
+
+Traducción actualizada al parche 4.10.2 (LIVE), con una revisión a fondo de nombres propios, organizaciones, tildes y armaduras.
+
+**Cambios:**
+- **Parche 4.10.2**: unos 520 textos nuevos traducidos y 55 modificados. Incluye las Constellation Mk IV y Mk V (Centaurus, Aquila y Taurus), la RSI Skylark, las skins nuevas de las armas S71, P8-SC, F55, R97, Ravager-212 y Atzkav, las insignias y contratos de IASI y del RSI Discovery Month, y las armaduras Monolith, Venture y Zeus.
+- **Nombres propios respetados**: marcas, fabricantes, naves y armas conservan su nombre original. Algunos venían traducidos («Vengador», «égida», «Avispón») y vuelven a su nombre real.
+- **Nombres de producto**: llevan su nombre comercial original seguido del tipo en español, como «Aril Black (Casco)», «ADP Twilight (Pecho)» o «Li-Tok Black (Botas)» (unos 2.400 nombres). Los objetos genéricos van en español.
+- **Organizaciones con una sola forma**: «Armada de la UEE», «Seguridad de Hurston», «Gremio de Cazarrecompensas», «la Advocacy»… con el artículo concordado en todos los textos. Los lugares llevan el nombre propio y la parte genérica en español («Estación Seraphim», «Puerto Olisar»).
+- **Tildes**: unas 3.100 corregidas (así, ahí, día, pensé…). Las opciones de diálogo con NPC van sin tildes, porque la fuente del juego no las muestra.
+- **Armaduras y cascos**: temperatura, radiación y clase corregidas según los datos reales del juego (unas 230 piezas), estadísticas que faltaban añadidas en 52 armaduras y BUL-H4 como «Armadura superpesada».
+- **Textos que seguían en inglés**: ubicaciones de Lazarus, piezas del Cydnus y del Merlin y otros. También se corrigen erratas y textos cortados.
+
+**Estadísticas:**
+- Líneas en global.ini: 91.163
+
 ## v1.37.11 — 2026-10-09
 
 Los planos de las misiones de recolección de Rayari indican ahora que solo caen con un 25 % de probabilidad.
