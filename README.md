@@ -16,7 +16,7 @@ Traducción al español de Star Citizen, actualizada en cada parche del juego (c
 ## Versión actual
 
 - **LIVE — Alpha 4.10.2 "Siege of Orison"** (build 12881860): parche completo en español
-- Última release: **v1.37.12** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
+- Última release: **v1.37.13** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
 
 ## Instalación — cómo poner Star Citizen en español
 
@@ -65,7 +65,7 @@ Recuentos hechos sobre el archivo real del canal LIVE:
 | Misiles y bombas | Prefijo de tracking `IR`/`EM`/`CS` en misiles (137) + tamaño `B#` en bombas (6) | 143 |
 | Minería | Nombres abreviados del HUD y compendio del diario reorganizado por rareza | 40 |
 | Fabricación en materiales | Bloque "Fabricación" en minerales y materiales (refinado y en bruto) | 50 |
-| Correcciones manuales | Registro vivo de la auditoría de la traducción heredada (tildes sistemáticas incluidas) y de los reportes de la comunidad | 14.564 |
+| Correcciones manuales | Registro vivo de la auditoría de la traducción heredada (tildes sistemáticas incluidas) y de los reportes de la comunidad | 14.580 |
 
 **Total: 91 163 claves en LIVE (4.10.2 "Siege of Orison", build 12881860). Parche 4.10 completo en español desde el día de su salida**
 

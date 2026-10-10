@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.37.13 — 2026-10-10
+
+Revisión de nombres de lugares y limpieza de traducciones literales.
+
+**Cambios:**
+- **Nombres de lugares**: el nombre propio se queda en inglés y la parte genérica va en español, delante: «Puerto Everus», «Valle Nakamura», «Cuenca Kosso», «Cresta Aston», «Paso Calhoun». Los nombres con posesivo llevan «de»: «Cráter de Rolo», «Pico de Kant», «Barranco de Flanagan», «Refugio de Shepherd». Los lugares con «Point» (Baijini Point, Prospect Point…) y los nombres descriptivos (Sunset Mesa, Prophet's Peak, Echo Isle…) se quedan enteros en inglés. Cada lugar tiene ya una sola forma en misiones, diálogos y mapa.
+- **Complejo Lazarus**: las ubicaciones de misión del complejo de investigación de Pyro I estaban en inglés. Ahora dicen «Complejo Lazarus», distinto del «Centro de transporte Lazarus», que es otro edificio.
+- **Cuevas**: las 24 ubicaciones de cueva siguen un mismo formato, «Cueva en Hurston», «Cueva en Daymar»…
+- **Textos resaltados**: en 13 misiones (Headhunters, Foxwell, Intersec, Covalex, Battaglia) el resaltado de color no se cerraba bien. Corregido.
+- **Traducciones literales**: fuera los «te tiene cubierto» de las bengalas Joker, las gorras City Lights y los pantalones Silverton; las contramedidas dicen «Cantidad: 16» en lugar de «Cuenta: 16»; la escopeta Ravager-212 en sus ediciones IAE 2022 y Luminalia tenía la descripción a medio traducir.
+- **Erratas y frases sueltas**: diálogos de combate y de reabastecimiento, el saludo del cajero automático y «el laboratorio Rayari de Cellin», que seguía en inglés.
+
+**Estadísticas:**
+- Líneas en global.ini: 91.163
+
 ## v1.37.12 — 2026-10-09
 
 Traducción actualizada al parche 4.10.2 (LIVE), con una revisión a fondo de nombres propios, organizaciones, tildes y armaduras.
