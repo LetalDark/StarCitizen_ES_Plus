@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.37.14 — 2026-10-10
+
+Nombres de lugares tal como aparecen en el mapa del juego y limpieza de traducciones literales.
+
+**Cambios:**
+- **Nombres de lugares**: van tal como aparecen en el mapa del juego y como los dice la comunidad: «Everus Harbor», «Port Olisar», «Seraphim Station», «Pyro Gateway», «Nakamura Valley Aid Shelter», «Rolo's Crater», «Lazarus Complex»… Cada lugar tiene una sola forma en misiones, diálogos y mapa. Lo que no es un nombre sigue en español: «la estación Jericho», «Cueva en Hurston», «Puesto de avanzada abandonado».
+- **Cuevas**: las 24 ubicaciones de cueva siguen un mismo formato, «Cueva en Hurston», «Cueva en Daymar»…
+- **Textos resaltados**: en 13 misiones (Headhunters, Foxwell, Intersec, Covalex, Battaglia) el resaltado de color no se cerraba bien. Corregido.
+- **Traducciones literales**: fuera los «te tiene cubierto» de las bengalas Joker, las gorras City Lights y los pantalones Silverton; las contramedidas dicen «Cantidad: 16» en lugar de «Cuenta: 16»; la escopeta Ravager-212 en sus ediciones IAE 2022 y Luminalia tenía la descripción a medio traducir.
+- **Erratas y frases sueltas**: diálogos de combate y de reabastecimiento, el saludo del cajero automático, textos de lugares que mezclaban inglés y español («Aston Ridge Shelter Centro de ayuda», «Echo Isle on Hurston»…) y «el laboratorio Rayari de Cellin», que seguía en inglés.
+
+**Estadísticas:**
+- Líneas en global.ini: 91.163
+
 ## v1.37.12 — 2026-10-09
 
 Traducción actualizada al parche 4.10.2 (LIVE), con una revisión a fondo de nombres propios, organizaciones, tildes y armaduras.
