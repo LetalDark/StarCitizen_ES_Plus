@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.37.15 — 2026-10-20
+
+Repaso de tildes: «más» en todo el juego y otras correcciones de traducción.
+
+**Cambios:**
+- **«más» con tilde**: casi 1.900 «mas» corregidos en misiones, diálogos, descripciones de objetos y naves («más tarde», «lo más rápido posible», «¿Tienes algo más?»…).
+- **Railgun Scourge**: descripción reescrita; tenía una frase traducida palabra por palabra.
+- **Enfriador Idris**: el componente aparecía como «Idris mas fresco».
+- **Más tildes**: «réplica» en uniformes, maquetas y figuras, «cálculo», y «confíe»/«confié» en componentes y diálogos.
+
+**Estadísticas:**
+- Líneas en global.ini: 91.163
+
 ## v1.37.14 — 2026-10-10
 
 Nombres de lugares tal como aparecen en el mapa del juego y limpieza de traducciones literales.
@@ -1144,7 +1157,7 @@ El juego ha publicado el RC1 hacia 4.8 LIVE. Esta versión es enorme: trae de vu
 - **Aurora Mk I**: el juego cambió el nombre corto de "Aurora Mk I CL/ES/LN/LX" a "Aurora CL/ES/LN/LX" — actualizado.
 - **APOS → AVS-E**: el casco del traje de pilotaje Navy renombrado por el juego, ahora aparece como "AVS-E (Casco vuelo)".
 - **Antium Maroon → Antium Jet**: el juego reutilizó la ranura del item con un casco nuevo, traducción actualizada.
-- **Contratos sin localización oficial**: añadidos textos provisionales (con marca `*`) para 17 contratos nuevos del DCB que aún no tenían traducción oficial — Foxwell DefendEntitesAndEscort (5 niveles de dificultad), UWC Refueling (United Wayfarers Club, contratos de repostaje con riesgo), C11 Trap Refuel (emboscada en repostaje) y similares.
+- **Contratos sin localización oficial**: añadidos textos provisionales (con marca `*`) para 17 contratos nuevos del juego que aún no tenían traducción oficial — Foxwell DefendEntitesAndEscort (5 niveles de dificultad), UWC Refueling (United Wayfarers Club, contratos de repostaje con riesgo), C11 Trap Refuel (emboscada en repostaje) y similares.
 
 **Cómo se mantiene el archivo consistente con el juego:**
 
