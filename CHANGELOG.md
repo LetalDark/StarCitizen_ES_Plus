@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.37.16 — 2026-11-07
+
+La 4.10.3 del PTU, traducida desde su primer parche de pruebas, y la LIVE al día con el último hotfix de la 4.10.2.
+
+**Cambios (PTU 4.10.3):**
+- **Contenido nuevo traducido**: 279 textos nuevos y 86 que cambian. Incluye las pinturas de Luminalia, IAE 2956, Perseus y MOTH, las ediciones Raider Camo y Epoque, el rifle Skarnov, los contratos nuevos de InterSec y los textos de abordaje de naves.
+- **Cambios de CIG**: el Ballista, el Centurion y el Spartan pasan a llamarse «HM6»; el terminal de naves habla ahora de «vehículos»; el escondite de los Frontier Fighters pasa a ser una «Instalación abandonada»; las armaduras Venture Starwalker e Infrared ya no van con los nombres cambiados.
+- **Stats al día**: los cañones Vanduul de los Mauler (STRIKER, IGNITER y ANNIHILATOR) pegan mucho más fuerte; los enfriadores BriskAir y las plantas de energía Helios y Sovereign muestran por fin su distorsión real, y el escudo del Polaris tiene nombre propio: «Deterrent».
+- **Erratas del juego corregidas**: «C54 EQ» (aparecía como C53) y «Takuetsu» en la maqueta del Idris.
+- **Respuestas a NPC**: «Cuentame mas...» sin tildes para que no salgan huecos en ese menú.
+
+**Cambios (LIVE y PTU):**
+- **Glaciem Ring**: sin artículo delante, como el resto de lugares («una ubicación en Glaciem Ring»).
+- **Torreta tractora**: el texto ya no sale duplicado al entrar en ella.
+
+**Estadísticas:**
+- Líneas en global.ini: 91.163 (LIVE) / 91.431 (PTU)
+
 ## v1.37.15 — 2026-10-20
 
 Repaso de tildes: «más» en todo el juego y otras correcciones de traducción.
