@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.37.18 — 2026-11-13
+
+Nombres de objetos con el tipo en español, «motor cuántico» en todo el juego y una tanda de textos que seguían en inglés.
+
+**Cambios:**
+- **El tipo de objeto, en español**: 156 nombres que lo llevaban en inglés lo llevan ahora en español, con la marca tal cual la escribe el juego. Por ejemplo, «Pistola Coda», «Rifle Gallant», «Escudo Vanduul Spark», «Propulsor retro Aegis Javelin», «Gatling YellowJacket GT-210» o «Repetidor Axiom L-22». Los muebles genéricos van en español completo: «Sofá de gama alta», «Silla de comedor de gama baja». Las listas de «Posibles Planos» de los contratos usan los nombres nuevos.
+- **Fabricantes con su nombre real**: «Hammer Propulsion» e «Hydra Propulsion» ya no aparecen traducidos («Hammer propulsión»).
+- **«Motor cuántico» y «motor de salto» en todo el juego**: las fichas de componente decían «Unidad cuántica», y las pistas «Unidad de Salto Cuántico». Ahora todo dice «motor cuántico», también en el HUD, los diálogos y las descripciones de cada motor. Los controles del motor de salto, que iban medio en inglés («Jump Drive - Activar Jump»), dicen «Motor de salto - Activar salto».
+- **Textos que seguían en inglés**: títulos de contratos («El que se lo encuentra se lo queda», «Expulsar a los usurpadores de concesiones», «Cazando cabezas»…), el hueco del motor cuántico al montar componentes, «LÍM VEL» del HUD, «Reiniciar gimbal en modo desguace», la tabla de clasificación por oleadas, el quiosco de mercancías y los datos de reputación («Sistema Stanton»).
+- **Erratas del juego corregidas**: el perfil avanzado del mando venía en galés («Rheolydd Cymhleth») y ahora dice «Mando avanzado»; «Imperial Waste Managemet» pasa a «Management»; en la ficha del motor Siren, el nombre ya no sale traducido como «la sirena».
+
+**Estadísticas:**
+- Líneas en global.ini: 91.579
+
 ## v1.37.17 — 2026-11-12
 
 La 4.10.3 ya está en LIVE, y la traducción con ella: naves nuevas, roles de nave en español y stats de armas corregidos.
