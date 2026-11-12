@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.37.17 — 2026-11-12
+
+La 4.10.3 ya está en LIVE, y la traducción con ella: naves nuevas, roles de nave en español y stats de armas corregidos.
+
+**Cambios:**
+- **Contenido nuevo traducido**: 148 textos nuevos. Incluye las naves Drake Marauder, Gatac Hyun, RSI Galaxy y Anvil Liberator con sus módulos y pinturas, el rifle Arlington «Everglade», la decoración de Wally's Bar y Neonwave, la chaqueta Bobcat Varsity y los paquetes de IAE 2956.
+- **Rol de cada nave en español**: el «Enfoque» de las descripciones de nave sale ahora siempre en español y escrito igual en todas («Caza pesado», «Carreras», «Explorador», «Interdicción»…). 45 seguían en inglés.
+- **La Galaxy y la Liberator**, en femenino, como las dice la comunidad.
+- **Baterías de armas de energía**: 23 armas mostraban un tamaño de batería que no era el real. Entre ellas, las ediciones de la escopeta Volt (20, no 10), del Atzkav (8, no 5) y el Arrowhead (16).
+- **Accesorios**: el Arlington «Everglade» y varias ediciones de la ballesta UltiFlex muestran el tamaño real del subcañón.
+- **«Combate aéreo»**: sustituye a «peleas de perros» en naves, Arena Commander y frases de pilotos.
+- **Otras correcciones**: Freelancer MAX, Nox, pintura Keystone de la UTV (frase duplicada), pintura DeBiasio del Avenger y el paquete IceBreak de la Nomad, que en el juego dice «Avenger» por error.
+
+**Estadísticas:**
+- Líneas en global.ini: 91.579
+
 ## v1.37.16 — 2026-11-07
 
 La 4.10.3 del PTU, traducida desde su primer parche de pruebas, y la LIVE al día con el último hotfix de la 4.10.2.
