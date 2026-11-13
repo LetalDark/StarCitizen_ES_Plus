@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.37.19 — 2026-11-13
+
+La Verdict LMG, completa: el juego no traía los textos del arma ni de su batería.
+
+**Cambios:**
+- **Verdict LMG (Kastak Arms)**: el juego solo incluye los textos de la edición «Derivation». El arma normal y su batería aparecían como `@item_Nameksar_lmg_energy_01_mag` en todos los idiomas, también en inglés. Ahora se llaman «LMG Verdict» y «Batería Verdict LMG (75 cap)» y tienen su ficha completa.
+- **Los dos modos de disparo de la Verdict, por separado**: en el HUD los dos aparecen como [AUTO], y la ficha los mezclaba. Ahora la del arma y la de la edición «Derivation» muestran cada uno con su DPS:
+  - `Modo 1`: láser a 600 disparos por minuto.
+  - `Modo 2`: láser a 300 disparos por minuto, con 1 s de giro antes del primer disparo.
+  - `Modo 2, 40% calor`: por encima del 40 % de calor, el modo 2 dispara proyectiles potenciados de 60 de daño.
+
+**Estadísticas:**
+- Líneas en global.ini: 91.584
+
 ## v1.37.18 — 2026-11-13
 
 Nombres de objetos con el tipo en español, «motor cuántico» en todo el juego y una tanda de textos que seguían en inglés.

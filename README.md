@@ -17,7 +17,7 @@ Traducción al español de Star Citizen, actualizada en cada parche del juego (c
 
 - **LIVE — Alpha 4.10.3** (build 13165946): parche completo en español, traducido desde su primer parche de pruebas
 - **PTU**: sin canal de pruebas abierto ahora mismo; cuando CIG abra el siguiente, sale en español desde su primer build
-- Última release: **v1.37.18** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
+- Última release: **v1.37.19** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
 
 ## Instalación — cómo poner Star Citizen en español
 
@@ -55,11 +55,11 @@ Recuentos hechos sobre el archivo real del canal LIVE:
 
 | Capa | Contenido | Claves |
 |---|---|---|
-| Traducción al español | Todas las claves del juego, traducidas y mantenidas de forma independiente sobre una base evolutiva propia (origen: comunidad Thord82, hoy auditada al completo) | 91.579 |
+| Traducción al español | Todas las claves del juego, traducidas y mantenidas de forma independiente sobre una base evolutiva propia (origen: comunidad Thord82, hoy auditada al completo) | 91.584 |
 | Misiones — planos | Títulos con `[BP]` (383, de ellos 29 condicionales `[BP]*` con línea «Condición:») + listas «[Posibles Planos]» (367, con la zona hasta el planeta y los planos por tipo de componente) | 750 |
 | Misiones — reputación y eventos | Bloque Reputación (802) + bloque Escenario en eventos dinámicos (108) | 910 |
 | Transporte y sustancias ilegales | Títulos de carga compactos con rango y tipo de ruta (4) + marca `[!]` en drogas (8) | 12 |
-| Armas FPS | Descripciones con stats y modos de disparo reales: DPS, Alpha, velocidad, caída de daño, todos los modos, giro previo de las rotativas | 345 |
+| Armas FPS | Descripciones con stats y modos de disparo reales: DPS, Alpha, velocidad, caída de daño, todos los modos, giro previo de las rotativas | 346 |
 | Armaduras, ropa y equipo | Claves con la masa real del objeto; incluye 1.000 piezas con Peso/Stun/Impacto y 986 con tolerancia a fuerza G | 1.950 |
 | Armas de nave | Descripciones con el bloque completo de stats (DPS, Alpha, RPM, penetración, capacitor, masa…) | 138 |
 | Componentes de nave | Prefijo clase\|tamaño\|grado en el nombre + stats por tipo en la descripción | 397 |
@@ -68,7 +68,7 @@ Recuentos hechos sobre el archivo real del canal LIVE:
 | Fabricación en materiales | Bloque "Fabricación" en minerales y materiales (refinado y en bruto) | 50 |
 | Correcciones manuales | Registro vivo de la auditoría de la traducción heredada (tildes sistemáticas incluidas) y de los reportes de la comunidad | 15.296 |
 
-**Total: 91 579 claves en LIVE (4.10.3, build 13165946). Parche 4.10 completo en español desde el día de su salida y la 4.10.3 traducida desde su primer parche de pruebas**
+**Total: 91 584 claves en LIVE (4.10.3, build 13165946). Parche 4.10 completo en español desde el día de su salida y la 4.10.3 traducida desde su primer parche de pruebas**
 
 ## Guía de formatos
 
