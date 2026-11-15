@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.38.0 — 2026-11-15
+
+Star Citizen Alpha 5.0 (PTU) en español desde su primer build de pruebas.
+
+**Cambios:**
+- **Alpha 5.0 (PTU) traducida**: 3.151 textos nuevos y 114 que cambiaron, todos en español. Los nombres de los lugares nuevos van como los escribe el juego, igual que el resto de lugares.
+- Términos nuevos: «bioseñal» y «Monitor de bioseñales», «Hongos de Gatala», «Vaina de Lumborb», «placa de servidor», «Terraformador».
+- Erratas del inglés del juego que no se copian: 9 textos de misión con variables mal escritas, que el juego mostraría tal cual, y 10 resaltados de texto mal cerrados.
+- **Datos reales de la 5.0**: peso de cada mochila según su modelo (ya no pesan todas 6 kg), reducción de daño en las armaduras nuevas, cascos que pasan a «Utilidad», trajes Pembroke y Stirling con su peso y protección nuevos, y la batería del Model-K2 con su capacidad real (55).
+- **Reputación**: las certificaciones del Gremio de Cazarrecompensas indican el +100 del Gremio de Mercenarios que dan algunas de sus versiones, y dos contratos de recompensa del Gremio dejan de mostrar penalizaciones por fallo que no existen.
+- Erratas antiguas corregidas: «recuperación legítima», «Si ha fallecido», «Esperando tu llegada».
+- LIVE 4.10.3: sin cambios.
+
+**Estadísticas:**
+- Líneas en global.ini: 94.686 (PTU 5.0) · 91.584 (LIVE 4.10.3)
+
 ## v1.37.19 — 2026-11-13
 
 La Verdict LMG, completa: el juego no traía los textos del arma ni de su batería.
