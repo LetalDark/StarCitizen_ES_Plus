@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.38.1 — 2026-11-16
+
+Repaso a fondo de la ortografía y la puntuación del texto en LIVE y PTU.
+
+**Cambios:**
+- **Puntuación y ortografía corregidas en unos 4.500 textos por canal**: «¡» y «¿» de apertura que faltaban, frases pegadas sin punto, mayúsculas a la inglesa («Confiscar Contrabando» → «Confiscar contrabando»), «No sé», «¿Estás», sujetos que sobraban («Nosotros estamos juntos» → «Estamos juntos»), dobles espacios y puntos suspensivos separados. Los diálogos de combate que eran traducciones literales ilegibles ahora se entienden.
+- **«Inversor»** en lugar de «Alternador» para el IFFI del asedio de Orison y sus tarjetas de código.
+- Erratas sueltas: frases del comentarista de carreras, «¡Blanco fijado!», «Moneda Luminalia '55», «Propulsor dual HAPR HM 4.3», gritos de los guardias de seguridad y «estacionadas» mal acentuado.
+- LIVE 4.10.3 recibe también «recuperación legítima» y «Si ha fallecido».
+- En LIVE los cascos siguen siendo «Armadura»: solo pasan a «Utilidad» en la 5.0.
+
+**Estadísticas:**
+- Líneas en global.ini: 94.686 (PTU 5.0) · 91.584 (LIVE 4.10.3)
+
 ## v1.38.0 — 2026-11-15
 
 Star Citizen Alpha 5.0 (PTU) en español desde su primer build de pruebas.
