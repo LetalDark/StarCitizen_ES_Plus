@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.38.2 — 2026-11-16
+
+Las ediciones de color de la LMG Verdict ya tienen nombre en LIVE.
+
+**Cambios:**
+- **LMG Verdict «Barricade», «Rancor» y «Memoir»** (LIVE 4.10.3): el juego no traía sus textos y en el inventario salía `@item_Nameksar_lmg_energy_01_tint02` y similares, también en inglés. Ahora muestran su nombre oficial y la ficha de stats de la Verdict.
+- PTU 5.0: sin cambios.
+
+**Estadísticas:**
+- Líneas en global.ini: 94.686 (PTU 5.0) · 91.593 (LIVE 4.10.3)
+
 ## v1.38.1 — 2026-11-16
 
 Repaso a fondo de la ortografía y la puntuación del texto en LIVE y PTU.
