@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.38.3 — 2026-11-17
+
+Repaso de las traducciones que decían otra cosa distinta al original, en LIVE y PTU.
+
+**Cambios:**
+- **Paneles de las puertas: «Blanco fijado» → «Bloqueado».** El texto del estado de bloqueo de las puertas estaba traducido como el fijado de un misil.
+- **896 textos por canal con el sentido equivocado corregidos**, casi todos traducciones palabra a palabra que venían de versiones muy antiguas:
+  - Puertas, esclusas y ascensores: los botones dicen la acción («ABRIR», «BLOQUEAR», «BAJAR») y los estados el resultado («Abierto», «Cerrado», «EN CICLO»); «Plataformas de azotea» (antes «Almohadillas de techo»), plantas y plataformas con nombre en español, salas de la IAE unificadas («Salón Aegis», «Salón Anvil»…).
+  - Órdenes al escolta: «Atacar a discreción», «No atacar», «Misiles a discreción» (antes «Misiles gratis»), «Modo silencioso», «Retirarse».
+  - Ayudas de control: «Armar misiles +/-» (antes «Misiles de brazo»), «Cambiar misil (sig.)», «Trepar / Saltar» (antes «Manto / Bóveda»), «Lanzar por abajo» (antes «Axila»), «Corte (ligero)», «Inyectar a otro», «Esposar», «Enfundar», botón «Limpiar» de la pistola médica.
+  - Frases de los NPC: «Objetivo abatido» (antes «Apunta hacia abajo»), «Cuidado» (antes «Míralo»), «Claro que sí» (antes «Cosa segura»), «¡Han entrado!», «¡Granada!», «Te cubro», «Los he perdido de vista», «Cuidado dónde disparas», «Aliado abatido», «Tranquilo» (antes «Fácil»), «¡Ha llegado la caballería!». Las órdenes a un grupo van en «ustedes» («¡Dispérsense!», «¡Rodéenlos!»).
+  - Interfaz: marcadores («Victorias», «Derrotas», «Empates», «Temporada»), tienda («PAGAR», «REGALADO», «Desgaste», «Rendimiento», «Procesando pedido»), escáner («Energía», «Encendido»), HUD de vuelo («ESCD», brújula «O»), la tecla «W» (decía «O») y «Rumbo» en el timón.
+
+**Estadísticas:**
+- Líneas en global.ini: 94.686 (PTU 5.0) · 91.593 (LIVE 4.10.3)
+
 ## v1.38.2 — 2026-11-16
 
 Las ediciones de color de la LMG Verdict ya tienen nombre en LIVE.
