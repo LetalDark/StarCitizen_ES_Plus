@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.38.4 — 2026-11-18
+
+La pistola Hellion ya tiene nombre y descripción en LIVE.
+
+**Cambios:**
+- **Pistola Hellion de Kastak y sus ediciones «Esquire», «Primetime» y «Goodnite»** (LIVE 4.10.3): el juego no traía sus textos y en el inventario salía `@item_Nameksar_pistol_energy_01_tint03` y similares, también en inglés. Ahora muestran su nombre oficial y la ficha de stats de la Hellion, igual que la munición («Proyectil de plasma de Pistola Hellion»).
+- PTU 5.0: sin cambios.
+
+**Estadísticas:**
+- Líneas en global.ini: 94.686 (PTU 5.0) · 91.606 (LIVE 4.10.3)
+
 ## v1.38.3 — 2026-11-17
 
 Repaso de las traducciones que decían otra cosa distinta al original, en LIVE y PTU.
