@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.38.5 — 2026-11-23
+
+Los radares de nave vuelven a mostrar su sensibilidad RS (escaneo de recursos).
+
+**Cambios:**
+- **Descripción de los radares completa** (LIVE 4.10.3 y PTU 5.0): la línea de sensibilidades mostraba solo IR, EM y CS; ahora incluye también RS, como en «IR: 95% | EM: 95% | CS: 100% | RS: 100%». 62 radares por canal.
+
+**Estadísticas:**
+- Líneas en global.ini: 94.686 (PTU 5.0) · 91.606 (LIVE 4.10.3)
+
 ## v1.38.4 — 2026-11-18
 
 La pistola Hellion ya tiene nombre y descripción en LIVE.

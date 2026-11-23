@@ -17,7 +17,7 @@ Traducción al español de Star Citizen, actualizada en cada parche del juego (c
 
 - **LIVE — Alpha 4.10.3** (build 13165946): parche completo en español, traducido desde su primer parche de pruebas
 - **PTU — Alpha 5.0** (build 13189690): traducido desde su primer build de pruebas
-- Última release: **v1.38.4** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
+- Última release: **v1.38.5** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
 
 ## Instalación — cómo poner Star Citizen en español
 
