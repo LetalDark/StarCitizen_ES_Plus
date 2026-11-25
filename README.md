@@ -15,9 +15,9 @@ Traducción al español de Star Citizen, actualizada en cada parche del juego (c
 
 ## Versión actual
 
-- **LIVE — Alpha 4.10.3** (build 13165946): parche completo en español, traducido desde su primer parche de pruebas
+- **LIVE — Alpha 4.10.3** (build 13220821): parche completo en español, traducido desde su primer parche de pruebas
 - **PTU — Alpha 5.0** (build 13189690): traducido desde su primer build de pruebas
-- Última release: **v1.38.5** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
+- Última release: **v1.38.6** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
 
 ## Instalación — cómo poner Star Citizen en español
 
@@ -55,7 +55,7 @@ Recuentos hechos sobre el archivo real del canal LIVE:
 
 | Capa | Contenido | Claves |
 |---|---|---|
-| Traducción al español | Todas las claves del juego, traducidas y mantenidas de forma independiente sobre una base evolutiva propia (origen: comunidad Thord82, hoy auditada al completo) | 91.606 |
+| Traducción al español | Todas las claves del juego, traducidas y mantenidas de forma independiente sobre una base evolutiva propia (origen: comunidad Thord82, hoy auditada al completo) | 91.607 |
 | Misiones — planos | Títulos con `[BP]` (383, de ellos 29 condicionales `[BP]*` con línea «Condición:») + listas «[Posibles Planos]» (367, con la zona hasta el planeta y los planos por tipo de componente) | 750 |
 | Misiones — reputación y eventos | Bloque Reputación (802) + bloque Escenario en eventos dinámicos (108) | 910 |
 | Transporte y sustancias ilegales | Títulos de carga compactos con rango y tipo de ruta (4) + marca `[!]` en drogas (8) | 12 |
@@ -66,9 +66,9 @@ Recuentos hechos sobre el archivo real del canal LIVE:
 | Misiles y bombas | Prefijo de tracking `IR`/`EM`/`CS` en misiles (137) + tamaño `B#` en bombas (6) | 143 |
 | Minería | Nombres abreviados del HUD y compendio del diario reorganizado por rareza | 40 |
 | Fabricación en materiales | Bloque "Fabricación" en minerales y materiales (refinado y en bruto) | 50 |
-| Correcciones manuales | Registro vivo de la auditoría de la traducción heredada (tildes sistemáticas incluidas) y de los reportes de la comunidad | 19.501 |
+| Correcciones manuales | Registro vivo de la auditoría de la traducción heredada (tildes sistemáticas incluidas) y de los reportes de la comunidad | 19.509 |
 
-**Total: 91 606 claves en LIVE (4.10.3, build 13165946) y 94 686 en PTU (5.0, build 13189690). Parche 4.10 completo en español desde el día de su salida y la 5.0 traducida desde su primer build de pruebas**
+**Total: 91 607 claves en LIVE (4.10.3, build 13220821) y 94 687 en PTU (5.0, build 13189690). Parche 4.10 completo en español desde el día de su salida y la 5.0 traducida desde su primer build de pruebas**
 
 ## Guía de formatos
 

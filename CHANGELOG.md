@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.38.6 — 2026-11-25
+
+Traducción al día con el nuevo build de LIVE y dos textos que se veían mal en el juego.
+
+**Cambios:**
+- **LIVE actualizado al build 13220821** de Alpha 4.10.3 (sin textos nuevos del juego respecto al anterior).
+- **Mapa**: la cabecera de la lista de marcadores, bajo «Miembros del grupo», muestra «Marcadores» en lugar del código `@MAP_HEADER_PINS` (texto que el juego no trae en ningún idioma). LIVE y PTU.
+- **Beneficios de rango que se salían del recuadro**, ahora más cortos: «Contratos extra», «Nuevas pistas» y «Sin beneficios extra». LIVE y PTU.
+
+**Estadísticas:**
+- Líneas en global.ini: 94.687 (PTU 5.0) · 91.607 (LIVE 4.10.3)
+
 ## v1.38.5 — 2026-11-23
 
 Los radares de nave vuelven a mostrar su sensibilidad RS (escaneo de recursos).
