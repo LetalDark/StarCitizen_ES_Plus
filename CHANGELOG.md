@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.38.7 — 2026-11-26
+
+PTU 5.0 al día con su nuevo build: textos nuevos traducidos y planos de misión más claros.
+
+**Cambios (PTU 5.0):**
+- **PTU actualizado al build 13284307**: todos los textos nuevos y cambiados del juego en español (armas, armaduras, ropa, naves, contratos y menús), y un repaso a textos heredados que sonaban raros.
+- **Reducción de daño de las armaduras** con los valores de la 5.0 (varias piezas mostraban aún los de la 4.x).
+- **Planos de accesorios de arma**: las miras, bocachas, supresores, linternas y punteros láser que dan algunas misiones salen en su propia categoría, «Accesorios»; las pruebas de metamaterial del Coleccionista, en «Materiales».
+- **Contratos del nuevo tablón de contratos**: cuando un mismo contrato da planos distintos según la variante, cada lista dice cuál es con lo que ves en el tablón (contrato global, regional o local, rango del gremio exigido y, en las recompensas, la clase de riesgo HRT/VHRT y si es en planeta o en el espacio), en lugar de «Opción 1/Opción 2». Si dos variantes no se distinguen, sus planos salen en una sola lista.
+- **Recompensas y certificaciones del Gremio de Cazarrecompensas** con el texto actual del juego y su reputación.
+- Fuera listas de planos de contratos que el juego ya no ofrece.
+
+**Estadísticas:**
+- Líneas en global.ini: 94.997 (PTU 5.0) · 91.607 (LIVE 4.10.3, sin cambios)
+
 ## v1.38.6 — 2026-11-25
 
 Traducción al día con el nuevo build de LIVE y dos textos que se veían mal en el juego.

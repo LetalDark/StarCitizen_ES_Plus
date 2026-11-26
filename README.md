@@ -16,8 +16,8 @@ Traducción al español de Star Citizen, actualizada en cada parche del juego (c
 ## Versión actual
 
 - **LIVE — Alpha 4.10.3** (build 13220821): parche completo en español, traducido desde su primer parche de pruebas
-- **PTU — Alpha 5.0** (build 13189690): traducido desde su primer build de pruebas
-- Última release: **v1.38.6** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
+- **PTU — Alpha 5.0** (build 13284307): traducido desde su primer build de pruebas
+- Última release: **v1.38.7** — todas las novedades, versión a versión, en el [CHANGELOG](CHANGELOG.md)
 
 ## Instalación — cómo poner Star Citizen en español
 
@@ -66,9 +66,9 @@ Recuentos hechos sobre el archivo real del canal LIVE:
 | Misiles y bombas | Prefijo de tracking `IR`/`EM`/`CS` en misiles (137) + tamaño `B#` en bombas (6) | 143 |
 | Minería | Nombres abreviados del HUD y compendio del diario reorganizado por rareza | 40 |
 | Fabricación en materiales | Bloque "Fabricación" en minerales y materiales (refinado y en bruto) | 50 |
-| Correcciones manuales | Registro vivo de la auditoría de la traducción heredada (tildes sistemáticas incluidas) y de los reportes de la comunidad | 19.509 |
+| Correcciones manuales | Registro vivo de la auditoría de la traducción heredada (tildes sistemáticas incluidas) y de los reportes de la comunidad | 19.553 |
 
-**Total: 91 607 claves en LIVE (4.10.3, build 13220821) y 94 687 en PTU (5.0, build 13189690). Parche 4.10 completo en español desde el día de su salida y la 5.0 traducida desde su primer build de pruebas**
+**Total: 91 607 claves en LIVE (4.10.3, build 13220821) y 94 997 en PTU (5.0, build 13284307). Parche 4.10 completo en español desde el día de su salida y la 5.0 traducida desde su primer build de pruebas**
 
 ## Guía de formatos
 
